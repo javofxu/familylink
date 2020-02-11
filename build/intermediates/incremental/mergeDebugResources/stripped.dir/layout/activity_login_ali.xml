@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:inputBox="http://schemas.android.com/apk/res-auto"
+    xmlns:inputHistory="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:keep="@layout/activity_login_ali">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:id="@+id/main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_50"
+                android:layout_marginBottom="@dimen/margin_50"
+                android:src="@mipmap/company_logo"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:layout_margin="@dimen/margin_20"
+                android:orientation="vertical">
+                <com.alibaba.sdk.android.openaccount.ui.widget.InputBoxWithHistory
+                    android:id="@+id/login_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin_58"
+                    android:background="@null"
+                    android:gravity="center_vertical"
+                    inputBox:ali_sdk_openaccount_attrs_hint="@string/ali_sdk_openaccount_text_loginId"
+                    inputHistory:ali_sdk_openaccount_attrs_storeKey="openaccount_loginid_history" />
+
+                <ListView
+                    android:id="@+id/input_history"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/ali_sdk_openaccount_bg_topline_gray"
+                    android:divider="@android:color/transparent"
+                    android:fillViewport="true"
+                    android:overScrollMode="never"
+                    android:paddingLeft="1dp"
+                    android:paddingRight="1dp"
+                    android:paddingTop="1dp"
+                    android:visibility="gone" />
+
+                <com.alibaba.sdk.android.openaccount.ui.widget.PasswordInputBox
+                    android:id="@+id/password"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin_58"
+                    android:background="@drawable/ali_sdk_openaccount_bg_topline_gray"
+                    android:gravity="center_vertical"
+                    inputBox:ali_sdk_openaccount_attrs_hint="@string/ali_sdk_openaccount_text_password"
+                    inputBox:ali_sdk_openaccount_attrs_inputType="textPassword" />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin_1"
+                    android:background="@color/line"/>
+            </LinearLayout>
+
+            <com.alibaba.sdk.android.openaccount.ui.widget.NextStepButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_20"
+                android:layout_marginEnd="@dimen/margin_20"
+                android:layout_marginTop="@dimen/margin_10"
+                android:layout_marginBottom="@dimen/margin_20"
+                android:text="@string/login"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_20"
+                android:layout_marginEnd="@dimen/margin_20"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/register2"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/register"/>
+                <TextView
+                    android:id="@+id/reset_password"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:text="@string/ali_sdk_openaccount_text_reset_password"/>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <ProgressBar
+                    android:id="@+id/login_loading"
+                    android:layout_width="@dimen/margin_36"
+                    android:layout_height="@dimen/margin_36"
+                    android:layout_centerInParent="true"
+                    android:indeterminateBehavior="repeat"
+                    android:indeterminateDrawable="@drawable/loading_view"
+                    android:visibility="invisible"/>
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>

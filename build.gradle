@@ -1,0 +1,138 @@
+apply plugin: 'com.android.application'
+apply plugin: 'project-report'
+apply plugin: 'org.greenrobot.greendao'
+
+def projectName = "FamilyLink"
+
+static def getIncreasedVersionCode() {
+    return (int) (System.currentTimeMillis() / (1000 * 60 * 60 * 24))
+}
+
+android {
+    compileSdkVersion 28
+
+    defaultConfig {
+        applicationId "com.siterwell.familywellplus"
+        minSdkVersion 21
+        targetSdkVersion 28
+        versionCode getIncreasedVersionCode()
+        versionName "3.0.0"
+        ndk {
+            abiFilters "armeabi", "arm64-v8a"
+        }
+        multiDexEnabled true
+    }
+
+    signingConfigs {
+        debug {
+            storeFile file("xjjsiterwell.jks")
+            storePassword '123456'
+            keyAlias '123456'
+            keyPassword '123456'
+        }
+        release {
+            storeFile file("xjjsiterwell.jks")
+            storePassword '123456'
+            keyAlias '123456'
+            keyPassword '123456'
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            buildConfigField "String", "BUILD_COUNTRY", "\"CHINA\""//国内
+            signingConfig signingConfigs.release
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }//debug 默认不开混淆
+        debug {
+            minifyEnabled false
+            buildConfigField "String", "BUILD_COUNTRY", "\"CHINA\""
+            signingConfig signingConfigs.debug
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    lintOptions {
+        abortOnError false
+    }
+
+    dexOptions {
+        javaMaxHeapSize "4g"
+    }
+
+    applicationVariants.all { variant ->
+        variant.outputs.all {
+            String fileName = projectName + "_" + defaultConfig.versionName + ".apk"
+            println "fileName:" + fileName
+            outputFileName = fileName
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility = '1.8'
+        targetCompatibility = '1.8'
+    }
+
+    dataBinding {
+        enabled = true
+    }
+}
+
+buildscript {
+    repositories {
+        google()
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.0.0'
+        classpath 'org.greenrobot:greendao-gradle-plugin:3.2.2'
+    }
+}
+
+repositories {
+    google()
+    jcenter()
+    mavenLocal()
+    maven { url 'https://maven.google.com' }
+    maven { url 'https://maven.aliyun.com/repository/jcenter' }
+    maven { url "http://maven.aliyun.com/nexus/content/repositories/releases" }
+}
+
+
+configurations {
+    cleanedAnnotations
+    compile.exclude group: 'org.jetbrains', module: 'annotations'
+}
+
+//解决冲突 同一版本
+configurations.all {
+    resolutionStrategy.cacheDynamicVersionsFor 0, 'seconds'
+    resolutionStrategy.cacheChangingModulesFor 0, 'seconds'
+    resolutionStrategy.eachDependency { DependencyResolveDetails details ->
+        def requested = details.requested
+        if (requested.group == 'com.android.support') {
+            if (!requested.name.startsWith("multidex")) {
+                details.useVersion '28.0.0'
+            }
+        }
+    }
+}
+
+dependencies {
+    implementation 'com.google.android:flexbox:0.3.1'
+    implementation 'com.android.support:design:28.0.0'
+    implementation 'com.android.support:multidex:1.0.3'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    /* 其他.end */
+    implementation 'com.google.code.gson:gson:2.8.5'
+    implementation 'org.greenrobot:greendao:3.2.2'
+    implementation 'com.jakewharton:butterknife:9.0.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:9.0.0'
+    implementation project(path: ':common')
+    implementation project(path: ':xmpic')
+    implementation files('libs/highlight.jar')
+    implementation files('libs/httpclient-4.4.1.1.jar')
+    implementation files('libs/json_simple-1.1.jar')
+    implementation files('libs/lite-common-1.1.3.jar')
+}

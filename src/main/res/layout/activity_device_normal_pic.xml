@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_50"
+            android:background="@color/color_white">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/device_sport_camera_normal_pic"
+                android:textColor="@color/top_bar_title"
+                android:textSize="@dimen/title_size" />
+
+            <ImageView
+                android:id="@+id/iv_picture_back"
+                android:layout_width="@dimen/back_image_width"
+                android:layout_height="@dimen/back_image_height"
+                android:padding="@dimen/margin_3"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/back_image_marginLeft"
+                android:src="@mipmap/back"/>
+
+        </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_1"
+            android:background="@color/top_bar_line" />
+
+        <ImageView
+            android:id="@+id/pic_normal_img"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp" />
+
+        <Button
+            android:id="@+id/btn_download"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_58"
+            android:layout_margin="@dimen/margin_20"
+            android:paddingBottom="@dimen/margin_10"
+            android:background="@mipmap/blue_bg"
+            android:text="@string/device_sport_camera_download_to_phone"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_16"/>
+    </LinearLayout>
+</layout>

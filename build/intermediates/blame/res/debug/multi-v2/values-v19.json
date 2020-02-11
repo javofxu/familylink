@@ -1,0 +1,20 @@
+{
+    "logs": [
+        {
+            "outputFile": "/Users/Skygge/github/familylink/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v19/values-v19.xml",
+            "map": [
+                {
+                    "source": "/Users/Skygge/.gradle/caches/transforms-1/files-1.1/openaccount-ui-default-3.5.3.9.aar/b7d6345aae8e31f4a01e7d4e978f131e/res/values-v19/values-v19.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,15",
+                        "startColumns": "4,4,4,4,4",
+                        "startOffsets": "55,124,201,269,916",
+                        "endLines": "2,3,4,14,33",
+                        "endColumns": "68,76,67,12,12",
+                        "endOffsets": "119,196,264,911,2293"
+                    }
+                }
+            ]
+        }
+    ]
+}

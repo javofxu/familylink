@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="Gradle: com.aliyun.iot.aep.sdk:alog:0.0.5@aar">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/alog-0.0.5.aar/cecf7a7cc29e752817eecdde1ab39eda/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/alog-0.0.5.aar/cecf7a7cc29e752817eecdde1ab39eda/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

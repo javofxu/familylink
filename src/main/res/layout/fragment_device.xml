@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/main_ground">
+        <com.example.common.view.refresh.CustomRefreshView
+            android:id="@+id/device_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </com.example.common.view.refresh.CustomRefreshView>
+
+        <ImageView
+            android:id="@+id/device_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="@dimen/margin_20"
+            android:src="@drawable/device_add"/>
+    </FrameLayout>
+</layout>

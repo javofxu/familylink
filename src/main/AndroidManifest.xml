@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.siterwell.familywellplus">
+
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_SETTINGS" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+
+    <uses-permission android:name="android.permission.WAKE_LOCK" /> <!-- 写入扩展存储，向扩展卡写入数据，用于写入用户数据 -->
+    <uses-permission android:name="android.permission.RECORD_VIDEO" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" /> <!-- 如果您想获得客户端crash的报告, 需要添加这个权限 -->
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <uses-feature
+        android:name="android.hardware.camera.autofocus"
+        android:required="false"/>
+    <uses-feature
+        android:name="android.hardware.camera2"
+        android:required="false"/>
+
+    <application
+        android:name="com.ilop.sthome.app.MyApplication"
+        android:allowBackup="false"
+        android:icon="@mipmap/icon_launch"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/icon_launch"
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning"
+        tools:replace="android:allowBackup,android:label,android:icon,android:roundIcon,android:theme">
+
+        <!-- ImagePicker 相关配置 -->
+        <activity android:name="com.linchaolong.android.imagepicker.cropper.CropImageActivity"
+            android:theme="@style/Base.Theme.AppCompat"/>
+        <activity
+            android:name="com.ilop.sthome.ui.activity.scene.AddSceneActivity"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity android:name="com.ilop.sthome.ui.activity.mine.PersonalActivity"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity android:name="com.ilop.sthome.ui.activity.config.ConfigGatewayActivity"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity android:name="com.ilop.sthome.ui.activity.scene.ChooseActionActivity" />
+        <activity android:name="com.ilop.sthome.ui.activity.config.ProductActivity" />
+        <activity android:name="com.ilop.sthome.ui.activity.device.AddTimerActivity" />
+        <activity android:name="com.ilop.sthome.ui.activity.main.QRCodeActivity"/>
+        <activity android:name="com.ilop.sthome.ui.activity.mine.WebViewActivity"/>
+        <activity android:name="com.ilop.sthome.ui.activity.device.SubDeviceHistoryActivity"/>
+        <activity android:name="com.ilop.sthome.ui.activity.detail.AddModeSwitchActivity"/>
+        <activity android:name="com.ilop.sthome.ui.activity.mine.AssessActivity"/>
+        <activity android:name="com.ilop.sthome.ui.activity.mine.SetUpActivity"/>
+        <activity android:name="com.ilop.sthome.ui.activity.scene.SceneDetailActivity"/>
+        <activity android:name="com.ilop.sthome.ui.activity.scene.SceneEditActivity"/>
+        <activity android:name="com.ilop.sthome.ui.activity.device.ChangeSceneActivity"/>
+        <activity android:name="com.ilop.sthome.ui.activity.scene.AutomationDetailActivity"/>
+        <activity android:name="com.ilop.sthome.ui.activity.scene.SettingActionActivity"/>
+        <activity android:name="com.ilop.sthome.ui.activity.scene.SettingHumitureActivity"/>
+        <activity android:name="com.ilop.sthome.ui.activity.scene.SettingDoubleSwitchActivity"/>
+        <activity android:name="com.ilop.sthome.ui.activity.scene.SettingTempControlActivity"/>
+        <activity android:name="com.ilop.sthome.ui.activity.scene.SettingTimingActivity"/>
+        <activity android:name="com.ilop.sthome.ui.activity.mine.CancellationActivity"/>
+        <activity android:name="com.ilop.sthome.ui.activity.device.RoomManageActivity"/>
+        <activity android:name="com.ilop.sthome.ui.activity.device.RoomEditorActivity"/>
+
+        <meta-data
+            android:name="android.max_aspect"
+            android:value="2.5" /> <!-- 启动页.begin -->
+        <activity
+            android:name="com.ilop.sthome.ui.activity.main.StartActivity"
+            android:launchMode="singleTop"
+            android:theme="@style/MyLauncher">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity> <!-- 启动页.end -->
+        <!-- Ilop首页.begin -->
+        <activity
+            android:name="com.ilop.sthome.ui.activity.main.MainActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="com.aliyun.iot.aep.demo.action.navigation" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:scheme="http" />
+                <data android:scheme="https" />
+                <data
+                    android:host="com.siterwell.familywellplus"
+                    android:path="/page/ilopmain" />
+            </intent-filter>
+        </activity> <!-- Ilop首页.end -->
+        <!-- Ilop添加设备.begin -->
+        <activity
+            android:name="com.ilop.sthome.ui.activity.config.AddGatewayActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme">
+            <intent-filter>
+                <action android:name="com.aliyun.iot.aep.demo.action.navigation" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:scheme="http" />
+                <data android:scheme="https" />
+                <data
+                    android:host="com.siterwell.familywellplus"
+                    android:path="/page/ilopadddevice" />
+            </intent-filter>
+        </activity> <!-- Ilop绑定设备.begin -->
+        <activity
+            android:name="com.ilop.sthome.ui.activity.config.BindAndUseActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="adjustResize|stateHidden">
+            <intent-filter android:priority="-1">
+                <action android:name="com.aliyun.iot.aep.demo.action.navigation" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:scheme="http" />
+                <data android:scheme="https" />
+                <data
+                    android:host="com.siterwell.familywellplus"
+                    android:path="/page/ilopbinddevice" />
+            </intent-filter>
+        </activity> <!-- Ilop绑定设备.end -->
+        <!-- 关于.begin -->
+        <activity
+            android:name="com.ilop.sthome.ui.activity.mine.AboutActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" /> <!-- API client.begin -->
+        <!-- locale|layoutDirection|keyboard  防止切换语言界面重启 -->
+        <activity
+            android:name="com.ilop.sthome.ui.activity.login.OALoginActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|locale|layoutDirection|keyboard"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyLogin" />
+        <activity
+            android:name="com.ilop.sthome.ui.ota.activity.OTAActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme">
+            <intent-filter>
+                <action android:name="com.aliyun.iot.aep.action.navigation" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:scheme="http" />
+                <data android:scheme="https" />
+                <data
+                    android:host="com.siterwell.familywellplus"
+                    android:path="/page/ota" />
+            </intent-filter>
+        </activity> <!-- OTA @end -->
+
+        <activity
+            android:name="com.ilop.sthome.ui.activity.login.EmailRegisterAliActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyEmailRegister" />
+        <activity
+            android:name="com.ilop.sthome.ui.activity.login.PhoneRegisterAliActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MySmsRegister" />
+        <activity
+            android:name="com.ilop.sthome.ui.activity.login.EmailResetAliActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyEmailResetPassword" />
+        <activity
+            android:name="com.ilop.sthome.ui.activity.login.PhoneResetAliActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MySmsResetPassword" />
+        <activity
+            android:name="com.ilop.sthome.ui.activity.mine.InstructionActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.ilop.sthome.ui.activity.device.GatewayMainActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.ilop.sthome.ui.activity.device.GatewaySettingActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.ilop.sthome.ui.activity.config.AddDeviceGuideActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.ilop.sthome.ui.activity.detail.ButtonDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ilop.sthome.ui.activity.detail.CoDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ilop.sthome.ui.activity.detail.CxSmDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ilop.sthome.ui.activity.detail.DoorDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ilop.sthome.ui.activity.detail.GasDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ilop.sthome.ui.activity.detail.LockDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ilop.sthome.ui.activity.detail.ModeButtonDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ilop.sthome.ui.activity.detail.OutDoorDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ilop.sthome.ui.activity.detail.PirDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ilop.sthome.ui.activity.detail.SmDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ilop.sthome.ui.activity.detail.SocketDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ilop.sthome.ui.activity.detail.SosDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ilop.sthome.ui.activity.detail.THCheckDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ilop.sthome.ui.activity.detail.ThermalDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ilop.sthome.ui.activity.detail.WaterDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ilop.sthome.ui.activity.detail.TempControlDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ilop.sthome.ui.activity.device.DeviceHistoryActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ilop.sthome.ui.activity.mine.ShareListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ilop.sthome.ui.activity.config.ConfigDeviceActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ilop.sthome.ui.activity.device.DeviceDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ilop.sthome.ui.activity.main.ExplainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ilop.sthome.ui.activity.xmipc.ActivityGuideDeviceCamera"
+            android:configChanges="orientation|keyboardHidden|screenLayout|keyboard|screenSize"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.ilop.sthome.ui.activity.xmipc.ActivityGuideDeviceWifiConfig"
+            android:windowSoftInputMode="stateHidden|adjustPan"/>
+        <activity
+            android:name="com.ilop.sthome.ui.activity.xmipc.ActivityGuideDeviceWifiConfigNew"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ilop.sthome.ui.activity.xmipc.ActivityGuideDevicePictureList"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ilop.sthome.ui.activity.xmipc.ActivityGuideDeviceChangePwd"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ilop.sthome.ui.activity.xmipc.ActivityGuideDeviceNormalPic"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.ilop.sthome.ui.activity.xmipc.ActivityLocalPicVideo"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.ilop.sthome.ui.activity.xmipc.ActivityGuideSettingMain"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.ilop.sthome.ui.activity.xmipc.ActivityGuideSettingCommon"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.ilop.sthome.ui.activity.xmipc.ActivityGuideSettingExpert"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.ilop.sthome.ui.activity.xmipc.ActivityGuideSetingInfo"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.ilop.sthome.ui.activity.xmipc.ActivityGuideDeviceSetupRecord"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.ilop.sthome.ui.activity.xmipc.ActivityGuideDeviceSetupStorage"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.ilop.sthome.ui.activity.xmipc.DateSelectActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.ilop.sthome.ui.activity.xmipc.ActivityGuideDeviceRecordListNew"
+            android:configChanges="orientation|keyboardHidden|screenLayout|keyboard|screenSize"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ilop.sthome.ui.activity.xmipc.ActivityGuideDeviceAdd"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.ilop.sthome.ui.activity.xmipc.ActivityGuideDeviceListLan"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ilop.sthome.ui.activity.xmipc.ActivityGuideDeviceBeforeWifiConfig"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ilop.sthome.ui.activity.config.ConfigGuideActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ilop.sthome.ui.activity.config.NetWorkActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name="com.ilop.sthome.ui.activity.config.SetApActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ilop.sthome.ui.activity.config.ConnectNetActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ilop.sthome.ui.activity.config.RecoveryGuideActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ilop.sthome.ui.activity.config.QuestionActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+
+        <service
+            android:name="com.ilop.sthome.service.UpdateService"
+            android:exported="true"
+            android:label="UpdateService" />
+        <service
+            android:name="com.ilop.sthome.service.SiterService"
+            android:enabled="true"
+            android:exported="true"
+            android:label="siterwell服务" />
+
+        <receiver
+            android:name="com.aliyun.iot.aep.sdk.receiver.PushReceiver"
+            android:exported="false"> <!-- 为保证receiver安全，建议设置不可导出，如需对其他应用开放可通过android：permission进行限制 -->
+            <intent-filter>
+                <action android:name="com.alibaba.push2.action.NOTIFICATION_OPENED" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.alibaba.push2.action.NOTIFICATION_REMOVED" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.alibaba.sdk.android.push.RECEIVE" />
+            </intent-filter>
+        </receiver>
+
+        <!--<provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.siterwell.familywellplus.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true"
+            tools:replace="android:authorities">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>-->
+    </application>
+
+</manifest>

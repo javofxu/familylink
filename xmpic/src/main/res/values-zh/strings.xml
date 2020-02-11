@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<resources>
+   <string name="device_stauts_unknown">状态查询中</string>
+   <string name="device_stauts_online">在线</string>
+   <string name="device_stauts_offline">离线</string>
+   <string name="dev_type_monitor">监控设备</string>
+   <string name="dev_type_smalleye">小雨点</string>
+   <string name="dev_type_boutiquerotot">摇头机</string>
+   <string name="dev_type_idr">门铃摄像头</string>
+   <string name="videos">视频管理</string>
+</resources>

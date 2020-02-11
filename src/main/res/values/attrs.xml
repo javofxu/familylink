@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <declare-styleable name="code_switch_edit">
+        <attr name="code_can_see" format="boolean" />
+        <attr name="hint_text" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="setting_info">
+        <attr name="item_titleText" format="string" />
+        <attr name="item_subTitleText" format="string" />
+        <attr name="item_detailText" format="string" />
+        <attr name="item_accessoryType">
+            <enum name="none" value="0" />
+            <enum name="arrow" value="1" />
+            <enum name="switchbutton" value="2" />
+            <enum name="radio" value="3" />
+        </attr>
+        <attr name="item_showDivider" format="boolean" />
+        <attr name="item_background" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="ipc_setting_info">
+        <attr name="titleText" format="string" />
+        <attr name="subTitleText" format="string" />
+        <attr name="detailText" format="string" />
+        <attr name="accessoryType">
+            <enum name="none" value="1" />
+            <enum name="switchbutton" value="2" />
+            <enum name="spinner" value="3" />
+        </attr>
+        <attr name="Divider" format="boolean" />
+    </declare-styleable>
+
+
+    <declare-styleable name="ColorArcProgressBar">
+        <attr name="bg_arc_color" format="color"/>
+        <attr name="degree_color" format="color"/>
+        <attr name="hint_color" format="color"/>
+        <attr name="start_color" format="color"/>
+        <attr name="end_color" format="color"/>
+        <attr name="bg_arc_width" format="dimension"/>
+        <attr name="front_width" format="dimension"/>
+        <attr name="is_seek_enable" format="boolean"/>
+        <attr name="string_title" format="string"/>
+        <attr name="string_unit" format="string"/>
+        <attr name="sweep_angle" format="integer"/>
+        <attr name="current_value" format="float"/>
+        <attr name="sub_current_value" format="float" />
+        <attr name="max_value" format="float"/>
+        <attr name="min_value" format="float"/>
+    </declare-styleable>
+
+
+
+    <!--10dp-->
+    <declare-styleable name="SwitchButton" tools:ignore="ResourceName">
+        <attr name="kswThumbDrawable" format="reference"/>
+        <attr name="kswThumbColor" format="color|reference"/>
+        <attr name="kswThumbMargin" format="dimension|reference"/>
+        <attr name="kswThumbMarginTop" format="dimension|reference"/>
+        <attr name="kswThumbMarginBottom" format="dimension|reference"/>
+        <attr name="kswThumbMarginLeft" format="dimension|reference"/>
+        <attr name="kswThumbMarginRight" format="dimension|reference"/>
+        <attr name="kswThumbWidth" format="dimension|reference"/>
+        <attr name="kswThumbHeight" format="dimension|reference"/>
+        <attr name="kswThumbRadius" format="dimension|reference"/>
+        <attr name="kswBackRadius" format="dimension|reference"/>
+        <attr name="kswBackDrawable" format="reference"/>
+        <attr name="kswBackColor" format="color|reference"/>
+        <attr name="kswFadeBack" format="boolean"/>
+        <attr name="kswThumbRangeRatio" format="float"/>
+        <attr name="kswAnimationDuration" format="integer"/>
+        <attr name="kswTintColor" format="color|reference"/>
+        <attr name="kswTextOn" format="string"/>
+        <attr name="kswTextOff" format="string"/>
+        <attr name="kswTextThumbInset" format="dimension"/>
+        <attr name="kswTextExtra" format="dimension"/>
+        <attr name="kswTextAdjust" format="dimension"/>
+    </declare-styleable>
+
+    <declare-styleable name="CustomTabLayout">
+        <attr name="tab_Mode" format="enum">
+            <enum name="mode_fixed" value="1"/>
+            <enum name="mode_scrollable" value="2"/>
+        </attr>
+        <attr name="tabIndicatorColor" format="color"/>
+        <attr name="tabSelectTextColor" format="color"/>
+        <attr name="tabTextColor" format="color"/>
+        <attr name="tabIndicatorHeight" format="dimension"/>
+        <attr name="tabIndicatorWidth" format="dimension"/>
+        <attr name="tabTextSize" format="dimension"/>
+    </declare-styleable>
+
+    <declare-styleable name="ZxingViewFinderView">
+        <attr name="scannerBoundColor" format="color" />
+        <attr name="scannerBoundCornerColor" format="color" />
+        <attr name="scannerTipTextColor" format="color" />
+        <attr name="scannerBoundWidth" format="dimension" />
+        <attr name="scannerBoundCornerWith" format="dimension" />
+        <attr name="scannerBoundCornerHeight" format="dimension" />
+        <attr name="scannerTipTextSize" format="dimension" />
+        <attr name="scannerTipTextMargin" format="dimension" />
+
+        <attr name="pstsTabBackground" format="reference" />
+        <attr name="scannerLaserResId" format="integer" />
+        <attr name="scannerTipText" format="string" />
+        <attr name="scannerTipTextGravity" format="boolean" />
+    </declare-styleable>
+</resources>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="record_type">
+        <item>Toute la video</item>
+        <item>Vidéo d’alerte</item>
+        <item>Vidéo de détection</item>
+        <item>Vidéo normale</item>
+        <item>Vidéo manuelle</item>
+        <item>Vidéo à distance</item>
+    </string-array>
+    <string-array name="pic_type">
+        <item>Tout</item>
+        <item>Alerte</item>
+        <item>Détection</item>
+        <item>Standard</item>
+        <item>À distance</item>
+        <item>Touche</item>
+        <item>Temps écoulé</item>
+        <item>Continu</item>
+    </string-array>
+</resources>

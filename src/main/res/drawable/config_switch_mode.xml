@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:oneshot="false">
+    <item android:drawable="@mipmap/switch_mode_config1" android:duration="500"></item>
+    <item android:drawable="@mipmap/switch_mode_config2" android:duration="500"></item>
+    <item android:drawable="@mipmap/switch_mode_config3" android:duration="500"></item>
+    <item android:drawable="@mipmap/switch_mode_config4" android:duration="500"></item>
+    <item android:drawable="@mipmap/switch_mode_config5" android:duration="500"></item>
+    <item android:drawable="@mipmap/switch_mode_config6" android:duration="500"></item>
+    <item android:drawable="@mipmap/switch_mode_config7" android:duration="500"></item>
+    <item android:drawable="@mipmap/switch_mode_config8" android:duration="500"></item>
+    <item android:drawable="@mipmap/switch_mode_config9" android:duration="500"></item>
+    <item android:drawable="@mipmap/switch_mode_config10" android:duration="500"></item>
+</animation-list>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#4C80F8</color>
+    <color name="main_color">#4C80F8</color>
+    <color name="main_ground">#F2F5F8</color>
+    <color name="main_center">#e5f5fe</color>
+    <color name="text_title">#FF333333</color>
+    <color name="text_line">#FF666666</color>
+    <color name="text_content">#FF151515</color>
+    <color name="text_normal">#FF999999</color>
+    <color name="device_off">#AAAAAA</color>
+    <color name="dialog_bg">#CCFCFCFC</color>
+    <color name="dialog_text">#030303</color>
+    <color name="line">#CCCCCC</color>
+    <color name="view_line">#EEEEEE</color>
+    <color name="color_1">#0f44fa</color>
+    <color name="color_2">#2fa8e8</color>
+    <color name="color_3">#43e2e0</color>
+    <color name="color_4">#45e8df</color>
+    <color name="color_5">#e4e4e4</color>
+    <color name="circle_left">#30d2f1</color>
+    <color name="circle_right">#dce3e8</color>
+    <color name="top_bar_line">#D9D9D9</color>
+    <color name="top_bar_title">#333333</color>
+    <color name="tick_yellow">#f5d747</color>
+    <color name="tick_gray">#eaeaea</color>
+    <color name="tick_white">#FFFFFF</color>
+    <color name="tick_green">#3CB371</color>
+
+    <color name="gateway_color_0">#11da28</color>
+    <color name="gateway_color_1">#33a7ff</color>
+    <color name="gateway_color_2">#c968ed</color>
+    <color name="gateway_color_3">#f067bb</color>
+    <color name="gateway_color_4">#53f6ab</color>
+    <color name="gateway_color_5">#a5f7b2</color>
+    <color name="gateway_color_6">#f56735</color>
+    <color name="gateway_color_7">#4d94ff</color>
+    <color name="gateway_color_8">#e1e1e1</color>
+    <color name="transparent">#00000000</color>
+
+    <color name="device_error">#e75a3c</color>
+    <color name="device_normal">#3fc380</color>
+    <color name="device_warn">#f9bf3b</color>
+    <color name="device_off_line">#e1e1e1</color>
+    <color name="device_installed">#43DB87</color>
+    <color name="device_not_installed">#F92F2F</color>
+</resources>

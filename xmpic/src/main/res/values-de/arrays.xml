@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="record_type">
+        <item>Alle Videos</item>
+        <item>Videoalarmierung</item>
+        <item>Videoerkennung</item>
+        <item>Video normal</item>
+        <item>Video manuell</item>
+        <item>Remote-Video</item>
+    </string-array>
+    <string-array name="pic_type">
+        <item>Alle(s)</item>
+        <item>Alarm</item>
+        <item>Erkennung</item>
+        <item>Normal</item>
+        <item>Remote</item>
+        <item>Schlüssel</item>
+        <item>Zeitraffer</item>
+        <item>Serienbild</item>
+    </string-array>
+</resources>

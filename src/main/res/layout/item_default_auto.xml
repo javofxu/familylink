@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/item_click"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_80"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/auto_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/margin_12"
+                android:paddingStart="@dimen/margin_15"
+                android:paddingEnd="@dimen/margin_15"
+                android:textSize="@dimen/text_16"
+                android:textColor="@color/text_title"
+                android:text="@string/my_scene" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:id="@+id/diyigetu"
+                    android:layout_width="@dimen/margin_36"
+                    android:layout_height="@dimen/margin_30"
+                    android:layout_marginStart="@dimen/margin_15"
+                    android:layout_centerVertical="true">
+
+                    <ImageView
+                        android:id="@+id/input1"
+                        android:layout_width="@dimen/margin_30"
+                        android:layout_height="@dimen/margin_30"
+                        android:src="@mipmap/gs156" />
+
+                    <ImageView
+                        android:id="@+id/input2"
+                        android:layout_width="@dimen/margin_15"
+                        android:layout_height="@dimen/margin_05"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentBottom="true"
+                        android:src="@mipmap/device_more"/>
+
+                </RelativeLayout>
+
+
+                <ImageView
+                    android:id="@+id/link"
+                    android:src="@mipmap/link"
+                    android:layout_width="@dimen/margin_20"
+                    android:layout_height="@dimen/margin_20"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@id/diyigetu"
+                    android:layout_margin="@dimen/margin_12"/>
+
+                <ImageView
+                    android:id="@+id/output1"
+                    android:layout_width="@dimen/margin_32"
+                    android:layout_height="@dimen/margin_32"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@id/link"
+                    android:src="@mipmap/gs156"/>
+
+                <ImageView
+                    android:id="@+id/output2"
+                    android:layout_width="@dimen/margin_32"
+                    android:layout_height="@dimen/margin_32"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@id/output1"
+                    android:layout_marginStart="@dimen/margin_12"
+                    android:src="@mipmap/gs156"/>
+
+                <RelativeLayout
+                    android:layout_width="@dimen/margin_36"
+                    android:layout_height="@dimen/margin_30"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@id/output2"
+                    android:layout_marginStart="@dimen/margin_12">
+
+                    <ImageView
+                        android:id="@+id/output3"
+                        android:layout_width="@dimen/margin_30"
+                        android:layout_height="@dimen/margin_30"
+                        android:src="@mipmap/gs156"/>
+
+                    <ImageView
+                        android:id="@+id/output4"
+                        android:layout_width="@dimen/margin_15"
+                        android:layout_height="@dimen/margin_05"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentBottom="true"
+                        android:src="@mipmap/device_more"/>
+
+                </RelativeLayout>
+            </RelativeLayout>
+        </LinearLayout>
+
+        <CheckBox
+            android:id="@+id/auto_done"
+            android:layout_width="@dimen/margin_24"
+            android:layout_height="@dimen/margin_24"
+            android:layout_margin="@dimen/margin_15"
+            android:layout_gravity="center_vertical"
+            android:button="@null"
+            android:checked="false"
+            android:background="@drawable/auto_checkbox"/>
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_1"
+        android:background="@color/top_bar_line"/>
+</LinearLayout>

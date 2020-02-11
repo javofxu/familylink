@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="ota_network_error">Error de red</string>
+    <string name="ota">Mejora de solidificación</string>
+    <string name="ota_upgrade_success">Actualización exitosa</string>
+    <string name="ota_pre_upgrade">Actualización inmediata</string>
+    <string name="ota_current_version">Versión actual</string>
+    <string name="ota_doing_upgrade">Actualización en curso</string>
+    <string name="ota_did_upgrade">Completar</string>
+    <string name="ota_refresh">Actualizar</string>
+    <string name="ota_get_info_error">Fallo en obtener información sólida</string>
+    <string name="ota_did_upgrade_failure">Mejora fallida del soporte sólido</string>
+    <string name="ota_did_upgrade_error">El dispositivo no responde</string>
+    <string name="ota_current_is_the_lasted_version">Ahora es el nuevo sólido.</string>
+</resources>

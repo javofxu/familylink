@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="85dp"
+    android:background="#FFFFFF" >
+
+    <ImageView
+        android:id="@+id/list_item_device_icon"
+        android:layout_width="@dimen/margin_48"
+        android:layout_height="@dimen/margin_48"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="@dimen/margin_15" />
+
+    <TextView
+        android:id="@+id/list_item_device_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@+id/list_item_device_icon"
+        android:layout_toStartOf="@+id/list_item_device_action"
+        android:layout_marginStart="@dimen/margin_15"
+        android:layout_marginEnd="@dimen/margin_10"
+        android:textSize="@dimen/title_size_edit"
+        android:textColor="@color/text_title"
+        android:ellipsize="marquee"
+        android:singleLine="true"
+        android:text="@string/device"/>
+
+    <Button
+        android:id="@+id/list_item_device_action"
+        android:layout_width="@dimen/margin_80"
+        android:layout_height="@dimen/margin_32"
+        android:layout_marginEnd="@dimen/margin_15"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/round_state_bg"
+        android:textColor="@color/white"
+        android:text="@string/btnConfirmTitle"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_1"
+        android:background="@color/line_bg"/>
+</RelativeLayout>

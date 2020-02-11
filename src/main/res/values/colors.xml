@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="white">#FFFFFF</color>
+    <color name="line_bg">#F5F5F5</color>
+    <color name="black">#000000</color>
+    <color name="mainGround">#90cbcfd2</color>
+    <color name="nonChose">#717171</color>
+    <color name="color_white">#ffffff</color>
+    <color name="red">#ff0000</color>
+    <color name="toast_text_content">#ffa19d94</color>
+    <color name="text_desc">#ffbebbb4</color>
+    <color name="text_color">#717171</color>
+    <color name="text_color_hint">#cdcdcd</color>
+    <color name="text_color_selected">#4394d0</color>
+    <color name="num_color">#9ca2a6</color>
+    <color name="list_divider">#ffdadada</color>
+    <color name="transparent">#00000000</color>
+    <color name="item_not">#c9c9c9</color>
+    <color name="delist_bk">#616162</color>
+    <color name="status_bar_bg">#60c8c8c8</color>
+    <color name="item_pressed">#80888888</color>
+    <color name="monitor_control_panel_bg">#E096d5e7</color>
+    <color name="big_red">#e60012</color>
+    <color name="test_history">#d57e89</color>
+    <color name="common_history">#678fbb</color>
+    <color name="empty_history">#D9D9D9</color>
+    <color name="dark_blue">#2264c2</color>
+
+    <color name="color_F6F6F6">#F7F7F7</color>
+    <color name="color_999999">#999999</color>
+
+    <color name="mine_color_333333">#333333</color>
+    <color name="mine_color_FFFFFF">#FFFFFF</color>
+    <color name="mine_color_F6F6F6">#F6F6F6</color>
+    <color name="mine_color_EDEDED">#EDEDED</color>
+    <color name="mine_color_999999">#999999</color>
+    <color name="mine_color_1FC88B">#1FC88B</color>
+    <color name="mine_color_030303">#030303</color>
+    <color name="mine_color_00000000">#00000000</color>
+    <color name="mine_color_33000000">#33000000</color>
+
+</resources>

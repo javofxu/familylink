@@ -1,0 +1,13 @@
+package com.ilop.sthome.data.event;
+
+public class EventUdpReceive {
+    private String msg;
+
+    public String getMsg() {
+        return msg;
+    }
+
+    public void setMsg(String msg) {
+        this.msg = msg;
+    }
+}

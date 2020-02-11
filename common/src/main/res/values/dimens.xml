@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="text_10">10sp</dimen>
+    <dimen name="text_12">12sp</dimen>
+    <dimen name="text_14">14sp</dimen>
+    <dimen name="text_16">16sp</dimen>
+    <dimen name="text_18">18sp</dimen>
+    <dimen name="text_20">20sp</dimen>
+    <dimen name="text_26">26sp</dimen>
+    <dimen name="text_28">28sp</dimen>
+    <dimen name="text_42">42sp</dimen>
+
+    <dimen name="margin_1">1dp</dimen>
+    <dimen name="margin_2">2dp</dimen>
+    <dimen name="margin_3">3dp</dimen>
+    <dimen name="margin_4">4dp</dimen>
+    <dimen name="margin_05">5dp</dimen>
+
+    <dimen name="margin_20">20dp</dimen>
+    <dimen name="margin_08">8dp</dimen>
+    <dimen name="margin_10">10dp</dimen>
+    <dimen name="margin_12">12dp</dimen>
+    <dimen name="margin_15">15dp</dimen>
+    <dimen name="margin_18">18dp</dimen>
+    <dimen name="margin_96">96dp</dimen>
+    <dimen name="margin_100">100dp</dimen>
+    <dimen name="margin_120">120dp</dimen>
+    <dimen name="margin_150">150dp</dimen>
+    <dimen name="margin_80">80dp</dimen>
+    <dimen name="margin_88">88dp</dimen>
+    <dimen name="margin_25">25dp</dimen>
+    <dimen name="margin_27">27dp</dimen>
+    <dimen name="margin_28">28dp</dimen>
+
+    <dimen name="margin_60">60dp</dimen>
+    <dimen name="margin_64">64dp</dimen>
+    <dimen name="margin_66">66dp</dimen>
+    <dimen name="margin_40">40dp</dimen>
+    <dimen name="margin_48">48dp</dimen>
+    <dimen name="margin_36">36dp</dimen>
+    <dimen name="margin_50">50dp</dimen>
+    <dimen name="margin_55">55dp</dimen>
+    <dimen name="margin_30">30dp</dimen>
+    <dimen name="margin_160">160dp</dimen>
+    <dimen name="margin_200">200dp</dimen>
+    <dimen name="margin_220">220dp</dimen>
+    <dimen name="margin_240">240dp</dimen>
+    <dimen name="margin_260">260dp</dimen>
+    <dimen name="margin_280">280dp</dimen>
+    <dimen name="margin_137">137dp</dimen>
+    <dimen name="margin_72">72dp</dimen>
+    <dimen name="margin_65">65dp</dimen>
+    <dimen name="margin_180">180dp</dimen>
+    <dimen name="margin_32">32dp</dimen>
+    <dimen name="margin_58">58dp</dimen>
+    <dimen name="margin_24">24dp</dimen>
+</resources>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="CustomScrollView">
+        <attr name="top_offset" format="dimension" />
+        <attr name="top_viewHeight" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="AutoSplitTextView">
+        <attr name="paddingLeft" format="dimension" />
+        <attr name="paddingTop" format="dimension" />
+        <attr name="paddingRight" format="dimension" />
+        <attr name="paddingBottom" format="dimension" />
+        <attr name="text_Size" format="dimension" />
+        <attr name="text_Color" format="string" />
+        <attr name="text" format="string"/>
+        <attr name="line_Spacing" format="integer" />
+        <attr name="max_Line" format="integer"/>
+        <attr name="ellipsis" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="RoundProgressView">
+        <attr name="outRoundColor" format="color"/>
+        <attr name="centerRoundColor" format="color" />
+        <attr name="centerErrRoundColor" format="color"/>
+        <attr name="progressRoundColor" format="color"/>
+        <attr name="progressRoundBgColor" format="color"/>
+        <attr name="progressErrRoundBgColor" format="color"/>
+    </declare-styleable>
+
+    <declare-styleable name="TickView">
+        <!--没有选中的基调颜色-->
+        <attr name="uncheck_base_color" format="color" />
+        <!--选中后的基调颜色-->
+        <attr name="check_base_color" format="color" />
+        <!--选中后钩的颜色-->
+        <attr name="check_tick_color" format="color" />
+        <!--圆的半径-->
+        <attr name="radius" format="dimension" />
+        <!--圆的半径-->
+        <attr name="tick_radius" format="dimension" />
+        <!--圆的半径-->
+        <attr name="tick_radius_set" format="dimension" />
+        <!--动画执行的速度-->
+        <attr name="rate">
+            <enum name="slow" value="0"/>
+            <enum name="normal" value="1"/>
+            <enum name="fast" value="2"/>
+        </attr>
+        <attr name="clickable" format="boolean"/>
+    </declare-styleable>
+
+    <declare-styleable name="CustomEditText">
+        <attr name="hintColor" format="color"/>
+        <attr name="hintSize" format="dimension"/>
+        <attr name="drawable" format="reference"/>
+        <attr name="drawablePadding" format="dimension"/>
+        <attr name="inputHint" format="string"/>
+        <attr name="inputPaddingTop" format="dimension"/>
+        <attr name="inputPaddingBottom" format="dimension"/>
+        <attr name="inputPaddingLeft" format="dimension"/>
+        <attr name="inputPaddingRight" format="dimension"/>
+        <attr name="inputContent" format="string"/>
+        <attr name="inputPadding" format="dimension"/>
+        <attr name="inputBackground" format="reference|color|dimension"/>
+        <attr name="inputSize" format="dimension"/>
+        <attr name="inputColor" format="color"/>
+        <attr name="inputHeight" format="dimension"/>
+        <attr name="inputType">
+            <enum name = "text" value="0"/>
+            <enum name = "textPassword" value="1"/>
+            <enum name = "number" value="2"/>
+        </attr>
+        <attr name="rightButton" format="reference"/>
+        <attr name="btnType">
+            <enum name="delete" value="1"/>
+            <enum name="eyes" value="2"/>
+        </attr>
+        <attr name="btnVisibility" >
+            <enum name="visible" value="1"/>
+            <enum name="gone" value="8"/>
+        </attr>
+        <attr name="clearContentsFocus" format="boolean"/>
+
+    </declare-styleable>
+
+    <declare-styleable name="CustomBannerView">
+        <attr name="open_mz_mode" format="boolean"/>
+        <attr name="canLoop" format="boolean"/>
+        <attr name="indicatorPaddingLeft" format="dimension"/>
+        <attr name="indicatorPaddingRight" format="dimension"/>
+        <attr name="indicatorPaddingTop" format="dimension"/>
+        <attr name="indicatorPaddingBottom" format="dimension"/>
+        <attr name="indicatorAlign">
+            <enum name="left" value="0"/>
+            <enum name="center" value="1"/>
+            <enum name="right" value="2"/>
+        </attr>
+        <attr name="middle_page_cover" format="boolean"/>
+    </declare-styleable>
+</resources>

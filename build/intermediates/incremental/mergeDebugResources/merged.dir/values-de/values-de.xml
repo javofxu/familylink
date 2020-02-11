@@ -1,0 +1,1176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:ns1="http://schemas.android.com/tools" xmlns:ns2="urn:oasis:names:tc:xliff:document:1.2">
+    <string-array name="alert_actions">
+        <item>Test Alarm</item>
+        <item>Meldung</item>
+    </string-array>
+    <string-array name="check_pics">
+        <item>Remotebilder ansehen</item>
+        <item>Lokale Screenshots ansehen</item>
+    </string-array>
+    <string-array name="cx_alert_actions">
+        <item>Rauchmelder</item>
+        <item>Temperaturalarm</item>
+        <item>Alarm testen</item>
+    </string-array>
+    <string-array name="device_setup_alarm_level" ns1:keep="@array/device_setup_alarm_level">
+        <item>Tiefer</item>
+        <item>Junior</item>
+        <item>Senior</item>
+    </string-array>
+    <string-array name="device_setup_camera_definition_values" ns1:keep="@array/device_setup_camera_definition_values">
+        <item>Am besten</item>
+        <item>Sehr gut</item>
+        <item>Gut</item>
+        <item>Durchschnittlich</item>
+        <item>Nicht gut</item>
+        <item>Mangelhaft</item>
+    </string-array>
+    <string-array name="device_setup_camera_metering_values" ns1:keep="@array/device_setup_camera_metering_values">
+        <item>Ganzheitliche Belichtungsmessung</item>
+        <item>Zentrale Belichtungsmessung</item>
+        <item>Punkt</item>
+    </string-array>
+    <string-array name="device_setup_camera_noise_reduction_values" ns1:keep="@array/device_setup_camera_noise_reduction_values">
+        <item>SCHLIESSEN</item>
+        <item>Junior</item>
+        <item>Senior</item>
+    </string-array>
+    <string-array name="device_setup_color_mode_values" ns1:keep="@array/device_setup_color_mode_values">
+        <item>Farbig</item>
+        <item>Schwarz-Weiß</item>
+    </string-array>
+    <string-array name="device_setup_electronic_slow_shutter_values" ns1:keep="@array/device_setup_electronic_slow_shutter_values">
+        <item>SCHLIESSEN</item>
+        <item>Junior</item>
+        <item>Senior</item>
+    </string-array>
+    <string-array name="device_setup_exposure_time_values" ns1:keep="@array/device_setup_exposure_time_values">
+        <item>auto</item>
+        <item>1/50</item>
+        <item>1/120</item>
+        <item>1/250</item>
+        <item>1/500</item>
+        <item>1/1000</item>
+        <item>1/2000</item>
+        <item>1/4000</item>
+        <item>1/10000</item>
+    </string-array>
+    <string-array name="device_setup_record_mode_values">
+        <item>Immer</item>
+        <item>Nie</item>
+        <item>Verkettung</item>
+    </string-array>
+    <string-array name="device_setup_scene_mode_values" ns1:keep="@array/device_setup_scene_mode_values">
+        <item>automatisch</item>
+        <item>Innenbereich</item>
+        <item>Außenbereich</item>
+    </string-array>
+    <array name="dimming_modlue_action" ns1:keep="@array/dimming_modlue_action">
+        <item>OFFEN</item>
+        <item>GESCHLOSSEN</item>
+    </array>
+    <string-array name="door_actions">
+        <item>TÜR OFFEN</item>
+        <item>TÜR GESCHLOSSEN</item>
+        <item>WARTE AUF TÜR</item>
+    </string-array>
+    <string-array name="gateway_actions">
+        <item>UNERLAUBTER EINGRIFF</item>
+        <item>WARNALARM</item>
+        <item>STILLE</item>
+        <item>Die glocke ALARM</item>
+    </string-array>
+    <string-array name="gatewaycolor">
+        <item>Dunkelgrün</item>
+        <item>Himmelblau</item>
+        <item>Purpurschwarz</item>
+        <item>Rosa</item>
+        <item>Hellgrün</item>
+        <item>Grasgrün</item>
+        <item>Mandarine</item>
+        <item>Marineblau</item>
+        <item>Keine Farbe</item>
+    </string-array>
+    <array name="group_room" ns1:keep="@array/group_room">
+        <item>All device</item>
+    </array>
+    <string-array name="guard_actions">
+        <item>öffnen</item>
+        <item>schließen</item>
+    </string-array>
+    <string-array name="lamp_actions" ns1:keep="@array/lamp_actions">
+        <item>rot</item>
+        <item>grün</item>
+        <item>blau</item>
+        <item>rot-grün</item>
+        <item>rot-blau</item>
+        <item>grün-blau</item>
+        <item>öffnen</item>
+        <item>schließen</item>
+        <item>Alarm</item>
+        <item>farbig</item>
+    </string-array>
+    <array name="lianxi">
+        <item>0574-83007591</item>
+        <item>sales@china-siter.com</item>
+    </array>
+    <array name="lock_input">
+        <item>Dietrich</item>
+        <item>Code entsperren</item>
+        <item>Card entsperren</item>
+        <item>Fingerabdruck freischalten</item>
+        <item>Illegale Operation</item>
+        <item>Die abriss operationen</item>
+        <item>Stress Betrieb</item>
+    </array>
+    <string-array name="mode_button_signs">
+        <item>HILFE</item>
+        <item>OFFLINE</item>
+    </string-array>
+    <array name="month" ns1:keep="@array/month">
+        <item>January</item>
+        <item>February</item>
+        <item>March</item>
+        <item>April</item>
+        <item>May</item>
+        <item>June</item>
+        <item>July</item>
+        <item>August</item>
+        <item>September</item>
+        <item>October</item>
+        <item>November</item>
+        <item>December</item>
+    </array>
+    <array name="outdoor_siren_action">
+        <item>Stumm</item>
+        <item>Alarm</item>
+    </array>
+    <string-array name="pic_type">
+        <item>Alle(s)</item>
+        <item>Alarm</item>
+        <item>Erkennung</item>
+        <item>Normal</item>
+        <item>Remote</item>
+        <item>Schlüssel</item>
+        <item>Zeitraffer</item>
+        <item>Serienbild</item>
+    </string-array>
+    <string-array name="pir_signs">
+        <item>DA IST JEMAND</item>
+        <item>NORMAL</item>
+        </string-array>
+    <array name="question">
+        <item>WLAN-Passwort falsch</item>
+        <item>Probleme mit gewissen Zeichen</item>
+        <item>WLAN-Frequenz</item>
+    </array>
+    <array name="question_detail">
+        <item>Ihr WLAN-Passwort ist nicht korrekt</item>
+        <item>Verwenden Sie keine Leer-und Sonderzeichen</item>
+        <item>Das Gateway unterstützt nur 2.4GHz; bitte schalten Sie(temporär) nur zur Installation des Gateway die 5 Ghz-Frequenz Ihres Wlan aus</item>
+    </array>
+    <string-array name="record_type">
+        <item>Alle Videos</item>
+        <item>Videoalarmierung</item>
+        <item>Videoerkennung</item>
+        <item>Video normal</item>
+        <item>Video manuell</item>
+        <item>Remote-Video</item>
+    </string-array>
+    <string-array name="socket_actions">
+        <item>OFFEN</item>
+        <item>GESCHLOSSEN</item>
+        <item>NSCHALTER</item>
+    </string-array>
+    <array name="socket_channel">
+        <item>Kanal1</item>
+        <item>Kanal2</item>
+    </array>
+    <string-array name="sos_signs">
+        <item>HILFE</item>
+        <item>OFFLINE</item>
+    </string-array>
+    <array name="testMode">
+        <item>Test single</item>
+        <item>Test all</item>
+    </array>
+    <array name="thtrigger_method">
+        <item>Temperatur</item>
+        <item>Luftfeuchtigkeit</item>
+    </array>
+    <array name="thtrigger_style">
+        <item>&lt;=</item>
+        <item>>=</item>
+    </array>
+    <string-array name="week">
+        <item>Mo</item>
+        <item>Di</item>
+        <item>Mi</item>
+        <item>Do</item>
+        <item>Fr</item>
+        <item>Sa</item>
+        <item>So</item>
+    </string-array>
+    <string-array name="week2">
+        <item>Mo</item>
+        <item>Di</item>
+        <item>Mi</item>
+        <item>Do</item>
+        <item>Fr</item>
+        <item>Sa</item>
+        <item>So</item>
+    </string-array>
+    <string-array name="week3">
+        <item>So</item>
+        <item>Mo</item>
+        <item>Di</item>
+        <item>Mi</item>
+        <item>Do</item>
+        <item>Fr</item>
+        <item>So</item>
+    </string-array>
+    <string name="EE_ACCOUNT_CERTIFICATE_FAILURE">ZERTIFIKAT FEHLER</string>
+    <string name="EE_ACCOUNT_CERTIFICATE_NOT_EXIST">ZERTIFIKAT EXISTIERT NICHT</string>
+    <string name="EE_ACCOUNT_COMFIRMPWD_FORMAT_NOT_CORRECT">BESTÄTIGTEST FORMAT IST NICHT KORREKT</string>
+    <string name="EE_ACCOUNT_COMFIRMPWD_IS_EMPTY">BESTÄTIGUNG IST LEER</string>
+    <string name="EE_ACCOUNT_DEVICE_ALREADY_EXSIT">GERÄT EXISTIERT BEREITS</string>
+    <string name="EE_ACCOUNT_DEVICE_CHANGE_IFNO_FAIL">GEREÄT INFORMATION VERÄNDERN FEHLGESCHLAGEN</string>
+    <string name="EE_ACCOUNT_DEVICE_ILLEGAL_NOT_ADD">GERÄT ILLEGAL, NICHT HINZUGEFÜGT</string>
+    <string name="EE_ACCOUNT_EMAIL_FORMATE_NOT_CORRECT">E-MAIL FORMAT IST NICHT KORREKT</string>
+    <string name="EE_ACCOUNT_EMAIL_IS_EMPTY">E-MAIL IST LEER</string>
+    <string name="EE_ACCOUNT_EMAIL_IS_EXIST">E-MAILS EXISTIEREN</string>
+    <string name="EE_ACCOUNT_EMAIL_NOT_EXIST">E-MAILS EXISTIEREN NICHT</string>
+    <string name="EE_ACCOUNT_ENCRYPT_CHECK_FAILURE">ENTSCHLÜSSELN CHECK FEHLER</string>
+    <string name="EE_ACCOUNT_HTTP_HEADER_ERROR">HTTP HEADER FEHLER</string>
+    <string name="EE_ACCOUNT_HTTP_SERVER_ERROR">HTTP SERVER FEHLER</string>
+    <string name="EE_ACCOUNT_HTTP_USERNAME_PWD_ERROR">Falscher Benutzername oder Passwort</string>
+    <string name="EE_ACCOUNT_MESSAGE_INTERFACE_CHECK_ERROR">BENACHRICHTIGUNGS INTERFACE CHECK FEHLER</string>
+    <string name="EE_ACCOUNT_MESSAGE_INTERFACE_PARM_ERROR">BENACHRICHTIGUNGS INTERFACE PARM FEHLER</string>
+    <string name="EE_ACCOUNT_MESSAGE_SEND_ERROR">NACHRICHT SENDEN FEHLER</string>
+    <string name="EE_ACCOUNT_MESSAGE_SEND_OFTEN">NACHRICHT OFT SENDEN</string>
+    <string name="EE_ACCOUNT_MESSAGE_TIME_MORE_THAN_THREE">ZEIT MEHR ALS DREI</string>
+    <string name="EE_ACCOUNT_MODIFY_PASSWORD_ERROR">VERÄNDERN PASSWORT FEHLER</string>
+    <string name="EE_ACCOUNT_OLD_PASSWORD_ERROR">ALTES PASSWORT EXISTIERT NICHT</string>
+    <string name="EE_ACCOUNT_PARMA_ABNORMAL">PARMA ABNORMAL</string>
+    <string name="EE_ACCOUNT_PASSWORD_FORMAT_NOT_CORRECT">PASSWORT FORMAT IST NICHT KORREKT</string>
+    <string name="EE_ACCOUNT_PASSWORD_IS_EMPTY">PASSWORT IST LEER</string>
+    <string name="EE_ACCOUNT_PASSWORD_NOT_SAME">Passwort Unstimmigkeit</string>
+    <string name="EE_ACCOUNT_PHONE_FORMAT_NOT_CORRECT">TELEFON FORMAT IST NICHT KORREKT</string>
+    <string name="EE_ACCOUNT_PHONE_IS_EMPTY">TELEFON IST LEER</string>
+    <string name="EE_ACCOUNT_PHONE_IS_EXIST">TELEFON EXISTIERT</string>
+    <string name="EE_ACCOUNT_PHONE_NOT_EXSIT">TELEFON EXISTIERT NICHT</string>
+    <string name="EE_ACCOUNT_SEND_CODE_FAIL">CODE SENDEN FEHLGESCHLAGEN</string>
+    <string name="EE_ACCOUNT_USERID_IS_EMPTY">BENUTZER ID IST LEER</string>
+    <string name="EE_ACCOUNT_USERNAME_FORMAT_NOT_CORRECT">BENUTZERNAME FORMAT IST NICHT KORREKT</string>
+    <string name="EE_ACCOUNT_USERNAME_HAS_BEEN_REGISTERED">Benutzername wurde registriert</string>
+    <string name="EE_ACCOUNT_USERNAME_IS_EMPTY">BENUTZERNAME IST LEER</string>
+    <string name="EE_ACCOUNT_USER_NOT_EXSIT">BENUTZER EXISTIERT NICHT</string>
+    <string name="EE_ACCOUNT_VERIFICATION_CODE_ERROR">Verifizierungscode Fehler</string>
+    <string name="EE_ACCOUNT_VERIFICATION_CODE_IS_EMPTY">VERIFIZIERUNGSCODE IST _ LEER</string>
+    <string name="EE_ACCOUNT_VIDEO_EMPTY">VIDEO IST LEER</string>
+    <string name="EE_AS_CANCEL_DEV_PUBLIC_CODE">Serverantwort fehlgeschlagen</string>
+    <string name="EE_AS_CANCEL_SHARE_VIDEO_CODE">Serverantwort fehlgeschlagen</string>
+    <string name="EE_AS_CHECK_CODE_FOR_EMAIL">Serverantwort fehlgeschlagen</string>
+    <string name="EE_AS_CHECK_CODE_FOR_EMAIL1">Interface Bestätigung fehlgeschlagen</string>
+    <string name="EE_AS_CHECK_CODE_FOR_EMAIL2">PARAM FEHLER</string>
+    <string name="EE_AS_CHECK_CODE_FOR_EMAIL3">Verifizierungscode Fehler</string>
+    <string name="EE_AS_CHECK_CODE_FOR_EMAIL4">Mailbox existiert nicht</string>
+    <string name="EE_AS_CHECK_PWD_CODE1">Interface Bestätigung fehlgeschlagen</string>
+    <string name="EE_AS_CHECK_PWD_CODE2">PARAM FEHLER</string>
+    <string name="EE_AS_CHECK_PWD_CODE3">Verifizierungscode Fehler</string>
+    <string name="EE_AS_CHECK_PWD_CODE4">Telefonnummer existiert nicht</string>
+    <string name="EE_AS_CHECK_PWD_STRENGTH_CODE">Serverantwort fehlgeschlagen</string>
+    <string name="EE_AS_CHECK_PWD_STRENGTH_CODE1">Interface Bestätigung fehlgeschlagen</string>
+    <string name="EE_AS_CHECK_PWD_STRENGTH_CODE2">PARAM FEHLER</string>
+    <string name="EE_AS_CHECK_PWD_STRENGTH_CODE3">Ungültiges Passwort</string>
+    <string name="EE_AS_CHECK_USER_REGISTE_CODE">Serverantwort fehlgeschlagen</string>
+    <string name="EE_AS_CHECK_USER_REGISTE_CODE1">Interface Bestätigung fehlgeschlagen</string>
+    <string name="EE_AS_CHECK_USER_REGISTE_CODE2">PARAM FEHLER</string>
+    <string name="EE_AS_CHECK_USER_REGISTE_CODE3">Benutzer wurde nicht registriert</string>
+    <string name="EE_AS_CREATE_USER_PHOTOS_CODE">SServerantwort fehlgeschlagen</string>
+    <string name="EE_AS_DELETE_PHOTOS_CODE">Serverantwort fehlgeschlagen</string>
+    <string name="EE_AS_DELETE_PHOTO_CODE">Serverantwort fehlgeschlagen</string>
+    <string name="EE_AS_DELETE_SHORT_VIDEO_CODE">Serverantwort fehlgeschlagen</string>
+    <string name="EE_AS_DEV_REGISTER_CODE">Serverantwort fehlgeschlagen</string>
+    <string name="EE_AS_EDIT_PHOTO_INFO_CODE">Serverantwort fehlgeschlagen</string>
+    <string name="EE_AS_EDIT_SHORT_VIDEO_INFO_CODE">Serverantwort fehlgeschlagen</string>
+    <string name="EE_AS_EIDIT_PWD_CODE1">Interface Bestätigung fehlgeschlagen</string>
+    <string name="EE_AS_EIDIT_PWD_CODE2">PARAM FEHLER</string>
+    <string name="EE_AS_EIDIT_PWD_CODE3">Das neue Passwort genügt nicht den Bestimmungen</string>
+    <string name="EE_AS_EIDIT_PWD_CODE4">Ursprüngliches Passwort Fehler</string>
+    <string name="EE_AS_EIDIT_PWD_CODE5">Bitte geben Sie ein neues Passwort ein, es muss anders als das ursprüngliche sein</string>
+    <string name="EE_AS_FORGET_PWD_CODE1">Interface Bestätigung fehlgeschlagen</string>
+    <string name="EE_AS_FORGET_PWD_CODE2">PARAM FEHLER</string>
+    <string name="EE_AS_FORGET_PWD_CODE3">SMS LIMIT</string>
+    <string name="EE_AS_FORGET_PWD_CODE4">SENDEFEHLER</string>
+    <string name="EE_AS_FORGET_PWD_CODE5">Telefonnummer existiert nicht</string>
+    <string name="EE_AS_GET_COMMENT_LIST_CODE">Serverantwort fehlgeschlagen</string>
+    <string name="EE_AS_GET_PHOTO_LIST_CODE">Serverantwort fehlgeschlagen</string>
+    <string name="EE_AS_GET_PUBLIC_DEV_LIST_CODE">Serverantwort fehlgeschlagen</string>
+    <string name="EE_AS_GET_SHARE_DEV_LIST_CODE">Serverantwort fehlgeschlagen</string>
+    <string name="EE_AS_GET_SHORT_VIDEO_LIST_CODE">Serverantwort fehlgeschlagen</string>
+    <string name="EE_AS_GET_USER_PHOTOS_LIST_CODE">Serverantwort fehlgeschlagen</string>
+    <string name="EE_AS_GET_VIDEO_INFO_CODE">Serverantwort fehlgeschlagen</string>
+    <string name="EE_AS_LOGIN_CODE1">Interface Bestätigung fehlgeschlagen</string>
+    <string name="EE_AS_LOGIN_CODE2">PARAM FEHLER</string>
+    <string name="EE_AS_LOGIN_CODE3">Login fehlgeschlagen, Benutzername oder Passwort Fehler</string>
+    <string name="EE_AS_PHONE_CODE0">API FEHLER</string>
+    <string name="EE_AS_PHONE_CODE1">PRAM FEHLER</string>
+    <string name="EE_AS_PHONE_CODE2">TELEFON REGISTRIERT</string>
+    <string name="EE_AS_PHONE_CODE3">SMS LIMIT</string>
+    <string name="EE_AS_PHONE_CODE4">SENDEFEHLER</string>
+    <string name="EE_AS_PHONE_CODE5">Kann nur innerhalb von 120 Sekunden gesendet werden</string>
+    <string name="EE_AS_REGISTER_CODE0">Interface Bestätigung fehlgeschlagen</string>
+    <string name="EE_AS_REGISTER_CODE1">PARAM FEHLER</string>
+    <string name="EE_AS_REGISTER_CODE2">TELEFON REGISTRIERT</string>
+    <string name="EE_AS_REGISTER_CODE3">BENUTZERNAME REGISTRIERT</string>
+    <string name="EE_AS_REGISTER_CODE4">Registrierfehler</string>
+    <string name="EE_AS_REGISTER_CODE5">Registrierung fehlgeschlagen (MSG fehlen bestimmte Informationen)</string>
+    <string name="EE_AS_REGISTER_EXTEND_CODE0">Interface Bestätigung fehlgeschlagen</string>
+    <string name="EE_AS_REGISTER_EXTEND_CODE1">Interface Bestätigung fehlgeschlagen</string>
+    <string name="EE_AS_REGISTER_EXTEND_CODE2">Telefonnummer wurde registriert</string>
+    <string name="EE_AS_REGISTER_EXTEND_CODE3">Benutzername wurde registriert</string>
+    <string name="EE_AS_REGISTER_EXTEND_CODE4">Registrierungsfehler</string>
+    <string name="EE_AS_REGISTER_EXTEND_CODE5">Registrierung fehlgeschlagen</string>
+    <string name="EE_AS_REGISTE_BY_EMAIL_CODE">Serverantwort fehlgeschlagen</string>
+    <string name="EE_AS_REGISTE_BY_EMAIL_CODE1">Interface Bestätigung fehlgeschlagen</string>
+    <string name="EE_AS_REGISTE_BY_EMAIL_CODE2">PARAM FEHLER</string>
+    <string name="EE_AS_REGISTE_BY_EMAIL_CODE3">Benutzername wurde registriert</string>
+    <string name="EE_AS_REGISTE_BY_EMAIL_CODE4">Registrierfehler</string>
+    <string name="EE_AS_REGISTE_BY_EMAIL_CODE5">Mailbox wurde registriert</string>
+    <string name="EE_AS_REGISTE_BY_EMAIL_CODE6">Login ist fehlgeschlagen</string>
+    <string name="EE_AS_REGISTE_BY_EMAIL_EXTEND_CODE">Serverantwort fehlgeschlagen</string>
+    <string name="EE_AS_REGISTE_BY_EMAIL_EXTEND_CODE1">Interface Bestätigung fehlgeschlagen</string>
+    <string name="EE_AS_REGISTE_BY_EMAIL_EXTEND_CODE2">Parameter Fehler</string>
+    <string name="EE_AS_REGISTE_BY_EMAIL_EXTEND_CODE3">Benutzer wurde registriert</string>
+    <string name="EE_AS_REGISTE_BY_EMAIL_EXTEND_CODE4">Registrierungsfehler</string>
+    <string name="EE_AS_REGISTE_BY_EMAIL_EXTEND_CODE5">Mailbox wurde registriert</string>
+    <string name="EE_AS_REGISTE_BY_EMAIL_EXTEND_CODE6">Login ist fehlgeschlagen</string>
+    <string name="EE_AS_RESET_PWD_BY_EMAIL">Serverantwort fehlgeschlagen</string>
+    <string name="EE_AS_RESET_PWD_BY_EMAIL1">Interface Bestätigung fehlgeschlagen</string>
+    <string name="EE_AS_RESET_PWD_BY_EMAIL2">PARAM FEHLER</string>
+    <string name="EE_AS_RESET_PWD_BY_EMAIL3">Neustart fehlgeschlagen</string>
+    <string name="EE_AS_RESET_PWD_BY_EMAIL4">Telefonnummer oder Mailbox existieren nicht</string>
+    <string name="EE_AS_RESET_PWD_CODE1">Interface Bestätigung fehlgeschlagen</string>
+    <string name="EE_AS_RESET_PWD_CODE2">PARAM FEHLER</string>
+    <string name="EE_AS_RESET_PWD_CODE3">Das neue Passwort genügt nicht den Bestimmungen</string>
+    <string name="EE_AS_RESET_PWD_CODE4">Die zwei neu eingegeben Passwörter stimmen nicht überein</string>
+    <string name="EE_AS_RESET_PWD_CODE5">Telefonnummer existiert nicht</string>
+    <string name="EE_AS_SELECT_AUTHCODE_CDOE">Serverantwort fehlgeschlagen</string>
+    <string name="EE_AS_SELECT_AUTHCODE_CDOE1">Serverabfragefehler</string>
+    <string name="EE_AS_SEND_COMMNET_CODE">Serverantwort fehlgeschlagen</string>
+    <string name="EE_AS_SEND_EMAIL_CODE">Serverantwort fehlgeschlagen</string>
+    <string name="EE_AS_SEND_EMAIL_CODE1">Interface Bestätigung fehlgeschlagen</string>
+    <string name="EE_AS_SEND_EMAIL_CODE2">PARAM FEHLER</string>
+    <string name="EE_AS_SEND_EMAIL_CODE3">E-Mail registriert</string>
+    <string name="EE_AS_SEND_EMAIL_CODE4">SENDEFEHLER</string>
+    <string name="EE_AS_SEND_EMAIL_FOR_CODE">Serverantwort fehlgeschlagen</string>
+    <string name="EE_AS_SEND_EMAIL_FOR_CODE1">Interface Bestätigung fehlgeschlagen</string>
+    <string name="EE_AS_SEND_EMAIL_FOR_CODE3">PARAM FEHLER</string>
+    <string name="EE_AS_SEND_EMAIL_FOR_CODE4">SENDEFEHLER</string>
+    <string name="EE_AS_SEND_EMAIL_FOR_CODE5">Mailbox existiert nicht</string>
+    <string name="EE_AS_SEND_EMAIL_FOR_CODE6">Boxen und Benutzername stimmen nicht überein</string>
+    <string name="EE_AS_SET_DEV_PUBLIC_CODE">Serverantwort fehlgeschlagen</string>
+    <string name="EE_AS_SHARE_DEV_VIDEO_CODE">Serverantwort fehlgeschlagen</string>
+    <string name="EE_AS_SYS_BINDING_PHONE_CODE">Serverantwort fehlgeschlagen</string>
+    <string name="EE_AS_SYS_BINDING_PHONE_CODE1">Interface Bestätigung fehlgeschlagen</string>
+    <string name="EE_AS_SYS_BINDING_PHONE_CODE2">PARAM FEHLER</string>
+    <string name="EE_AS_SYS_BINDING_PHONE_CODE3">Telefonnummer wurde verbunden</string>
+    <string name="EE_AS_SYS_BINDING_PHONE_CODE4">Benutzername existiert nicht</string>
+    <string name="EE_AS_SYS_BINDING_PHONE_CODE5">Verifizierungscode Fehler</string>
+    <string name="EE_AS_SYS_BINDING_PHONE_CODE6">Verbindung fehlgeschlagen</string>
+    <string name="EE_AS_SYS_BINDING_PHONE_CODE7">Benutzerpasswort Fehler</string>
+    <string name="EE_AS_SYS_GET_USER_INFO_CODE">Serverantwort fehlgeschlagen</string>
+    <string name="EE_AS_SYS_GET_USER_INFO_CODE1">Interface Bestätigung fehlgeschlagen</string>
+    <string name="EE_AS_SYS_GET_USER_INFO_CODE2">PARAM FEHLER</string>
+    <string name="EE_AS_SYS_GET_USER_INFO_CODE3">Benutzername existiert nicht</string>
+    <string name="EE_AS_SYS_GET_USER_INFO_CODE4">Erhalte Fehlermeldung</string>
+    <string name="EE_AS_SYS_GET_USER_INFO_CODE5">Benutzerpasswort Fehler</string>
+    <string name="EE_AS_SYS_LOGOUT_CODE">Serverantwort fehlgeschlagen</string>
+    <string name="EE_AS_SYS_LOGOUT_CODE1">Interface Bestätigung fehlgeschlagen</string>
+    <string name="EE_AS_SYS_LOGOUT_CODE2">PARAM FEHLER</string>
+    <string name="EE_AS_SYS_NO_VALIDATED_REGISTER_CODE">Serverantwort fehlgeschlagen</string>
+    <string name="EE_AS_SYS_NO_VALIDATED_REGISTER_CODE1">Interface Bestätigung fehlgeschlagen</string>
+    <string name="EE_AS_SYS_NO_VALIDATED_REGISTER_CODE2">PARAM FEHLER</string>
+    <string name="EE_AS_SYS_NO_VALIDATED_REGISTER_CODE3">Benutzer wurde nicht registriert</string>
+    <string name="EE_AS_SYS_NO_VALIDATED_REGISTER_CODE4">Login ist fehlgeschlagen</string>
+    <string name="EE_AS_SYS_NO_VALIDATED_REGISTER_EXTEND_CODE">Serverantwort fehlgeschlagen</string>
+    <string name="EE_AS_SYS_NO_VALIDATED_REGISTER_EXTEND_CODE1">Interface Bestätigung fehlgeschlagen</string>
+    <string name="EE_AS_SYS_NO_VALIDATED_REGISTER_EXTEND_CODE2">Parameter Fehler</string>
+    <string name="EE_AS_SYS_NO_VALIDATED_REGISTER_EXTEND_CODE3">Benutzername wurde registriert</string>
+    <string name="EE_AS_SYS_NO_VALIDATED_REGISTER_EXTEND_CODE4">Registrierungsfehler</string>
+    <string name="EE_AS_SYS_SEND_BINDING_PHONE_CODE">Serverantwort fehlgeschlagen</string>
+    <string name="EE_AS_SYS_SEND_BINDING_PHONE_CODE1">Serverantwort fehlgeschlagen</string>
+    <string name="EE_AS_SYS_SEND_BINDING_PHONE_CODE2">PARAM FEHLER</string>
+    <string name="EE_AS_SYS_SEND_BINDING_PHONE_CODE3">Telefonnummer wurde verknüpft</string>
+    <string name="EE_AS_SYS_SEND_BINDING_PHONE_CODE4">SMS Limit</string>
+    <string name="EE_AS_SYS_SEND_BINDING_PHONE_CODE5">Benutzername existiert nicht</string>
+    <string name="EE_AS_SYS_SEND_BINDING_PHONE_CODE6">SENDEFEHLER</string>
+    <string name="EE_AS_SYS_SEND_BINDING_PHONE_CODE7">Benutzerpasswort Fehler</string>
+    <string name="EE_AS_SYS_SEND_BINDING_PHONE_CODE8">Kann nur innerhalb 120 Sekunden gesendet werden</string>
+    <string name="EE_AS_UPLOAD_LOCAL_VIDEO_CODE">Serverantwort fehlgeschlagen</string>
+    <string name="EE_AS_UPLOAD_LOCAL_VIDEO_CODE1">Datei hochgeladen</string>
+    <string name="EE_AS_UPLOAD_PHOTO_CODE">Serverantwort fehlgeschlagen</string>
+    <string name="EE_AS_UPLOAD_PHOTO_CODE1">Keine Dateien hochgeladen</string>
+    <string name="EE_CLOUD_AUTHENTICATION_FAILURE">150000: Authentifizierungsautorisierung fehlgeschlagen (Benutzername oder Passwortfehler)</string>
+    <string name="EE_CLOUD_CHANGEDEVINFO">Bearbeiten der Systeminformation fehlgeschlagen</string>
+    <string name="EE_CLOUD_DEV_MAC_BACKLIST">101: In die Blacklist (MAC)</string>
+    <string name="EE_CLOUD_DEV_MAC_EMPTY">104: MAC IST NULL</string>
+    <string name="EE_CLOUD_DEV_MAC_EXSIT">102: BESTEHEND</string>
+    <string name="EE_CLOUD_DEV_MAC_INVALID">105: Format ist nicht korrekt</string>
+    <string name="EE_CLOUD_DEV_MAC_UNREDLIST">107: Keine weiße Liste</string>
+    <string name="EE_CLOUD_DEV_NAME_EMPTY">109: Systemname kann nicht leer sein</string>
+    <string name="EE_CLOUD_DEV_NAME_INVALID">113: Das Format des Gerätenamens ist inkorrekt, einschließlich Schlüsselwörter</string>
+    <string name="EE_CLOUD_DEV_PASSWORD_INVALID">112: Das Format des Passworts des Systems ist inkorrekt, einschließlich Schlüsselwörter</string>
+    <string name="EE_CLOUD_DEV_USERNAME_INVALID">111: Das Format des Benutzernamens des Systems ist inkorrekt, einschließlich Schlüsselwörter</string>
+    <string name="EE_CLOUD_PARAM_INVALID">10003: Parameter Ausnahme</string>
+    <string name="EE_CLOUD_SERVICE_ACTIVATE">10002: Öffnen fehlgeschlagen</string>
+    <string name="EE_CLOUD_SERVICE_UNAVAILABLE">40001: Kein offener Cloud Speicherplatz (1, der Benutzer existiert nicht; 2, der Benutzer hat es nicht geöffnet)</string>
+    <string name="EE_CLOUD_UPGRADE_INVALIDREQ">Ungültige Anfrage</string>
+    <string name="EE_CLOUD_UPGRADE_LASTEST">Erfolgreich, neuste Version, kein Bedarf zum aktualisieren</string>
+    <string name="EE_CLOUD_UPGRADE_SERVER">SERVER FEHLER</string>
+    <string name="EE_CLOUD_UPGRADE_SERVER_UNAVAIL">Der Server ist derzeit unerreichbar, bitte versuchen Sie es später noch einmal </string>
+    <string name="EE_CLOUD_UPGRADE_UNFINDRES">Fehlgeschlagen, Ressource nicht gefunden</string>
+    <string name="EE_CLOUD_UPGRADE_UPDATE">Erfolgreich, Aktualisierung notwendig</string>
+    <string name="EE_CLOUD_USERNAME_NOTEXIST">41001: Der Benutzername existiert nicht (erhalte Geräteliste)</string>
+    <string name="EE_CREATE_FILE">DATEI ERZEUGEN FEHLER</string>
+    <string name="EE_DEV_NOT_LOGIN">DEV NICHT LOGIN</string>
+    <string name="EE_DSS_NOT_SUP_MAIN">DSS NICHT SUP MAIN</string>
+    <string name="EE_DVR_ACCOUNT_INPUT_NOT_VALID">EINGABE NICHT GÜLTIG</string>
+    <string name="EE_DVR_ACCOUNT_OBJECT_IN_USE">OBJEKT IN GEBRAUCH</string>
+    <string name="EE_DVR_ACCOUNT_OBJECT_NONE">OBJEKT KEIN</string>
+    <string name="EE_DVR_ACCOUNT_OBJECT_NOT_VALID">OBJEKT NICHT GÜLTIG</string>
+    <string name="EE_DVR_ACCOUNT_OVERLAP">BENUTZERKONTO ÜBERLAPPT</string>
+    <string name="EE_DVR_ACCOUNT_PWD_NOT_MATCH">PWT PASST NICHT ZUSAMMEN</string>
+    <string name="EE_DVR_ACCOUNT_PWD_NOT_VALID">PWT NICHT GÜLTIG</string>
+    <string name="EE_DVR_ACCOUNT_RESERVED">KONTO RESERVIERT</string>
+    <string name="EE_DVR_ACCOUNT_SUBSET_OVERLAP">SUBSET ÜBERLAPPT</string>
+    <string name="EE_DVR_ARSP_BUSING">ARSP BUSING</string>
+    <string name="EE_DVR_ARSP_BUSING_RECVICE">ARSP BUSING ERHALTN</string>
+    <string name="EE_DVR_ARSP_BUSING_SELECT">ARSP BUSING WÄHLEN</string>
+    <string name="EE_DVR_ARSP_NO_DEVICE">ARSP KEIN GERÄT</string>
+    <string name="EE_DVR_ARSP_PASSWORD_ERROR">PASSWORTFEHLER</string>
+    <string name="EE_DVR_ARSP_QUERY_ERROR">ABFRAGEFEHLER</string>
+    <string name="EE_DVR_ARSP_USER_NOEXIST">BENUTZER EXISTIERT NICHT</string>
+    <string name="EE_DVR_CFG_NOT_ENABLE">CFG NICHT MÖGLICH</string>
+    <string name="EE_DVR_CLOSE_CHANNEL_ERROR">KANAL SCHLIESSEN FEHLER</string>
+    <string name="EE_DVR_CONNECTSERVER_ERROR">SERVER VERBINDUNGSFEHLER</string>
+    <string name="EE_DVR_CONNECT_DEVICE_ERROR">GERÄT VERBINDUNGSFEHLER</string>
+    <string name="EE_DVR_CONNECT_FULL">VERBINDUNG VOLL</string>
+    <string name="EE_DVR_CTRL_PAUSE_ERROR">CTRL PAUSE FEHLER</string>
+    <string name="EE_DVR_DECORD_FAIL">DECORD FEHLER</string>
+    <string name="EE_DVR_DEV_VER_NOMATCH">GERÄT UND VERSION PASSEN NICHT ZUSAMMEN</string>
+    <string name="EE_DVR_ILLEGAL_PARAM">ILLEGALER PARAM</string>
+    <string name="EE_DVR_INVALID_HANDLE">INVALID HANDLE</string>
+    <string name="EE_DVR_LOGIN_USER_NOEXIST">LOGIN BENUTZER EXISTIERT NICHT</string>
+    <string name="EE_DVR_NATCONNET_REACHED_MAX">NATCONNET MAXIMUM ERREICHT</string>
+    <string name="EE_DVR_NOPOWER">KEIN STROM</string>
+    <string name="EE_DVR_NO_INIT">SDK NO INIT</string>
+    <string name="EE_DVR_OPEN_CHANNEL_ERROR">KANAL ÖFFNEN FEHLER</string>
+    <string name="EE_DVR_OPT_CAPS_ERROR">CAPS FEHLER</string>
+    <string name="EE_DVR_OPT_CONFIG_NOT_EXIST">VERKNÜPGUNG FEHLER</string>
+    <string name="EE_DVR_OPT_FILE_ERROR">DATEI FEHLER</string>
+    <string name="EE_DVR_OPT_REBOOT">OPT ZURÜCKSETZEN</string>
+    <string name="EE_DVR_OPT_RESTART">OPT NEUSTARTEN</string>
+    <string name="EE_DVR_OPT_VALIDATE_ERROR">GÜLTIGKEIT FEHLER</string>
+    <string name="EE_DVR_PASSWORD_NOT_VALID">PASSWORT NICHT GÜLTIG</string>
+    <string name="EE_DVR_PIRATESOFTWARE">PIRATESOFTWARE</string>
+    <string name="EE_DVR_SDK_MEMORY_ERROR">SPEICHERFEHLER</string>
+    <string name="EE_DVR_SDK_NET_ERROR">NETZWERK FEHLER</string>
+    <string name="EE_DVR_SDK_NOTFOUND">NICHT GEFUNDEN</string>
+    <string name="EE_DVR_SDK_NOTSUPPORT">VERSION NICHT UNTERSTÜTZT</string>
+    <string name="EE_DVR_SDK_NOTVALID">DVR SDK NICHT GÜLTIG</string>
+    <string name="EE_DVR_SDK_OPEN_FILE_ERROR">DATEI ÖFFNEN FEHLER</string>
+    <string name="EE_DVR_SDK_TIMEOUT">TIMEOUT</string>
+    <string name="EE_DVR_SDK_UNINIT_ERROR">SDK UNINIT FEHLER</string>
+    <string name="EE_DVR_SDK_UNKNOWNERROR">UNBEKANNTER FEHLER</string>
+    <string name="EE_DVR_SOCKET_CONNECT">STECKDOSE VERBINDEN</string>
+    <string name="EE_DVR_SOCKET_DOMAIN">STECKDOSE DOMAIN</string>
+    <string name="EE_DVR_SOCKET_ERROR">STECKDOSE FEHLER</string>
+    <string name="EE_DVR_SOCKET_SEND">STECKDOSE SENDEN</string>
+    <string name="EE_DVR_SUB_CONNECT_ERROR">SUB VERBINDEN FEHLER</string>
+    <string name="EE_DVR_SUB_CONNECT_SEND_ERROR">SUB VERBINDEN SENDEFEHLER</string>
+    <string name="EE_DVR_USER_HAS_USED">BENUTZER BEREITS BENUTZT</string>
+    <string name="EE_DVR_USER_IN_BLACKLIST">BENUTZER IN BLACKLIST</string>
+    <string name="EE_DVR_USER_LOCKED">BENUTZER GESPERRT</string>
+    <string name="EE_DVR_USER_NOT_LOGIN">BENUTZER NICHT EINGELOGGT</string>
+    <string name="EE_ERROR">FEHLER</string>
+    <string name="EE_HTTP_PWBYEMAIL_FAILURE">SENDEFEHLER</string>
+    <string name="EE_HTTP_PWBYEMAIL_UNFINDNAME">Kein Benutzername</string>
+    <string name="EE_ILLEGAL_PARAM">ILLEGALER PARAM</string>
+    <string name="EE_LINK_SERVER_ERROR">SERVERLINK FEHLER</string>
+    <string name="EE_MC_NOTFOUND">MC NICHT GEFUNDEN</string>
+    <string name="EE_NET">NETZWERK FEHLER</string>
+    <string name="EE_NO_SUPPORTED">NICHT UNTERSTÜTZTER FEHLER</string>
+    <string name="EE_OBJ_NOT_EXIST">OBJ EXISTIERT NICHT</string>
+    <string name="EE_OK">OK</string>
+    <string name="EE_OPEN_FILE">DATEI ÖFFNEN FEHLER</string>
+    <string name="EE_PARAM_ERROR">PARAM FEHLER</string>
+    <string name="EE_PASSWORD_NOT_VALID">PASSWORT NICHT GÜLTIG</string>
+    <string name="EE_READ_FILE">DATEI LESEN FEHLER</string>
+    <string name="EE_SQL_ERROR">SQL FEHLER</string>
+    <string name="EE_TPS_NOT_SUP_MAIN">TPT NICHT SUP MAIN</string>
+    <string name="EE_USER_DEV_MAC_EXSIT">BENUTZER DEV MAC EXIT</string>
+    <string name="EE_USER_NOEXIST">BENUTZER EXISTIERT NICHT</string>
+    <string name="EE_USER_NO_DEV">BENUTZER KEIN DEV</string>
+    <string name="EE_WRITE_FILE">DATEI SCHREIBEN FEHLER</string>
+    <string name="HTTP_network_call_failed">HTTP Netzwerkanruf fehlgeschlagen</string>
+    <string name="Illegal_demolition">illegaler Eingriff</string>
+    <string name="Illegal_reverse_licensing_request">Illegale Reverse-Lizenzierungsanforderung</string>
+    <string name="The_same_timed_reservation_cannot_be_created">Die gleiche zeitgesteuerte Reservierung kann nicht erstellt werden</string>
+    <string msgid="4600421777120114993" name="abc_action_bar_home_description">"Zur Startseite"</string>
+    <string msgid="1594238315039666878" name="abc_action_bar_up_description">"Nach oben"</string>
+    <string msgid="3588849162933574182" name="abc_action_menu_overflow_description">"Weitere Optionen"</string>
+    <string msgid="4076576682505996667" name="abc_action_mode_done">"Fertig"</string>
+    <string msgid="7468859129482906941" name="abc_activity_chooser_view_see_all">"Alle ansehen"</string>
+    <string msgid="2031811694353399454" name="abc_activitychooserview_choose_application">"App auswählen"</string>
+    <string msgid="121134116657445385" name="abc_capital_off">"Aus"</string>
+    <string msgid="3405795526292276155" name="abc_capital_on">"An"</string>
+    <string msgid="1302280443949172191" name="abc_menu_alt_shortcut_label">"Alt +"</string>
+    <string msgid="1324831542140195728" name="abc_menu_ctrl_shortcut_label">"Strg +"</string>
+    <string msgid="8362206064229013510" name="abc_menu_delete_shortcut_label">"Löschen"</string>
+    <string msgid="8341180395196749340" name="abc_menu_enter_shortcut_label">"Eingabetaste"</string>
+    <string msgid="4792426091847145555" name="abc_menu_function_shortcut_label">"Funktionstaste +"</string>
+    <string msgid="7643535737296831317" name="abc_menu_meta_shortcut_label">"Meta-Taste +"</string>
+    <string msgid="8126296154200614004" name="abc_menu_shift_shortcut_label">"Umschalttaste +"</string>
+    <string msgid="2378550843553983978" name="abc_menu_space_shortcut_label">"Leertaste +"</string>
+    <string msgid="9002602288060866689" name="abc_menu_sym_shortcut_label">"Sym-Taste +"</string>
+    <string msgid="1351762916121158029" name="abc_prepend_shortcut_label">"Menütaste +"</string>
+    <string msgid="7723749260725869598" name="abc_search_hint">"Suchen…"</string>
+    <string msgid="3691816814315814921" name="abc_searchview_description_clear">"Suchanfrage löschen"</string>
+    <string msgid="2550479030709304392" name="abc_searchview_description_query">"Suchanfrage"</string>
+    <string msgid="8264924765203268293" name="abc_searchview_description_search">"Suchen"</string>
+    <string msgid="8928215447528550784" name="abc_searchview_description_submit">"Suchanfrage senden"</string>
+    <string msgid="893419373245838918" name="abc_searchview_description_voice">"Sprachsuche"</string>
+    <string msgid="3421042268587513524" name="abc_shareactionprovider_share_with">"Freigeben für"</string>
+    <string msgid="3300176832234831527" name="abc_shareactionprovider_share_with_application">"Mit <ns2:g id="APPLICATION_NAME">%s</ns2:g> teilen"</string>
+    <string msgid="1603543279005712093" name="abc_toolbar_collapse_description">"Minimieren"</string>
+    <string name="about">Über</string>
+    <string name="account">Konto</string>
+    <string name="account_cancellation">Löschung Kontos</string>
+    <string name="account_follows">Wir löschen alle Informationen in Ihrem Konto wie folgt:</string>
+    <string name="account_has_been_associated_with_a_three_party_account">Der Account wurde mit einem anderen Account in verbunden</string>
+    <string name="account_has_been_authenticated">Account wurde bestätigt</string>
+    <string name="account_information">Alle Ihre Kontoinformationen</string>
+    <string name="account_or_password_error">Account oder Passwort Fehler</string>
+    <string name="action">Führe folgende Aktionen in dieser Reihenfolge durch</string>
+    <string name="action_does_not_exist">Aktion existiert nicht</string>
+    <string name="actived">Aktiviert</string>
+    <string name="add_auto">Zum automatisieren.</string>
+    <string name="add_camera">IPC hinzufügen</string>
+    <string name="add_device_hint">Bitte drücken Sie den Knopf des Gerätes schnell drei Mal nacheinander</string>
+    <string name="add_equipment">Gerät zufügen</string>
+    <string name="add_localnet_ipc">Die IPC MIT Einem router hinzugefügt</string>
+    <string name="add_my_ipc">Fügen sie meine IPC</string>
+    <string name="add_share_ipc">Die IPC noch teilen</string>
+    <string name="add_success">Erfolgreich hinzugefügt</string>
+    <string name="agree">Einverstanden</string>
+    <string name="alarm">Alarm</string>
+    <string name="alarm_remove">ALARM aufgehoben</string>
+    <string name="alert_delete_all_history_log">Sicher, löschen sie alle historischen ALARM - rekord?</string>
+    <string name="ali_add_guide_lock_1">Geben Sie den Fingerabdruck des Managers ein und geben Sie das Management -Menü ein</string>
+    <string name="ali_add_guide_lock_2">Wählen Sie Netzwerk basierend auf der Sprachnavigation hinzufügen</string>
+    <string name="ali_add_scene">Szenarien hinzufügen</string>
+    <string name="ali_add_shiwai_1">Drehen Sie das Gerät nach hinten und drücken Sie den Knopf schnell</string>
+    <string name="ali_add_shiwai_2">Flash -Indikator zeigt eine erfolgreiche Hinzufügung an</string>
+    <string name="ali_add_switch_1">Schneller Dauerschalter dreimal</string>
+    <string name="ali_add_switch_2">Bulb Flash zeigt den Erfolg an</string>
+    <string name="ali_add_timer">Zeit hinzufügen</string>
+    <string name="ali_alarm_product">Brandbekämpfung</string>
+    <string name="ali_bind">Bindung</string>
+    <string name="ali_camera">Video Kamera</string>
+    <string name="ali_change_config_style">Ändern Sie den Weg des Vertriebsnetzes</string>
+    <string name="ali_choose_product">Auswahl der Produkte</string>
+    <string name="ali_current_account">Aktuelles Login -Konto</string>
+    <string name="ali_debug">Partitur der Sicherheit</string>
+    <string name="ali_default_ins">Standard Automation Beschreibung</string>
+    <string name="ali_delete_sub_device_from_gateway">Überprüfen Sie, ob es vom Gateway kommt: %1$s Dieses Gerät löschen?</string>
+    <string name="ali_detail">Details</string>
+    <string name="ali_deviceName">deviceName</string>
+    <string name="ali_device_empty">Keine Ausrüstung</string>
+    <string name="ali_device_has_connected_to_wifi">Das Gerät ist mit WLAN verbunden</string>
+    <string name="ali_environment_product">Umfeld</string>
+    <string name="ali_gateay_unbind_hint">Bestätigen Löschen Gateway:%1$s?</string>
+    <string name="ali_gateway">Gateway</string>
+    <string name="ali_gateway_config">Netzwerk für Gateway -Distribution</string>
+    <string name="ali_gateway_detail">Detail Gateways</string>
+    <string name="ali_gateway_eq_is_happen_has_eq">%1$s %2$s %3$s，Bitte beachten Sie, dass</string>
+    <string name="ali_gateway_init">Initialisierung des Gateways</string>
+    <string name="ali_gateway_location_manage">Location Management</string>
+    <string name="ali_gateway_name">Name des Gerätes</string>
+    <string name="ali_gateway_ota">Firmware update</string>
+    <string name="ali_gateway_restart">Gateway neu starten</string>
+    <string name="ali_gateway_scene_is_happen_has_no_scene">%1$s Automatisierung %2$d Triggert, bitte beachten</string>
+    <string name="ali_gateway_scene_is_happen_has_scene">%1$s %2$s Triggert, bitte beachten</string>
+    <string name="ali_gateway_setting">Einstellungen des Gateways</string>
+    <string name="ali_gateway_share">Freigabe von Geräten</string>
+    <string name="ali_gateway_stop_alert">Alarmanlage für Gateway</string>
+    <string name="ali_gateway_unbind">Ungebunden</string>
+    <string name="ali_history_log">Historische Aufzeichnungen</string>
+    <string name="ali_instrution">Beschreibung des Produkts</string>
+    <string name="ali_iotid">iotId</string>
+    <string name="ali_look_to_how_muth_your_system_is">Sehen Sie, wie sicher Ihr System ist!</string>
+    <string name="ali_net_break">Trennung des Netzwerks</string>
+    <string name="ali_net_ok">Netzwerk normal</string>
+    <string name="ali_no_gateway">Kein Gateway\nBitte zuerst Gateway hinzufügen</string>
+    <string name="ali_no_support_device">Nicht unterstützte Geräte</string>
+    <string name="ali_no_timer">Zeitlos</string>
+    <string name="ali_rename_device_name">Bitte den Gerät -Namen einstellen</string>
+    <string name="ali_rename_gateway_name">Bitte den Gateway -Namen einstellen</string>
+    <string name="ali_rename_room_name">Bitte den Zimmer -Namen einstellen</string>
+    <string name="ali_sdk_finded_local_device">Local Discovery Equipment</string>
+    <string name="ali_sdk_scan_local">Scannen lokaler Geräte...</string>
+    <string name="ali_set_ap">Stellen Sie Hot Spots</string>
+    <string name="ali_set_ap_ins_1">So verbinden Sie Hotspot</string>
+    <string name="ali_set_ap_ins_2">1.Geben Sie den’Netzwerk -Namen ’ein, setzen Sie den Namen auf’aha’</string>
+    <string name="ali_set_ap_ins_3">2.Setzen Sie das Passwort auf 12345678</string>
+    <string name="ali_set_ap_ins_4">3.Speichern und zurücksenden</string>
+    <string name="ali_share_list">Liste teilen</string>
+    <string name="ali_start_to_check">Beginnen Sie die Bewertung</string>
+    <string name="ali_subdevice_setting">Einrichtung der Geräte</string>
+    <string name="ali_support_add_device">Unterstützte Zusatzgeräte</string>
+    <string name="ali_temp">Temperatur:</string>
+    <string name="ali_theft_product">Prävention  Diebstählen</string>
+    <string name="ali_wifi_product">Gateway</string>
+    <string name="all_condition">Maßnahme erfolgt, wenn alle Bedingungen erfüllt</string>
+    <string name="all_condition_hint_four">Wenn Sie die Funktionsweise dieser Option nicht verstehen, wählen Sie bitte die standardmäßig eingestellte Option:</string>
+    <string name="all_condition_hint_one">Alle Bedingungen müssen erfüllt sein, bevor das Gerät die Tätigkeit(en) durchführt. </string>
+    <string name="all_condition_hint_three">Die gleichzeitige Erfüllung bezieht sich hier auf die gleichzeitige Erfüllung von Entity -Equipment -Bedingungen, ausgenommen virtuelle Geräte: Klick -Ausführung, Timing -Ausführung.</string>
+    <string name="all_condition_hint_two">Wenn Sie nur eine Bedingung hinzufügen, wird/werden die Aktion(en) durchgeführt, wenn diese eine Bedingung erfüllt wird.</string>
+    <string name="already_in_gateway">Die Geräte wurden noch in der connector,Umbenennen oder nicht?</string>
+    <string name="already_monitor_add">Bereits mit WiFi verbunden, aber die Verbindung muss getrennt werden</string>
+    <string name="appTid_cannot_be_empty">AppTid kann nicht geleert werden</string>
+    <string name="app_id_empty">Die Botschaft der app - Leer</string>
+    <string name="app_name">FamilyLink</string>
+    <string name="app_repeat_logon">App wiederholen login</string>
+    <string name="app_update_hint">NeUe version:%1$s</string>
+    <string name="app_version_hint">APP Version</string>
+    <string name="authorization_relationship_already_exists">Die Bestätigungsbeziehung existiert bereits</string>
+    <string name="authorization_relationship_does_not_exist">Die Bestätigungsbeziehung existiert nicht</string>
+    <string name="authorized_instruction_has_expired">Die bestätigte Anweisung ist abgelaufen</string>
+    <string name="auto_modify">Die lautstärke</string>
+    <string name="automation_name">Automatisch heißt das.</string>
+    <string name="battery_low">Baaterie fast leer</string>
+    <string name="battery_normal">Batterie ok</string>
+    <string name="bedroom">Schlafzimmer</string>
+    <string name="binding_failed_because_of_repeated_binding">TDie Verbindung ist aufgrund von wiederholtem verbinden fehlgeschlagen</string>
+    <string name="binding_failed_due_to_network_reasons">Verbindung aus Netzwerkgründen fehlgeschlagen</string>
+    <string name="binding_failed_due_to_timeout_reason">Verbindung aus Timeout Gründen fehlgeschlagen</string>
+    <string name="btnConfirmTitle">Verbinden</string>
+    <string name="btn_silence">stumm</string>
+    <string name="button">Taste</string>
+    <string name="camera_empety_sn">Bitte geben Sie die Seriennummer ein </string>
+    <string name="cancel">ABBRECHEN</string>
+    <string name="cancelled">\t\t\t\tWenn Sie sich erneut anmelden, wird Ihre Deaktivierungsanfrage storniert.</string>
+    <string name="cannot_create_folder_with_the_same_name">Es kann nicht eine Datei mit demselben Namen erstellt werden</string>
+    <string name="cannot_find_instruction_set">Anweisungsset kann nicht gefunden werden</string>
+    <string name="card_open">Card entsperren</string>
+    <string name="center_person">Persönliches Zentrum</string>
+    <string name="center_setting">Set up</string>
+    <string name="change_scene">Klicken Sie auf den gelben Bereich, um die voreingestellte Szene zu wechseln.</string>
+    <string name="check_code_failed_to_send">Senden des Bestätigungscodes fehlgeschlagen</string>
+    <string name="check_pic">Fotos</string>
+    <string name="check_to_automate">Aktivieren, um zu automatisieren</string>
+    <string name="choose_channel">Kanalauswahl</string>
+    <string name="choose_color">Connector Farbe</string>
+    <string name="choose_condition">Wählen Sie die Bedingung</string>
+    <string name="chose_auto">Bitte wählen sie den startertyp aus</string>
+    <string name="clickTo">Klicken</string>
+    <string name="clicktrigger">Auf ausgelöst</string>
+    <string name="close">AB</string>
+    <string name="coalarm">CO Alarm</string>
+    <string name="code_fault">Passwort Fehler</string>
+    <string name="code_hint">Verification code</string>
+    <string name="coercion">Nötigung</string>
+    <string name="common">Information</string>
+    <string name="common_functions">Gemeinsame Funktionen:</string>
+    <string msgid="8585111718777012708" name="common_google_play_services_enable_button">"Aktivieren"</string>
+    <string msgid="7045129128108380659" name="common_google_play_services_enable_text">"<ns2:g id="APP_NAME">%1$s</ns2:g> funktioniert erst nach der Aktivierung der Google Play-Dienste."</string>
+    <string msgid="3147157405986503375" name="common_google_play_services_enable_title">"Google Play-Dienste aktivieren"</string>
+    <string msgid="9115728400623041681" name="common_google_play_services_install_button">"Installieren"</string>
+    <string msgid="8179894293032530091" name="common_google_play_services_install_text">"Zur Nutzung von <ns2:g id="APP_NAME">%1$s</ns2:g> sind die Google Play-Dienste erforderlich, die auf deinem Gerät nicht installiert sind."</string>
+    <string msgid="7442193194585196676" name="common_google_play_services_install_title">"Google Play-Dienste installieren"</string>
+    <string msgid="4293541511340436975" name="common_google_play_services_notification_channel_name">"Verfügbarkeit von Google Play-Diensten"</string>
+    <string msgid="180394615667698242" name="common_google_play_services_notification_ticker">"Fehler bei Zugriff auf Google Play-Dienste"</string>
+    <string msgid="2518680582564677258" name="common_google_play_services_unknown_issue">"<ns2:g id="APP_NAME">%1$s</ns2:g> hat Probleme mit Google Play-Diensten. Bitte versuche es noch einmal."</string>
+    <string msgid="5501187292256987189" name="common_google_play_services_unsupported_text">"Zur Nutzung von <ns2:g id="APP_NAME">%1$s</ns2:g> sind Google Play-Dienste erforderlich, die auf deinem Gerät nicht unterstützt werden."</string>
+    <string msgid="8172070149091615356" name="common_google_play_services_update_button">"Aktualisieren"</string>
+    <string msgid="7773943415006962566" name="common_google_play_services_update_text">"<ns2:g id="APP_NAME">%1$s</ns2:g> wird nur ausgeführt, wenn du die Google Play-Dienste aktualisierst."</string>
+    <string msgid="8706675115216073244" name="common_google_play_services_update_title">"Google Play-Dienste aktualisieren"</string>
+    <string msgid="7894275749778928941" name="common_google_play_services_updating_text">"Zur Nutzung von <ns2:g id="APP_NAME">%1$s</ns2:g> sind Google Play-Dienste erforderlich, die gerade aktualisiert werden."</string>
+    <string msgid="2804989272736383918" name="common_google_play_services_wear_update_text">"Eine neue Version der Google Play-Dienste wird benötigt. Diese wird in Kürze automatisch aktualisiert."</string>
+    <string msgid="5201977337835724196" name="common_open_on_phone">"Auf Smartphone öffnen"</string>
+    <string name="common_setting">Allgemeine Einstellungen</string>
+    <string msgid="3441753203274453993" name="common_signin_button_text">"Anmelden"</string>
+    <string msgid="669893613918351210" name="common_signin_button_text_long">"Über Google anmelden"</string>
+    <string name="comprehensive_score">Ihr smart home comprehensive score:</string>
+    <string name="condition">Bedingungen</string>
+    <string name="config_fail_reason">Gründe für das Scheitern</string>
+    <string name="config_instruction">Fünf Sekunden nach dem Einschalten des Gateways drücken Sie die Gateway -Taste lange, bis das Gateway den "Piep"-2 -Ton -Auslöseknopf sendet</string>
+    <string name="configure_device">Gerät Einrichten</string>
+    <string name="configure_gateway">Gateway Einrichten</string>
+    <string name="confirm_delete_monitor">Sind sie sicher, dass sie diesen Monitor löschen möschten?</string>
+    <string name="confirm_to_cancel">Bestätigen Sie die Kündigung des Kontos?</string>
+    <string name="connected">verbunden</string>
+    <string name="create_timed_reservation_times_to_upper_limit">Zeitgesteuerte Reservierungszeiten bis Obergrenze erstellt</string>
+    <string name="current_mode">Die modell:</string>
+    <string name="current_mode_not_allow_delete">Aktueller Schauplatz existiert Automation im Bereich der Kombiautomation!</string>
+    <string name="current_scene">Aktuelle Szene</string>
+    <string name="current_temperature">Aktuell</string>
+    <string name="custom">Selbstdefinierte Schalter</string>
+    <string name="custom_scene">Selbstdefinierte</string>
+    <string name="cxalert11">Stumm</string>
+    <string name="cxalert2">Schuld</string>
+    <string name="cxalert5">Nicht stören</string>
+    <string name="cxalert6">Nicht stören</string>
+    <string name="cxalert7">Test ALARM</string>
+    <string name="cxalert9">FeUer - ALARM</string>
+    <string name="cxsmalarm">Rauchmelder</string>
+    <string name="default_scene">Die standard situationen</string>
+    <string name="default_scenes">Standard.</string>
+    <string name="delay">Verzögerung</string>
+    <string name="delete">Löschen</string>
+    <string name="delete_condition">Hat die löschung dieser bedingung bestätigt?</string>
+    <string name="delete_equipment">Löschen</string>
+    <string name="delete_or_not">Löschen bestätigen?</string>
+    <string name="delete_success">Erfolgreich gelöscht!</string>
+    <string name="delete_the_room">Es ist nicht erlaubt, den Raum zu löschen, wenn es Ausrüstung im Raum gibt</string>
+    <string name="devTid_cannot_be_empty">DevTid kann nicht leer sein</string>
+    <string name="dev_type_boutiquerotot">Schüttelt den kopf</string>
+    <string name="dev_type_idr">Die klingel - Kamera</string>
+    <string name="dev_type_monitor">MONITOR</string>
+    <string name="dev_type_smalleye">Stecker</string>
+    <string name="device">Gerät</string>
+    <string name="device_alarm_no_change">keine Veränderung</string>
+    <string name="device_authorization_times_are_capped">Gerätbestätigungszeiten sind begrenzt</string>
+    <string name="device_camera_video_list_empty">Die Videoliste dieses Tages ist leer. Bitte wählen Sie eine andere Datei. </string>
+    <string name="device_cannot_be_found_due_to_an_incorrect_internal_condition">Der Connector kann aufgrund einer inkorrekten internen Bedingung nicht </string>
+    <string name="device_cannot_be_found_due_to_an_internal_error">Der Connector kann aufgrund eines internen Fehlers nicht gefunden werden. Bitte verbinden Sie erneut</string>
+    <string name="device_cannot_bind_forcibly">Der Connector kann nicht zur Verbindung gezwungen werden</string>
+    <string name="device_cannot_log_in_again">Das Gerät kann nicht wieder angemeldet werden</string>
+    <string name="device_does_not_belong_to_the_user">Das Sytem gehört nicht zum Benutzer</string>
+    <string name="device_information">Alle Geräteinformationen</string>
+    <string name="device_login_input_password">Bitte geben Sie das Login Passwort des Gerätes an </string>
+    <string name="device_net_connect_type_ip">Typ_IP</string>
+    <string name="device_net_connect_type_p2p">P2P</string>
+    <string name="device_net_connect_type_rps">RPS</string>
+    <string name="device_net_connect_type_transmit">Typ_senden</string>
+    <string name="device_net_connect_type_unknown">Typ_unbekant</string>
+    <string name="device_opt_picture_list">Fotos des Systems</string>
+    <string name="device_opt_record_list">Videos des Systems</string>
+    <string name="device_opt_set_wifi">WiFi einstellen</string>
+    <string name="device_opt_set_wifi_hint_ssid">WiFi SSID</string>
+    <string name="device_opt_set_wifi_info_error">WiFi Info Fehler</string>
+    <string name="device_pic_list_empty">Die Fotoliste des Systems ist leer, bitte wählen Sie ein anderes Datum</string>
+    <string name="device_pic_type_manual">FERNBEDIENUNG</string>
+    <string name="device_setup_camera_flip">Kamerabild umdrehen</string>
+    <string name="device_setup_camera_mirror">Kamerabild spiegeln</string>
+    <string name="device_setup_change_password">Passworteinstellung</string>
+    <string name="device_setup_expert">Expert Einstellungen</string>
+    <string name="device_setup_record">Aufnahme Einstellungen</string>
+    <string name="device_setup_record_audio">Audio Aufzeichnung</string>
+    <string name="device_setup_record_length">Dauer aufzeichnen</string>
+    <string name="device_setup_record_minute">min</string>
+    <string name="device_setup_record_mode">Aufzeichnungsmodus</string>
+    <string name="device_setup_record_prerecord">vorherige Aufzeichnung</string>
+    <string name="device_setup_record_prerecord_prompt">Link-Aufzeichnungsverwaltung, erweiterte Voraufzeichnungszeit</string>
+    <string name="device_setup_record_second">sek</string>
+    <string name="device_setup_storage">Speicher Konfiguration</string>
+    <string name="device_setup_storage_capacity">Speicherkapaztät:</string>
+    <string name="device_setup_storage_format">Speicherformat</string>
+    <string name="device_setup_storage_format_tip">Wollen Sie das Gerätlaufwerk formatieren?</string>
+    <string name="device_setup_storage_record_cycle">Aufzeichnungskreislauf</string>
+    <string name="device_setup_storage_record_full">Aufzeichnung voll:</string>
+    <string name="device_setup_storage_record_stop">Aufzeichnung Stop</string>
+    <string name="device_setup_storage_remain">übriger Speicherplatz:</string>
+    <string name="device_socket_capture_delete_success">Fortschritt löschen</string>
+    <string name="device_socket_capture_preview">Vorschau</string>
+    <string name="device_socket_capture_save_success">Fortschritt speichern %1$s</string>
+    <string name="device_sport_camera_download_success">Erfolgreich gespeichert. Speichern sie den Verlauf unter:</string>
+    <string name="device_sport_camera_download_to_phone">auf das Handy runterladen</string>
+    <string name="device_sport_camera_load_first">Bitte laden sie die Datei herunter nachdem das Bild erfolgreich geladen wurde</string>
+    <string name="device_sport_camera_normal_pic">normales Foto</string>
+    <string name="device_sport_camera_pic_existed">Bild Existierte</string>
+    <string name="device_sport_camera_record_success">Ist das Video in Ordnung? Lässt es sich öffnen?</string>
+    <string name="device_sport_camera_record_success_cancel">abbrechen</string>
+    <string name="device_sport_camera_record_success_open">öffnen</string>
+    <string name="device_stauts_offline">Stecker offline</string>
+    <string name="device_stauts_online">Stecker online</string>
+    <string name="device_stauts_unknown">Stecker Status unbekannt</string>
+    <string name="device_system_info_defaultconfigsucc">Fabrikeinstellungen werden wiederhergestellt..</string>
+    <string name="device_system_info_model">Info Modell</string>
+    <string name="device_system_info_nat_code">Nat Code</string>
+    <string name="device_system_info_nat_status">Nat Status</string>
+    <string name="device_system_info_sn">Info SN</string>
+    <string name="device_time_in_AP_or_local_mode">Bitte synchronisieren Sie die Zeit im AP Modus oder lokal Modus</string>
+    <string name="deviceid_does_not_match">Die Connector ID stimmen nicht überein</string>
+    <string name="devices">Geräte</string>
+    <string name="dialog_btn_cancel">Abbrechen</string>
+    <string name="dialog_btn_confim">Bestätigen</string>
+    <string name="dialog_title_alert">Meldung</string>
+    <string name="disagree">Uneinigkeit</string>
+    <string name="dismantle">Zerschlagen</string>
+    <string name="done">Fertig</string>
+    <string name="door">Tür/ Fenster-Kontakt</string>
+    <string name="door_default_scene">Standard Tür/ Fenster Alarm</string>
+    <string name="door_default_scene_hint">Ein Gate -Magnettrigger unter diesem Gateway wird Gateway -Alarm auslösen und App Push -Nachricht</string>
+    <string name="door_open">Öffnen</string>
+    <string name="door_still_open">Warten</string>
+    <string name="downing">Herunterladen</string>
+    <string name="edit_timer">Timer bearbeiten</string>
+    <string name="electric_city_break_off">AC Abgeschaltet</string>
+    <string name="electric_city_normal">AC Normal</string>
+    <string name="email_code_success_hint">Der Bestätigungscode wurde an Ihre E-Mail-Adresse gesendet. Möglicherweise verzögert sich die Zustellung. Bitte haben Sie etwas Geduld.</string>
+    <string name="email_find">über E-Mail</string>
+    <string name="email_register">über E-Mail</string>
+    <string name="emergency_number">Notrufnummer</string>
+    <string name="error_e">Fehler</string>
+    <string name="esptouch_is_configuring">Connector wird verbunden, bitte warten</string>
+    <string name="executive_action">Exekutive Aktion</string>
+    <string name="explain">Erklären:</string>
+    <string name="facebook_app_id">使用开发者自己申请的key</string>
+    <string name="failed">Fehlgeschlagen</string>
+    <string name="failed_Esptouch_check_eq">Verbindung ist fehlgeschlagen: überprüfen Sie den Status des Connectors und verbinden Sie die Geräte</string>
+    <string name="failed_due_to_internal_error_binding">wegen interner Fehlbindung fehlgeschlagen</string>
+    <string name="failed_to_delete_SkyDrive_file">Löschen der SkyDrive Datei fehlgeschlagen</string>
+    <string name="failed_to_modify_user_file">Bearbeitung Benutzerdatei fehlgeschlagen</string>
+    <string name="failed_to_upload_SkyDrive_file">Hochladen der SkyDrive Date fehlgeschlagen</string>
+    <string name="failed_to_verify_code">Verifizierung des Codes fehlgeschlagen</string>
+    <string name="feedback">Alle Ihre Feedback</string>
+    <string name="folder_specified_for_id_does_not_exist">Die Datei bestimmt für ID existiert nicht</string>
+    <string name="footprint_open">Fingerabdruck freischalten</string>
+    <string name="full_notice_push">Ganze Hinweis Push Alarm</string>
+    <string name="gasalarm">GASalarm</string>
+    <string name="gateway">Connector</string>
+    <string name="gateway_alert">Connector Alarm</string>
+    <string name="gateway_name">Name des Gateways</string>
+    <string name="get_code">Erhalten</string>
+    <string name="get_max_scene_group">Ok, erhalten Sie die maximale Größe!</string>
+    <string name="goto_set">Zur Einrichtung</string>
+    <string name="gprs_hint">Ob die derzeit Traffic - Muster, öffnet das video?</string>
+    <string name="gs361_install_construction">Bitte DAS thermostat zu installieren, dann wieder drücken sie den Knopf installieren.</string>
+    <string name="guide_message_error_call">- ruf wieder fehler, bitte</string>
+    <string name="has_been_moved">wurde bewegt</string>
+    <string name="has_been_registered">Der Benutzer wurde registriert</string>
+    <string name="has_not_validated_yet">Der Benutzer ist noch nicht anerkannt</string>
+    <string name="has_people">Auslöser</string>
+    <string name="head">Porträt des Kopfes</string>
+    <string name="help">Hilfe</string>
+    <string name="home_mode">Heim</string>
+    <string name="hour_and_min">Stunden/Minuten</string>
+    <string name="how_to_config">Sobald die LED blau blinkt,drücken Sie bitte WEITER.</string>
+    <string name="hum">Luftfeuchtigkeit:</string>
+    <string name="humidity">Feuchtigkeit(%)</string>
+    <string name="humidity_triggering_mode">Bitte wählen Sie den Feuchtigkeitsauslösungsmodus</string>
+    <string name="if_ok_click_next">Wenn bestätigt, klicken sie in \"Der nächste Schritt\"</string>
+    <string name="illegal_checksum_code">Illegaler checksum Code</string>
+    <string name="illegal_mail_token">Illegales Mailzeichen</string>
+    <string name="illegal_old_password">Ein illegales altes Passwort</string>
+    <string name="illegal_operation">Illegale</string>
+    <string name="illegal_parameter">illegaler Parameter</string>
+    <string name="illegal_parameter2">illegaler Parameter</string>
+    <string name="illegal_prodPubKey">Illegaler prodPubKey</string>
+    <string name="increase_input">Mehr Bedingungen</string>
+    <string name="increase_output">zusätzliche Aktionen</string>
+    <string name="info_format_error">Nachrichten im falschen format</string>
+    <string name="info_null_error">Der inhalt der Botschaft, Leer</string>
+    <string name="infrared_code_cannot_be_found">Der Infrarotcode kann nicht gefunden werde</string>
+    <string name="initialzation_guidance_button">Ich hab\’s！</string>
+    <string name="initialzation_guidance_mention1">\t\t\t\tDieses Gerät wurde von anderen Benutzern gebunden. Bitte kontaktieren Sie den Administrator oder stellen Sie die Werkseinstellungen wieder her.</string>
+    <string name="initialzation_guidance_mention2">Wie man die Werkseinstellungen wiederherstellt</string>
+    <string name="initialzation_guidance_text1">Drücken Sie schnell dreimal hintereinander und das Gateway flackert und öffnet sich drei Sekunden später.</string>
+    <string name="initialzation_guidance_text2">Warten auf die Gateway Brightlila Darstellung zur Wiederherstellung der Werkseinstellungen erfolgreich</string>
+    <string name="input_exist">Eingabegerät kann nicht wiederholt werden</string>
+    <string name="input_scene_name">Bitte geben Sie einen Namen ein</string>
+    <string name="insert_card">Karte einstecken</string>
+    <string name="install_mode">Montage - modus</string>
+    <string name="installed">Installiert</string>
+    <string name="instruction">Die beschreibungen der Systeme</string>
+    <string name="internal_error">Interner Fehler</string>
+    <string name="internal_service_error">Interner Servicefehler</string>
+    <string name="intput_must_has_eq">Eingabe muss etwas beinhalten</string>
+    <string name="invalid_message_token">ungültiges Nachrichtenzeichen</string>
+    <string name="invalid_old_password">Ungültiges altes Passwort</string>
+    <string name="invalid_request_type">Ungültiger Anforderungstyp</string>
+    <string name="ipc_in_localnet">Lan - IPC</string>
+    <string name="ipc_tip">Wenn Geräte immer noch Lange auf den router, bitte auf der rückseite des geräts die set - Taste (Oder Unten), die wiederherstellung der Fabrik</string>
+    <string name="ipc_tip_1">1. Bitte eingesteckt Strom - und datenleitungen Laden und haben dafür sorgen, dass die Geräte funktionieren.</string>
+    <string name="ipc_tip_2">2. Zum ersten mal wird die konfiguration, bitte Geräte, handys und router in 1 Meter Breit, um sicherzustellen, dass die signale, die erfolgreich.</string>
+    <string name="ipc_tip_3">3. ALS sie hörte, dass sie \"-\" Oder \"warten auf link\" stimme für sie zu konfigurieren</string>
+    <string name="ipc_tip_4">4. Wenn sie nicht beobachtet SET/RESRET, Lange auf die wiederherstellung der FABRIK - Taste, die Geräte wieder.</string>
+    <string name="ir_service_request_error">IR Serviceanforderungsfehler</string>
+    <string name="is_config">Der benutzer ist dabei. Keine anderen operationen durchführen!</string>
+    <string name="is_connected_to_wifi">%1$s ist mit WiFi verbunden</string>
+    <string name="is_head_yuyin">PROMPT, ob Geräte \"begann Schnell zu hören -\" und \"warten auf die Verbindung von\"</string>
+    <string name="kitchen">Küche</string>
+    <string name="living_room">Wohnzimmer</string>
+    <string name="loading">Bitte später…</string>
+    <string name="loading_press">Laden..</string>
+    <string name="local_net_auth_timeout">Lan - Lizenz - Timeout</string>
+    <string name="local_net_connect_error">Die lan - Verbindung scheitern</string>
+    <string name="local_pic">Foto</string>
+    <string name="local_video">Video</string>
+    <string name="lock">Schloss</string>
+    <string name="login">Melden Sie sich</string>
+    <string name="login_protocol">Bitte lesen Sie sorgfältig und verstehen Sie die Bedingungen von "Benutzervereinbarung" und "Datenschutzrichtlinie", einschließlich, aber nicht beschränkt auf: Um Ihnen Instant-Messaging, intelligente Gerätedaten Push und andere Dienstleistungen zu bieten, müssen wir Ihre Geräteinformationen, Betriebsprotokolle und andere Informationen sammeln.Bitte lesen Sie die 《Benutzervereinbarung》 die 《Datenschutzrichtlinie》 für Details.Wenn Sie einverstanden sind, klicken Sie bitte auf "einverstanden", um mit der Nutzung unseres Dienstes zu beginnen.</string>
+    <string name="login_protocol_1">《Benutzervereinbarung》</string>
+    <string name="login_protocol_2">Indem Sie ein Konto erstellen, stimmen Sie zu《Benutzervereinbarung》die《Datenschutzrichtlinie》</string>
+    <string name="login_protocol_3">《Datenschutzrichtlinie》</string>
+    <string name="logon_information_expired_log_in_again">Login Information abgelaufen. Bitte melden Sie sich erneut an!</string>
+    <string name="logout">Ausloggen</string>
+    <string name="longpress_to_talk">Drücken zum sprechen</string>
+    <string name="low_battery">NIEDRIGE-SPANNUNG</string>
+    <string name="manage">Verwalten</string>
+    <string name="media_capture_failure_need_playing">Das Video muss laufen, um einen Screenshot aufnehmen zu können</string>
+    <string name="media_play_error">Abspielfehler</string>
+    <string name="media_player_buffering">Laden</string>
+    <string name="media_record_failure_need_playing">Das Video kann nur während es läuft aufgenommen werden</string>
+    <string name="media_record_start">start</string>
+    <string name="media_record_stop">Unterbreche die Aufnahme und speichere die Datei:</string>
+    <string name="meida_not_auto_play_because_no_wifi">WiFi ist nicht verbunden. Bitte spielen sie das Video manuell ab.</string>
+    <string name="message">Nachricht</string>
+    <string name="message_logs">Alle Ihre Nachrichten-Protokolle</string>
+    <string name="method_does_not_support">Methode wird nicht unterstützt</string>
+    <string name="mode_button">ModeTaste</string>
+    <string name="modify_email">Mailbox Bearbeiten</string>
+    <string name="modify_phone">Mobilnummer Bearbeiten</string>
+    <string name="my_scene">Meine_Szene_</string>
+    <string name="name">Namen:</string>
+    <string name="name_contain_emoji">Name darf keine emoji enthalten</string>
+    <string name="name_is_illegal">Name ist illegal</string>
+    <string name="name_is_null">Der name Darf nicht Leer sein</string>
+    <string name="name_is_too_long">Name ist zu lang</string>
+    <string name="net_configuration">Netzwerk Konfiguration</string>
+    <string name="net_error">Netzwerk - Fehler</string>
+    <string name="network_hz">Das Gerät unterstützt nur 2,4GHz Router.</string>
+    <string name="network_timeout">Netzwerk Timeout</string>
+    <string name="new_version">neu</string>
+    <string name="next">WEITER</string>
+    <string name="no_actived">Tür nicht aktiviert</string>
+    <string name="no_automation">Keine Automatisierung</string>
+    <string name="no_connect">Die Botschaft ist nicht MIT</string>
+    <string name="no_data">keine Daten</string>
+    <string name="no_extern_storage">Kein externer Speicher</string>
+    <string name="no_find_device">Nicht die ausrüstung</string>
+    <string name="no_params_parameter">Nachrichten ohne params parameter in json.</string>
+    <string name="no_save">Nicht speichern</string>
+    <string name="no_support_fiveg_wifi">(Nicht für die WiFi - 5 - GHz - band)</string>
+    <string name="no_wifi">kein WiFi</string>
+    <string name="normal">Normal</string>
+    <string name="not_installed">Nicht installiert</string>
+    <string name="off_line">Offline</string>
+    <string name="offline">Offline</string>
+    <string name="ok">OK</string>
+    <string name="old_man_default_scene">Standard 5 Stunden ohne Bewegung</string>
+    <string name="old_man_default_scene_hint">Wenn ein PIR -Gerät unter diesem Gateway nicht für fünf Stunden auslöst, löst es Gateway -Alarm und App -Push aus.</string>
+    <string name="on_line">Online</string>
+    <string name="one_condition">Maßnahme erfolgt bei einer efüllten Bedingung</string>
+    <string name="one_condition_hint">Die Tätigkeit(en) des Gerätes werden durchgeführt, wenn eine der Bedingungen erfüllt wird. </string>
+    <string name="only_the_owner_can_authorize_the_equipment_to_other_people">Nur der Besitzer kann die Geräte an andere Personen autorisieren</string>
+    <string name="open">Offen</string>
+    <string name="opening">Offen ist</string>
+    <string name="operation_failed">Vorgang gescheitert</string>
+    <string name="operation_is_too_frequent_try_again_later">Zu viele Versuche. Bitte versuchen Sie es später erneut</string>
+    <string name="operation_success">Vorgang erfolgreich</string>
+    <string name="options">Wählen.</string>
+    <string name="ota">Firmware update</string>
+    <string name="ota_current_is_the_lasted_version">Aktuell ist die neueste Firmware</string>
+    <string name="ota_current_version">aktuelle Version</string>
+    <string name="ota_did_upgrade">vollständig</string>
+    <string name="ota_did_upgrade_error">Das Gerät reagiert nicht. Bitte versuchen Sie es erneut.</string>
+    <string name="ota_did_upgrade_failure">Firmware -Upgrade fehlgeschlagen, retry oder nicht</string>
+    <string name="ota_doing_upgrade">odernisierung</string>
+    <string name="ota_get_info_error">Es ist fehlgeschlagen, Firmware -Informationen zu erhalten. Bitte versuchen Sie es erneut.</string>
+    <string name="ota_network_error">Fehler bei der Netzwerkanfrage</string>
+    <string name="ota_pre_upgrade">Upgrade jetzt</string>
+    <string name="ota_refresh">Aktualisieren</string>
+    <string name="ota_upgrade_success">Erfolgreiches Upgrade</string>
+    <string name="out_mode">Weg</string>
+    <string name="outdoor_siren">Outdoor sirenen</string>
+    <string name="output_must_has_eq">Output muss ein Gerät beinhalten</string>
+    <string name="page_loading_error">Site - Fehler</string>
+    <string name="param_setting">Parameter</string>
+    <string name="parameter_not_supported">Parameter werden nicht unterstützt</string>
+    <string name="parsing_JSON_failed">Parsing JSON fehlgeschlagen</string>
+    <string name="password">Passwort</string>
+    <string name="password_hint">Passwort eingeben</string>
+    <string name="password_is_empty">Das passwort IST Leer</string>
+    <string name="permanently_discontinued">Permanent abgesetzt</string>
+    <string name="permission_register">Antrag auf Zulassung</string>
+    <string name="permission_reject_imei_tip">Wenn Sie den Status -Code des Mobiltelefons nicht lesen, wird sich die normale Nutzung der App auswirken. Bitte öffnen Sie die Telefongenehmigung.</string>
+    <string name="permission_reject_location_service_tip">Bitte öffnen Sie den Standortservice, sonst können Sie das WLAN nicht konfigurieren</string>
+    <string name="permission_reject_location_tip">Die aktuelle Anwendung hat keine Standortberechtigung und kann kein WLAN konfigurieren. Bitte setzen Sie die für das Öffnen erforderliche Erlaubnis ein.</string>
+    <string name="permission_reject_write_local_tip">Ohne die Schreib - und Leseberechtigung der SD -Karte wird dies die Verwendung von APP -Kamerafunktionen beeinflussen. Bitte öffnen Sie die Speichergenehmigung</string>
+    <string name="person_email">Briefkasten</string>
+    <string name="person_name">Name</string>
+    <string name="person_phone">Telefon Nummer</string>
+    <string name="person_sex">Geschlecht</string>
+    <string name="personal_information">Alle Ihre persönlichen Daten</string>
+    <string name="phone">Push-Notification</string>
+    <string name="phone_find">über das Telefon</string>
+    <string name="phone_hint">Geben Sie Ihr Telefon</string>
+    <string name="phone_number_invalid">Die Telefonnummer ist ungültig</string>
+    <string name="phone_register">über das Telefon</string>
+    <string name="physical_device">Maschinen sind aktiv.</string>
+    <string name="pid_does_not_exist">Das PID existiert nicht</string>
+    <string name="pir">Bewegungsmelder</string>
+    <string name="pir_default_scene">Standard Bewegungsmelder Alarm</string>
+    <string name="pir_default_scene_hint">Jedes PIR -Gerät, das unter diesem Gateway ausgelöst wird, löst Gateway -Alarm und App -Push -Nachricht aus.</string>
+    <string name="platform_parameter_error">Platform Parameter Fehler</string>
+    <string name="please_choose">Bitte wählen SIE</string>
+    <string name="please_choose_alert_time">Please choose alert time</string>
+    <string name="please_choose_device">Gateway wählen</string>
+    <string name="please_choose_mode">Wählen Sie Schaltmodus</string>
+    <string name="please_choose_switch_time">Wählen Sie die Schaltzeit</string>
+    <string name="please_input_complete">Bitte vervollständigen Sie die Eingabe</string>
+    <string name="please_input_email">Enter email ID</string>
+    <string name="please_input_name">Namen eingeben</string>
+    <string name="please_input_unlock_password">Bitte Passwort eingeben</string>
+    <string name="please_select_trigger_time">Wählen sie den zeitraum</string>
+    <string name="points">Punkte</string>
+    <string name="press">Drücken</string>
+    <string name="privacy_agree">Privacy Policy</string>
+    <string name="product_does_not_exist">Produkt existiert nicht</string>
+    <string name="product_does_not_exist2">Produkt existiert nicht</string>
+    <string name="protocol_template_does_not_exist">Die Protokollvorlage existiert nicht</string>
+    <string name="purpose_scene">Wechsel Szene</string>
+    <string name="pwd_help">Unterstützung des Passworts</string>
+    <string name="reached_the_maximum_number_of_folders_created">Die Maximalanzahl and Datein die hergestellt werden können wurde erreicht</string>
+    <string name="recommend">Empfehlenswert</string>
+    <string name="record">Aufnahme</string>
+    <string name="register">Register</string>
+    <string name="remote_unlock_success">Remote - Erfolg</string>
+    <string name="rename">Umbenennen</string>
+    <string name="repeat_at_this_time">Time is Repeated at %1$s</string>
+    <string name="replace_equipment">Ersetzen</string>
+    <string name="replace_success">Ersetzt wurde, erfolgreich</string>
+    <string name="request_parameter_error">Anforderungsparameterfehler</string>
+    <string name="reset_to_default_set">Fabrikeinstellungen wiederherstellen</string>
+    <string name="retry">WIEDERHOLEN</string>
+    <string name="reverse_registration_request_for_the_specified_id_does_not_exist">Die umgekehrte Registrierungsanforderung für die angegebene ID existiert nicht</string>
+    <string name="room_management">Room Management</string>
+    <string name="room_name">Name des Zimmers</string>
+    <string name="room_setting">Einstellungen Zimmers</string>
+    <string name="root_directory_cannot_be_deleted">Das Stammverzeichnis kann nicht gelöscht werden</string>
+    <string name="root_directory_cannot_be_renamed">Das Stammverzeichnis kann nicht umbenannt werden</string>
+    <string name="sale_number">Kundenservice</string>
+    <string name="save">Speichern</string>
+    <string name="save_modle_or_not">Szenenmodus speichern?</string>
+    <string name="save_or_not">Ob speichern?</string>
+    <string name="scene_edit">Edit</string>
+    <string name="scene_has_modify">Die Szene wurde verändert. Möchten Sie sie speichern?</string>
+    <string name="scene_name">. Namen</string>
+    <string name="scenes">Szene</string>
+    <string name="search_local_net">Nach diesem Connectors Im LAN suchen...</string>
+    <string msgid="146198913615257606" name="search_menu_title">"Suchen"</string>
+    <string name="see_some_scene_above_click">Wenn beobachtet, bitte klicken sie auf</string>
+    <string name="select_date">Datum auswählen</string>
+    <string name="select_device">Wählen sie den auslöser</string>
+    <string name="select_timing_cycle">Bestimmen sie den zyklus</string>
+    <string name="server_client_id">使用开发者自己申请的key</string>
+    <string name="server_exception_try_again">Serverausnahme, bitte versuchen Sie es erneut!</string>
+    <string name="server_intro">1, die Bestätigung und Annahme der Nutzungsbedingungen \n Die Inhalte dieser Website und APP sind Eigentum von Cosa Connects BV. Benutzer müssen die Bedingungen sorgfältig lesen, bevor sie diesen Service akzeptieren. Benutzer, die den Dienst nutzen, oder Personen, die den Registrierungsprozess abgeschlossen haben, akzeptieren alle Nutzungsbedingungen. \n2, der Benutzer stimmt zu: \n (1) liefert detaillierte und genaue persönliche Informationen. \n (2) die Anforderungen. \n Falls die vom Benutzer angegebenen Informationen ungenau sind, hat diese Website das Recht, den Dienst zu beenden. \n Diese Website und APP werden den Namen, die Adresse, die E-Mail-Adresse, die Kontonummer und die Telefonnummer des Kontos nicht offen legen. Informationen (siehe Datenschutzklausel). \n Benutzer dieser Website und jedes Verhalten von APP müssen folgen: \n (1) die Übermittlung von Daten muss EU-Vorschriften entsprechen. \n (2) die Nutzung von Informationsdiensten ist nicht illegal und unmoralisch Handlungen. \n (3) nicht in die Netzwerkdienste eingreifen. \n (4) alle Netzwerkprotokolle, -regeln, -verfahren und -praktiken für die Nutzung von Diensten einhalten. Der Benutzer-Verhaltenskodex basiert auf Internet-Richtlinien, Richtlinien, Verfahren und Praktiken. \n3, ändern Sie die Nutzungsbedingungen \n Diese Website und APP haben das Recht, die Bedingungen gegebenenfalls zu ändern, die auf der Seite veröffentlicht werden. \n Wenn Sie die Änderungen nicht akzeptieren, kann der Benutzer die Initiative ergreifen, um seine Mitgliedschaft zu kündigen. Wenn Sie Ihre Mitgliedschaft nicht kündigen, stimmen Sie jeder Änderung der Nutzungsbedingungen zu. \n4, die Benutzerkontonummer, das Passwort und die Sicherheit \n Sobald Sie erfolgreich als Mitglied registriert wurden, haben Sie ein Passwort und einen Benutzernamen.</string>
+    <string name="service_error">Servicefehler</string>
+    <string name="service_internal_error">Service interner Fehler</string>
+    <string name="service_response_error">Serviceantwortfehler</string>
+    <string name="set_action">Aktion Setzen</string>
+    <string name="set_criteria">Festlegung Bedingungen</string>
+    <string name="set_delay">Bitte Verzögerung einstellen</string>
+    <string name="set_first">Bitte zuerst einstellen</string>
+    <string name="set_weekday">Bitte Wochentag einstellen</string>
+    <string name="setting">Einstellungen</string>
+    <string name="setting_temperature">Einstellung(℃)</string>
+    <string name="silence">Still</string>
+    <string name="sleep_mode">Schlaf</string>
+    <string name="smalarm">Rauchmelder</string>
+    <string name="sn_is_illegal">SN illegal</string>
+    <string name="socket">Steckdose</string>
+    <string name="some_device_kuaishan">Manche Geräte für lampen - Flash - ohne stimme</string>
+    <string name="soskey">Paniktaster</string>
+    <string name="specified_SkyDrive_file_does_not_exist">Die angegebene SkyDrive Datei existiert nicht</string>
+    <string name="specified_rule_does_not_exist">Die angegebene Regel existiert nicht</string>
+    <string name="specified_template_does_not_exist">Die angegebende Vorlage existiert nicht</string>
+    <string name="specified_timed_reservation_task_does_not_exist">Die angegebene zeitgesteuerte Reservierungsaufgabe existiert nicht</string>
+    <string name="specifies_that_PID_does_not_exist">Gibt an, dass PID nicht existiert</string>
+    <string msgid="7988687684186075107" name="status_bar_notification_info_overflow">"999+"</string>
+    <string name="sthalert">Meldung</string>
+    <string name="stream_hd">HD</string>
+    <string name="stream_sd">SD</string>
+    <string name="study">Studie</string>
+    <string name="success">ERFOLG</string>
+    <string name="success_add">Hinzufügen erfolgreich</string>
+    <string name="success_e">Erfolgreich</string>
+    <string name="success_e2">Erfolgriech</string>
+    <string name="success_set">Erfolgreich!</string>
+    <string name="success_test">Die Operation War erfolgreich, warten auf das Gerät</string>
+    <string name="switch_to">zu</string>
+    <string name="sync_ipc_time">Synchronisiere IPC Zeit</string>
+    <string name="sync_time">Zeit synch.</string>
+    <string name="sys_account">Konto Stornierung</string>
+    <string name="sys_update_pwd">Passwort ändern</string>
+    <string name="system_mode_not_allow_delete">Home, weg, Schlaf kann nicht gelöscht werden!</string>
+    <string name="system_scene">Szenen Modell</string>
+    <string name="temp_controler">Thermostat</string>
+    <string name="temperature">Temperatur(℃)</string>
+    <string name="temperature_triggering_mode">Bitte wählen Sie den Temperaturauslösungsmodus</string>
+    <string name="test">Test</string>
+    <string name="test_scores">Test punkte</string>
+    <string name="thcheck">Temp/Hydro</string>
+    <string name="the_device_specified_for_devTid_does_not_exist">Der Connector bestimmt für devTid existiert nicht</string>
+    <string name="the_specified_task_does_not_exist">Die angegebene Aufgabe existiert nicht</string>
+    <string name="there_is_no_authority_on_this_instruction">Es gibt keine Berechtigung für diese Anweisung</string>
+    <string name="there_is_no_authority_to_do_so">Keine Berechtigung dies zu tun</string>
+    <string name="there_is_no_such_instruction">So eine Anweisung gibt es nicht</string>
+    <string name="thermalalarm">Thermik</string>
+    <string name="this_instruction_is_not_supported">Diese Anweisung wird nicht unterstützt</string>
+    <string name="timeout">Timeout</string>
+    <string name="timer">Timer</string>
+    <string name="timing_trigger">Regelmäßig ausgelöst</string>
+    <string name="tip_video_days">Der rote Punkt dieser Tage im video</string>
+    <string name="to_detect">Wieder auf</string>
+    <string name="today_operation_has_reached_an_upper_limit">Heutige Versuche haben das Limit erreicht</string>
+    <string name="too_many_verification_codes">Zu viele Bestätigungscodes gesendet</string>
+    <string name="trigger">Auslösen</string>
+    <string name="trigger_condition">Zustand Triggers</string>
+    <string name="trigger_style">Auslöserart</string>
+    <string name="two_channel_socket">Schalter 2</string>
+    <string name="unable_to_create_duplicate_template">Das Erstellen einer duplizierten Vorlage ist nicht möglich</string>
+    <string name="unable_to_create_the_same_rule">Dieselbe Regel kann nicht erstellt werden</string>
+    <string name="unamed">Unbenannt</string>
+    <string name="unconnected">getrennt</string>
+    <string name="unknown_error">Unbekannter Fehler</string>
+    <string name="unlock">Entsperren</string>
+    <string name="update_alert">Update</string>
+    <string name="update_name">Name aktualisieren</string>
+    <string name="upper_limit_on_the_number_of_devices_that_can_be_accommodated_by_a_folder">Eine Obergrenze für die Anzahl der Geräte, die von einem Ordner aufgenommen werden können</string>
+    <string name="user_agreement">Zustimmung Des Benutzers</string>
+    <string name="user_change_password">Passwort ändern</string>
+    <string name="user_change_password_error_passwnotequal">Passwort nicht gleich</string>
+    <string name="user_change_password_hint_new_password">neues Passwort</string>
+    <string name="user_change_password_hint_new_password_confirm">Passwort bestätigen</string>
+    <string name="user_change_password_hint_old_password">altes Passwot</string>
+    <string name="user_does_not_exist">Benutzer existiert nicht</string>
+    <string name="user_does_not_exist2">Benutzer existiert nicht</string>
+    <string name="user_forget_pwd_reset_passw_success">Passwort Zurückstellung erfolgreich </string>
+    <string name="validation_code_expired">Bestätigungscode abgelaufen</string>
+    <string name="verify_code_error">Bestätigung Code Fehler</string>
+    <string name="verify_that_code_expires">Bestätigen Sie, dass der Code abläuft</string>
+    <string name="verify_that_the_code_type_is_not_valid">Bestätigen Sie, dass der Codetyp nicht gültig ist</string>
+    <string name="video_alarm">Alarm</string>
+    <string name="video_common">allgemeine Einstellungen</string>
+    <string name="videos">Videos</string>
+    <string name="volume_show">Einstellen des Volumens von klein auf groß und dann von groß auf klein \nDas spezifische Volumen ist abhängig von dem tatsächlich vernommenen Volumen.</string>
+    <string name="wait">Warten...</string>
+    <string name="want_to_delete_confirm_eq">Möchten Sie %1$s entfernen?</string>
+    <string name="week">Woche</string>
+    <string name="wi_fi">Wi-Fi</string>
+    <string name="wifi_config">Neue Kamera hinzufügen</string>
+    <string name="wifi_password_hint">WiFi Passwort eingeben</string>
+    <string name="without_scene">Keine Szenen, bitte zuerst Gateway hinzufügen.</string>
+    <string name="wt">Wassermelder</string>
+    <string name="zxing_app_name">Barcode Scanner</string>
+    <string name="zxing_button_ok">OK</string>
+    <string name="zxing_msg_camera_framework_bug">Mit der Android-Kamera ist leider ein Fehler aufgetreten. Es könnte sein, dass Sie das Gerät neu starten müssen.</string>
+    <string name="zxing_msg_default_status">Positionieren Sie den Barcode innerhalb des Rechteckes.</string>
+</resources>

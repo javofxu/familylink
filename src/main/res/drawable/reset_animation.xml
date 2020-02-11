@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:oneshot="false">
+    <item android:drawable="@mipmap/reset1" android:duration="1000"></item>
+    <item android:drawable="@mipmap/reset2" android:duration="1000"></item>
+    <item android:drawable="@mipmap/reset3" android:duration="1000"></item>
+    <item android:drawable="@mipmap/reset4" android:duration="1000"></item>
+    <item android:drawable="@mipmap/reset5" android:duration="1000"></item>
+    <item android:drawable="@mipmap/reset6" android:duration="1000"></item>
+    <item android:drawable="@mipmap/reset7" android:duration="1000"></item>
+    <item android:drawable="@mipmap/reset8" android:duration="1000"></item>
+    <item android:drawable="@mipmap/reset9" android:duration="1000"></item>
+    <item android:drawable="@mipmap/reset10" android:duration="1000"></item>
+    <item android:drawable="@mipmap/reset11" android:duration="1000"></item>
+    <item android:drawable="@mipmap/reset12" android:duration="1000"></item>
+    <item android:drawable="@mipmap/reset13" android:duration="1000"></item>
+    <item android:drawable="@mipmap/reset14" android:duration="1000"></item>
+</animation-list>

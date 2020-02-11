@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <integer-array name="chose_color">
+        <item>@drawable/round_corner_color</item>
+        <item>@drawable/round_corner_color1</item>
+        <item>@drawable/round_corner_color2</item>
+        <item>@drawable/round_corner_color3</item>
+        <item>@drawable/round_corner_color4</item>
+        <item>@drawable/round_corner_color5</item>
+        <item>@drawable/round_corner_color6</item>
+        <item>@drawable/round_corner_color7</item>
+        <item>@drawable/round_corner_color8</item>
+    </integer-array>
+    <integer-array name="scene_color">
+        <item>@drawable/scene_corner_bg</item>
+        <item>@drawable/scene_corner_bg1</item>
+        <item>@drawable/scene_corner_bg2</item>
+        <item>@drawable/scene_corner_bg3</item>
+        <item>@drawable/scene_corner_bg4</item>
+        <item>@drawable/scene_corner_bg5</item>
+        <item>@drawable/scene_corner_bg6</item>
+        <item>@drawable/scene_corner_bg7</item>
+        <item>@drawable/scene_corner_bg8</item>
+    </integer-array>
+    <string-array name="EE_DEV_DOOR">
+        <item>00005500</item>
+        <item>0000AA00</item>
+        <item>00006600</item>
+    </string-array>
+
+    <string-array name="EE_DEV_SOCKET">
+        <item>01010000</item>
+        <item>01000000</item>
+        <item>0100ff00</item>
+    </string-array>
+
+    <string-array name="EE_DEV_PIR">
+        <item>00005500</item>
+        <item>0000AA00</item>
+    </string-array>
+
+    <string-array name="EE_DEV_SOS">
+        <item>00005500</item>
+        <item>00006600</item>
+    </string-array>
+
+    <string-array name="EE_DEV_SMALARM">
+        <item>0000BB00</item>
+        <item>00005500</item>
+    </string-array>
+
+    <string-array name="EE_DEV_GATEWAY">
+        <item>33000000</item>
+        <item>44000000</item>
+        <item>00000000</item>
+        <item>22000000</item>
+    </string-array>
+
+    <string-array name="EE_DEV_SXSMALARM">
+        <item>00001900</item>
+        <item>00001700</item>
+    </string-array>
+
+    <string-array name="EE_DEV_MODE_BUTTON">
+        <item>00005500</item>
+        <item>00006600</item>
+    </string-array>
+
+    <string-array name="EE_DEV_LOCK">
+        <item>00005000</item>
+        <item>00005100</item>
+        <item>00005200</item>
+        <item>00005300</item>
+        <item>00001000</item>
+        <item>00002000</item>
+        <item>00003000</item>
+    </string-array>
+
+    <string-array name="EE_DEV_CHANNEL" tools:keep="@array/EE_DEV_CHANNEL">
+        <item>01010000</item>
+        <item>01000000</item>
+        <item>0100FF00</item>
+    </string-array>
+
+    <string-array name="EE_DEV_CHANNEL2" tools:keep="@array/EE_DEV_CHANNEL2">
+        <item>02020000</item>
+        <item>02000000</item>
+        <item>0200FF00</item>
+    </string-array>
+
+    <string-array name="EE_TEMP_OUTDOOR_SIREN">
+        <item>50000000</item>
+        <item>51000000</item>
+    </string-array>
+
+    <string-array name="EE_DEV_SOCKET1">
+        <item>01010000</item>
+        <item>01000000</item>
+        <item>0100FF00</item>
+    </string-array>
+
+    <string-array name="EE_DEV_SOCKET2">
+        <item>02020000</item>
+        <item>02000000</item>
+        <item>0200FF00</item>
+    </string-array>
+
+
+    <string-array name="AA_DEV_DOOR">
+        <item>0101</item>
+        <item>1101</item>
+        <item>2101</item>
+    </string-array>
+
+    <string-array name="AA_DEV_SOCKET">
+        <item>0200</item>
+        <item>1200</item>
+        <item>2200</item>
+    </string-array>
+
+    <string-array name="AA_DEV_PIR1">
+        <item>0100</item>
+        <item>1100</item>
+        <item>2100</item>
+    </string-array>
+
+    <string-array name="AA_DEV_SOS1">
+        <item>0300</item>
+        <item>1300</item>
+        <item>2300</item>
+    </string-array>
+
+    <string-array name="AA_DEV_CO_ALARM">
+        <item>0000</item>
+        <item>1000</item>
+        <item>2000</item>
+        <item>0008</item>
+        <item>1008</item>
+        <item>2008</item>
+        <item>000E</item>
+        <item>100E</item>
+        <item>200E</item>
+    </string-array>
+
+    <string-array name="AA_DEV_SM_ALARM">
+        <item>0001</item>
+        <item>1001</item>
+        <item>2001</item>
+        <item>0009</item>
+        <item>1009</item>
+        <item>2009</item>
+        <item>000F</item>
+        <item>100F</item>
+        <item>200F</item>
+    </string-array>
+
+    <string-array name="AA_DEV_GAS_ALARM">
+        <item>0002</item>
+        <item>1002</item>
+        <item>2002</item>
+        <item>1006</item>
+        <item>000A</item>
+        <item>100A</item>
+        <item>200A</item>
+        <item>0010</item>
+        <item>1010</item>
+        <item>2010</item>
+    </string-array>
+
+    <string-array name="AA_DEV_THE_RM_ALARM">
+        <item>0003</item>
+        <item>1003</item>
+        <item>2003</item>
+        <item>000B</item>
+        <item>100B</item>
+        <item>200B</item>
+        <item>0011</item>
+        <item>1011</item>
+        <item>2011</item>
+    </string-array>
+
+    <string-array name="AA_DEV_WT_ALARM">
+        <item>0004</item>
+        <item>1004</item>
+        <item>2004</item>
+        <item>000C</item>
+        <item>100C</item>
+        <item>200C</item>
+        <item>0012</item>
+        <item>1012</item>
+        <item>2012</item>
+    </string-array>
+
+    <string-array name="AA_DEV_SX_SM_ALARM">
+        <item>0005</item>
+        <item>1005</item>
+        <item>2005</item>
+        <item>000D</item>
+        <item>100D</item>
+        <item>200D</item>
+        <item>0013</item>
+        <item>1013</item>
+        <item>2013</item>
+    </string-array>
+
+    <string-array name="AA_DEV_TH_CHECK">
+        <item>0102</item>
+        <item>1102</item>
+        <item>2102</item>
+    </string-array>
+
+    <string-array name="AA_DEV_BUTTON">
+        <item>0301</item>
+        <item>1301</item>
+        <item>2301</item>
+    </string-array>
+
+    <string-array name="AA_DEV_MODE_BUTTON">
+        <item>0305</item>
+    </string-array>
+
+    <string-array name="AA_DEV_LOCK">
+        <item>1213</item>
+    </string-array>
+
+    <string-array name="AA_TWO_CHANNEL_SOCKET">
+        <item>0201</item>
+        <item>1201</item>
+        <item>2201</item>
+    </string-array>
+
+    <string-array name="AA_TEMP_CONTROL">
+        <item>0215</item>
+        <item>1215</item>
+        <item>2215</item>
+    </string-array>
+
+    <string-array name="AA_TEMP_OUTDOOR_SIREN">
+        <item>020E</item>
+        <item>120E</item>
+        <item>220E</item>
+    </string-array>
+
+    <string-array name="AA_SIMULATE_GATEWAY" tools:keep="@array/AA_SIMULATE_GATEWAY">
+        <item>GATEWAY</item>
+    </string-array>
+
+    <string-array name="AA_SIMULATE_IPC" tools:keep="@array/AA_SIMULATE_IPC">
+        <item>IPC</item>
+    </string-array>
+
+
+</resources>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<resources>
+   <string name="device_stauts_unknown">Chargement…</string>
+   <string name="device_stauts_online">En ligne</string>
+   <string name="device_stauts_offline">Déconnecté</string>
+   <string name="dev_type_monitor">MONITEUR</string>
+   <string name="dev_type_smalleye">Angle mort</string>
+   <string name="dev_type_boutiquerotot">Retourner délicatement la caméra et la remettre en situation normale</string>
+   <string name="dev_type_idr">La sonnette de la caméra</string>
+   <string name="videos">La vidéo</string>
+</resources>

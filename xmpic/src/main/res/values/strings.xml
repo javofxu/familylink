@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<resources>
+    <string name="device_stauts_unknown">Loading…</string>
+    <string name="device_stauts_online">Online</string>
+    <string name="device_stauts_offline">Offline</string>
+    <string name="dev_type_monitor">MONITOR</string>
+    <string name="dev_type_smalleye">Rain point</string>
+    <string name="dev_type_boutiquerotot">Head machine</string>
+    <string name="dev_type_idr">Door bell</string>
+    <string name="videos">Videos</string>
+</resources>

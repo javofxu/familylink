@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="ota_network_error">Fehler bei der Netzwerkanfrage</string>
+    <string name="ota">Firmware update</string>
+    <string name="ota_upgrade_success">Erfolgreiches Upgrade</string>
+    <string name="ota_pre_upgrade">Upgrade jetzt</string>
+    <string name="ota_current_version">aktuelle Version</string>
+    <string name="ota_doing_upgrade">odernisierung</string>
+    <string name="ota_did_upgrade">vollständig</string>
+    <string name="ota_refresh">Aktualisieren</string>
+    <string name="ota_get_info_error">Es ist fehlgeschlagen, Firmware -Informationen zu erhalten. Bitte versuchen Sie es erneut.</string>
+    <string name="ota_did_upgrade_failure">Firmware -Upgrade fehlgeschlagen, retry oder nicht</string>
+    <string name="ota_did_upgrade_error">Das Gerät reagiert nicht. Bitte versuchen Sie es erneut.</string>
+    <string name="ota_current_is_the_lasted_version">Aktuell ist die neueste Firmware</string>
+</resources>

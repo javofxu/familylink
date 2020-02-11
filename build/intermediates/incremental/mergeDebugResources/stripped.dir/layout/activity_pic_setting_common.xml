@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+                                                                   
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/white" android:tag="layout/activity_pic_setting_common_0" xmlns:android="http://schemas.android.com/apk/res/android">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_50"
+            android:background="@color/color_white">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/common_setting"
+                android:textColor="@color/top_bar_title"
+                android:textSize="@dimen/title_size" />
+
+            <ImageView
+                android:id="@+id/iv_common_setting_back"
+                android:layout_width="@dimen/back_image_width"
+                android:layout_height="@dimen/back_image_height"
+                android:padding="@dimen/margin_3"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/back_image_marginLeft"
+                android:src="@mipmap/back"/>
+
+        </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/top_bar_line" />
+        <RelativeLayout
+            android:id="@+id/updatename"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/margin_15"
+            android:background="@drawable/list_item_selector">
+            <TextView
+                style="@style/CCPFontPreferenceLarge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/update_name"
+                android:layout_marginStart="@dimen/margin_05"
+                android:layout_centerVertical="true"
+                android:textColor="@color/delist_bk"/>
+
+            <ImageView
+                android:layout_width="@dimen/back_image_width"
+                android:layout_height="@dimen/back_image_height"
+                android:padding="@dimen/margin_2"
+                android:src="@mipmap/icon_right"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:id="@+id/dd" />
+            <TextView
+                android:id="@+id/name"
+                style="@style/CCPFontPreferenceSummary"
+                android:paddingBottom="@dimen/SmallPadding"
+                android:paddingRight="@dimen/SmallPadding"
+                android:paddingTop="@dimen/SmallPadding"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxWidth="@dimen/margin_260"
+                android:layout_toStartOf="@id/dd"/>
+        </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_1"
+            android:background="@color/line_bg"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/margin_15"
+            android:background="@drawable/list_item_selector"
+            android:id="@+id/updatetime">
+            <TextView
+                style="@style/CCPFontPreferenceLarge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/sync_time"
+                android:layout_marginStart="@dimen/margin_05"
+                android:layout_centerVertical="true"
+                android:textColor="@color/delist_bk"/>
+
+            <ImageView
+                android:layout_width="@dimen/back_image_width"
+                android:layout_height="@dimen/back_image_height"
+                android:padding="@dimen/margin_2"
+                android:src="@mipmap/icon_right"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:id="@+id/ee"/>
+
+            <com.example.xmpic.support.widget.TimeTextView
+                android:id="@+id/time"
+                style="@style/CCPFontPreferenceSummary"
+                android:paddingBottom="@dimen/SmallPadding"
+                android:paddingRight="@dimen/SmallPadding"
+                android:paddingTop="@dimen/SmallPadding"
+                android:singleLine="true"
+                android:textColor="@color/toast_text_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toStartOf="@id/ee" />
+
+        </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_1"
+            android:background="@color/line_bg"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/margin_15"
+            android:background="@drawable/list_item_selector">
+            <TextView
+                style="@style/CCPFontPreferenceLarge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/device_setup_camera_flip"
+                android:layout_marginStart="@dimen/margin_05"
+                android:layout_centerVertical="true"
+                android:textColor="@color/delist_bk"/>
+
+            <ImageButton
+                android:id="@+id/btnSwitchCameraFlip"
+                android:layout_width="@dimen/margin_48"
+                android:layout_height="@dimen/margin_24"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:background="@color/transparent"
+                android:scaleType="fitCenter"
+                android:src="@drawable/icon_switch_check_ipc"
+                android:layout_marginEnd="@dimen/margin_2"/>
+
+        </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_1"
+            android:background="@color/line_bg"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/margin_15"
+            android:background="@drawable/list_item_selector">
+            <TextView
+                style="@style/CCPFontPreferenceLarge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/device_setup_camera_mirror"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="@dimen/margin_05"
+                android:layout_centerVertical="true"
+                android:textColor="@color/delist_bk"/>
+
+            <ImageButton
+                android:id="@+id/btnSwitchCameraMirror"
+                android:layout_width="@dimen/margin_48"
+                android:layout_height="@dimen/margin_24"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:background="@color/transparent"
+                android:scaleType="fitCenter"
+                android:src="@drawable/icon_switch_check_ipc"
+                android:layout_marginEnd="@dimen/margin_2"/>
+        </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/line_bg"/>
+    </LinearLayout>
+         

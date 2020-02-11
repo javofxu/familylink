@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/margin_10">
+        <com.example.common.view.CustomTextView
+            android:id="@+id/item_room_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/margin_15"
+            android:textSize="@dimen/text_18"
+            android:textColor="@color/text_line"
+            android:text="@string/room_name"/>
+        <TextView
+            android:id="@+id/item_room_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/item_room_name"
+            android:layout_toEndOf="@id/item_room_name"
+            android:layout_marginStart="@dimen/margin_08"
+            android:textSize="@dimen/text_10"
+            android:textColor="@color/text_line"
+            android:text="@string/devices"/>
+        <ImageView
+            android:id="@+id/item_room_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/margin_15"
+            android:src="@drawable/iv_room_edit"/>
+    </RelativeLayout>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/item_room_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </android.support.v7.widget.RecyclerView>
+</LinearLayout>

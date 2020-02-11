@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<resources>
+   <string name="device_stauts_unknown">Stecker Status unbekannt</string>
+   <string name="device_stauts_online">Stecker online</string>
+   <string name="device_stauts_offline">Stecker offline</string>
+   <string name="dev_type_monitor">MONITOR</string>
+   <string name="dev_type_smalleye">Stecker</string>
+   <string name="dev_type_boutiquerotot">Schüttelt den kopf</string>
+   <string name="dev_type_idr">Die klingel - Kamera</string>
+   <string name="videos">Videos</string>
+</resources>

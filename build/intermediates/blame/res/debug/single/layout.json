@@ -1,0 +1,298 @@
+[
+    {
+        "merged": "/Users/Skygge/github/familylink/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_ipc_pic.xml",
+        "source": "/Users/Skygge/github/familylink/src/main/res/layout/fragment_ipc_pic.xml"
+    },
+    {
+        "merged": "/Users/Skygge/github/familylink/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_room_editor.xml",
+        "source": "/Users/Skygge/github/familylink/src/main/res/layout/activity_room_editor.xml"
+    },
+    {
+        "merged": "/Users/Skygge/github/familylink/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_room_manage.xml",
+        "source": "/Users/Skygge/github/familylink/src/main/res/layout/activity_room_manage.xml"
+    },
+    {
+        "merged": "/Users/Skygge/github/familylink/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_automation_detail.xml",
+        "source": "/Users/Skygge/github/familylink/src/main/res/layout/activity_automation_detail.xml"
+    },
+    {
+        "merged": "/Users/Skygge/github/familylink/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_recovery_guide.xml",
+        "source": "/Users/Skygge/github/familylink/src/main/res/layout/activity_recovery_guide.xml"
+    },
+    {
+        "merged": "/Users/Skygge/github/familylink/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_pic_setting_storage.xml",
+        "source": "/Users/Skygge/github/familylink/src/main/res/layout/activity_pic_setting_storage.xml"
+    },
+    {
+        "merged": "/Users/Skygge/github/familylink/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_pic_setting_common.xml",
+        "source": "/Users/Skygge/github/familylink/src/main/res/layout/activity_pic_setting_common.xml"
+    },
+    {
+        "merged": "/Users/Skygge/github/familylink/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_web_view.xml",
+        "source": "/Users/Skygge/github/familylink/src/main/res/layout/activity_web_view.xml"
+    },
+    {
+        "merged": "/Users/Skygge/github/familylink/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_qr_code.xml",
+        "source": "/Users/Skygge/github/familylink/src/main/res/layout/activity_qr_code.xml"
+    },
+    {
+        "merged": "/Users/Skygge/github/familylink/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_detail_socket.xml",
+        "source": "/Users/Skygge/github/familylink/src/main/res/layout/activity_detail_socket.xml"
+    },
+    {
+        "merged": "/Users/Skygge/github/familylink/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_pic_setting_expert.xml",
+        "source": "/Users/Skygge/github/familylink/src/main/res/layout/activity_pic_setting_expert.xml"
+    },
+    {
+        "merged": "/Users/Skygge/github/familylink/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_ipc_video.xml",
+        "source": "/Users/Skygge/github/familylink/src/main/res/layout/fragment_ipc_video.xml"
+    },
+    {
+        "merged": "/Users/Skygge/github/familylink/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_explain.xml",
+        "source": "/Users/Skygge/github/familylink/src/main/res/layout/activity_explain.xml"
+    },
+    {
+        "merged": "/Users/Skygge/github/familylink/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_ipc_before_wifi_config.xml",
+        "source": "/Users/Skygge/github/familylink/src/main/res/layout/activity_ipc_before_wifi_config.xml"
+    },
+    {
+        "merged": "/Users/Skygge/github/familylink/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_product.xml",
+        "source": "/Users/Skygge/github/familylink/src/main/res/layout/activity_product.xml"
+    },
+    {
+        "merged": "/Users/Skygge/github/familylink/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_device_history.xml",
+        "source": "/Users/Skygge/github/familylink/src/main/res/layout/activity_device_history.xml"
+    },
+    {
+        "merged": "/Users/Skygge/github/familylink/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_add_scene.xml",
+        "source": "/Users/Skygge/github/familylink/src/main/res/layout/activity_add_scene.xml"
+    },
+    {
+        "merged": "/Users/Skygge/github/familylink/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_device_setup_record.xml",
+        "source": "/Users/Skygge/github/familylink/src/main/res/layout/activity_device_setup_record.xml"
+    },
+    {
+        "merged": "/Users/Skygge/github/familylink/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_config_device.xml",
+        "source": "/Users/Skygge/github/familylink/src/main/res/layout/activity_config_device.xml"
+    },
+    {
+        "merged": "/Users/Skygge/github/familylink/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_device_change_password.xml",
+        "source": "/Users/Skygge/github/familylink/src/main/res/layout/activity_device_change_password.xml"
+    },
+    {
+        "merged": "/Users/Skygge/github/familylink/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_device_record_list_horizon.xml",
+        "source": "/Users/Skygge/github/familylink/src/main/res/layout/activity_device_record_list_horizon.xml"
+    },
+    {
+        "merged": "/Users/Skygge/github/familylink/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_question.xml",
+        "source": "/Users/Skygge/github/familylink/src/main/res/layout/activity_question.xml"
+    },
+    {
+        "merged": "/Users/Skygge/github/familylink/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_change_scene.xml",
+        "source": "/Users/Skygge/github/familylink/src/main/res/layout/activity_change_scene.xml"
+    },
+    {
+        "merged": "/Users/Skygge/github/familylink/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_set_double_switch.xml",
+        "source": "/Users/Skygge/github/familylink/src/main/res/layout/activity_set_double_switch.xml"
+    },
+    {
+        "merged": "/Users/Skygge/github/familylink/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_scene_child.xml",
+        "source": "/Users/Skygge/github/familylink/src/main/res/layout/fragment_scene_child.xml"
+    },
+    {
+        "merged": "/Users/Skygge/github/familylink/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_message.xml",
+        "source": "/Users/Skygge/github/familylink/src/main/res/layout/fragment_message.xml"
+    },
+    {
+        "merged": "/Users/Skygge/github/familylink/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_share_list.xml",
+        "source": "/Users/Skygge/github/familylink/src/main/res/layout/activity_share_list.xml"
+    },
+    {
+        "merged": "/Users/Skygge/github/familylink/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_add_device.xml",
+        "source": "/Users/Skygge/github/familylink/src/main/res/layout/activity_add_device.xml"
+    },
+    {
+        "merged": "/Users/Skygge/github/familylink/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_config_gateway.xml",
+        "source": "/Users/Skygge/github/familylink/src/main/res/layout/activity_config_gateway.xml"
+    },
+    {
+        "merged": "/Users/Skygge/github/familylink/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_date.xml",
+        "source": "/Users/Skygge/github/familylink/src/main/res/layout/activity_date.xml"
+    },
+    {
+        "merged": "/Users/Skygge/github/familylink/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_device_set_wifi.xml",
+        "source": "/Users/Skygge/github/familylink/src/main/res/layout/activity_device_set_wifi.xml"
+    },
+    {
+        "merged": "/Users/Skygge/github/familylink/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_gateway_setting.xml",
+        "source": "/Users/Skygge/github/familylink/src/main/res/layout/activity_gateway_setting.xml"
+    },
+    {
+        "merged": "/Users/Skygge/github/familylink/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_mode_switch.xml",
+        "source": "/Users/Skygge/github/familylink/src/main/res/layout/activity_mode_switch.xml"
+    },
+    {
+        "merged": "/Users/Skygge/github/familylink/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_personal.xml",
+        "source": "/Users/Skygge/github/familylink/src/main/res/layout/activity_personal.xml"
+    },
+    {
+        "merged": "/Users/Skygge/github/familylink/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_device_detail.xml",
+        "source": "/Users/Skygge/github/familylink/src/main/res/layout/activity_device_detail.xml"
+    },
+    {
+        "merged": "/Users/Skygge/github/familylink/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_main.xml",
+        "source": "/Users/Skygge/github/familylink/src/main/res/layout/activity_main.xml"
+    },
+    {
+        "merged": "/Users/Skygge/github/familylink/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_config_guide.xml",
+        "source": "/Users/Skygge/github/familylink/src/main/res/layout/activity_config_guide.xml"
+    },
+    {
+        "merged": "/Users/Skygge/github/familylink/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_choose_action.xml",
+        "source": "/Users/Skygge/github/familylink/src/main/res/layout/activity_choose_action.xml"
+    },
+    {
+        "merged": "/Users/Skygge/github/familylink/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_add_timer.xml",
+        "source": "/Users/Skygge/github/familylink/src/main/res/layout/activity_add_timer.xml"
+    },
+    {
+        "merged": "/Users/Skygge/github/familylink/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_gateway_main.xml",
+        "source": "/Users/Skygge/github/familylink/src/main/res/layout/activity_gateway_main.xml"
+    },
+    {
+        "merged": "/Users/Skygge/github/familylink/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_add_ipc.xml",
+        "source": "/Users/Skygge/github/familylink/src/main/res/layout/activity_add_ipc.xml"
+    },
+    {
+        "merged": "/Users/Skygge/github/familylink/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_about.xml",
+        "source": "/Users/Skygge/github/familylink/src/main/res/layout/activity_about.xml"
+    },
+    {
+        "merged": "/Users/Skygge/github/familylink/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_instruction.xml",
+        "source": "/Users/Skygge/github/familylink/src/main/res/layout/activity_instruction.xml"
+    },
+    {
+        "merged": "/Users/Skygge/github/familylink/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_bind.xml",
+        "source": "/Users/Skygge/github/familylink/src/main/res/layout/activity_bind.xml"
+    },
+    {
+        "merged": "/Users/Skygge/github/familylink/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_detail_temp_control.xml",
+        "source": "/Users/Skygge/github/familylink/src/main/res/layout/activity_detail_temp_control.xml"
+    },
+    {
+        "merged": "/Users/Skygge/github/familylink/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_cancellation.xml",
+        "source": "/Users/Skygge/github/familylink/src/main/res/layout/activity_cancellation.xml"
+    },
+    {
+        "merged": "/Users/Skygge/github/familylink/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_set_humiture.xml",
+        "source": "/Users/Skygge/github/familylink/src/main/res/layout/activity_set_humiture.xml"
+    },
+    {
+        "merged": "/Users/Skygge/github/familylink/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_histroy_detail.xml",
+        "source": "/Users/Skygge/github/familylink/src/main/res/layout/activity_histroy_detail.xml"
+    },
+    {
+        "merged": "/Users/Skygge/github/familylink/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_detail_outdoor_siren.xml",
+        "source": "/Users/Skygge/github/familylink/src/main/res/layout/activity_detail_outdoor_siren.xml"
+    },
+    {
+        "merged": "/Users/Skygge/github/familylink/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_scene_detail.xml",
+        "source": "/Users/Skygge/github/familylink/src/main/res/layout/activity_scene_detail.xml"
+    },
+    {
+        "merged": "/Users/Skygge/github/familylink/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_set_temp_control.xml",
+        "source": "/Users/Skygge/github/familylink/src/main/res/layout/activity_set_temp_control.xml"
+    },
+    {
+        "merged": "/Users/Skygge/github/familylink/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_detail_alarm.xml",
+        "source": "/Users/Skygge/github/familylink/src/main/res/layout/activity_detail_alarm.xml"
+    },
+    {
+        "merged": "/Users/Skygge/github/familylink/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_set_timing.xml",
+        "source": "/Users/Skygge/github/familylink/src/main/res/layout/activity_set_timing.xml"
+    },
+    {
+        "merged": "/Users/Skygge/github/familylink/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_set_up.xml",
+        "source": "/Users/Skygge/github/familylink/src/main/res/layout/activity_set_up.xml"
+    },
+    {
+        "merged": "/Users/Skygge/github/familylink/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_device_picture_list.xml",
+        "source": "/Users/Skygge/github/familylink/src/main/res/layout/activity_device_picture_list.xml"
+    },
+    {
+        "merged": "/Users/Skygge/github/familylink/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_set_action.xml",
+        "source": "/Users/Skygge/github/familylink/src/main/res/layout/activity_set_action.xml"
+    },
+    {
+        "merged": "/Users/Skygge/github/familylink/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_pic_setting_info.xml",
+        "source": "/Users/Skygge/github/familylink/src/main/res/layout/activity_pic_setting_info.xml"
+    },
+    {
+        "merged": "/Users/Skygge/github/familylink/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_assess.xml",
+        "source": "/Users/Skygge/github/familylink/src/main/res/layout/activity_assess.xml"
+    },
+    {
+        "merged": "/Users/Skygge/github/familylink/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_connect_net.xml",
+        "source": "/Users/Skygge/github/familylink/src/main/res/layout/activity_connect_net.xml"
+    },
+    {
+        "merged": "/Users/Skygge/github/familylink/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_pic_setting_main.xml",
+        "source": "/Users/Skygge/github/familylink/src/main/res/layout/activity_pic_setting_main.xml"
+    },
+    {
+        "merged": "/Users/Skygge/github/familylink/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_scene_edit.xml",
+        "source": "/Users/Skygge/github/familylink/src/main/res/layout/activity_scene_edit.xml"
+    },
+    {
+        "merged": "/Users/Skygge/github/familylink/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_device_normal_pic.xml",
+        "source": "/Users/Skygge/github/familylink/src/main/res/layout/activity_device_normal_pic.xml"
+    },
+    {
+        "merged": "/Users/Skygge/github/familylink/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_device_set_wifi_new.xml",
+        "source": "/Users/Skygge/github/familylink/src/main/res/layout/activity_device_set_wifi_new.xml"
+    },
+    {
+        "merged": "/Users/Skygge/github/familylink/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_set_ap.xml",
+        "source": "/Users/Skygge/github/familylink/src/main/res/layout/activity_set_ap.xml"
+    },
+    {
+        "merged": "/Users/Skygge/github/familylink/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_timer.xml",
+        "source": "/Users/Skygge/github/familylink/src/main/res/layout/fragment_timer.xml"
+    },
+    {
+        "merged": "/Users/Skygge/github/familylink/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_localpicvideo.xml",
+        "source": "/Users/Skygge/github/familylink/src/main/res/layout/activity_localpicvideo.xml"
+    },
+    {
+        "merged": "/Users/Skygge/github/familylink/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_localnet_ipc_list.xml",
+        "source": "/Users/Skygge/github/familylink/src/main/res/layout/activity_localnet_ipc_list.xml"
+    },
+    {
+        "merged": "/Users/Skygge/github/familylink/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_device.xml",
+        "source": "/Users/Skygge/github/familylink/src/main/res/layout/fragment_device.xml"
+    },
+    {
+        "merged": "/Users/Skygge/github/familylink/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_sub_device.xml",
+        "source": "/Users/Skygge/github/familylink/src/main/res/layout/fragment_sub_device.xml"
+    },
+    {
+        "merged": "/Users/Skygge/github/familylink/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_scene.xml",
+        "source": "/Users/Skygge/github/familylink/src/main/res/layout/fragment_scene.xml"
+    },
+    {
+        "merged": "/Users/Skygge/github/familylink/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_device_camera.xml",
+        "source": "/Users/Skygge/github/familylink/src/main/res/layout/activity_device_camera.xml"
+    },
+    {
+        "merged": "/Users/Skygge/github/familylink/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_add_device_guide.xml",
+        "source": "/Users/Skygge/github/familylink/src/main/res/layout/activity_add_device_guide.xml"
+    },
+    {
+        "merged": "/Users/Skygge/github/familylink/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_detail_humiture.xml",
+        "source": "/Users/Skygge/github/familylink/src/main/res/layout/activity_detail_humiture.xml"
+    },
+    {
+        "merged": "/Users/Skygge/github/familylink/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_net_work.xml",
+        "source": "/Users/Skygge/github/familylink/src/main/res/layout/activity_net_work.xml"
+    }
+]

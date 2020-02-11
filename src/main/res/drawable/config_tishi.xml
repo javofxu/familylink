@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:oneshot="false">
+    <item android:drawable="@mipmap/config1" android:duration="1000"></item>
+    <item android:drawable="@mipmap/config2" android:duration="1000"></item>
+    <item android:drawable="@mipmap/config3" android:duration="1000"></item>
+    <item android:drawable="@mipmap/config4" android:duration="1000"></item>
+    <item android:drawable="@mipmap/config5" android:duration="1000"></item>
+    <item android:drawable="@mipmap/config6" android:duration="1000"></item>
+    <item android:drawable="@mipmap/config7" android:duration="1000"></item>
+    <item android:drawable="@mipmap/config6" android:duration="1000"></item>
+    <item android:drawable="@mipmap/config7" android:duration="1000"></item>
+</animation-list>
