@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
@@ -423,8 +424,9 @@ public class GatewaySettingActivity extends BaseActivity<ActivityGatewaySettingB
         });
     }
 
-    @Subscribe          //订阅事件FirstEvent
+    @Subscribe
     public  void onEventMainThread(EventAnswerOK event) {
+        Log.i(TAG, "onEventMainThread: "+ event.getData_str1()+" -- " +event.getData_str2());
         if (event.getData_str1().length() == 9) {
             int cmd = Integer.parseInt(event.getData_str1().substring(0, 4), 16);
             if (cmd == SendCommandAli.MODIFY_EQUIPMENT_NAME) {

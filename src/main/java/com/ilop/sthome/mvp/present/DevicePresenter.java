@@ -225,7 +225,9 @@ public class DevicePresenter extends BasePresenterImpl<DeviceContract.IView> imp
         if (!TextUtils.isEmpty(subDevice)){
             String[] subDeviceList = subDevice.split(",");
             for (String subDevices: subDeviceList) {
-                DeviceInfoBean mDevice = deviceAliDAO.findByDeviceid(subDevices, 0);
+                String deviceName = subDevices.split("_")[0];
+                String deviceId = subDevices.split("_")[1];
+                DeviceInfoBean mDevice = deviceAliDAO.findByDeviceid(deviceName, Integer.parseInt(deviceId));
                 mSubDeviceList.add(mDevice);
             }
             roomBean.setSubDeviceList(mSubDeviceList);

@@ -42,6 +42,7 @@ public class AddDevicePresenter extends BasePresenterImpl<AddDeviceContract.IVie
     private BaseDialog mDialog;
     private int mDeviceId;
     private String mDeviceName;
+    private String mNickName;
     private List<RoomBean> mRoomList;
     private List<DeviceInfoBean> mDeviceList;
     private DeviceAliDAO mDeviceDao;
@@ -98,14 +99,15 @@ public class AddDevicePresenter extends BasePresenterImpl<AddDeviceContract.IVie
 
     @Override
     public void onModifyDevice(int deviceId) {
-        String ds = CoderALiUtils.getAscii(mDeviceName);
+        mNickName = SpUtil.getString(mContext, "device");
+        String ds = CoderALiUtils.getAscii(mNickName);
         String dsCRC = ByteUtil.CRCmaker(ds);
         mSendEquipment.modifyEquipmentName(deviceId, ds + dsCRC);
+        onModifySuccess();
     }
 
     @Override
     public void onModifySuccess() {
-        String mNickName = SpUtil.getString(mContext, "device");
         String mRoomName = SpUtil.getString(mContext, "room");
         mRoomList = RoomDaoUtil.getInstance().findRoomByName(mRoomName);
         if(mDeviceId > 0){

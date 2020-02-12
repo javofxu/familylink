@@ -1,6 +1,7 @@
 package com.ilop.sthome.ui.activity.config;
 
 import android.graphics.drawable.AnimationDrawable;
+import android.util.Log;
 import android.view.KeyEvent;
 
 import com.example.common.base.BasePActivity;
@@ -106,18 +107,6 @@ public class AddDeviceGuideActivity extends BasePActivity<AddDevicePresenter, Ac
             if(mDeviceId==event.getDevice_id()){
                 showToast(getString(R.string.replace_success));
                 finish();
-            }
-        }
-    }
-
-    @Subscribe
-    public  void onEventMainThread(EventAnswerOK event){
-        if (event.getData_str1().length() == 9) {
-            int cmd = Integer.parseInt(event.getData_str1().substring(0, 4), 16);
-            if (cmd == SendCommandAli.MODIFY_EQUIPMENT_NAME) {
-                if ("OK".equals(event.getData_str2())) {
-                    mPresent.onModifySuccess();
-                }
             }
         }
     }
