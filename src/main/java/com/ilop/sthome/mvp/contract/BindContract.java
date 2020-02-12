@@ -46,7 +46,7 @@ public interface BindContract {
          * 创建房间
          * @param roomName
          */
-        void createRoom(String roomName, String gatewayName);
+        void createRoom(String roomName);
 
         /**
          * 获取网关列表

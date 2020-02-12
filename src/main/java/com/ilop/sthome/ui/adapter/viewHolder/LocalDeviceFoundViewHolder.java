@@ -14,11 +14,10 @@ import android.widget.TextView;
 import com.aliyun.alink.business.devicecenter.api.add.DeviceInfo;
 import com.aliyun.alink.business.devicecenter.api.discovery.DiscoveryType;
 import com.example.common.base.BaseLoadingDialog;
-import com.ilop.sthome.app.MyApplication;
 import com.ilop.sthome.data.device.FoundDevice;
 import com.ilop.sthome.data.device.FoundDeviceListItem;
 import com.ilop.sthome.data.enums.DevType;
-import com.ilop.sthome.ui.activity.config.BindAndUseActivity;
+import com.ilop.sthome.ui.activity.config.ConfigGatewayActivity;
 import com.siterwell.familywellplus.R;
 
 /**
@@ -65,9 +64,10 @@ public class LocalDeviceFoundViewHolder extends BaseViewHolder<FoundDevice> {
             dialog = new BaseLoadingDialog(mContext);
             dialog.show();
             Bundle bundle = new Bundle();
+            bundle.putBoolean("isLocal", true);
             bundle.putString("productKey", deviceInfo.productKey);
             bundle.putString("deviceName", deviceInfo.deviceName);
-            intent  = new Intent(mContext, BindAndUseActivity.class);
+            intent  = new Intent(mContext, ConfigGatewayActivity.class);
             intent.putExtras(bundle);
             handler.sendEmptyMessageDelayed(1, 1500);
         });

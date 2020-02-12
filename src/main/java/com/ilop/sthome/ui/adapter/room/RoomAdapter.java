@@ -86,7 +86,7 @@ public class RoomAdapter extends RecyclerView.Adapter<RoomAdapter.ItemHolder> {
         ImageView itemRoomEdit;
         @BindView(R.id.item_room_list)
         RecyclerView itemRoomList;
-        public ItemHolder(@NonNull View itemView) {
+        ItemHolder(@NonNull View itemView) {
             super(itemView);
             ButterKnife.bind(this, itemView);
         }

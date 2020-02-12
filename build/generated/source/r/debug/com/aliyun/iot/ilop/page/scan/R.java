@@ -34,12 +34,12 @@ public final class R {
     }
     public static final class id {
         public static final int imageview_resultview_view = 0x7f0a013d;
-        public static final int scan_fragment = 0x7f0a028a;
-        public static final int scan_preview_surfaceview = 0x7f0a028b;
-        public static final int scanactivity_album_textview = 0x7f0a028c;
-        public static final int scanactivity_back_linearlayout = 0x7f0a028d;
-        public static final int scanactivity_topbar_linearlayout = 0x7f0a028e;
-        public static final int textview_resultview_des = 0x7f0a031a;
+        public static final int scan_fragment = 0x7f0a028b;
+        public static final int scan_preview_surfaceview = 0x7f0a028c;
+        public static final int scanactivity_album_textview = 0x7f0a028d;
+        public static final int scanactivity_back_linearlayout = 0x7f0a028e;
+        public static final int scanactivity_topbar_linearlayout = 0x7f0a028f;
+        public static final int textview_resultview_des = 0x7f0a031b;
     }
     public static final class layout {
         public static final int scan_activity = 0x7f0d00fe;

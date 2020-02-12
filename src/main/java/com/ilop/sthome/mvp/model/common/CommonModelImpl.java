@@ -42,7 +42,7 @@ public interface CommonModelImpl {
      * @param roomName 房间名称
      * @param callBack 返回信息
      */
-    void onCreateRoom(String roomId, String roomName, onModelCallBack callBack);
+    void onCreateRoom(String roomId, String roomName, String gateway, String device, String camera, onModelCallBack callBack);
 
     /**
      * 修改房间名称

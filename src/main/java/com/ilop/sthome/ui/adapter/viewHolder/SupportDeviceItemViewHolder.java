@@ -31,8 +31,6 @@ public class SupportDeviceItemViewHolder extends BaseViewHolder<FoundDevice> {
          iv_device_icon = itemView.findViewById(R.id.list_item_device_icon);
          tv_device_name = itemView.findViewById(R.id.list_item_device_name);
          btn_device_connect = itemView.findViewById(R.id.list_item_device_action);
-
-
     }
 
 

@@ -12,6 +12,7 @@ import com.ilop.sthome.data.event.EventAnswerOK;
 import com.ilop.sthome.mvp.contract.AddSceneContract;
 import com.ilop.sthome.mvp.present.AddScenePresenter;
 import com.ilop.sthome.network.api.SendCommandAli;
+import com.ilop.sthome.ui.activity.config.ConfigGatewayActivity;
 import com.ilop.sthome.ui.adapter.device.GatewayListAdapter;
 import com.ilop.sthome.ui.adapter.scene.ChoseColorAdapter;
 import com.siterwell.familywellplus.R;
@@ -97,6 +98,10 @@ public class AddSceneActivity extends BasePActivity<AddScenePresenter, ActivityA
                 mPresent.onSaveScene(mSceneName, mGateway, mSceneList);
             }
         });
+        mDBind.ivAddGateway.setOnClickListener(v -> {
+            skipAnotherActivity(ConfigGatewayActivity.class);
+            finish();
+        });
     }
 
     @Subscribe          //订阅事件FirstEvent
@@ -125,6 +130,7 @@ public class AddSceneActivity extends BasePActivity<AddScenePresenter, ActivityA
     @Override
     public void withoutGateway() {
         mGatewayAdapter.setList(null);
+        mDBind.llWithout.setVisibility(View.VISIBLE);
     }
 
     @Override

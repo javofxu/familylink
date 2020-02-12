@@ -37,7 +37,8 @@
                 android:layout_height="@dimen/margin_260"
                 android:layout_margin="@dimen/margin_20"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginTop="@dimen/margin_40"/>
+                android:layout_marginTop="@dimen/margin_40"
+                android:src="@drawable/config_button"/>
 
             <com.example.common.view.AutoSplitTextView
                 android:id="@+id/guideText1"

@@ -17,6 +17,9 @@ import com.ilop.sthome.utils.greenDao.RoomDaoUtil;
 import com.siterwell.familywellplus.R;
 
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.util.List;
 
 /**
@@ -50,20 +53,23 @@ public class RoomPresenter extends BasePresenterImpl<RoomContract.IView> impleme
     @Override
     public void onSaveRoom(String name) {
         int roomId;
+        mRoomList = RoomDaoUtil.getInstance().getRoomDao().queryAll();
         if (mRoomList.size()>0){
             roomId = mRoomList.get(mRoomList.size()-1).getRid() + 1;
         }else {
             roomId = 1;
         }
-        mModel.onCreateRoom(String.valueOf(roomId), name, new onModelCallBack() {
+        mModel.onCreateRoom(String.valueOf(roomId), name, "", "", "", new onModelCallBack() {
             @Override
             public void onResponse(IoTResponse response) {
                 if (response.getCode() == 200){
-                    Object data = response.getData();
                     String mUserId = null;
-                    List<VirtualUserBean> virtualList = JSON.parseArray(data.toString(),VirtualUserBean.class);
-                    if (virtualList.size()>0){
-                        mUserId = virtualList.get(0).getUserId();
+                    try {
+                        Object data = response.getData();
+                        JSONObject jsonObject = (JSONObject) data;
+                        mUserId = jsonObject.getString("userId");
+                    } catch (JSONException e) {
+                        e.printStackTrace();
                     }
                     RoomBean mRoom = new RoomBean();
                     mRoom.setRid(roomId);

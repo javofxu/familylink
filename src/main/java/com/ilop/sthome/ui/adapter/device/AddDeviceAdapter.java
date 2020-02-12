@@ -42,18 +42,17 @@ public class AddDeviceAdapter extends BaseRecycleViewAdapter<FoundDevice> {
         localScanDeviceTilte = new LocalScanDeviceTilte();
         supportDeviceTitle = new SupportDeviceTitle();
         noSupportDeviceTitle = new NoSupportDeviceTitle();
-        mDatas.add(0, localScanDeviceTilte);
-        mDatas.add(1, localDevciceTitle);
-        mDatas.add(2, supportDeviceTitle);
+        mDatas.add(0, localDevciceTitle);
+        mDatas.add(1, supportDeviceTitle);
     }
 
 
     public void resetLocalDevice() {
         int supportIndex = mDatas.indexOf(supportDeviceTitle);
 
-        List<FoundDevice> foundDevices = new ArrayList<>(mDatas.subList(2, supportIndex));
+        List<FoundDevice> foundDevices = new ArrayList<>(mDatas.subList(1, supportIndex));
         mDatas.removeAll(foundDevices);
-        notifyItemRangeRemoved(2, foundDevices.size());
+        notifyItemRangeRemoved(1, foundDevices.size());
     }
 
     public void addLocalDevice(List<FoundDeviceListItem> foundDeviceListItems) {

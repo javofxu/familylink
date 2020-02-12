@@ -448,12 +448,12 @@
         "source": "/Users/Skygge/.gradle/caches/transforms-1/files-1.1/openaccount-ui-default-3.5.3.9.aar/b7d6345aae8e31f4a01e7d4e978f131e/res/drawable/ali_sdk_openaccount_bg_main_button.xml"
     },
     {
-        "merged": "/Users/Skygge/github/familylink/build/intermediates/res/merged/debug/mipmap-xhdpi-v4_u2.jpg.flat",
-        "source": "/Users/Skygge/github/familylink/common/build/intermediates/bundles/debug/res/mipmap-xhdpi-v4/u2.jpg"
-    },
-    {
         "merged": "/Users/Skygge/github/familylink/build/intermediates/res/merged/debug/color_btn_item.xml.flat",
         "source": "/Users/Skygge/github/familylink/src/main/res/color/btn_item.xml"
+    },
+    {
+        "merged": "/Users/Skygge/github/familylink/build/intermediates/res/merged/debug/mipmap-xhdpi-v4_u2.jpg.flat",
+        "source": "/Users/Skygge/github/familylink/common/build/intermediates/bundles/debug/res/mipmap-xhdpi-v4/u2.jpg"
     },
     {
         "merged": "/Users/Skygge/github/familylink/build/intermediates/res/merged/debug/layout_item_history_detail.xml.flat",
@@ -1862,6 +1862,10 @@
     {
         "merged": "/Users/Skygge/github/familylink/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_ic_menu_copy_mtrl_am_alpha.png.flat",
         "source": "/Users/Skygge/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/46c98044aab58df29208fca388cb3d9b/res/drawable-xxhdpi-v4/abc_ic_menu_copy_mtrl_am_alpha.png"
+    },
+    {
+        "merged": "/Users/Skygge/github/familylink/build/intermediates/res/merged/debug/mipmap-xxhdpi_default_pic_152.png.flat",
+        "source": "/Users/Skygge/github/familylink/src/main/res/mipmap-xxhdpi/default_pic_152.png"
     },
     {
         "merged": "/Users/Skygge/github/familylink/build/intermediates/res/merged/debug/layout_activity_ipc_before_wifi_config.xml.flat",
@@ -5382,6 +5386,10 @@
     {
         "merged": "/Users/Skygge/github/familylink/build/intermediates/res/merged/debug/mipmap-xhdpi_scene_at_home.png.flat",
         "source": "/Users/Skygge/github/familylink/src/main/res/mipmap-xhdpi/scene_at_home.png"
+    },
+    {
+        "merged": "/Users/Skygge/github/familylink/build/intermediates/res/merged/debug/mipmap-xhdpi_default_pic_152.png.flat",
+        "source": "/Users/Skygge/github/familylink/src/main/res/mipmap-xhdpi/default_pic_152.png"
     },
     {
         "merged": "/Users/Skygge/github/familylink/build/intermediates/res/merged/debug/drawable_config_thcheck.xml.flat",

@@ -12,12 +12,12 @@
         "source": "/Users/Skygge/github/familylink/src/main/res/layout/activity_room_manage.xml"
     },
     {
-        "merged": "/Users/Skygge/github/familylink/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_automation_detail.xml",
-        "source": "/Users/Skygge/github/familylink/src/main/res/layout/activity_automation_detail.xml"
-    },
-    {
         "merged": "/Users/Skygge/github/familylink/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_recovery_guide.xml",
         "source": "/Users/Skygge/github/familylink/src/main/res/layout/activity_recovery_guide.xml"
+    },
+    {
+        "merged": "/Users/Skygge/github/familylink/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_automation_detail.xml",
+        "source": "/Users/Skygge/github/familylink/src/main/res/layout/activity_automation_detail.xml"
     },
     {
         "merged": "/Users/Skygge/github/familylink/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_pic_setting_storage.xml",

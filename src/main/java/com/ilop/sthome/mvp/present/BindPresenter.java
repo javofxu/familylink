@@ -96,7 +96,7 @@ public class BindPresenter extends BasePresenterImpl<BindContract.IView> impleme
                 if (code == 200){
                     List<RoomBean> mRoomList = RoomDaoUtil.getInstance().findRoomByName(roomName);
                     if (mRoomList.size() == 0){
-                        createRoom(roomName, gatewayName);
+                        createRoom(roomName);
                     }else{
                         isAlreadyRoom = true;
                         getGatewayList();
@@ -113,12 +113,12 @@ public class BindPresenter extends BasePresenterImpl<BindContract.IView> impleme
     }
 
     @Override
-    public void createRoom(String roomName, String gatewayName) {
+    public void createRoom(String roomName) {
         this.mRoomName = roomName;
         List<RoomBean> roomBeanList = RoomDaoUtil.getInstance().getRoomDao().queryAll();
         int size = roomBeanList.size();
         mRoomId = size == 0 ? 0 : roomBeanList.get(size-1).getId().intValue()+1;
-        mModel.onCreateRoom(String.valueOf(mRoomId), roomName, new onModelCallBack() {
+        mModel.onCreateRoom(String.valueOf(mRoomId), roomName, "", "", "", new onModelCallBack() {
             @Override
             public void onResponse(IoTResponse response) {
                 if (response.getCode() == 200){

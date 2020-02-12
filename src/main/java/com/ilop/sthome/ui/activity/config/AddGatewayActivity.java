@@ -114,7 +114,7 @@ public class AddGatewayActivity extends BaseActivity<ActivityAddDeviceBinding> i
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        mDeviceAddHandler.onDestory();
+        mDeviceAddHandler.onDestroy();
     }
 
 

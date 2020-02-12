@@ -128,27 +128,27 @@ public class CommonModel implements CommonModelImpl {
     }
 
     @Override
-    public void onCreateRoom(String roomId, String roomName, onModelCallBack callBack) {
+    public void onCreateRoom(String roomId, String roomName, String gateway, String device, String camera, onModelCallBack callBack) {
         List<Map<String, Object>> mapList = new ArrayList<>();
         Map<String, Object> maps = new HashMap<>();
         maps.put("attrKey","employeeID");
-        maps.put("attrValue",roomId);
+        maps.put("attrValue", roomId);
         mapList.add(maps);
         Map<String, Object> maps2 = new HashMap<>();
         maps2.put("attrKey","extNum");
-        maps2.put("attrValue",roomName);
+        maps2.put("attrValue", roomName);
         mapList.add(maps2);
         Map<String, Object> maps3 = new HashMap<>();
         maps3.put("attrKey","homeAddress");
-        maps3.put("attrValue","");
+        maps3.put("attrValue", camera);
         mapList.add(maps3);
         Map<String, Object> maps4 = new HashMap<>();
         maps4.put("attrKey","companyAddress");
-        maps4.put("attrValue","");
+        maps4.put("attrValue", gateway);
         mapList.add(maps4);
         Map<String, Object> maps5 = new HashMap<>();
         maps5.put("attrKey","companyName");
-        maps5.put("attrValue","");
+        maps5.put("attrValue", device);
         mapList.add(maps5);
         Map<String, Object> map = new HashMap<>();
         map.put("attrList", mapList);

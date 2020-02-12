@@ -72,7 +72,7 @@ public class DeviceAddHandler extends Handler {
     }
 
 
-    public void onDestory() {
+    public void onDestroy() {
         removeCallbacksAndMessages(null);
         onDeviceAddListener = null;
     }

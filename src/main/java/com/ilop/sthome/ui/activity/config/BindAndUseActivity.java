@@ -26,7 +26,6 @@ import com.siterwell.familywellplus.databinding.ActivityBindBinding;
  * description：网关配网成功
  */
 public class BindAndUseActivity extends BasePActivity<BindPresenter, ActivityBindBinding> implements BindContract.IView {
-    private String TAG = BindAndUseActivity.class.getSimpleName();
     private String productKey, deviceName;
     private String mGatewayName;
     private String mRoomName;

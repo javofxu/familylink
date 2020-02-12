@@ -30,7 +30,7 @@ public final class R {
     }
     public static final class id {
         public static final int imageview_resultview_view = 0x7f0a013d;
-        public static final int textview_resultview_des = 0x7f0a031a;
+        public static final int textview_resultview_des = 0x7f0a031b;
     }
     public static final class layout {
         public static final int view_showalbumpic = 0x7f0d0104;

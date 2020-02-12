@@ -1,6 +1,8 @@
 package com.ilop.sthome.ui.activity.config;
 
+import android.content.Intent;
 import android.os.Build;
+import android.os.Bundle;
 import android.support.annotation.RequiresApi;
 import android.support.v7.widget.LinearLayoutManager;
 import android.text.Editable;
@@ -21,7 +23,6 @@ import com.siterwell.familywellplus.databinding.ActivityConfigGatewayBinding;
 import java.util.List;
 import java.util.stream.Collectors;
 
-
 /**
  * @author skygge
  * @date 2020-01-08.
@@ -35,10 +36,24 @@ public class ConfigGatewayActivity extends BaseActivity<ActivityConfigGatewayBin
     private List<RoomBean> mRoomList;
     private List<String> mNameList;
     private String mRoomNames;
+    private boolean mIsLocal;
+    private String mProductKey;
+    private String mDeviceName;
 
     @Override
     protected int getLayoutId() {
         return R.layout.activity_config_gateway;
+    }
+
+    @Override
+    protected void initialize() {
+        super.initialize();
+        Bundle bundle = getIntent().getExtras();
+        if (bundle!=null) {
+            mIsLocal = bundle.getBoolean("isLocal", false);
+            mProductKey = bundle.getString("productKey", null);
+            mDeviceName = bundle.getString("deviceName", null);
+        }
     }
 
     @Override
@@ -110,7 +125,16 @@ public class ConfigGatewayActivity extends BaseActivity<ActivityConfigGatewayBin
             }else {
                 SpUtil.putString(mContext, "gateway", mGatewayName);
                 SpUtil.putString(mContext, "room", mRoomName);
-                skipAnotherActivity(ConfigGuideActivity.class);
+                if (mIsLocal){
+                    Bundle bundle = new Bundle();
+                    bundle.putString("productKey", mProductKey);
+                    bundle.putString("deviceName", mDeviceName);
+                    Intent intent  = new Intent(mContext, BindAndUseActivity.class);
+                    intent.putExtras(bundle);
+                    startActivity(intent);
+                }else {
+                    skipAnotherActivity(ConfigGuideActivity.class);
+                }
             }
         });
     }

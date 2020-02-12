@@ -8,8 +8,8 @@ package com.aliyun.alink.linksdk;
 
 public final class R {
     public static final class mipmap {
-        public static final int ic_launcher = 0x7f0f008c;
-        public static final int ic_launcher_round = 0x7f0f008d;
+        public static final int ic_launcher = 0x7f0f008d;
+        public static final int ic_launcher_round = 0x7f0f008e;
     }
     public static final class raw {
         public static final int version = 0x7f100005;

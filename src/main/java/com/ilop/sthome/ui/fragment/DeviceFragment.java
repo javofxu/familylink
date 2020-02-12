@@ -61,7 +61,6 @@ public class DeviceFragment extends BasePFragment<DevicePresenter, FragmentDevic
         super.initView();
         mRoomAdapter = new RoomAdapter(mContext);
         LayoutAnimationController mAnimation = AnimationUtils.loadLayoutAnimation(mContext, R.anim.layout_animation_fall_down);
-        mDBind.deviceList.getRecyclerView().setLayoutManager(new LinearLayoutManager(mContext));
         mDBind.deviceList.getRecyclerView().setLayoutAnimation(mAnimation);
         mDBind.deviceList.setAdapter(mRoomAdapter);
         mDBind.deviceList.setRefreshing(false);

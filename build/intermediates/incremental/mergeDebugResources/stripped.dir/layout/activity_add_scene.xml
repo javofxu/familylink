@@ -99,12 +99,36 @@
                     android:textSize="@dimen/text_16"
                     android:textColor="@color/text_line"
                     android:text="@string/please_choose_device"/>
-                <android.support.v7.widget.RecyclerView
-                    android:id="@+id/scene_choose_gateway"
+                <FrameLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-                </android.support.v7.widget.RecyclerView>
+                    android:layout_height="match_parent">
+                    <LinearLayout
+                        android:id="@+id/ll_without"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:visibility="gone"
+                        android:orientation="vertical">
+                        <ImageView
+                            android:id="@+id/iv_add_gateway"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/device_add"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:textColor="@color/text_title"
+                            android:textSize="@dimen/text_14"
+                            android:text="@string/ali_no_gateway"/>
+                    </LinearLayout>
 
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/scene_choose_gateway"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                    </android.support.v7.widget.RecyclerView>
+                </FrameLayout>
             </LinearLayout>
         </ScrollView>
     </LinearLayout>
