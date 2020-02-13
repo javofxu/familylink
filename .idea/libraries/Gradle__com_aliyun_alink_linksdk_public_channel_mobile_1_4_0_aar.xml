@@ -1,8 +1,8 @@
 <component name="libraryTable">
   <library name="Gradle: com.aliyun.alink.linksdk:public-channel-mobile:1.4.0@aar">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/public-channel-mobile-1.4.0.aar/80723d197c7f82c8131f7dca0afb4dd5/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/public-channel-mobile-1.4.0.aar/80723d197c7f82c8131f7dca0afb4dd5/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/public-channel-mobile-1.4.0.aar/b1b02ebfe4e76fef9704a0de23708b9d/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/public-channel-mobile-1.4.0.aar/b1b02ebfe4e76fef9704a0de23708b9d/res" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

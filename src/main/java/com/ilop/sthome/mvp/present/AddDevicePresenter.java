@@ -41,6 +41,7 @@ public class AddDevicePresenter extends BasePresenterImpl<AddDeviceContract.IVie
     private Context mContext;
     private BaseDialog mDialog;
     private int mDeviceId;
+    private int mRoomId;
     private String mDeviceName;
     private String mNickName;
     private List<RoomBean> mRoomList;
@@ -54,6 +55,7 @@ public class AddDevicePresenter extends BasePresenterImpl<AddDeviceContract.IVie
         this.mDeviceName = deviceName;
         mModel = new CommonModel();
         mDeviceDao = new DeviceAliDAO(mContext);
+        mDeviceList = new ArrayList<>();
         DeviceInfoBean deviceInfoBean = mDeviceDao.findByDeviceid(deviceName,0);
         mSendEquipment = new SendEquipmentDataAli(mContext, deviceInfoBean);
     }
@@ -110,16 +112,23 @@ public class AddDevicePresenter extends BasePresenterImpl<AddDeviceContract.IVie
     public void onModifySuccess() {
         String mRoomName = SpUtil.getString(mContext, "room");
         mRoomList = RoomDaoUtil.getInstance().findRoomByName(mRoomName);
+        List<RoomBean> roomBeanList = RoomDaoUtil.getInstance().getRoomDao().queryAll();
+        int size = roomBeanList.size();
+        mRoomId = size == 0 ? 0 : roomBeanList.get(size-1).getId().intValue()+1;
         if(mDeviceId > 0){
             DeviceInfoBean deviceInfoBean = new DeviceInfoBean();
             deviceInfoBean.setSubdeviceName(mNickName);
             deviceInfoBean.setDeviceName(mDeviceName);
             deviceInfoBean.setDevice_ID(mDeviceId);
+            deviceInfoBean.setNodeType(String.valueOf(mRoomId));
             mDeviceDao.updateName(deviceInfoBean);
-            mDeviceList = mDeviceDao.findAllSubDevice(mDeviceName);
+            List<DeviceInfoBean> deviceList = mDeviceDao.findAllSubDevice(mDeviceName);
             List<String> stringList = new ArrayList<>();
-            for (DeviceInfoBean mDevice: mDeviceList) {
+            for (DeviceInfoBean mDevice: deviceList) {
                 stringList.add(mDevice.getDeviceName()+"_"+mDevice.getDevice_ID());
+                if (String.valueOf(mRoomId).equals(mDevice.getNodeType())){
+                    mDeviceList.add(mDevice);
+                }
             }
             String devices = StringUtils.join(stringList.toArray(),",");
             if (mRoomList.size() == 0){
@@ -132,9 +141,7 @@ public class AddDevicePresenter extends BasePresenterImpl<AddDeviceContract.IVie
 
     @Override
     public void createRoom(String roomName, String deviceList) {
-        List<RoomBean> roomBeanList = RoomDaoUtil.getInstance().getRoomDao().queryAll();
-        int size = roomBeanList.size();
-        int mRoomId = size == 0 ? 0 : roomBeanList.get(size-1).getId().intValue()+1;
+
         mModel.onCreateRoom(String.valueOf(mRoomId), roomName, "", deviceList, "", new onModelCallBack() {
             @Override
             public void onResponse(IoTResponse response) {

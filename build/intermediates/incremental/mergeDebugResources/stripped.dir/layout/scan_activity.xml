@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <fragment
+        android:id="@+id/scan_fragment"
+        android:name="com.aliyun.iot.ilop.page.scan.ScanFragment"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"/>
+
+    <RelativeLayout
+        android:id="@+id/scanactivity_topbar_linearlayout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@android:color/transparent"
+        android:paddingLeft="11.5dp"
+        android:paddingRight="11.5dp"
+        android:visibility="visible">
+        <LinearLayout android:id="@+id/scanactivity_back_linearlayout"
+                      android:layout_width="30dp"
+                      android:layout_height="match_parent"
+                      android:layout_centerVertical="true"
+                      android:gravity="center_vertical">
+            <ImageView
+                android:layout_width="8dp"
+                android:layout_height="17dp"
+                android:src="@drawable/scan_backarrow_white"/>
+        </LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="@string/ilop_page_scan_title"
+            android:textColor="@android:color/white"
+            android:textSize="17dp"/>
+        <TextView
+            android:id="@+id/scanactivity_album_textview"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/scan_rect_tranblack_bg"
+            android:gravity="center"
+            android:text="相册"
+            android:textColor="@color/scan_text_white"
+            android:textSize="12dp"
+            android:visibility="gone"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:background="@drawable/scan_rect_tranblack_bg"
+        android:gravity="center"
+        android:visibility="gone">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/ilop_page_scan_type_range_tip"
+            android:textColor="@color/scan_text_white"
+            android:textSize="18dp"/>
+    </LinearLayout>
+</RelativeLayout>

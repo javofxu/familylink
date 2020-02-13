@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+                                                                   
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" android:tag="layout/activity_device_picture_list_0" xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_50"
+        android:background="@color/color_white">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/device_opt_picture_list"
+            android:textColor="@color/top_bar_title"
+            android:textSize="@dimen/title_size" />
+
+        <ImageView
+            android:id="@+id/iv_picture_back"
+            android:layout_width="@dimen/back_image_width"
+            android:layout_height="@dimen/back_image_height"
+            android:padding="@dimen/margin_3"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/back_image_marginLeft"
+            android:src="@mipmap/back"/>
+
+        <ImageView
+            android:id="@+id/iv_picture_time"
+            android:layout_width="@dimen/back_image_width"
+            android:layout_height="@dimen/back_image_height"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="@dimen/back_image_marginLeft"
+            android:src="@mipmap/icon_time"/>
+
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_1"
+        android:background="@color/top_bar_line" />
+
+    <com.example.common.view.refresh.CustomRefreshView
+        android:id="@+id/picture_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </com.example.common.view.refresh.CustomRefreshView>
+
+</LinearLayout>
+         

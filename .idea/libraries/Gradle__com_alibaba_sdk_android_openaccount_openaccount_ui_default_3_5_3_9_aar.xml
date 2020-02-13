@@ -1,11 +1,11 @@
 <component name="libraryTable">
   <library name="Gradle: com.alibaba.sdk.android.openaccount:openaccount-ui-default:3.5.3.9@aar">
     <ANNOTATIONS>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/openaccount-ui-default-3.5.3.9.aar/b7d6345aae8e31f4a01e7d4e978f131e/annotations.zip!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/openaccount-ui-default-3.5.3.9.aar/94f47ff55e8a7772bbf8fee3233cad73/annotations.zip!/" />
     </ANNOTATIONS>
     <CLASSES>
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/openaccount-ui-default-3.5.3.9.aar/b7d6345aae8e31f4a01e7d4e978f131e/res" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/openaccount-ui-default-3.5.3.9.aar/b7d6345aae8e31f4a01e7d4e978f131e/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/openaccount-ui-default-3.5.3.9.aar/94f47ff55e8a7772bbf8fee3233cad73/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/openaccount-ui-default-3.5.3.9.aar/94f47ff55e8a7772bbf8fee3233cad73/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

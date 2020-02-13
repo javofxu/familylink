@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+                                                                   
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/white" android:tag="layout/activity_choose_action_0" xmlns:android="http://schemas.android.com/apk/res/android">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_50">
+            <TextView
+                android:id="@+id/tv_condition_title"
+                style="@style/TabTitleTextView"
+                android:text="@string/condition"/>
+            <ImageView
+                android:id="@+id/iv_condition_back"
+                style="@style/TabBackImageView"/>
+        </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_1"
+            android:background="@color/top_bar_line" />
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/physical_equipment_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+         

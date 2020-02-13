@@ -1,8 +1,8 @@
 <component name="libraryTable">
   <library name="Gradle: com.aliyun.iot.aep.sdk.external:securityguard:5.4.94.2018-12-13-exclude-x86@aar">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/securityguard-5.4.94.2018-12-13-exclude-x86.aar/4108fc326f97f6addb0b6a4f8f7e135f/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/securityguard-5.4.94.2018-12-13-exclude-x86.aar/4108fc326f97f6addb0b6a4f8f7e135f/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/securityguard-5.4.94.2018-12-13-exclude-x86.aar/207d8514cef8c0b6008d9e448eea7768/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/securityguard-5.4.94.2018-12-13-exclude-x86.aar/207d8514cef8c0b6008d9e448eea7768/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />
