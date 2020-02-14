@@ -24,6 +24,31 @@ import java.util.Map;
 public class PersonalModel implements PersonalContract.IModel {
 
     @Override
+    public void toGetUploadUrl(onModelCallBack callBack) {
+        Map<String, Object> map = new HashMap<>();
+        map.put("fileSize", 300888);
+        IoTRequestBuilder builder = new IoTRequestBuilder()
+                .setPath("/living/user/avatar/upload/signature/get")
+                .setScheme(Scheme.HTTPS)
+                .setApiVersion("1.0.0")
+                .setAuthType("iotAuth")
+                .setParams(map);
+        IoTRequest request = builder.build();
+        IoTAPIClient ioTAPIClient = new IoTAPIClientFactory().getClient();
+        ioTAPIClient.send(request, new IoTCallback() {
+            @Override
+            public void onFailure(IoTRequest ioTRequest, Exception e) {
+                callBack.onFailure(e);
+            }
+
+            @Override
+            public void onResponse(IoTRequest ioTRequest, IoTResponse response) {
+                callBack.onResponse(response);
+            }
+        });
+    }
+
+    @Override
     public void toQueryUserInfo(String identifyId, onModelCallBack callBack) {
         Map<String, Object> maps = new HashMap<>();
         Map<String, Object> maps2 = new HashMap<>();

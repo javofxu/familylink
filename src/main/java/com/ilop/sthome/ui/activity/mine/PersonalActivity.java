@@ -5,18 +5,25 @@ import android.net.Uri;
 import android.support.annotation.NonNull;
 import android.view.View;
 
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.engine.DiskCacheStrategy;
+import com.bumptech.glide.load.resource.bitmap.CircleCrop;
+import com.bumptech.glide.request.RequestOptions;
 import com.example.common.base.BasePActivity;
+import com.example.common.utils.LiveDataBus;
 import com.facebook.drawee.generic.RoundingParams;
 import com.ilop.sthome.mvp.contract.PersonalContract;
 import com.ilop.sthome.mvp.present.PersonalPresenter;
 import com.ilop.sthome.ui.activity.login.EmailResetAliActivity;
 import com.ilop.sthome.ui.activity.login.PhoneResetAliActivity;
+import com.ilop.sthome.utils.FileUtil;
 import com.linchaolong.android.imagepicker.ImagePicker;
 import com.linchaolong.android.imagepicker.cropper.CropImage;
 import com.linchaolong.android.imagepicker.cropper.CropImageView;
 import com.siterwell.familywellplus.R;
 import com.siterwell.familywellplus.databinding.ActivityPersonalBinding;
 
+import java.io.File;
 import java.util.Locale;
 
 /**
@@ -30,6 +37,7 @@ public class PersonalActivity extends BasePActivity<PersonalPresenter, ActivityP
 
     private String mImageUrl;
     private String mLanguage;
+    private File mFile;
     private ImagePicker mImagePicker;
 
     @Override
@@ -55,7 +63,6 @@ public class PersonalActivity extends BasePActivity<PersonalPresenter, ActivityP
         super.initView();
         mImagePicker = new ImagePicker();
         mImagePicker.setCropImage(true);
-        mDBind.userImg.getHierarchy().setRoundingParams(RoundingParams.asCircle());
         mDBind.userUpdatePhone.setVisibility("zh".equals(mLanguage) ? View.VISIBLE : View.INVISIBLE);
         mDBind.userUpdateEmail.setVisibility("zh".equals(mLanguage) ? View.INVISIBLE : View.VISIBLE);
         mDBind.userUpdatePhone.setEnabled("zh".equals(mLanguage));
@@ -68,6 +75,12 @@ public class PersonalActivity extends BasePActivity<PersonalPresenter, ActivityP
     protected void initData() {
         super.initData();
         mPresent.getUserInfo();
+        LiveDataBus.get().with("upload_success", String.class).observe(this, s -> {
+            String nickname = mDBind.userNickname.getText().toString();
+            String phone = mDBind.userPhone.getText().toString();
+            String email = mDBind.userMail.getText().toString();
+            mPresent.onSaveUserInfo(nickname, phone, email, s);
+        });
     }
 
     @Override
@@ -75,10 +88,14 @@ public class PersonalActivity extends BasePActivity<PersonalPresenter, ActivityP
         super.initListener();
         mDBind.ivPersonalBack.setOnClickListener(view -> finish());
         mDBind.tvSavePersonal.setOnClickListener(v -> {
-            String nickname = mDBind.userNickname.getText().toString();
-            String phone = mDBind.userPhone.getText().toString();
-            String email = mDBind.userMail.getText().toString();
-            mPresent.onSaveUserInfo(nickname, phone, email, mImageUrl);
+            if (mFile != null){
+                mPresent.getAvatarUrlAddress(mFile);
+            }else {
+                String nickname = mDBind.userNickname.getText().toString();
+                String phone = mDBind.userPhone.getText().toString();
+                String email = mDBind.userMail.getText().toString();
+                mPresent.onSaveUserInfo(nickname, phone, email, mImageUrl);
+            }
             showProgressDialog();
         });
         mDBind.userImg.setOnClickListener(v -> startChooser());
@@ -108,8 +125,11 @@ public class PersonalActivity extends BasePActivity<PersonalPresenter, ActivityP
 
             // 裁剪图片回调
             @Override public void onCropImage(Uri imageUri) {
-                mImageUrl = imageUri.toString();
-                mDBind.userImg.setImageURI(imageUri);
+                mFile = FileUtil.uriToFile(mContext, imageUri);
+                Glide.with(mContext)
+                        .load(imageUri)
+                        .apply(RequestOptions.bitmapTransform(new CircleCrop()))
+                        .into(mDBind.userImg);
             }
 
             // 自定义裁剪配置
@@ -133,6 +153,7 @@ public class PersonalActivity extends BasePActivity<PersonalPresenter, ActivityP
             }
         });
     }
+
 
     @Override
     public void showNickName(String nickname) {
@@ -162,7 +183,12 @@ public class PersonalActivity extends BasePActivity<PersonalPresenter, ActivityP
     public void showUserImg(String path) {
         if (path!=null){
             mImageUrl = path;
-            mDBind.userImg.setImageURI(path);
+            Glide.with(mContext)
+                    .load(path)
+                    .apply(RequestOptions.diskCacheStrategyOf(DiskCacheStrategy.NONE))
+                    .apply(RequestOptions.skipMemoryCacheOf(true))
+                    .apply(RequestOptions.bitmapTransform(new CircleCrop()))
+                    .into(mDBind.userImg);
         }else {
             mImageUrl = "";
             mDBind.userImg.setImageResource(R.mipmap.head_default);
@@ -184,6 +210,5 @@ public class PersonalActivity extends BasePActivity<PersonalPresenter, ActivityP
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        mPresent.onDestroyHandler();
     }
 }

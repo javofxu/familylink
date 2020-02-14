@@ -1092,6 +1092,10 @@
         "source": "/Users/siterwell/github/familylink/src/main/res/drawable/config_sm.xml"
     },
     {
+        "merged": "/Users/siterwell/github/familylink/build/intermediates/res/merged/debug/layout_activity_device_setting.xml.flat",
+        "source": "/Users/siterwell/github/familylink/src/main/res/layout/activity_device_setting.xml"
+    },
+    {
         "merged": "/Users/siterwell/github/familylink/build/intermediates/res/merged/debug/layout_aliuser_activity_frame_content.xml.flat",
         "source": "/Users/siterwell/.gradle/caches/transforms-1/files-1.1/openaccount-ui-default-3.5.3.9.aar/94f47ff55e8a7772bbf8fee3233cad73/res/layout/aliuser_activity_frame_content.xml"
     },
@@ -3410,10 +3414,6 @@
     {
         "merged": "/Users/siterwell/github/familylink/build/intermediates/res/merged/debug/mipmap-xxhdpi-v4_shiwai_config9.png.flat",
         "source": "/Users/siterwell/github/familylink/common/build/intermediates/bundles/debug/res/mipmap-xxhdpi-v4/shiwai_config9.png"
-    },
-    {
-        "merged": "/Users/siterwell/github/familylink/build/intermediates/res/merged/debug/layout_activity_gateway_setting.xml.flat",
-        "source": "/Users/siterwell/github/familylink/src/main/res/layout/activity_gateway_setting.xml"
     },
     {
         "merged": "/Users/siterwell/github/familylink/build/intermediates/res/merged/debug/layout_dialog_base_list.xml.flat",

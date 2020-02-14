@@ -49,12 +49,13 @@
                         android:textSize="@dimen/text_16"
                         android:textColor="@color/text_title"
                         android:text="@string/head"/>
-                    <com.facebook.drawee.view.SimpleDraweeView
+                    <ImageView
                         android:id="@+id/user_img"
                         android:layout_width="@dimen/margin_48"
                         android:layout_height="@dimen/margin_48"
                         android:layout_centerVertical="true"
-                        android:layout_marginStart="@dimen/margin_137" />
+                        android:layout_marginStart="@dimen/margin_137"
+                        android:src="@mipmap/head_default"/>
 
                     <ImageView
                         android:id="@+id/iv_user_img"

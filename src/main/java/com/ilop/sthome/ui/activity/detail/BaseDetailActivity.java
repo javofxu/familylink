@@ -20,7 +20,7 @@ import com.example.common.utils.StatusBar.StatusBarUtil;
 import com.ilop.sthome.data.bean.DeviceInfoBean;
 import com.ilop.sthome.data.db.DeviceAliDAO;
 import com.ilop.sthome.network.api.SendEquipmentDataAli;
-import com.ilop.sthome.ui.activity.device.GatewaySettingActivity;
+import com.ilop.sthome.ui.activity.device.DeviceSettingActivity;
 import com.ilop.sthome.ui.activity.device.SubDeviceHistoryActivity;
 
 /**
@@ -80,7 +80,7 @@ public class BaseDetailActivity<B extends ViewDataBinding> extends AppCompatActi
     }
 
     public void manager(View view){
-        Intent intent = new Intent(this, GatewaySettingActivity.class);
+        Intent intent = new Intent(this, DeviceSettingActivity.class);
         Bundle bundle = new Bundle();
         bundle.putInt("deviceId", mDevice.getDevice_ID());
         bundle.putString("deviceName", mDevice.getDeviceName());

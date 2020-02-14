@@ -29,6 +29,13 @@ public interface CommonModelImpl {
     void onUnbindGateway(String iotId, onModelCallBack callBack);
 
     /**
+     * 刷新网关二维码
+     * @param iotId 设备iot
+     * @param callBack 返回信息
+     */
+    void onRefreshQRCode(String iotId, onModelCallBack callBack);
+
+    /**
      * 查询房间列表列表
      * @param pageNo 当前页号，从1开始的页序号
      * @param pageSize 页大小，单页的item数量上限

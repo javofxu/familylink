@@ -98,4 +98,5 @@
     <string name="kitchen">Küche</string>
     <string name="study">Studie</string>
     <string name="devices">Geräte</string>
+    <string name="uploaded_avatar">Der Avatar wurde erfolgreich hochgeladen!</string>
 </resources>

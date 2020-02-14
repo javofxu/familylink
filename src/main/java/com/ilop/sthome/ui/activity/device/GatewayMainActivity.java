@@ -81,7 +81,7 @@ public class GatewayMainActivity extends BasePActivity<GatewayPresenter, Activit
             startActivity(intent);
         });
         mDBind.tabSetting.setOnClickListener(view -> {
-            Intent intent = new Intent(this, GatewaySettingActivity.class);
+            Intent intent = new Intent(this, DeviceSettingActivity.class);
             intent.putExtra("deviceName",deviceName);
             startActivity(intent);
         });

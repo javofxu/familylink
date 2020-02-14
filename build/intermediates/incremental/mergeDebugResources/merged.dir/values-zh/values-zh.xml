@@ -1095,6 +1095,7 @@
     <string name="unlock">开锁</string>
     <string name="update_alert">更新</string>
     <string name="update_name">修改名称</string>
+    <string name="uploaded_avatar">头像上传成功!</string>
     <string name="upper_limit_on_the_number_of_devices_that_can_be_accommodated_by_a_folder">达到文件夹所能容纳设备数量的上限</string>
     <string name="user_agreement">用户协议</string>
     <string name="user_change_password">确认更改</string>

@@ -1143,6 +1143,7 @@
     <string name="unlock">desbloqueado</string>
     <string name="update_alert">Actualización</string>
     <string name="update_name">Actualice nombre</string>
+    <string name="uploaded_avatar">Carga exitosa!</string>
     <string name="upper_limit_on_the_number_of_devices_that_can_be_accommodated_by_a_folder">Hay límite superior de elementos  que pueden ser acomodados en una carpeta</string>
     <string name="user_agreement">Protocolo De Usuario</string>
     <string name="user_change_password">cambiar contraseña</string>

@@ -12,6 +12,10 @@ import android.view.View;
 import android.widget.RadioButton;
 
 import com.aliyun.iot.aep.sdk.login.LoginBusiness;
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.engine.DiskCacheStrategy;
+import com.bumptech.glide.load.resource.bitmap.CircleCrop;
+import com.bumptech.glide.request.RequestOptions;
 import com.example.common.base.BasePActivity;
 import com.facebook.drawee.generic.RoundingParams;
 import com.ilop.sthome.mvp.contract.MainContract;
@@ -173,8 +177,12 @@ public class MainActivity extends BasePActivity<MainPresenter, ActivityMainBindi
     @Override
     public void showUserImage(String uri) {
         if (!TextUtils.isEmpty(uri)){
-            mDBind.mainUserImg.setImageURI(uri);
-            mDBind.mainUserImg.getHierarchy().setRoundingParams(RoundingParams.asCircle());
+            Glide.with(mContext)
+                    .load(uri)
+                    .apply(RequestOptions.diskCacheStrategyOf(DiskCacheStrategy.NONE))
+                    .apply(RequestOptions.skipMemoryCacheOf(true))
+                    .apply(RequestOptions.bitmapTransform(new CircleCrop()))
+                    .into(mDBind.mainUserImg);
         }else {
             mDBind.mainUserImg.setImageResource(R.mipmap.head_default);
         }

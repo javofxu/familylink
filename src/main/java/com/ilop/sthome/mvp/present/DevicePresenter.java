@@ -73,6 +73,9 @@ public class DevicePresenter extends BasePresenterImpl<DeviceContract.IView> imp
     private int mRoomId;
     private String mRoomName;
 
+    private String mCameraName;
+    private String mCameraId;
+
     public DevicePresenter(Context mContext) {
         this.mContext = mContext;
         mModel = new CommonModel();
@@ -152,29 +155,34 @@ public class DevicePresenter extends BasePresenterImpl<DeviceContract.IView> imp
                                 RoomDaoUtil.getInstance().getRoomDao().deleteAll();
                                 for (VirtualUserBean bean : userList) {
                                     for (int i = 0; i < bean.getAttrList().size(); i++) {
+                                        if ("companyAddress".equals(bean.getAttrList().get(i).getAttrKey())) {
+                                            gatewayList = bean.getAttrList().get(i).getAttrValue();
+                                        }
+                                        if ("homeAddress".equals(bean.getAttrList().get(i).getAttrKey())) {
+                                            cameraList = bean.getAttrList().get(i).getAttrValue();
+                                        }
+                                        if ("companyName".equals(bean.getAttrList().get(i).getAttrKey())) {
+                                            subDeviceList = bean.getAttrList().get(i).getAttrValue();
+                                        }
+                                        if ("employeeID".equals(bean.getAttrList().get(i).getAttrKey())){
+                                            mRoomId = Integer.parseInt(bean.getAttrList().get(i).getAttrValue());
+                                        }
+                                        if ("extNum".equals(bean.getAttrList().get(i).getAttrKey())){
+                                            mRoomName = bean.getAttrList().get(i).getAttrValue();
+                                        }
+                                        if ("name".equals(bean.getAttrList().get(i).getAttrKey())){
+                                            mCameraName = bean.getAttrList().get(i).getAttrValue();
+                                        }
+                                        if ("displayName".equals(bean.getAttrList().get(i).getAttrKey())){
+                                            mCameraId = bean.getAttrList().get(i).getAttrValue();
+                                        }
                                         if ("name".equals(bean.getAttrList().get(i).getAttrKey())) {
                                             CameraDaoUtil.getInstance().getCameraDao().deleteAll();
                                             CameraBean cameraBean = new CameraBean();
                                             cameraBean.setUserId(bean.getUserId());
-                                            cameraBean.setDeviceName(bean.getAttrList().get(i).getAttrValue());
-                                            cameraBean.setDeviceId(bean.getAttrList().get(i + 1).getAttrValue());
+                                            cameraBean.setDeviceName(mCameraName);
+                                            cameraBean.setDeviceId(mCameraId);
                                             CameraDaoUtil.getInstance().getCameraDao().insert(cameraBean);
-                                        } else {
-                                            if ("companyAddress".equals(bean.getAttrList().get(i).getAttrKey())) {
-                                                gatewayList = bean.getAttrList().get(i).getAttrValue();
-                                            }
-                                            if ("homeAddress".equals(bean.getAttrList().get(i).getAttrKey())) {
-                                                cameraList = bean.getAttrList().get(i).getAttrValue();
-                                            }
-                                            if ("companyName".equals(bean.getAttrList().get(i).getAttrKey())) {
-                                                subDeviceList = bean.getAttrList().get(i).getAttrValue();
-                                            }
-                                            if ("employeeID".equals(bean.getAttrList().get(i).getAttrKey())){
-                                                mRoomId = Integer.parseInt(bean.getAttrList().get(i).getAttrValue());
-                                            }
-                                            if ("extNum".equals(bean.getAttrList().get(i).getAttrKey())){
-                                                mRoomName = bean.getAttrList().get(i).getAttrValue();
-                                            }
                                         }
                                     }
                                     processingData(bean.getUserId(), mRoomId, mRoomName, gatewayList, cameraList, subDeviceList);

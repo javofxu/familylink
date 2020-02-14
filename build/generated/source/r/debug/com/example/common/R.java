@@ -1592,10 +1592,11 @@ public final class R {
         public static final int test_scores = 0x7f1104f1;
         public static final int timing_trigger = 0x7f1104fc;
         public static final int trigger_condition = 0x7f110503;
-        public static final int user_agreement = 0x7f110510;
-        public static final int volume_show = 0x7f110520;
-        public static final int wi_fi = 0x7f110524;
-        public static final int without_scene = 0x7f110527;
+        public static final int uploaded_avatar = 0x7f11050f;
+        public static final int user_agreement = 0x7f110511;
+        public static final int volume_show = 0x7f110521;
+        public static final int wi_fi = 0x7f110525;
+        public static final int without_scene = 0x7f110528;
     }
     public static final class style {
         public static final int AlertDialog_AppCompat = 0x7f120001;

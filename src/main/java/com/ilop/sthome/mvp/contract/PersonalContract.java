@@ -4,6 +4,8 @@ import com.example.common.mvp.IBasePresenter;
 import com.example.common.mvp.IBaseView;
 import com.ilop.sthome.mvp.model.common.onModelCallBack;
 
+import java.io.File;
+
 /**
  * @Author skygge.
  * @Date on 2020-02-05.
@@ -12,6 +14,8 @@ import com.ilop.sthome.mvp.model.common.onModelCallBack;
 public interface PersonalContract {
 
     interface IModel{
+
+        void toGetUploadUrl(onModelCallBack callBack);
 
         void toQueryUserInfo(String identifyId, onModelCallBack callBack);
 
@@ -41,8 +45,11 @@ public interface PersonalContract {
 
         void getUserInfo();
 
+        void getAvatarUrlAddress(File file);
+
+        void onUploadImage(String url, String accessKey, String policy, String Signature, File file, String key);
+
         void onSaveUserInfo(String nickname, String phone, String email, String avatarUrl);
 
-        void onDestroyHandler();
     }
 }

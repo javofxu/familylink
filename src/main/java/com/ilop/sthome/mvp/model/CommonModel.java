@@ -102,6 +102,33 @@ public class CommonModel implements CommonModelImpl {
     }
 
     @Override
+    public void onRefreshQRCode(String iotId, onModelCallBack callBack) {
+        Map<String, Object> maps = new HashMap<>();
+        List<String> list = new ArrayList<>();
+        list.add(iotId);
+        maps.put("iotIdList",list);
+        IoTRequestBuilder builder = new IoTRequestBuilder()
+                .setPath("/uc/generateShareQrCode")
+                .setScheme(Scheme.HTTPS)
+                .setApiVersion("1.0.2")
+                .setAuthType("iotAuth")
+                .setParams(maps);
+        IoTRequest request = builder.build();
+        IoTAPIClient ioTAPIClient = new IoTAPIClientFactory().getClient();
+        ioTAPIClient.send(request, new IoTCallback() {
+            @Override
+            public void onFailure(IoTRequest ioTRequest, Exception e) {
+                callBack.onFailure(e);
+            }
+
+            @Override
+            public void onResponse(IoTRequest ioTRequest, IoTResponse ioTResponse) {
+                callBack.onResponse(ioTResponse);
+            }
+        });
+    }
+
+    @Override
     public void onQueryRoomList(int pageNo, int pageSize, onModelCallBack callBack) {
         Map<String, Object> maps = new HashMap<>();
         maps.put("pageNo",1);

@@ -1102,6 +1102,7 @@
     <string name="unlock">Unlock</string>
     <string name="update_alert">Update</string>
     <string name="update_name">Update Name</string>
+    <string name="uploaded_avatar">Successfully uploaded the Avatar!</string>
     <string name="upper_limit_on_the_number_of_devices_that_can_be_accommodated_by_a_folder">An upper limit on the number of devices that can be accommodated by a folder</string>
     <string name="user_agreement">User Agreement</string>
     <string name="user_change_password">Confirm changes</string>

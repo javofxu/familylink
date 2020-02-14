@@ -98,4 +98,5 @@
     <string name="kitchen">Cocina</string>
     <string name="study">Estudio</string>
     <string name="devices">equipos</string>
+    <string name="uploaded_avatar">Carga exitosa!</string>
 </resources>

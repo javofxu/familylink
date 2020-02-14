@@ -2313,18 +2313,18 @@ public final class R {
         public static final int unable_to_create_the_same_rule = 0x7f110507;
         public static final int unknown_error = 0x7f11050a;
         public static final int upload_files = 0x7f11050e;
-        public static final int upper_limit_on_the_number_of_devices_that_can_be_accommodated_by_a_folder = 0x7f11050f;
-        public static final int user_does_not_exist = 0x7f110516;
-        public static final int user_does_not_exist2 = 0x7f110517;
-        public static final int validation_code_expired = 0x7f110519;
-        public static final int verify_code_error = 0x7f11051a;
-        public static final int verify_that_code_expires = 0x7f11051b;
-        public static final int verify_that_the_code_type_is_not_valid = 0x7f11051c;
-        public static final int videos = 0x7f11051f;
-        public static final int zxing_app_name = 0x7f110529;
-        public static final int zxing_button_ok = 0x7f11052a;
-        public static final int zxing_msg_camera_framework_bug = 0x7f11052b;
-        public static final int zxing_msg_default_status = 0x7f11052c;
+        public static final int upper_limit_on_the_number_of_devices_that_can_be_accommodated_by_a_folder = 0x7f110510;
+        public static final int user_does_not_exist = 0x7f110517;
+        public static final int user_does_not_exist2 = 0x7f110518;
+        public static final int validation_code_expired = 0x7f11051a;
+        public static final int verify_code_error = 0x7f11051b;
+        public static final int verify_that_code_expires = 0x7f11051c;
+        public static final int verify_that_the_code_type_is_not_valid = 0x7f11051d;
+        public static final int videos = 0x7f110520;
+        public static final int zxing_app_name = 0x7f11052a;
+        public static final int zxing_button_ok = 0x7f11052b;
+        public static final int zxing_msg_camera_framework_bug = 0x7f11052c;
+        public static final int zxing_msg_default_status = 0x7f11052d;
     }
     public static final class style {
         public static final int AccountDevice = 0x7f120000;
