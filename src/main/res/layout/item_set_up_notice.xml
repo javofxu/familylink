@@ -14,7 +14,7 @@
             android:layout_marginStart="@dimen/margin_15"
             android:textSize="@dimen/text_16"
             android:textColor="@color/text_title"
-            android:text="@string/full_notice_push"/>
+            android:text="@string/gateway_online"/>
         <ImageView
             android:id="@+id/item_set_up_state"
             android:layout_width="wrap_content"

@@ -69,7 +69,7 @@ public class DeviceFragment extends BasePFragment<DevicePresenter, FragmentDevic
     @Override
     protected void initData() {
         super.initData();
-        mPresenter.getRoomList();
+        //mPresenter.getRoomList();
         LiveDataBus.get().with("refresh", Integer.class).observe(this, integer -> {
             Log.i(TAG, "initData: 刷新页面");
             mPresenter.getGatewayListByAccount();

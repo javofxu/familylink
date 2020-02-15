@@ -665,6 +665,7 @@
     <string name="cancelled">\t\t\t\tSi se vuelve a introducir antes, su solicitud de cierre será cancelada.</string>
     <string name="cannot_create_folder_with_the_same_name">no se puede crear una carpeta con el mismo nombre</string>
     <string name="cannot_find_instruction_set">No se puede encontrar el juego de instrucciones  </string>
+    <string name="cant_add_conditions">No se pueden añadir otras condiciones</string>
     <string name="card_open">tarjeta abierta</string>
     <string name="center_person">Personal Center</string>
     <string name="center_setting">Configuración</string>
@@ -845,6 +846,7 @@
     <string name="gateway">enrutador</string>
     <string name="gateway_alert">Enrutador en alarma</string>
     <string name="gateway_name">Nombre del portal</string>
+    <string name="gateway_online">Portal línea</string>
     <string name="get_code">Obtener</string>
     <string name="get_max_scene_group">Obtiene el mayor tamaño!</string>
     <string name="goto_set">Preferencias</string>
@@ -996,6 +998,7 @@
     <string name="password">Contraseña</string>
     <string name="password_hint">Introduzca contraseña</string>
     <string name="password_is_empty">Contraseña vacía</string>
+    <string name="perform_action">Pulse el botón para ejecutar</string>
     <string name="permanently_discontinued">Parada Permanente</string>
     <string name="permission_register">Solicitud de autorización</string>
     <string name="permission_reject_imei_tip">No tiene permiso para leer el Código de Estado de su celular,lo que afecta al uso normal de la App.</string>
@@ -1035,6 +1038,7 @@
     <string name="product_does_not_exist2">El producto no existe</string>
     <string name="protocol_template_does_not_exist">Protocolo inexistente</string>
     <string name="purpose_scene">Cambiar Escena</string>
+    <string name="push_message">Cuando se cumplan las condiciones de activación\nel teléfono recibirá un mensaje de empuje.</string>
     <string name="pwd_help">Ayuda criptográfica</string>
     <string name="reached_the_maximum_number_of_folders_created">se ha alcanzado el máximo numero de carpetas creadas</string>
     <string name="recommend">Recomendaciones</string>

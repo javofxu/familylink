@@ -3,6 +3,7 @@ package com.ilop.sthome.ui.activity.scene;
 import android.support.v7.widget.GridLayoutManager;
 import android.text.TextUtils;
 import android.util.Log;
+import android.view.View;
 
 import com.example.common.base.BaseActivity;
 import com.example.common.utils.LiveDataBus;
@@ -59,6 +60,9 @@ public class SettingTimingActivity extends BaseActivity<ActivitySetTimingBinding
         mAdapter = new WeekAdapter(mContext, mWeekInt);
         mDBind.weekTrigger.setLayoutManager(new GridLayoutManager(mContext, 5));
         mDBind.weekTrigger.setAdapter(mAdapter);
+        if (isUpdate) {
+            mDBind.btDelete.setVisibility(View.VISIBLE);
+        }
     }
 
     @Override
@@ -107,6 +111,10 @@ public class SettingTimingActivity extends BaseActivity<ActivitySetTimingBinding
             }else {
                 LiveDataBus.get().with("update_input").setValue(mDeviceList);
             }
+            finish();
+        });
+        mDBind.btDelete.setOnClickListener(view -> {
+            LiveDataBus.get().with("delete_condition").setValue("TIMER");
             finish();
         });
     }

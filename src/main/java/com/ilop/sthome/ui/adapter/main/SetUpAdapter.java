@@ -47,7 +47,7 @@ public class SetUpAdapter extends RecyclerView.Adapter<SetUpAdapter.ItemHolder> 
     @Override
     public void onBindViewHolder(@NonNull ItemHolder itemHolder, int i) {
         AlarmNotice alarm = mList.get(i);
-        itemHolder.mName.setText(alarm.getEventName());
+        itemHolder.mName.setText(i == 0 ? mContext.getString(R.string.gateway_online) : alarm.getEventName());
         itemHolder.mState.setImageResource(alarm.isNoticeEnabled() ? R.mipmap.btn_on_48 : R.mipmap.btn_off_48);
 
         itemHolder.mState.setOnClickListener(v -> LiveDataBus.get().with("alarm_notice").setValue(alarm));

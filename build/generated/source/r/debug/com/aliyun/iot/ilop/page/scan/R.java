@@ -33,13 +33,13 @@ public final class R {
         public static final int scan_rect_tranblack_bg = 0x7f080109;
     }
     public static final class id {
-        public static final int imageview_resultview_view = 0x7f0a013d;
-        public static final int scan_fragment = 0x7f0a028b;
-        public static final int scan_preview_surfaceview = 0x7f0a028c;
-        public static final int scanactivity_album_textview = 0x7f0a028d;
-        public static final int scanactivity_back_linearlayout = 0x7f0a028e;
-        public static final int scanactivity_topbar_linearlayout = 0x7f0a028f;
-        public static final int textview_resultview_des = 0x7f0a031b;
+        public static final int imageview_resultview_view = 0x7f0a013f;
+        public static final int scan_fragment = 0x7f0a028d;
+        public static final int scan_preview_surfaceview = 0x7f0a028e;
+        public static final int scanactivity_album_textview = 0x7f0a028f;
+        public static final int scanactivity_back_linearlayout = 0x7f0a0290;
+        public static final int scanactivity_topbar_linearlayout = 0x7f0a0291;
+        public static final int textview_resultview_des = 0x7f0a031d;
     }
     public static final class layout {
         public static final int scan_activity = 0x7f0d00fe;
@@ -51,12 +51,12 @@ public final class R {
     }
     public static final class string {
         public static final int app_name = 0x7f1102ee;
-        public static final int ilop_page_scan_hint_text = 0x7f1103e9;
-        public static final int ilop_page_scan_nobarcode_in_pic = 0x7f1103ea;
-        public static final int ilop_page_scan_title = 0x7f1103eb;
-        public static final int ilop_page_scan_type_range_tip = 0x7f1103ec;
-        public static final int nofoundbarcode = 0x7f110444;
-        public static final int scan_module_name = 0x7f1104b4;
+        public static final int ilop_page_scan_hint_text = 0x7f1103eb;
+        public static final int ilop_page_scan_nobarcode_in_pic = 0x7f1103ec;
+        public static final int ilop_page_scan_title = 0x7f1103ed;
+        public static final int ilop_page_scan_type_range_tip = 0x7f1103ee;
+        public static final int nofoundbarcode = 0x7f110446;
+        public static final int scan_module_name = 0x7f1104b8;
     }
     public static final class style {
         public static final int AppTheme = 0x7f120008;

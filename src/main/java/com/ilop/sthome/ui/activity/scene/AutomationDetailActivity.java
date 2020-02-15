@@ -109,13 +109,26 @@ public class AutomationDetailActivity extends BasePActivity<AutomationPresenter,
         LiveDataBus.get().with("update_output", List.class).observe(this, list -> {
             mPresent.checkUpdateOutput((List<DeviceInfoBean>)list);
         });
+        LiveDataBus.get().with("delete_condition", String.class).observe(this, s -> {
+            if ("PHONE".equals(s)){
+                mPresent.deleteOutput();
+            }else {
+                mPresent.deleteInput();
+            }
+        });
     }
 
     @Override
     protected void initListener() {
         super.initListener();
         mDBind.ivBack.setOnClickListener(v -> finish());
-        mDBind.triggerAdd.setOnClickListener(v -> mPresent.addNewInput());
+        mDBind.triggerAdd.setOnClickListener(v ->{
+            if (mPresent.isTimerOrClick()){
+                showToast(getString(R.string.cant_add_conditions));
+            }else {
+                mPresent.addNewInput();
+            }
+        });
         mDBind.executiveAdd.setOnClickListener(v -> mPresent.addNewOutput());
         mDBind.tvSaveAutomation.setOnClickListener(v -> {
             mPresent.onSaveAutomation();

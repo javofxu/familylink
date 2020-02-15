@@ -99,4 +99,8 @@
     <string name="study">书房</string>
     <string name="devices">个设备</string>
     <string name="uploaded_avatar">头像上传成功!</string>
+    <string name="gateway_online">网关在线</string>
+    <string name="cant_add_conditions">当前不能添加其他条件</string>
+    <string name="perform_action">手机上点击按钮即执行动作</string>
+    <string name="push_message">满足触发条件时\n手机将收到推送消息</string>
 </resources>

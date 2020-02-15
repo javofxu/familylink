@@ -2,7 +2,6 @@ package com.ilop.sthome.ui.activity.mine;
 
 import android.support.v7.widget.LinearLayoutManager;
 import android.text.TextUtils;
-import android.util.Log;
 
 import com.example.common.base.BasePActivity;
 import com.example.common.utils.LiveDataBus;
@@ -75,8 +74,7 @@ public class SetUpActivity extends BasePActivity<SetUpPresenter, ActivitySetUpBi
         mDBind.ivSetUpBack.setOnClickListener(view -> finish());
         mDBind.setUpAll.setOnClickListener(v -> {
             if (!TextUtils.isEmpty(mIotId)){
-                mEnabled = SpUtil.getBoolean(mContext, "noticeEnabled", false);
-                mPresent.setDeviceFullNoticeEnabled(mIotId, mEnabled);
+                mPresent.setDeviceFullNoticeEnabled(mIotId, !mEnabled);
                 showProgressDialog();
             }else {
                 showToast(getString(R.string.ali_device_empty));
@@ -93,6 +91,12 @@ public class SetUpActivity extends BasePActivity<SetUpPresenter, ActivitySetUpBi
     }
 
     @Override
+    public void showHasEnabledOpen(boolean open) {
+        mEnabled = open;
+        mDBind.setUpAll.setImageResource(open ? R.mipmap.btn_on_48 : R.mipmap.btn_off_48);
+    }
+
+    @Override
     public void showNoticeList(List<AlarmNotice> noticeList) {
         mAdapter.setList(noticeList);
     }
@@ -103,19 +107,9 @@ public class SetUpActivity extends BasePActivity<SetUpPresenter, ActivitySetUpBi
     }
 
     @Override
-    public void showFullNotice() {
-        Log.i(TAG, "showFullNotice: AAA");
-        SpUtil.putBoolean(mContext, "noticeEnabled", mEnabled);
-        mDBind.setUpAll.setImageResource(mEnabled ? R.mipmap.btn_on_48 : R.mipmap.btn_off_48);
-    }
-
-    @Override
     public void showToastMsg(String msg) {
+        dismissProgressDialog();
         showToast(msg);
     }
 
-    @Override
-    public void disProgressDialog() {
-        dismissProgressDialog();
-    }
 }

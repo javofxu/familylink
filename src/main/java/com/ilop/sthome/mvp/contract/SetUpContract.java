@@ -33,15 +33,13 @@ public interface SetUpContract {
 
     interface IView extends IBaseView{
 
+        void showHasEnabledOpen(boolean open);
+
         void showNoticeList(List<AlarmNotice> noticeList);
 
         void withoutNotice();
 
-        void showFullNotice();
-
         void showToastMsg(String msg);
-
-        void disProgressDialog();
     }
 
     interface IPresent extends IBasePresenter<IView>{

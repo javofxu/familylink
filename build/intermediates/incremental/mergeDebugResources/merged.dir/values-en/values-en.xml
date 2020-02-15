@@ -638,6 +638,7 @@
     <string name="cancelled">\t\t\t\tIf you sign in again before, your deactivation request will be cancelled</string>
     <string name="cannot_create_folder_with_the_same_name">Cannot create a folder with the same name</string>
     <string name="cannot_find_instruction_set">Cannot find instruction set</string>
+    <string name="cant_add_conditions">No other conditions can be added at present</string>
     <string name="card_open">Card Open</string>
     <string name="center_person">Personal Center</string>
     <string name="center_setting">Set up</string>
@@ -804,6 +805,7 @@
     <string name="gateway">Connector</string>
     <string name="gateway_alert">Gateway Alarm</string>
     <string name="gateway_name">Gateway Name</string>
+    <string name="gateway_online">gateway online</string>
     <string name="get_code">Send</string>
     <string name="get_max_scene_group">You get the max 8 Scene!</string>
     <string name="goto_set">Setting</string>
@@ -955,6 +957,7 @@
     <string name="password">Password</string>
     <string name="password_hint">Input Password</string>
     <string name="password_is_empty">Password is empty</string>
+    <string name="perform_action">Click the button to perform the action</string>
     <string name="permanently_discontinued">Permanently discontinued</string>
     <string name="permission_register">Application for authority</string>
     <string name="permission_reject_imei_tip">Failure to read the status code of the mobile phone will affect the normal use of app. Please open the phone permission.</string>
@@ -995,6 +998,7 @@
     <string name="product_does_not_exist2">Product does not exist</string>
     <string name="protocol_template_does_not_exist">The protocol template does not exist</string>
     <string name="purpose_scene">Switch Scene</string>
+    <string name="push_message">When trigger conditions are met \nMobile will receive push message</string>
     <string name="pwd_help">Password Assistance</string>
     <string name="reached_the_maximum_number_of_folders_created">Reached the maximum number of folders created</string>
     <string name="recommend">Recommend</string>

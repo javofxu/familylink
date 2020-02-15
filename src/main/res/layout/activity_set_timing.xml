@@ -27,6 +27,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:fillViewport="true"
+            android:scrollbars="none"
             android:background="@color/main_ground">
             <LinearLayout
                 android:layout_width="match_parent"
@@ -94,6 +95,23 @@
                     android:layout_height="wrap_content"
                     android:background="@color/white">
                 </android.support.v7.widget.RecyclerView>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="@dimen/margin_32">
+                    <Button
+                        android:id="@+id/bt_delete"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginStart="@dimen/margin_08"
+                        android:layout_marginEnd="@dimen/margin_08"
+                        android:textColor="@color/main_color"
+                        android:textSize="@dimen/text_16"
+                        android:text="@string/delete"
+                        android:visibility="gone"
+                        android:background="@drawable/btn_empty_bg"/>
+                </RelativeLayout>
             </LinearLayout>
         </ScrollView>
     </LinearLayout>

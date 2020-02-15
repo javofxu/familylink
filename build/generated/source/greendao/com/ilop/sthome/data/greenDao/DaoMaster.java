@@ -26,6 +26,7 @@ public class DaoMaster extends AbstractDaoMaster {
         CameraBeanDao.createTable(db, ifNotExists);
         RoomBeanDao.createTable(db, ifNotExists);
         UserInfoBeanDao.createTable(db, ifNotExists);
+        DeviceInfoBeanDao.createTable(db, ifNotExists);
     }
 
     /** Drops underlying database table using DAOs. */
@@ -35,6 +36,7 @@ public class DaoMaster extends AbstractDaoMaster {
         CameraBeanDao.dropTable(db, ifExists);
         RoomBeanDao.dropTable(db, ifExists);
         UserInfoBeanDao.dropTable(db, ifExists);
+        DeviceInfoBeanDao.dropTable(db, ifExists);
     }
 
     /**
@@ -58,6 +60,7 @@ public class DaoMaster extends AbstractDaoMaster {
         registerDaoClass(CameraBeanDao.class);
         registerDaoClass(RoomBeanDao.class);
         registerDaoClass(UserInfoBeanDao.class);
+        registerDaoClass(DeviceInfoBeanDao.class);
     }
 
     public DaoSession newSession() {

@@ -99,4 +99,8 @@
     <string name="study">Bureau</string>
     <string name="devices">appareils</string>
     <string name="uploaded_avatar">Ça a marché!</string>
+    <string name="gateway_online">Passerelle ligne</string>
+    <string name="cant_add_conditions">Impossible ajouter autres conditions pour le moment</string>
+    <string name="perform_action">Cliquez sur le bouton pour exécuter action</string>
+    <string name="push_message">Quand les conditions de déclenchement sont remplies\ntéléphone reçoit un message de poussée.</string>
 </resources>

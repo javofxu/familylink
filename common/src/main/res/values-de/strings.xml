@@ -99,4 +99,8 @@
     <string name="study">Studie</string>
     <string name="devices">Geräte</string>
     <string name="uploaded_avatar">Der Avatar wurde erfolgreich hochgeladen!</string>
+    <string name="gateway_online">Online Gateway</string>
+    <string name="cant_add_conditions">Zur Zeit können keine weiteren Bedingungen hinzugefügt werden</string>
+    <string name="perform_action">Klicken Sie auf die Schaltfläche, um die Aktion durchzuführen</string>
+    <string name="push_message">Wenn die Auslösebedingungen erfüllt sind\nerhält das Mobiltelefon eine Push-Nachricht</string>
 </resources>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.siterwell.familywellplus"
-    android:versionCode="18306"
+    android:versionCode="18307"
     android:versionName="3.0.0" >
 
     <uses-sdk
@@ -85,7 +85,6 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/icon_launch"
         android:supportsRtl="true"
-        android:testOnly="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true" >
 
@@ -115,6 +114,7 @@
         <activity android:name="com.ilop.sthome.ui.activity.scene.SceneEditActivity" />
         <activity android:name="com.ilop.sthome.ui.activity.device.ChangeSceneActivity" />
         <activity android:name="com.ilop.sthome.ui.activity.scene.AutomationDetailActivity" />
+        <activity android:name="com.ilop.sthome.ui.activity.scene.InputDetailActivity" />
         <activity android:name="com.ilop.sthome.ui.activity.scene.SettingActionActivity" />
         <activity android:name="com.ilop.sthome.ui.activity.scene.SettingHumitureActivity" />
         <activity android:name="com.ilop.sthome.ui.activity.scene.SettingDoubleSwitchActivity" />

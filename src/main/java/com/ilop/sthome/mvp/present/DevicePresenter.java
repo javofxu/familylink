@@ -186,7 +186,6 @@ public class DevicePresenter extends BasePresenterImpl<DeviceContract.IView> imp
                                         }
                                     }
                                     processingData(bean.getUserId(), mRoomId, mRoomName, gatewayList, cameraList, subDeviceList);
-                                    getRoomList();
                                 }
                             }else {
                                 getRoomList();
@@ -218,9 +217,13 @@ public class DevicePresenter extends BasePresenterImpl<DeviceContract.IView> imp
             String[] gatewayList = gateway.split(",");
             for (String gateways: gatewayList) {
                 DeviceInfoBean mDevice = deviceAliDAO.findByDeviceid(gateways,0);
-                mGatewayList.add(mDevice);
+                if (mDevice !=null){
+                    mGatewayList.add(mDevice);
+                }
             }
-            roomBean.setGatewayList(mGatewayList);
+            if (mGatewayList.size()>0){
+                roomBean.setGatewayList(mGatewayList);
+            }
         }
         if (!TextUtils.isEmpty(camera)){
             String[] cameraList = camera.split(",");
@@ -236,11 +239,16 @@ public class DevicePresenter extends BasePresenterImpl<DeviceContract.IView> imp
                 String deviceName = subDevices.split("_")[0];
                 String deviceId = subDevices.split("_")[1];
                 DeviceInfoBean mDevice = deviceAliDAO.findByDeviceid(deviceName, Integer.parseInt(deviceId));
-                mSubDeviceList.add(mDevice);
+                if (mDevice != null){
+                    mSubDeviceList.add(mDevice);
+                }
             }
-            roomBean.setSubDeviceList(mSubDeviceList);
+            if (mSubDeviceList.size()>0) {
+                roomBean.setSubDeviceList(mSubDeviceList);
+            }
         }
         RoomDaoUtil.getInstance().getRoomDao().insert(roomBean);
+        getRoomList();
     }
 
     @Override

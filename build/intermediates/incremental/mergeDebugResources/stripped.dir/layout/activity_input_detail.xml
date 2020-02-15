@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+                                                                   
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/white" android:tag="layout/activity_input_detail_0" xmlns:android="http://schemas.android.com/apk/res/android">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_50">
+            <TextView
+                android:id="@+id/tv_input_name"
+                style="@style/TabTitleTextView"
+                android:text="@string/add_auto"/>
+            <ImageView
+                android:id="@+id/iv_back"
+                style="@style/TabBackImageView"/>
+        </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_1"
+            android:background="@color/top_bar_line" />
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            android:scrollbars="none">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+                <ImageView
+                    android:id="@+id/iv_input_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_48"
+                    android:src="@mipmap/click_execution"/>
+                <TextView
+                    android:id="@+id/tv_input_msg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_24"
+                    android:textSize="@dimen/text_14"
+                    android:textColor="@color/text_title"
+                    android:text="@string/perform_action"/>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="@dimen/margin_32">
+                    <Button
+                        android:id="@+id/bt_delete_input"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginStart="@dimen/margin_08"
+                        android:layout_marginEnd="@dimen/margin_08"
+                        android:textColor="@color/main_color"
+                        android:textSize="@dimen/text_16"
+                        android:text="@string/delete"
+                        android:background="@drawable/btn_empty_bg"/>
+                </RelativeLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+         

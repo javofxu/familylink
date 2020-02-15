@@ -665,6 +665,7 @@
     <string name="cancelled">\t\t\t\tSi vous êtes connecté à nouveau avant cette date, votre demande de désactivation sera annulée </string>
     <string name="cannot_create_folder_with_the_same_name">Impossible de créer un dossier avec le même nom</string>
     <string name="cannot_find_instruction_set">Impossible de trouver le jeu d’instructions</string>
+    <string name="cant_add_conditions">Impossible ajouter autres conditions pour le moment</string>
     <string name="card_open">Déverrouillage de la carte</string>
     <string name="center_person">Centre personnel</string>
     <string name="center_setting">Set</string>
@@ -845,6 +846,7 @@
     <string name="gateway">Passerelle</string>
     <string name="gateway_alert">Alerte passerelle</string>
     <string name="gateway_name">Nom de passerelle</string>
+    <string name="gateway_online">Passerelle ligne</string>
     <string name="get_code">Obtenir</string>
     <string name="get_max_scene_group">La taille maximale est atteinte</string>
     <string name="goto_set">Deformer</string>
@@ -996,6 +998,7 @@
     <string name="password">Mot passe</string>
     <string name="password_hint">Merci de saisir le mot de passe</string>
     <string name="password_is_empty">Merci de saisir un mot de passe</string>
+    <string name="perform_action">Cliquez sur le bouton pour exécuter action</string>
     <string name="permanently_discontinued">Arrêt permanent</string>
     <string name="permission_register">Demande d ’autorisation</string>
     <string name="permission_reject_imei_tip">Si vous ne pouvez pas lire le code d ’état d’ un téléphone portable, cela affectera l ’utilisation normale de l’ app.</string>
@@ -1035,6 +1038,7 @@
     <string name="product_does_not_exist2">Produit inexistant</string>
     <string name="protocol_template_does_not_exist">Modèle de protocole inexistant</string>
     <string name="purpose_scene">Passer Scène</string>
+    <string name="push_message">Quand les conditions de déclenchement sont remplies\ntéléphone reçoit un message de poussée.</string>
     <string name="pwd_help">Aide cryptographique</string>
     <string name="reached_the_maximum_number_of_folders_created">Le nombre maximal de dossiers a été atteint</string>
     <string name="recommend">Recommend</string>

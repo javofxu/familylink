@@ -10,8 +10,6 @@ class DataBinderMapper  {
         switch(layoutId) {
                 case com.siterwell.familywellplus.R.layout.activity_net_work:
                     return com.siterwell.familywellplus.databinding.ActivityNetWorkBinding.bind(view, bindingComponent);
-                case com.siterwell.familywellplus.R.layout.fragment_timer:
-                    return com.siterwell.familywellplus.databinding.FragmentTimerBinding.bind(view, bindingComponent);
                 case com.siterwell.familywellplus.R.layout.fragment_scene_child:
                     return com.siterwell.familywellplus.databinding.FragmentSceneChildBinding.bind(view, bindingComponent);
                 case com.siterwell.familywellplus.R.layout.activity_add_ipc:
@@ -34,6 +32,8 @@ class DataBinderMapper  {
                     return com.siterwell.familywellplus.databinding.ActivityAddTimerBinding.bind(view, bindingComponent);
                 case com.siterwell.familywellplus.R.layout.activity_change_scene:
                     return com.siterwell.familywellplus.databinding.ActivityChangeSceneBinding.bind(view, bindingComponent);
+                case com.siterwell.familywellplus.R.layout.activity_input_detail:
+                    return com.siterwell.familywellplus.databinding.ActivityInputDetailBinding.bind(view, bindingComponent);
                 case com.siterwell.familywellplus.R.layout.activity_set_double_switch:
                     return com.siterwell.familywellplus.databinding.ActivitySetDoubleSwitchBinding.bind(view, bindingComponent);
                 case com.siterwell.familywellplus.R.layout.activity_detail_alarm:
@@ -176,12 +176,6 @@ class DataBinderMapper  {
                 }
                 break;
             }
-            case 1652281100: {
-                if(tag.equals("layout/fragment_timer_0")) {
-                    return com.siterwell.familywellplus.R.layout.fragment_timer;
-                }
-                break;
-            }
             case -1954005520: {
                 if(tag.equals("layout/fragment_scene_child_0")) {
                     return com.siterwell.familywellplus.R.layout.fragment_scene_child;
@@ -245,6 +239,12 @@ class DataBinderMapper  {
             case 1380396793: {
                 if(tag.equals("layout/activity_change_scene_0")) {
                     return com.siterwell.familywellplus.R.layout.activity_change_scene;
+                }
+                break;
+            }
+            case -403946526: {
+                if(tag.equals("layout/activity_input_detail_0")) {
+                    return com.siterwell.familywellplus.R.layout.activity_input_detail;
                 }
                 break;
             }

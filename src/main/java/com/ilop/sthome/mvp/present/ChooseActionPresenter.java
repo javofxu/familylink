@@ -31,12 +31,14 @@ public class ChooseActionPresenter extends BasePresenterImpl<ChooseActionContrac
 
     private static final String TAG = "ChooseActionPresenter";
     private Context mContext;
+    private int mDeviceNum;
     private String mDeviceName;
     private DeviceAliDAO mDeviceAliDAO;
     private List<DeviceInfoBean> deviceInfoBeanList;
 
-    public ChooseActionPresenter(Context mContext, String mDeviceName) {
+    public ChooseActionPresenter(Context mContext, String mDeviceName, int deviceNum) {
         this.mContext = mContext;
+        this.mDeviceNum = deviceNum;
         this.mDeviceName = mDeviceName;
         mDeviceAliDAO = new DeviceAliDAO(mContext);
         deviceInfoBeanList = new ArrayList<>();
@@ -45,13 +47,15 @@ public class ChooseActionPresenter extends BasePresenterImpl<ChooseActionContrac
     @Override
     public void getDeviceInList(String deviceName) {
         deviceInfoBeanList.addAll(mDeviceAliDAO.findInput(mDeviceName));
-        DeviceInfoBean device = new DeviceInfoBean();
-        device.setDevice_type("TIMER");
-        deviceInfoBeanList.add(device);
-        DeviceInfoBean device2 = new DeviceInfoBean();
-        device2.setDevice_type("CLICK");
-        device2.setDevice_status("00005500");
-        deviceInfoBeanList.add(device2);
+        if (mDeviceNum == 0) {
+            DeviceInfoBean device = new DeviceInfoBean();
+            device.setDevice_type("TIMER");
+            deviceInfoBeanList.add(device);
+            DeviceInfoBean device2 = new DeviceInfoBean();
+            device2.setDevice_type("CLICK");
+            device2.setDevice_status("00005500");
+            deviceInfoBeanList.add(device2);
+        }
         if (deviceInfoBeanList!=null && deviceInfoBeanList.size()>0){
             mView.getDeviceList(deviceInfoBeanList);
         }else {
@@ -121,13 +125,8 @@ public class ChooseActionPresenter extends BasePresenterImpl<ChooseActionContrac
         }else if ("CLICK".equals(device.getDevice_type())){
             List<DeviceInfoBean> deviceInfo = new ArrayList<>();
             deviceInfo.add(device);
-            if (isUpdate){
-                LiveDataBus.get().with("update_input").setValue(deviceInfo);
-                mView.finishActivity();
-            }else {
-                LiveDataBus.get().with("input_condition").setValue(deviceInfo);
-                mView.finishActivity();
-            }
+            LiveDataBus.get().with("input_condition").setValue(deviceInfo);
+            mView.finishActivity();
         }else if ("PHONE".equals(device.getDevice_type())){
             List<DeviceInfoBean> deviceInfo = new ArrayList<>();
             deviceInfo.add(device);

@@ -110,41 +110,41 @@ public final class R {
         public static final int baseline = 0x7f0a0068;
         public static final int beginning = 0x7f0a0069;
         public static final int blocking = 0x7f0a006b;
-        public static final int center = 0x7f0a0095;
-        public static final int chronometer = 0x7f0a00aa;
-        public static final int column = 0x7f0a00b0;
-        public static final int column_reverse = 0x7f0a00b1;
-        public static final int end = 0x7f0a00f9;
-        public static final int flex_end = 0x7f0a011b;
-        public static final int flex_start = 0x7f0a011c;
-        public static final int forever = 0x7f0a0120;
-        public static final int icon = 0x7f0a0137;
-        public static final int icon_group = 0x7f0a0138;
-        public static final int info = 0x7f0a0140;
-        public static final int italic = 0x7f0a0148;
-        public static final int item_touch_helper_previous_elevation = 0x7f0a0165;
-        public static final int line1 = 0x7f0a01c1;
-        public static final int line3 = 0x7f0a01c2;
-        public static final int middle = 0x7f0a01f1;
-        public static final int none = 0x7f0a021e;
-        public static final int normal = 0x7f0a021f;
-        public static final int notification_background = 0x7f0a0222;
-        public static final int notification_main_column = 0x7f0a0223;
-        public static final int notification_main_column_container = 0x7f0a0224;
-        public static final int nowrap = 0x7f0a0225;
-        public static final int right_icon = 0x7f0a0272;
-        public static final int right_side = 0x7f0a0273;
-        public static final int row = 0x7f0a0277;
-        public static final int row_reverse = 0x7f0a0278;
-        public static final int space_around = 0x7f0a02d7;
-        public static final int space_between = 0x7f0a02d8;
-        public static final int stretch = 0x7f0a02f0;
-        public static final int text = 0x7f0a0307;
-        public static final int text2 = 0x7f0a0308;
-        public static final int time = 0x7f0a031d;
-        public static final int title = 0x7f0a0322;
-        public static final int wrap = 0x7f0a0399;
-        public static final int wrap_reverse = 0x7f0a039b;
+        public static final int center = 0x7f0a0097;
+        public static final int chronometer = 0x7f0a00ac;
+        public static final int column = 0x7f0a00b2;
+        public static final int column_reverse = 0x7f0a00b3;
+        public static final int end = 0x7f0a00fb;
+        public static final int flex_end = 0x7f0a011d;
+        public static final int flex_start = 0x7f0a011e;
+        public static final int forever = 0x7f0a0122;
+        public static final int icon = 0x7f0a0139;
+        public static final int icon_group = 0x7f0a013a;
+        public static final int info = 0x7f0a0142;
+        public static final int italic = 0x7f0a014a;
+        public static final int item_touch_helper_previous_elevation = 0x7f0a0167;
+        public static final int line1 = 0x7f0a01c4;
+        public static final int line3 = 0x7f0a01c5;
+        public static final int middle = 0x7f0a01f4;
+        public static final int none = 0x7f0a0221;
+        public static final int normal = 0x7f0a0222;
+        public static final int notification_background = 0x7f0a0225;
+        public static final int notification_main_column = 0x7f0a0226;
+        public static final int notification_main_column_container = 0x7f0a0227;
+        public static final int nowrap = 0x7f0a0228;
+        public static final int right_icon = 0x7f0a0275;
+        public static final int right_side = 0x7f0a0276;
+        public static final int row = 0x7f0a027a;
+        public static final int row_reverse = 0x7f0a027b;
+        public static final int space_around = 0x7f0a02d9;
+        public static final int space_between = 0x7f0a02da;
+        public static final int stretch = 0x7f0a02f2;
+        public static final int text = 0x7f0a0309;
+        public static final int text2 = 0x7f0a030a;
+        public static final int time = 0x7f0a031f;
+        public static final int title = 0x7f0a0324;
+        public static final int wrap = 0x7f0a039d;
+        public static final int wrap_reverse = 0x7f0a039f;
     }
     public static final class integer {
         public static final int status_bar_notification_info_maxnum = 0x7f0b000f;
@@ -158,7 +158,7 @@ public final class R {
         public static final int notification_template_part_time = 0x7f0d00fd;
     }
     public static final class string {
-        public static final int status_bar_notification_info_overflow = 0x7f1104da;
+        public static final int status_bar_notification_info_overflow = 0x7f1104de;
     }
     public static final class style {
         public static final int TextAppearance_Compat_Notification = 0x7f120139;

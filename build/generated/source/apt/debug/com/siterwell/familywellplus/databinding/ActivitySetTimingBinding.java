@@ -20,8 +20,11 @@ public class ActivitySetTimingBinding extends android.databinding.ViewDataBindin
         sViewsWithIds.put(R.id.timer_hour, 3);
         sViewsWithIds.put(R.id.timer_minute, 4);
         sViewsWithIds.put(R.id.week_trigger, 5);
+        sViewsWithIds.put(R.id.bt_delete, 6);
     }
     // views
+    @NonNull
+    public final android.widget.Button btDelete;
     @NonNull
     public final android.widget.ImageView ivBack;
     @NonNull
@@ -41,7 +44,8 @@ public class ActivitySetTimingBinding extends android.databinding.ViewDataBindin
 
     public ActivitySetTimingBinding(@NonNull android.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
         super(bindingComponent, root, 0);
-        final Object[] bindings = mapBindings(bindingComponent, root, 6, sIncludes, sViewsWithIds);
+        final Object[] bindings = mapBindings(bindingComponent, root, 7, sIncludes, sViewsWithIds);
+        this.btDelete = (android.widget.Button) bindings[6];
         this.ivBack = (android.widget.ImageView) bindings[1];
         this.mboundView0 = (android.widget.LinearLayout) bindings[0];
         this.mboundView0.setTag(null);

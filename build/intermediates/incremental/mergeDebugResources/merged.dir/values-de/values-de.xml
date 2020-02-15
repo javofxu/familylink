@@ -665,6 +665,7 @@
     <string name="cancelled">\t\t\t\tWenn Sie sich erneut anmelden, wird Ihre Deaktivierungsanfrage storniert.</string>
     <string name="cannot_create_folder_with_the_same_name">Es kann nicht eine Datei mit demselben Namen erstellt werden</string>
     <string name="cannot_find_instruction_set">Anweisungsset kann nicht gefunden werden</string>
+    <string name="cant_add_conditions">Zur Zeit können keine weiteren Bedingungen hinzugefügt werden</string>
     <string name="card_open">Card entsperren</string>
     <string name="center_person">Persönliches Zentrum</string>
     <string name="center_setting">Set up</string>
@@ -845,6 +846,7 @@
     <string name="gateway">Connector</string>
     <string name="gateway_alert">Connector Alarm</string>
     <string name="gateway_name">Name des Gateways</string>
+    <string name="gateway_online">Online Gateway</string>
     <string name="get_code">Erhalten</string>
     <string name="get_max_scene_group">Ok, erhalten Sie die maximale Größe!</string>
     <string name="goto_set">Zur Einrichtung</string>
@@ -996,6 +998,7 @@
     <string name="password">Passwort</string>
     <string name="password_hint">Passwort eingeben</string>
     <string name="password_is_empty">Das passwort IST Leer</string>
+    <string name="perform_action">Klicken Sie auf die Schaltfläche, um die Aktion durchzuführen</string>
     <string name="permanently_discontinued">Permanent abgesetzt</string>
     <string name="permission_register">Antrag auf Zulassung</string>
     <string name="permission_reject_imei_tip">Wenn Sie den Status -Code des Mobiltelefons nicht lesen, wird sich die normale Nutzung der App auswirken. Bitte öffnen Sie die Telefongenehmigung.</string>
@@ -1035,6 +1038,7 @@
     <string name="product_does_not_exist2">Produkt existiert nicht</string>
     <string name="protocol_template_does_not_exist">Die Protokollvorlage existiert nicht</string>
     <string name="purpose_scene">Wechsel Szene</string>
+    <string name="push_message">Wenn die Auslösebedingungen erfüllt sind\nerhält das Mobiltelefon eine Push-Nachricht</string>
     <string name="pwd_help">Unterstützung des Passworts</string>
     <string name="reached_the_maximum_number_of_folders_created">Die Maximalanzahl and Datein die hergestellt werden können wurde erreicht</string>
     <string name="recommend">Empfehlenswert</string>

@@ -22,16 +22,11 @@ public class ChooseActionActivity extends BasePActivity<ChooseActionPresenter, A
     private String mDeviceName;
     private boolean isInput;
     private boolean isUpdate;
+    private int mDeviceNum;
 
     @Override
     protected int getLayoutId() {
         return R.layout.activity_choose_action;
-    }
-
-    @Override
-    protected void initPresent() {
-        super.initPresent();
-        mPresent = new ChooseActionPresenter(mContext, mDeviceName);
     }
 
     @Override
@@ -40,6 +35,13 @@ public class ChooseActionActivity extends BasePActivity<ChooseActionPresenter, A
         isInput = getIntent().getBooleanExtra("isInput", true);
         isUpdate = getIntent().getBooleanExtra("update", false);
         mDeviceName = getIntent().getStringExtra("deviceName");
+        mDeviceNum = getIntent().getIntExtra("deviceNum", 0);
+    }
+
+    @Override
+    protected void initPresent() {
+        super.initPresent();
+        mPresent = new ChooseActionPresenter(mContext, mDeviceName, mDeviceNum);
     }
 
     @Override
@@ -85,6 +87,7 @@ public class ChooseActionActivity extends BasePActivity<ChooseActionPresenter, A
         startActivity(intent);
         finish();
     }
+
 
     @Override
     public void finishActivity() {

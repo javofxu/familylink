@@ -1,4 +1,4 @@
-#Fri Feb 14 19:35:41 CST 2020
-base.0=/Users/siterwell/github/familylink/build/intermediates/transforms/dexMerger/debug/17
+#Sat Feb 15 16:23:10 CST 2020
+base.0=/Users/siterwell/github/familylink/build/intermediates/transforms/dexMerger/debug/44
 renamed.0=classes.dex
-file.0=/Users/siterwell/github/familylink/build/intermediates/transforms/dexMerger/debug/17/classes.dex
+file.0=/Users/siterwell/github/familylink/build/intermediates/transforms/dexMerger/debug/44/classes.dex

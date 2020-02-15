@@ -40,17 +40,23 @@ public interface AutomationContract {
 
         void setOutputList(List<DeviceInfoBean> deviceList);
 
+        boolean isTimerOrClick();
+
         void addNewInput();
 
         void addNewOutput();
 
-        void onSaveAutomation();
-
-        void onDeleteAutomation(int sceneId);
-
         void updateInput(DeviceInfoBean device);
 
         void updateOutput(DeviceInfoBean device);
+
+        void deleteInput();
+
+        void deleteOutput();
+
+        void onSaveAutomation();
+
+        void onDeleteAutomation(int sceneId);
 
         void sendSuccess();
 

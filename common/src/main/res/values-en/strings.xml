@@ -99,4 +99,8 @@
     <string name="study">Study</string>
     <string name="devices">devices</string>
     <string name="uploaded_avatar">Successfully uploaded the Avatar!</string>
+    <string name="gateway_online">gateway online</string>
+    <string name="cant_add_conditions">No other conditions can be added at present</string>
+    <string name="perform_action">Click the button to perform the action</string>
+    <string name="push_message">When trigger conditions are met \nMobile will receive push message</string>
 </resources>

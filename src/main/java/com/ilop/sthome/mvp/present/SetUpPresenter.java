@@ -50,20 +50,28 @@ public class SetUpPresenter extends BasePresenterImpl<SetUpContract.IView> imple
 
             @Override
             public void onResponse(IoTResponse response) {
+                Object data = response.getData();
+                if (data == null) {
+                    return;
+                }
+                if (!(data instanceof JSONArray)) {
+                    return;
+                }
                 mHandler.post(()->{
-                    Object data = response.getData();
-                    if (data == null) {
-                        return;
-                    }
-                    if (!(data instanceof JSONArray)) {
-                        return;
-                    }
                     try {
                         List<AlarmNotice> mNoticeList = JSON.parseArray(data.toString(), AlarmNotice.class);
                         if (mNoticeList.size() > 0) {
                             mView.showNoticeList(mNoticeList);
                         }else {
                             mView.withoutNotice();
+                        }
+                        for (AlarmNotice notice: mNoticeList) {
+                            if (notice.isNoticeEnabled()){
+                                mView.showHasEnabledOpen(true);
+                                return;
+                            }else {
+                                mView.showHasEnabledOpen(false);
+                            }
                         }
                     } catch (Exception e) {
                         e.printStackTrace();
@@ -87,7 +95,6 @@ public class SetUpPresenter extends BasePresenterImpl<SetUpContract.IView> imple
                 mHandler.post(()->{
                     if (code == 200){
                         getDeviceNoticeList(iotId);
-                        mView.disProgressDialog();
                         mView.showToastMsg(mContext.getString(R.string.operation_success));
                     }else {
                         mView.showToastMsg(response.getMessage());
@@ -107,15 +114,11 @@ public class SetUpPresenter extends BasePresenterImpl<SetUpContract.IView> imple
 
             @Override
             public void onResponse(IoTResponse response) {
-                int code = response.getCode();
                 mHandler.post(()->{
-                    if (code ==200){
+                    if (response.getCode() ==200){
                         getDeviceNoticeList(iotId);
-                        mView.showFullNotice();
-                        mView.disProgressDialog();
                         mView.showToastMsg(mContext.getString(R.string.operation_success));
                     }else {
-                        mView.disProgressDialog();
                         mView.showToastMsg(response.getMessage());
                     }
                 });

@@ -18,6 +18,8 @@ import com.ilop.sthome.mvp.contract.AutomationContract;
 import com.ilop.sthome.network.api.DataFromAliSceneGroup;
 import com.ilop.sthome.network.api.SendSceneDataAli;
 import com.ilop.sthome.ui.activity.scene.ChooseActionActivity;
+import com.ilop.sthome.ui.activity.scene.InputDetailActivity;
+import com.ilop.sthome.ui.activity.scene.SettingTimingActivity;
 import com.ilop.sthome.utils.CommandUtil;
 import com.siterwell.familywellplus.R;
 
@@ -88,11 +90,21 @@ public class AutomationPresenter extends BasePresenterImpl<AutomationContract.IV
     }
 
     @Override
+    public boolean isTimerOrClick() {
+        for (DeviceInfoBean mDevice: inputShow) {
+            if ("TIMER".equals(mDevice.getDevice_type()) || "CLICK".equals(mDevice.getDevice_type())){
+                return true;
+            }
+        }
+        return false;
+    }
+
+    @Override
     public void addNewInput() {
         Intent addItem = new Intent(mContext, ChooseActionActivity.class);
         addItem.putExtra("isInput", true);
         addItem.putExtra("deviceName", mDeviceName);
-        addItem.putExtra("deviceList", (Serializable) inputShow);
+        addItem.putExtra("deviceNum", inputShow.size());
         mView.startActivityByIntent(addItem);
     }
 
@@ -102,6 +114,55 @@ public class AutomationPresenter extends BasePresenterImpl<AutomationContract.IV
         addItem.putExtra("isInput", false);
         addItem.putExtra("deviceName", mDeviceName);
         mView.startActivityByIntent(addItem);
+    }
+
+    @Override
+    public void updateInput(DeviceInfoBean device) {
+        updateInputDevice = device;
+        if ("CLICK".equals(device.getDevice_type())){
+            Intent intent = new Intent(mContext, InputDetailActivity.class);
+            intent.putExtra("deviceType", "CLICK");
+            mView.startActivityByIntent(intent);
+        }else if ("TIMER".equals(device.getDevice_type())){
+            Intent intent = new Intent(mContext, SettingTimingActivity.class);
+            intent.putExtra("isUpdate", true);
+            intent.putExtra("device", device);
+            mView.startActivityByIntent(intent);
+        }else {
+            Intent intent = new Intent(mContext, ChooseActionActivity.class);
+            intent.putExtra("isInput", true);
+            intent.putExtra("update", true);
+            intent.putExtra("deviceName", mDeviceName);
+            mView.startActivityByIntent(intent);
+        }
+    }
+
+    @Override
+    public void updateOutput(DeviceInfoBean device) {
+        updateOutputDevice = device;
+        if ("PHONE".equals(device.getDevice_type())){
+            Intent intent = new Intent(mContext, InputDetailActivity.class);
+            intent.putExtra("deviceType", "PHONE");
+            mView.startActivityByIntent(intent);
+        }else {
+            Intent intent = new Intent(mContext, ChooseActionActivity.class);
+            intent.putExtra("isInput", false);
+            intent.putExtra("update", true);
+            intent.putExtra("deviceName", mDeviceName);
+            mView.startActivityByIntent(intent);
+        }
+    }
+
+    @Override
+    public void deleteInput() {
+        inputShow.remove(updateInputDevice);
+        setInputList(inputShow);
+    }
+
+    @Override
+    public void deleteOutput() {
+        outputShow.remove(updateOutputDevice);
+        setOutputList(outputShow);
     }
 
     @Override
@@ -129,26 +190,6 @@ public class AutomationPresenter extends BasePresenterImpl<AutomationContract.IV
     public void onDeleteAutomation(int sceneId) {
         mDeleteSceneId = sceneId;
         mSendSceneData.deleteScene(sceneId);
-    }
-
-    @Override
-    public void updateInput(DeviceInfoBean device) {
-        updateInputDevice = device;
-        Intent addItem = new Intent(mContext, ChooseActionActivity.class);
-        addItem.putExtra("isInput", true);
-        addItem.putExtra("update", true);
-        addItem.putExtra("deviceName", mDeviceName);
-        mView.startActivityByIntent(addItem);
-    }
-
-    @Override
-    public void updateOutput(DeviceInfoBean device) {
-        updateOutputDevice = device;
-        Intent addItem = new Intent(mContext, ChooseActionActivity.class);
-        addItem.putExtra("isInput", false);
-        addItem.putExtra("update", true);
-        addItem.putExtra("deviceName", mDeviceName);
-        mView.startActivityByIntent(addItem);
     }
 
     @Override

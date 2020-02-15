@@ -99,4 +99,8 @@
     <string name="study">Estudio</string>
     <string name="devices">equipos</string>
     <string name="uploaded_avatar">Carga exitosa!</string>
+    <string name="gateway_online">Portal línea</string>
+    <string name="cant_add_conditions">No se pueden añadir otras condiciones</string>
+    <string name="perform_action">Pulse el botón para ejecutar</string>
+    <string name="push_message">Cuando se cumplan las condiciones de activación\nel teléfono recibirá un mensaje de empuje.</string>
 </resources>

@@ -637,6 +637,7 @@
     <string name="cancelled">\t\t\t\t在此之前重新登录，则你的停用请求将被取消</string>
     <string name="cannot_create_folder_with_the_same_name">无法创建同名文件夹</string>
     <string name="cannot_find_instruction_set">无法找到指令集</string>
+    <string name="cant_add_conditions">当前不能添加其他条件</string>
     <string name="card_open">卡开锁</string>
     <string name="center_person">个人中心</string>
     <string name="center_setting">设置</string>
@@ -799,6 +800,7 @@
     <string name="gateway">网关报警器</string>
     <string name="gateway_alert">网关告警</string>
     <string name="gateway_name">网关名称</string>
+    <string name="gateway_online">网关在线</string>
     <string name="get_code">获取验证码</string>
     <string name="get_max_scene_group">已达场景上限，最多八个场景</string>
     <string name="goto_set">去设置</string>
@@ -950,6 +952,7 @@
     <string name="password">Password</string>
     <string name="password_hint">请输入密码</string>
     <string name="password_is_empty">密码为空</string>
+    <string name="perform_action">手机上点击按钮即执行动作</string>
     <string name="permanently_discontinued">永久停用</string>
     <string name="permission_register">权限申请</string>
     <string name="permission_reject_imei_tip">没有读取手机状态码的权限，会影响app正常使用，请打开电话权限</string>
@@ -989,6 +992,7 @@
     <string name="product_does_not_exist2">产品不存在</string>
     <string name="protocol_template_does_not_exist">协议模板不存在</string>
     <string name="purpose_scene">切换场景</string>
+    <string name="push_message">满足触发条件时\n手机将收到推送消息</string>
     <string name="pwd_help">密码找回</string>
     <string name="reached_the_maximum_number_of_folders_created">达到创建文件夹数量上限</string>
     <string name="recommend">推荐</string>
