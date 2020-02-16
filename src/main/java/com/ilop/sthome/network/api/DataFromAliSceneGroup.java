@@ -3,13 +3,13 @@ package com.ilop.sthome.network.api;
 import android.content.Context;
 import android.util.Log;
 
-import com.ilop.sthome.data.bean.DeviceInfoBean;
 import com.ilop.sthome.data.bean.SceneRelationBean;
 import com.ilop.sthome.data.bean.ShortcutAliBean;
 import com.ilop.sthome.data.bean.SysModelAliBean;
 import com.ilop.sthome.data.db.SceneRelaitonAliDAO;
 import com.ilop.sthome.data.db.ShortcutAliDAO;
 import com.ilop.sthome.data.db.SysmodelAliDAO;
+import com.ilop.sthome.data.greenDao.DeviceInfoBean;
 import com.ilop.sthome.utils.CoderALiUtils;
 import com.ilop.sthome.utils.tools.ByteUtil;
 

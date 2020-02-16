@@ -14,12 +14,12 @@ import android.view.View;
 import com.example.common.base.BaseActivity;
 import com.example.common.utils.LiveDataBus;
 import com.example.common.utils.SpUtil;
-import com.ilop.sthome.data.bean.DeviceInfoBean;
-import com.ilop.sthome.data.db.DeviceAliDAO;
 import com.ilop.sthome.data.enums.ProductGroup;
+import com.ilop.sthome.data.greenDao.DeviceInfoBean;
 import com.ilop.sthome.data.greenDao.RoomBean;
 import com.ilop.sthome.ui.adapter.device.GatewayListAdapter;
 import com.ilop.sthome.ui.adapter.room.RoomChooseAdapter;
+import com.ilop.sthome.utils.greenDao.DeviceDaoUtil;
 import com.ilop.sthome.utils.greenDao.RoomDaoUtil;
 import com.siterwell.familywellplus.R;
 import com.siterwell.familywellplus.databinding.ActivityConfigDeviceBinding;
@@ -38,7 +38,6 @@ import java.util.stream.Collectors;
 
 public class ConfigDeviceActivity extends BaseActivity<ActivityConfigDeviceBinding> {
 
-    private DeviceAliDAO deviceAliDAO;
     private ProductGroup mInsGuide;
     private GatewayListAdapter mGatewayAdapter;
     private RoomChooseAdapter mRoomAdapter;
@@ -62,7 +61,6 @@ public class ConfigDeviceActivity extends BaseActivity<ActivityConfigDeviceBindi
     @Override
     protected void initView() {
         super.initView();
-        deviceAliDAO = new DeviceAliDAO(this);
         mGatewayAdapter = new GatewayListAdapter(mContext);
         mRoomAdapter = new RoomChooseAdapter(mContext);
         mDBind.chooseGatewayList.setLayoutManager(new GridLayoutManager(mContext, 2));
@@ -154,7 +152,7 @@ public class ConfigDeviceActivity extends BaseActivity<ActivityConfigDeviceBindi
     }
 
     private void getGatewayList(){
-        mGatewayList = deviceAliDAO.findAllGateway();
+        mGatewayList = DeviceDaoUtil.getInstance().findAllGateway();
         if (mGatewayList.size()>0){
             mGatewayAdapter.setList(mGatewayList);
         }else {

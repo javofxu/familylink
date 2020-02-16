@@ -2,8 +2,8 @@ package com.ilop.sthome.ui.activity.device;
 
 
 import com.example.common.base.BaseActivity;
-import com.ilop.sthome.data.bean.DeviceInfoBean;
-import com.ilop.sthome.data.db.DeviceAliDAO;
+import com.ilop.sthome.data.greenDao.DeviceInfoBean;
+import com.ilop.sthome.utils.greenDao.DeviceDaoUtil;
 import com.siterwell.familywellplus.R;
 import com.siterwell.familywellplus.databinding.ActivityDeviceDetailBinding;
 
@@ -18,7 +18,6 @@ import com.siterwell.familywellplus.databinding.ActivityDeviceDetailBinding;
 public class DeviceDetailActivity extends BaseActivity<ActivityDeviceDetailBinding> {
 
     private String mDeviceName;
-    private DeviceAliDAO mDeviceAliDAO;
     private DeviceInfoBean mDeviceInfoBean;
 
     @Override
@@ -36,8 +35,7 @@ public class DeviceDetailActivity extends BaseActivity<ActivityDeviceDetailBindi
     @Override
     protected void initView() {
         super.initView();
-        mDeviceAliDAO = new DeviceAliDAO(this);
-        mDeviceInfoBean = mDeviceAliDAO.findByDeviceid( mDeviceName, 0);
+        mDeviceInfoBean = DeviceDaoUtil.getInstance().findGatewayByDeviceName( mDeviceName);
     }
 
     @Override

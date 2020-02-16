@@ -9,15 +9,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.basic.G;
 import com.example.common.utils.LiveDataBus;
-import com.ilop.sthome.data.bean.DeviceInfoBean;
-import com.ilop.sthome.data.bean.ResolveAliTimer;
 import com.ilop.sthome.data.enums.DeviceTrigger;
 import com.ilop.sthome.data.enums.SmartProduct;
+import com.ilop.sthome.data.greenDao.DeviceInfoBean;
+import com.ilop.sthome.utils.CoderALiUtils;
 import com.siterwell.familywellplus.R;
 
 import java.util.Arrays;
@@ -115,7 +113,7 @@ public class TriggerInAdapter extends RecyclerView.Adapter<TriggerInAdapter.Item
             }else if ("TIMER".equals(deviceInfoBean.getDevice_type())){
                 String init_state = deviceInfoBean.getDevice_status();
                 String init_week = init_state.substring(0, init_state.length()-4);
-                String week = ResolveAliTimer.getWeekinfo(init_week, mContext);
+                String week = CoderALiUtils.getWeekInfo(init_week, mContext);
                 String hour = init_state.substring(init_state.length()-4,init_state.length()-2);
                 String min = init_state.substring(init_state.length()-2);
                 String time = hour + ":"+ min;

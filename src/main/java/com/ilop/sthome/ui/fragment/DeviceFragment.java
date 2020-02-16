@@ -1,7 +1,6 @@
 package com.ilop.sthome.ui.fragment;
 
 import android.content.Intent;
-import android.support.v7.widget.LinearLayoutManager;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
@@ -11,8 +10,8 @@ import android.view.animation.LayoutAnimationController;
 import com.example.common.base.BasePFragment;
 import com.example.common.utils.LiveDataBus;
 import com.example.common.view.refresh.CustomRefreshView;
-import com.ilop.sthome.data.bean.DeviceInfoBean;
 import com.ilop.sthome.data.event.EventRefreshDevice;
+import com.ilop.sthome.data.greenDao.DeviceInfoBean;
 import com.ilop.sthome.data.greenDao.RoomBean;
 import com.ilop.sthome.mvp.contract.DeviceContract;
 import com.ilop.sthome.mvp.present.DevicePresenter;

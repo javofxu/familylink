@@ -1,7 +1,8 @@
 package com.ilop.sthome.network.udp;
 
-import com.ilop.sthome.data.bean.DeviceInfoBean;
+
 import com.ilop.sthome.data.bean.GatewayBean;
+import com.ilop.sthome.data.greenDao.DeviceInfoBean;
 
 import java.net.InetAddress;
 import java.util.ArrayList;

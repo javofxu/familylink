@@ -4,7 +4,7 @@ import android.util.Log;
 
 import com.example.common.base.BaseActivity;
 import com.example.common.utils.LiveDataBus;
-import com.ilop.sthome.data.bean.DeviceInfoBean;
+import com.ilop.sthome.data.greenDao.DeviceInfoBean;
 import com.ilop.sthome.utils.tools.ByteUtil;
 import com.ilop.sthome.view.WheelView;
 import com.siterwell.familywellplus.R;
@@ -38,7 +38,7 @@ public class SettingTempControlActivity extends BaseActivity<ActivitySetTempCont
     protected void initialize() {
         super.initialize();
         isUpdate = getIntent().getBooleanExtra("isUpdate", false);
-        mDevice = (DeviceInfoBean) getIntent().getSerializableExtra("device");
+        mDevice = getIntent().getParcelableExtra("device");
     }
 
     @Override

@@ -19,31 +19,25 @@ import com.aliyun.iot.aep.sdk.log.ALog;
 import com.aliyun.iot.aep.sdk.login.LoginBusiness;
 import com.example.common.base.OnCallBackToRefresh;
 import com.example.common.utils.RxTimerUtil;
-import com.example.common.utils.SpUtil;
 import com.ilop.sthome.common.ControllerWifi;
 import com.ilop.sthome.common.SearchWifiHelper;
-import com.ilop.sthome.data.bean.DeviceInfoBean;
-import com.ilop.sthome.data.bean.ResolveAliTimer;
 import com.ilop.sthome.data.bean.SceneAliBean;
 import com.ilop.sthome.data.bean.SceneRelationBean;
 import com.ilop.sthome.data.bean.ShortcutAliBean;
 import com.ilop.sthome.data.bean.SysModelAliBean;
-import com.ilop.sthome.data.bean.TimerGatewayAliBean;
-import com.ilop.sthome.data.db.DeviceAliDAO;
 import com.ilop.sthome.data.db.SceneAliDAO;
 import com.ilop.sthome.data.db.SceneRelaitonAliDAO;
 import com.ilop.sthome.data.db.ShortcutAliDAO;
 import com.ilop.sthome.data.db.SysmodelAliDAO;
-import com.ilop.sthome.data.db.TimerAliDAO;
 import com.ilop.sthome.data.enums.SmartProduct;
 import com.ilop.sthome.data.event.EventAnswerOK;
 import com.ilop.sthome.data.event.EventRefreshDevice;
 import com.ilop.sthome.data.event.EventRefreshLogs;
 import com.ilop.sthome.data.event.EventRefreshScene;
 import com.ilop.sthome.data.event.EventRefreshSubDeviceLogs;
-import com.ilop.sthome.data.event.EventRefreshTimer;
 import com.ilop.sthome.data.event.EventUdpReceive;
 import com.ilop.sthome.data.event.STEvent;
+import com.ilop.sthome.data.greenDao.DeviceInfoBean;
 import com.ilop.sthome.data.greenDao.HistoryBean;
 import com.ilop.sthome.data.greenDao.WarnBean;
 import com.ilop.sthome.network.api.SendCommandAli;
@@ -57,6 +51,7 @@ import com.ilop.sthome.ui.dialog.BaseDialog;
 import com.ilop.sthome.utils.CoderALiUtils;
 import com.ilop.sthome.utils.HistoryDataUtil;
 import com.ilop.sthome.utils.NetWorkUtil;
+import com.ilop.sthome.utils.greenDao.DeviceDaoUtil;
 import com.ilop.sthome.utils.greenDao.HistoryDaoUtil;
 import com.ilop.sthome.utils.greenDao.UserInfoDaoUtil;
 import com.ilop.sthome.utils.greenDao.WarnDaoUtil;
@@ -137,8 +132,7 @@ public class SiterService extends Service {
                         String deviceName = (String)msg.obj;
                         if(!TextUtils.isEmpty(deviceName)){
                             int currentGroup;
-                            DeviceAliDAO deviceAliDAO = new DeviceAliDAO(SiterService.this);
-                            DeviceInfoBean deviceInfoBean = deviceAliDAO.findByDeviceid(deviceName,0);
+                            DeviceInfoBean deviceInfoBean = DeviceDaoUtil.getInstance().findGatewayByDeviceName(deviceName);
                             if(deviceInfoBean!=null){
                                 SendSceneDataAli sendSceneDataAli = new SendSceneDataAli(SiterService.this,deviceInfoBean);
                                 SysmodelAliDAO sysmodelAliDAO = new SysmodelAliDAO(SiterService.this);
@@ -157,10 +151,9 @@ public class SiterService extends Service {
                     if(LoginBusiness.isLogin() && UserInfoDaoUtil.getInstance().getUserInfoDao().queryAll().size()>0){
                         String deviceName1 = (String)msg.obj;
                         if(!TextUtils.isEmpty(deviceName1)) {
-                            DeviceAliDAO deviceAliDAO = new DeviceAliDAO(SiterService.this);
-                            DeviceInfoBean deviceInfoBean = deviceAliDAO.findByDeviceid(deviceName1,0);
+                            DeviceInfoBean deviceInfoBean = DeviceDaoUtil.getInstance().findGatewayByDeviceName(deviceName1);
                             if(deviceInfoBean!=null){
-                                List<DeviceInfoBean> deviceInfoBeans = deviceAliDAO.findAllSubDevice(deviceName1);
+                                List<DeviceInfoBean> deviceInfoBeans = DeviceDaoUtil.getInstance().findAllSubDevice(deviceName1);
                                 if(deviceInfoBeans.size()>0){
                                     String crc = CoderALiUtils.getEqNameCRC(SiterService.this,deviceName1);
                                     SendEquipmentDataAli sendEquipmentDataAli = new SendEquipmentDataAli(SiterService.this,deviceInfoBean);
@@ -404,7 +397,6 @@ public class SiterService extends Service {
                 }
             } else if (cmd == SendCommandAli.UPLOAD_TIMER_INFO) {
                 String content = jsonObject1.getString("data_str2");
-                uploadTimeInfo(deviceName, content);
             } else if (cmd == SendCommandAli.SEND_ACK) {
                 String content = jsonObject1.toString();
                 sendAck(content);
@@ -468,7 +460,6 @@ public class SiterService extends Service {
                     }
                 } else if (cmd == SendCommandAli.UPLOAD_TIMER_INFO) {
                     String content = jsonObject1.getString("data_str2");
-                    uploadTimeInfo(deviceName, content);
                 } else if (cmd == SendCommandAli.SEND_ACK) {
                     String content = jsonObject1.toString();
                     sendAck(content);
@@ -509,8 +500,7 @@ public class SiterService extends Service {
             handler.sendMessageDelayed(message, 0);
         } else if ("00000000".equals(status)) {
             int dev_id = Integer.parseInt(device_id, 16);
-            DeviceAliDAO deviceAliDAO = new DeviceAliDAO(SiterService.this);
-            deviceAliDAO.deleteByDeviceName(deviceName, dev_id);
+            DeviceDaoUtil.getInstance().deleteByDeviceName(deviceName, dev_id);
             EventRefreshDevice eventRefreshDevice = new EventRefreshDevice();
             eventRefreshDevice.setDevice_id(dev_id);
             eventRefreshDevice.setDevice_type(device_type);
@@ -521,9 +511,8 @@ public class SiterService extends Service {
             int dev_id = Integer.parseInt(device_id, 16);
             int has_device = 0;
             if (dev_id > 0) {
-                DeviceAliDAO deviceAliDAO = new DeviceAliDAO(SiterService.this);
-                deviceAliDAO.HasThisDevice(deviceName, dev_id);
-                if (deviceAliDAO.HasThisDevice(deviceName, dev_id)) {
+                DeviceDaoUtil.getInstance().HasThisDevice(deviceName, dev_id);
+                if (DeviceDaoUtil.getInstance().HasThisDevice(deviceName, dev_id)) {
                     has_device = 1;
                 }
                 DeviceInfoBean model = new DeviceInfoBean();
@@ -531,7 +520,7 @@ public class SiterService extends Service {
                 model.setDevice_type(device_type);
                 model.setDevice_status(status);
                 model.setDeviceName(deviceName);
-                deviceAliDAO.insertDevice(model);
+                DeviceDaoUtil.getInstance().insertSubDevice(model);
             }
 
             EventRefreshDevice eventRefreshDevice = new EventRefreshDevice();
@@ -545,7 +534,6 @@ public class SiterService extends Service {
     }
 
     private void uploadDeviceName(String deviceName, String content){
-        DeviceAliDAO equipDAO = new DeviceAliDAO(SiterService.this);
         if ("NAME_OVER".equals(content)) {
             EventRefreshDevice eventRefreshDevice = new EventRefreshDevice();
             EventBus.getDefault().post(eventRefreshDevice);
@@ -559,36 +547,13 @@ public class SiterService extends Service {
                 deviceInfoBean.setDevice_ID(ds);
                 deviceInfoBean.setDeviceName(deviceName);
                 deviceInfoBean.setSubdeviceName(lastName);
-                equipDAO.updateName(deviceInfoBean);
+                DeviceDaoUtil.getInstance().getDeviceDao().update(deviceInfoBean);
             } else {
                 DeviceInfoBean deviceInfoBean = new DeviceInfoBean();
                 deviceInfoBean.setDevice_ID(ds);
                 deviceInfoBean.setDeviceName(deviceName);
                 deviceInfoBean.setSubdeviceName("");
-                equipDAO.updateName(deviceInfoBean);
-            }
-        }
-    }
-
-    private void uploadTimeInfo(String deviceName, String content){
-        if ("TIMER_OVER".equals(content)) {
-            EventRefreshTimer eventRefreshTimer = new EventRefreshTimer();
-            eventRefreshTimer.setDeviceName(deviceName);
-            EventBus.getDefault().post(eventRefreshTimer);
-        } else {
-            TimerAliDAO timerAliDAO = new TimerAliDAO(SiterService.this);
-            if (content.indexOf("DEL") != -1) {
-                String id = content.substring(0, 2);
-                int timerid = Integer.parseInt(id, 16);
-                timerAliDAO.delete(timerid, deviceName);
-            } else {
-                ResolveAliTimer resolveTimer = new ResolveAliTimer(content, deviceName);
-                if (resolveTimer.isTarget()) {
-                    TimerGatewayAliBean timerGatewayBean = resolveTimer.getTimerGatewayBean();
-                    timerAliDAO.insertTimer(timerGatewayBean);
-                } else {
-                    Log.i(TAG, "timer data format is error");
-                }
+                DeviceDaoUtil.getInstance().getDeviceDao().update(deviceInfoBean);
             }
         }
     }
@@ -597,8 +562,7 @@ public class SiterService extends Service {
         int sid = Integer.parseInt(current, 16);
         SysmodelAliDAO sysmodelAliDAO = new SysmodelAliDAO(SiterService.this);
         sysmodelAliDAO.updateChoice(sid, deviceName);
-        DeviceAliDAO deviceAliDAO = new DeviceAliDAO(SiterService.this);
-        deviceAliDAO.updateGatewayCurrentSid(deviceName, sid);
+        DeviceDaoUtil.getInstance().updateGatewayCurrentSid(deviceName, sid);
         EventRefreshScene eventRefreshDevice = new EventRefreshScene();
         eventRefreshDevice.setDeviceName(deviceName);
         EventBus.getDefault().post(eventRefreshDevice);
@@ -681,8 +645,7 @@ public class SiterService extends Service {
 
     private void uploadSceneInfo(String deviceName, String content){
         if ("OVER".equals(content)) {
-            DeviceAliDAO deviceAliDAO = new DeviceAliDAO(SiterService.this);
-            int current_mode = deviceAliDAO.findCurrentSidDeviceid(deviceName);
+            int current_mode = DeviceDaoUtil.getInstance().findGatewayCurrentSid(deviceName);
             if (current_mode >= 0) {
                 SysmodelAliDAO sysmodelAliDAO = new SysmodelAliDAO(SiterService.this);
                 sysmodelAliDAO.updateChoice(current_mode, deviceName);
@@ -871,13 +834,12 @@ public class SiterService extends Service {
                     }
                     doAliGatewayAlertShow(status,deviceName);
                 }else{
-                    DeviceAliDAO deviceAliDAO = new DeviceAliDAO(SiterService.this);
                     DeviceInfoBean deviceInfoBean = new DeviceInfoBean();
                     deviceInfoBean.setDevice_ID(eqid);
                     deviceInfoBean.setDevice_status(device_status);
                     deviceInfoBean.setDevice_type(device_type);
                     deviceInfoBean.setDeviceName(deviceName);
-                    deviceAliDAO.insertDevice(deviceInfoBean);
+                    DeviceDaoUtil.getInstance().insertSubDevice(deviceInfoBean);
 
                     EventRefreshDevice eventRefreshDevice = new EventRefreshDevice();
                     eventRefreshDevice.setType(1);
@@ -909,12 +871,11 @@ public class SiterService extends Service {
     private void doAliSceneAlertShow(int mid,String deviceName){
         try {
             SceneAliDAO SED = new SceneAliDAO(this);
-            DeviceAliDAO deviceDAO = new DeviceAliDAO(this);
-            String SceneName = "";
-            String dname = "";
+            String SceneName;
+            String dname;
 
 
-            DeviceInfoBean myDeviceBean =  deviceDAO.findByDeviceid(deviceName,0);
+            DeviceInfoBean myDeviceBean =  DeviceDaoUtil.getInstance().findGatewayByDeviceName(deviceName);
 
             if(myDeviceBean == null){
                 dname = getResources().getString(R.string.ali_gateway)+":"+"("+deviceName+")";
@@ -955,8 +916,7 @@ public class SiterService extends Service {
                         } catch (IOException e) {
                             e.printStackTrace();
                         }
-                        DeviceAliDAO deviceAliDAO = new DeviceAliDAO(SiterService.this);
-                        DeviceInfoBean deviceInfoBean = deviceAliDAO.findByDeviceid(deviceName,0);
+                        DeviceInfoBean deviceInfoBean = DeviceDaoUtil.getInstance().findGatewayByDeviceName(deviceName);
                         if(deviceInfoBean!=null){
                             SendEquipmentDataAli sendEquipmentDataAli = new SendEquipmentDataAli(SiterService.this,deviceInfoBean);
                             sendEquipmentDataAli.sendGateWaySilence();
@@ -987,8 +947,7 @@ public class SiterService extends Service {
         String gateway = "";
         String title = "";
 
-        DeviceAliDAO deviceAliDAO = new DeviceAliDAO(this);
-        DeviceInfoBean deviceInfoBean = deviceAliDAO.findByDeviceid(deviceName,0);
+        DeviceInfoBean deviceInfoBean = DeviceDaoUtil.getInstance().findGatewayByDeviceName(deviceName);
 
         if(deviceInfoBean==null){
             gateway = getResources().getString(R.string.ali_gateway)+":"+"("+deviceName+")";
@@ -1020,8 +979,7 @@ public class SiterService extends Service {
                     } catch (IOException e) {
                         e.printStackTrace();
                     }
-                    DeviceAliDAO deviceAliDAO = new DeviceAliDAO(SiterService.this);
-                    DeviceInfoBean deviceInfoBean = deviceAliDAO.findByDeviceid(deviceName,0);
+                    DeviceInfoBean deviceInfoBean = DeviceDaoUtil.getInstance().findGatewayByDeviceName(deviceName);
                     if(deviceInfoBean!=null){
                         SendEquipmentDataAli sendEquipmentDataAli = new SendEquipmentDataAli(SiterService.this,deviceInfoBean);
                         sendEquipmentDataAli.sendGateWaySilence();
@@ -1043,15 +1001,14 @@ public class SiterService extends Service {
      */
     @TargetApi(Build.VERSION_CODES.JELLY_BEAN)
     private void doAliAlertShow(String status,String dev_type,int eqid,String deviceName){
-        DeviceAliDAO deviceDAO = new DeviceAliDAO(this);
         String ds = "";
         String place = "";
         String gateway = "";
         String title = "";
 
 
-        DeviceInfoBean deviceBean = deviceDAO.findByDeviceid(deviceName,0);
-        DeviceInfoBean equipmentBean = deviceDAO.findByDeviceid(deviceName,eqid);
+        DeviceInfoBean deviceBean = DeviceDaoUtil.getInstance().findGatewayByDeviceName(deviceName);
+        DeviceInfoBean equipmentBean = DeviceDaoUtil.getInstance().findByDeviceId(deviceName,eqid);
 
         if(deviceBean == null){
             gateway = getResources().getString(R.string.ali_gateway)+"("+deviceName+")";
@@ -1099,8 +1056,7 @@ public class SiterService extends Service {
                     } catch (IOException e) {
                         e.printStackTrace();
                     }
-                    DeviceAliDAO deviceAliDAO = new DeviceAliDAO(SiterService.this);
-                    DeviceInfoBean deviceInfoBean = deviceAliDAO.findByDeviceid(deviceName,0);
+                    DeviceInfoBean deviceInfoBean = DeviceDaoUtil.getInstance().findGatewayByDeviceName(deviceName);
                     if(deviceInfoBean!=null){
                         SendEquipmentDataAli sendEquipmentDataAli = new SendEquipmentDataAli(SiterService.this,deviceInfoBean);
                         sendEquipmentDataAli.sendGateWaySilence();

@@ -30,8 +30,8 @@ dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     api files('libs/LibFishEye.jar')
     api files('libs/stickygridheaders.jar')
-    api files('libs/commons-lang3-3.1.jar')
     api files('libs/LibFunSDK.jar')
+    api files('libs/commons-lang3-3.1.jar')
 }
 
 
@@ -65,4 +65,5 @@ dependencies {
     api 'org.greenrobot:eventbus:3.0.0'
 
     api ('com.journeyapps:zxing-android-embedded:3.6.0') { transitive = false }
+
 }

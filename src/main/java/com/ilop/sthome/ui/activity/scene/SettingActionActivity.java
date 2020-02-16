@@ -5,8 +5,8 @@ import android.view.View;
 
 import com.example.common.base.BaseActivity;
 import com.example.common.utils.LiveDataBus;
-import com.ilop.sthome.data.bean.DeviceInfoBean;
 import com.ilop.sthome.data.enums.DeviceTrigger;
+import com.ilop.sthome.data.greenDao.DeviceInfoBean;
 import com.ilop.sthome.ui.adapter.detail.OptionAdapter;
 import com.ilop.sthome.view.WheelView;
 import com.siterwell.familywellplus.R;
@@ -44,7 +44,7 @@ public class SettingActionActivity extends BaseActivity<ActivitySetActionBinding
         super.initialize();
         isInput = getIntent().getBooleanExtra("isInput", false);
         isUpdate = getIntent().getBooleanExtra("isUpdate", false);
-        mDevice = (DeviceInfoBean) getIntent().getSerializableExtra("device");
+        mDevice = getIntent().getParcelableExtra("device");
         if (isInput){
             mDBind.tvSetTitle.setText(getString(R.string.set_criteria));
         }else {

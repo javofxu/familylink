@@ -10,14 +10,14 @@ import android.view.inputmethod.InputMethodManager;
 
 import com.example.common.base.BasePFragment;
 import com.example.common.view.refresh.CustomRefreshView;
-import com.ilop.sthome.data.bean.DeviceInfoBean;
-import com.ilop.sthome.data.db.DeviceAliDAO;
 import com.ilop.sthome.data.event.EventAnswerOK;
 import com.ilop.sthome.data.event.EventRefreshDevice;
+import com.ilop.sthome.data.greenDao.DeviceInfoBean;
 import com.ilop.sthome.mvp.contract.SubDeviceContract;
 import com.ilop.sthome.mvp.present.SubDevicePresenter;
 import com.ilop.sthome.network.api.SendCommandAli;
 import com.ilop.sthome.ui.adapter.device.SubDeviceAdapter;
+import com.ilop.sthome.utils.greenDao.DeviceDaoUtil;
 import com.siterwell.familywellplus.R;
 import com.siterwell.familywellplus.databinding.FragmentSubDeviceBinding;
 
@@ -120,8 +120,7 @@ public class SubDeviceFragment extends BasePFragment<SubDevicePresenter,Fragment
             if (cmd == SendCommandAli.DELETE_EQUIPMENT) {
                 if ("OK".equals(event.getData_str2())) {
                     if(delete_deviceInfoBean!=null){
-                        DeviceAliDAO deviceAliDAO = new DeviceAliDAO(mContext);
-                        deviceAliDAO.deleteByDeviceName(delete_deviceInfoBean.getDeviceName(),delete_deviceInfoBean.getDevice_ID());
+                        DeviceDaoUtil.getInstance().deleteByDeviceName(delete_deviceInfoBean.getDeviceName(),delete_deviceInfoBean.getDevice_ID());
                         mPresenter.getAllSubDevice(mDeviceName);
                     }
                 }else {
@@ -134,8 +133,7 @@ public class SubDeviceFragment extends BasePFragment<SubDevicePresenter,Fragment
                         deviceInfoBean.setSubdeviceName(mNickname);
                         deviceInfoBean.setDeviceName(mDeviceName);
                         deviceInfoBean.setDevice_ID(mDeviceId);
-                        DeviceAliDAO deviceAliDAO = new DeviceAliDAO(mContext);
-                        deviceAliDAO.updateName(deviceInfoBean);
+                        DeviceDaoUtil.getInstance().getDeviceDao().update(deviceInfoBean);
                         mPresenter.getAllSubDevice(mDeviceName);
                         hideSoftKeyboard();
                         mDeviceId= 0;

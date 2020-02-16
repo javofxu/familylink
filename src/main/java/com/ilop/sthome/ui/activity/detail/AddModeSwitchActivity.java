@@ -4,20 +4,20 @@ import android.support.v7.widget.LinearLayoutManager;
 
 import com.example.common.base.BaseActivity;
 import com.example.common.utils.LiveDataBus;
-import com.ilop.sthome.data.bean.DeviceInfoBean;
 import com.ilop.sthome.data.bean.SceneAliBean;
 import com.ilop.sthome.data.bean.ShortcutAliBean;
 import com.ilop.sthome.data.bean.SysModelAliBean;
-import com.ilop.sthome.data.db.DeviceAliDAO;
 import com.ilop.sthome.data.db.SceneAliDAO;
 import com.ilop.sthome.data.db.ShortcutAliDAO;
 import com.ilop.sthome.data.db.SysmodelAliDAO;
 import com.ilop.sthome.data.event.EventAnswerOK;
+import com.ilop.sthome.data.greenDao.DeviceInfoBean;
 import com.ilop.sthome.network.api.SendCommandAli;
 import com.ilop.sthome.network.api.SendSceneGroupDataAli;
 import com.ilop.sthome.ui.adapter.detail.SceneSwitchAdapter;
 import com.ilop.sthome.ui.dialog.BaseListDialog;
 import com.ilop.sthome.utils.CoderALiUtils;
+import com.ilop.sthome.utils.greenDao.DeviceDaoUtil;
 import com.ilop.sthome.utils.tools.ByteUtil;
 import com.siterwell.familywellplus.R;
 import com.siterwell.familywellplus.databinding.ActivityModeSwitchBinding;
@@ -61,9 +61,8 @@ public class AddModeSwitchActivity extends BaseActivity<ActivityModeSwitchBindin
         EventBus.getDefault().register(this);
         mDeviceName = getIntent().getStringExtra("deviceName");
         mDeviceId = getIntent().getIntExtra("deviceId", -1);
-        DeviceAliDAO mDeviceDAO = new DeviceAliDAO(mContext);
-        mDevice = mDeviceDAO.findByDeviceid(mDeviceName, mDeviceId);
-        DeviceInfoBean deviceInfoBean = mDeviceDAO.findByDeviceid(mDevice.getDeviceName(),0);
+        mDevice = DeviceDaoUtil.getInstance().findByDeviceId(mDeviceName, mDeviceId);
+        DeviceInfoBean deviceInfoBean = DeviceDaoUtil.getInstance().findGatewayByDeviceName(mDevice.getDeviceName());
         mSend = new SendSceneGroupDataAli(this, deviceInfoBean);
     }
 

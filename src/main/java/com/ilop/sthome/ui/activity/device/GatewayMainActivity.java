@@ -6,8 +6,8 @@ import android.view.View;
 
 import com.example.common.base.BasePActivity;
 import com.example.common.view.refresh.CustomRefreshView;
-import com.ilop.sthome.data.bean.DeviceInfoBean;
 import com.ilop.sthome.data.event.EventRefreshScene;
+import com.ilop.sthome.data.greenDao.DeviceInfoBean;
 import com.ilop.sthome.mvp.contract.GatewayContract;
 import com.ilop.sthome.mvp.present.GatewayPresenter;
 import com.ilop.sthome.ui.activity.config.ProductActivity;

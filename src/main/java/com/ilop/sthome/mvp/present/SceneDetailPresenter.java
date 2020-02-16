@@ -5,20 +5,20 @@ import android.content.Intent;
 import android.util.Log;
 
 import com.example.common.mvp.BasePresenterImpl;
-import com.ilop.sthome.data.bean.DeviceInfoBean;
 import com.ilop.sthome.data.bean.SceneAliBean;
 import com.ilop.sthome.data.bean.SceneRelationBean;
 import com.ilop.sthome.data.bean.ShortcutAliBean;
 import com.ilop.sthome.data.bean.SysModelAliBean;
-import com.ilop.sthome.data.db.DeviceAliDAO;
 import com.ilop.sthome.data.db.SceneAliDAO;
 import com.ilop.sthome.data.db.SceneRelaitonAliDAO;
 import com.ilop.sthome.data.db.ShortcutAliDAO;
 import com.ilop.sthome.data.db.SysmodelAliDAO;
+import com.ilop.sthome.data.greenDao.DeviceInfoBean;
 import com.ilop.sthome.mvp.contract.SceneDetailContract;
 import com.ilop.sthome.network.api.SendSceneGroupDataAli;
 import com.ilop.sthome.ui.activity.scene.AutomationDetailActivity;
 import com.ilop.sthome.utils.CoderALiUtils;
+import com.ilop.sthome.utils.greenDao.DeviceDaoUtil;
 import com.ilop.sthome.utils.tools.ByteUtil;
 import com.siterwell.familywellplus.R;
 
@@ -55,7 +55,7 @@ public class SceneDetailPresenter extends BasePresenterImpl<SceneDetailContract.
         mSceneAliDAO = new SceneAliDAO(mContext);
         mShortcutDAO = new ShortcutAliDAO(mContext);
         mSceneRelationAliDAO = new SceneRelaitonAliDAO(mContext);
-        DeviceInfoBean mDeviceInfoBean = new DeviceAliDAO(mContext).findByDeviceid(deviceName, 0);
+        DeviceInfoBean mDeviceInfoBean = DeviceDaoUtil.getInstance().findGatewayByDeviceName(deviceName);
         mSendScene = new SendSceneGroupDataAli(mContext, mDeviceInfoBean);
     }
 

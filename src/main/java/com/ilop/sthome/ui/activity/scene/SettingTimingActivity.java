@@ -7,7 +7,7 @@ import android.view.View;
 
 import com.example.common.base.BaseActivity;
 import com.example.common.utils.LiveDataBus;
-import com.ilop.sthome.data.bean.DeviceInfoBean;
+import com.ilop.sthome.data.greenDao.DeviceInfoBean;
 import com.ilop.sthome.ui.adapter.device.WeekAdapter;
 import com.ilop.sthome.utils.tools.ByteUtil;
 import com.ilop.sthome.view.WheelView;
@@ -45,7 +45,7 @@ public class SettingTimingActivity extends BaseActivity<ActivitySetTimingBinding
     protected void initialize() {
         super.initialize();
         isUpdate = getIntent().getBooleanExtra("isUpdate", false);
-        mDevice = (DeviceInfoBean) getIntent().getSerializableExtra("device");
+        mDevice = getIntent().getParcelableExtra("device");
     }
 
     @Override

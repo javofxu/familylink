@@ -17,11 +17,11 @@ import com.example.common.base.BaseLoadingDialog;
 import com.example.common.mvp.IBaseView;
 import com.example.common.utils.ScreenAdapterUtil;
 import com.example.common.utils.StatusBar.StatusBarUtil;
-import com.ilop.sthome.data.bean.DeviceInfoBean;
-import com.ilop.sthome.data.db.DeviceAliDAO;
+import com.ilop.sthome.data.greenDao.DeviceInfoBean;
 import com.ilop.sthome.network.api.SendEquipmentDataAli;
 import com.ilop.sthome.ui.activity.device.DeviceSettingActivity;
 import com.ilop.sthome.ui.activity.device.SubDeviceHistoryActivity;
+import com.ilop.sthome.utils.greenDao.DeviceDaoUtil;
 
 /**
  * @author skygge
@@ -37,7 +37,6 @@ public class BaseDetailActivity<B extends ViewDataBinding> extends AppCompatActi
     protected B mDBind;
     private BaseLoadingDialog mDialog;
 
-    protected DeviceAliDAO mDeviceDAO;
     protected DeviceInfoBean mDevice;
     protected SendEquipmentDataAli mSendEquipment;
 
@@ -66,11 +65,10 @@ public class BaseDetailActivity<B extends ViewDataBinding> extends AppCompatActi
      * 初始化
      */
     private void initialize() {
-        mDeviceDAO = new DeviceAliDAO(mContext);
         String deviceName = getIntent().getStringExtra("deviceName");
         int deviceId = getIntent().getIntExtra("eqid",-1);
-        mDevice = mDeviceDAO.findByDeviceid(deviceName, deviceId);
-        DeviceInfoBean deviceInfoBean = mDeviceDAO.findByDeviceid(deviceName,0);
+        mDevice = DeviceDaoUtil.getInstance().findByDeviceId(deviceName, deviceId);
+        DeviceInfoBean deviceInfoBean = DeviceDaoUtil.getInstance().findGatewayByDeviceName(deviceName);
         mSendEquipment = new SendEquipmentDataAli(this, deviceInfoBean);
     }
 

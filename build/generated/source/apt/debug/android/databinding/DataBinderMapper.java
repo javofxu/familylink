@@ -28,8 +28,6 @@ class DataBinderMapper  {
                     return com.siterwell.familywellplus.databinding.ActivityAddDeviceBinding.bind(view, bindingComponent);
                 case com.siterwell.familywellplus.R.layout.activity_config_gateway:
                     return com.siterwell.familywellplus.databinding.ActivityConfigGatewayBinding.bind(view, bindingComponent);
-                case com.siterwell.familywellplus.R.layout.activity_add_timer:
-                    return com.siterwell.familywellplus.databinding.ActivityAddTimerBinding.bind(view, bindingComponent);
                 case com.siterwell.familywellplus.R.layout.activity_change_scene:
                     return com.siterwell.familywellplus.databinding.ActivityChangeSceneBinding.bind(view, bindingComponent);
                 case com.siterwell.familywellplus.R.layout.activity_input_detail:
@@ -227,12 +225,6 @@ class DataBinderMapper  {
             case -675745597: {
                 if(tag.equals("layout/activity_config_gateway_0")) {
                     return com.siterwell.familywellplus.R.layout.activity_config_gateway;
-                }
-                break;
-            }
-            case 122227885: {
-                if(tag.equals("layout/activity_add_timer_0")) {
-                    return com.siterwell.familywellplus.R.layout.activity_add_timer;
                 }
                 break;
             }

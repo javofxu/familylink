@@ -4,12 +4,12 @@ import android.content.Context;
 
 import com.example.common.mvp.BasePresenterImpl;
 import com.ilop.sthome.data.bean.CheckDeviceBean;
-import com.ilop.sthome.data.bean.DeviceInfoBean;
-import com.ilop.sthome.data.db.DeviceAliDAO;
 import com.ilop.sthome.data.enums.SmartProduct;
 import com.ilop.sthome.data.greenDao.CameraBean;
+import com.ilop.sthome.data.greenDao.DeviceInfoBean;
 import com.ilop.sthome.mvp.contract.AssessContract;
 import com.ilop.sthome.utils.greenDao.CameraDaoUtil;
+import com.ilop.sthome.utils.greenDao.DeviceDaoUtil;
 import com.siterwell.familywellplus.R;
 
 import java.util.ArrayList;
@@ -55,9 +55,8 @@ public class AssessPresenter extends BasePresenterImpl<AssessContract.IView> imp
     public void detection() {
         mCheckList.clear();
 
-        DeviceAliDAO deviceAliDAO = new DeviceAliDAO(mContext);
-        List<DeviceInfoBean> list = deviceAliDAO.findAllDevice();
-        List<DeviceInfoBean> k = deviceAliDAO.findAllGateway();
+        List<DeviceInfoBean> list = DeviceDaoUtil.getInstance().findAllDevice();
+        List<DeviceInfoBean> k = DeviceDaoUtil.getInstance().findAllGateway();
         mScore = list.size()+k.size();
 
         //智能消防
@@ -83,7 +82,7 @@ public class AssessPresenter extends BasePresenterImpl<AssessContract.IView> imp
         DeviceInfoBean deviceInfoBean_11 = new DeviceInfoBean();
         List<String> SM_ALARM = getCode(R.array.AA_DEV_SM_ALARM);
         for (int i = 0; i < SM_ALARM.size(); i++) {
-            int count = deviceAliDAO.isDevTypeExists(SM_ALARM.get(i));
+            int count = DeviceDaoUtil.getInstance().isDevTypeExists(SM_ALARM.get(i));
             if (count!=0){
                 deviceInfoBean_11.setDevice_type(SM_ALARM.get(i));
                 deviceInfoBean_11.setOwned(1);
@@ -99,7 +98,7 @@ public class AssessPresenter extends BasePresenterImpl<AssessContract.IView> imp
         DeviceInfoBean deviceInfoBean_12 = new DeviceInfoBean();
         List<String> CO_ALARM = getCode(R.array.AA_DEV_CO_ALARM);
         for (int i = 0; i < CO_ALARM.size(); i++) {
-            int count = deviceAliDAO.isDevTypeExists(CO_ALARM.get(i));
+            int count = DeviceDaoUtil.getInstance().isDevTypeExists(CO_ALARM.get(i));
             if (count!=0){
                 deviceInfoBean_12.setDevice_type(CO_ALARM.get(i));
                 deviceInfoBean_12.setOwned(1);
@@ -115,7 +114,7 @@ public class AssessPresenter extends BasePresenterImpl<AssessContract.IView> imp
         DeviceInfoBean deviceInfoBean_13 = new DeviceInfoBean();
         List<String> WT_ALARM = getCode(R.array.AA_DEV_WT_ALARM);
         for (int i = 0; i < WT_ALARM.size(); i++) {
-            int count = deviceAliDAO.isDevTypeExists(WT_ALARM.get(i));
+            int count = DeviceDaoUtil.getInstance().isDevTypeExists(WT_ALARM.get(i));
             if (count!=0){
                 deviceInfoBean_13.setDevice_type(WT_ALARM.get(i));
                 deviceInfoBean_13.setOwned(1);
@@ -131,7 +130,7 @@ public class AssessPresenter extends BasePresenterImpl<AssessContract.IView> imp
         DeviceInfoBean deviceInfoBean_14 = new DeviceInfoBean();
         List<String> SX_SM_ALARM = getCode(R.array.AA_DEV_SX_SM_ALARM);
         for (int i = 0; i < SX_SM_ALARM.size(); i++) {
-            int count = deviceAliDAO.isDevTypeExists(SX_SM_ALARM.get(i));
+            int count = DeviceDaoUtil.getInstance().isDevTypeExists(SX_SM_ALARM.get(i));
             if (count!=0){
                 deviceInfoBean_14.setDevice_type(SX_SM_ALARM.get(i));
                 deviceInfoBean_14.setOwned(1);
@@ -147,7 +146,7 @@ public class AssessPresenter extends BasePresenterImpl<AssessContract.IView> imp
         DeviceInfoBean deviceInfoBean_15 = new DeviceInfoBean();
         List<String> GAS_ALARM = getCode(R.array.AA_DEV_GAS_ALARM);
         for (int i = 0; i < GAS_ALARM.size(); i++) {
-            int count = deviceAliDAO.isDevTypeExists(GAS_ALARM.get(i));
+            int count = DeviceDaoUtil.getInstance().isDevTypeExists(GAS_ALARM.get(i));
             if (count!=0){
                 deviceInfoBean_15.setDevice_type(GAS_ALARM.get(i));
                 deviceInfoBean_15.setOwned(1);
@@ -163,7 +162,7 @@ public class AssessPresenter extends BasePresenterImpl<AssessContract.IView> imp
         DeviceInfoBean deviceInfoBean_16 = new DeviceInfoBean();
         List<String> THE_RM_ALARM = getCode(R.array.AA_DEV_THE_RM_ALARM);
         for (int i = 0; i < THE_RM_ALARM.size(); i++) {
-            int count = deviceAliDAO.isDevTypeExists(THE_RM_ALARM.get(i));
+            int count = DeviceDaoUtil.getInstance().isDevTypeExists(THE_RM_ALARM.get(i));
             if (count!=0){
                 deviceInfoBean_16.setDevice_type(THE_RM_ALARM.get(i));
                 deviceInfoBean_16.setOwned(1);
@@ -191,35 +190,35 @@ public class AssessPresenter extends BasePresenterImpl<AssessContract.IView> imp
         deviceInfoBean_21.setOwned(j.size() == 0 ? 0:1);
         deviceList3.add(deviceInfoBean_21);
 
-        mCount = deviceAliDAO.isDevTypeExists(SmartProduct.EE_DEV_DOOR1.getDevType());
+        mCount = DeviceDaoUtil.getInstance().isDevTypeExists(SmartProduct.EE_DEV_DOOR1.getDevType());
         DeviceInfoBean deviceInfoBean_22 = new DeviceInfoBean();
         deviceInfoBean_22.setDevice_ID(11);
         deviceInfoBean_22.setDevice_type(SmartProduct.EE_DEV_DOOR1.getDevType());
         deviceInfoBean_22.setOwned(mCount == 0 ? 0:1);
         deviceList3.add(deviceInfoBean_22);
 
-        mCount = deviceAliDAO.isDevTypeExists(SmartProduct.EE_DEV_PIR1.getDevType());
+        mCount = DeviceDaoUtil.getInstance().isDevTypeExists(SmartProduct.EE_DEV_PIR1.getDevType());
         DeviceInfoBean deviceInfoBean_23 = new DeviceInfoBean();
         deviceInfoBean_23.setDevice_type(SmartProduct.EE_DEV_PIR1.getDevType());
         deviceInfoBean_23.setOwned(mCount == 0 ? 0:1);
         deviceInfoBean_23.setDevice_ID(12);
         deviceList3.add(deviceInfoBean_23);
 
-        mCount = deviceAliDAO.isDevTypeExists(SmartProduct.EE_DEV_SOS1.getDevType());
+        mCount = DeviceDaoUtil.getInstance().isDevTypeExists(SmartProduct.EE_DEV_SOS1.getDevType());
         DeviceInfoBean deviceInfoBean_24 = new DeviceInfoBean();
         deviceInfoBean_24.setDevice_type(SmartProduct.EE_DEV_SOS1.getDevType());
         deviceInfoBean_24.setOwned(mCount == 0 ? 0:1);
         deviceInfoBean_24.setDevice_ID(13);
         deviceList3.add(deviceInfoBean_24);
 
-        mCount = deviceAliDAO.isDevTypeExists(SmartProduct.EE_DEV_LOCK.getDevType());
+        mCount = DeviceDaoUtil.getInstance().isDevTypeExists(SmartProduct.EE_DEV_LOCK.getDevType());
         DeviceInfoBean deviceInfoBean_25 = new DeviceInfoBean();
         deviceInfoBean_25.setDevice_type(SmartProduct.EE_DEV_LOCK.getDevType());
         deviceInfoBean_25.setOwned(mCount == 0 ? 0:1);
         deviceInfoBean_25.setDevice_ID(14);
         deviceList3.add(deviceInfoBean_25);
 
-        mCount = deviceAliDAO.isDevTypeExists(SmartProduct.EE_TEMP_OUTDOOR_SIREN1.getDevType());
+        mCount = DeviceDaoUtil.getInstance().isDevTypeExists(SmartProduct.EE_TEMP_OUTDOOR_SIREN1.getDevType());
         DeviceInfoBean deviceInfoBean_26 = new DeviceInfoBean();
         deviceInfoBean_26.setDevice_type(SmartProduct.EE_TEMP_OUTDOOR_SIREN1.getDevType());
         deviceInfoBean_26.setOwned(mCount == 0 ? 0:1);
@@ -234,42 +233,42 @@ public class AssessPresenter extends BasePresenterImpl<AssessContract.IView> imp
         check4.setDeviceIcon(R.mipmap.device_prevent);
         check4.setDeviceType(mContext.getString(R.string.ali_environment_product));
 
-        mCount = deviceAliDAO.isDevTypeExists(SmartProduct.EE_DEV_SOCKET1.getDevType());
+        mCount = DeviceDaoUtil.getInstance().isDevTypeExists(SmartProduct.EE_DEV_SOCKET1.getDevType());
         DeviceInfoBean deviceInfoBean_31 = new DeviceInfoBean();
         deviceInfoBean_31.setDevice_type(SmartProduct.EE_DEV_SOCKET1.getDevType());
         deviceInfoBean_31.setOwned(mCount == 0 ? 0:1);
         deviceInfoBean_31.setDevice_ID(17);
         deviceList4.add(deviceInfoBean_31);
 
-        mCount = deviceAliDAO.isDevTypeExists(SmartProduct.EE_DEV_THCHECK1.getDevType());
+        mCount = DeviceDaoUtil.getInstance().isDevTypeExists(SmartProduct.EE_DEV_THCHECK1.getDevType());
         DeviceInfoBean deviceInfoBean_32 = new DeviceInfoBean();
         deviceInfoBean_32.setDevice_type(SmartProduct.EE_DEV_THCHECK1.getDevType());
         deviceInfoBean_32.setOwned(mCount == 0 ? 0:1);
         deviceInfoBean_32.setDevice_ID(18);
         deviceList4.add(deviceInfoBean_32);
 
-        mCount = deviceAliDAO.isDevTypeExists(SmartProduct.EE_DEV_BUTTON1.getDevType());
+        mCount = DeviceDaoUtil.getInstance().isDevTypeExists(SmartProduct.EE_DEV_BUTTON1.getDevType());
         DeviceInfoBean deviceInfoBean_33 = new DeviceInfoBean();
         deviceInfoBean_33.setDevice_type(SmartProduct.EE_DEV_BUTTON1.getDevType());
         deviceInfoBean_33.setOwned(mCount == 0 ? 0:1);
         deviceInfoBean_33.setDevice_ID(19);
         deviceList4.add(deviceInfoBean_33);
 
-        mCount = deviceAliDAO.isDevTypeExists(SmartProduct.EE_DEV_MODE_BUTTON.getDevType());
+        mCount = DeviceDaoUtil.getInstance().isDevTypeExists(SmartProduct.EE_DEV_MODE_BUTTON.getDevType());
         DeviceInfoBean deviceInfoBean_34 = new DeviceInfoBean();
         deviceInfoBean_34.setDevice_type(SmartProduct.EE_DEV_MODE_BUTTON.getDevType());
         deviceInfoBean_34.setOwned(mCount == 0 ? 0:1);
         deviceInfoBean_34.setDevice_ID(20);
         deviceList4.add(deviceInfoBean_34);
 
-        mCount = deviceAliDAO.isDevTypeExists(SmartProduct.EE_TWO_CHANNEL_SOCKET1.getDevType());
+        mCount = DeviceDaoUtil.getInstance().isDevTypeExists(SmartProduct.EE_TWO_CHANNEL_SOCKET1.getDevType());
         DeviceInfoBean deviceInfoBean_35 = new DeviceInfoBean();
         deviceInfoBean_35.setDevice_type(SmartProduct.EE_TWO_CHANNEL_SOCKET1.getDevType());
         deviceInfoBean_35.setOwned(mCount == 0 ? 0:1);
         deviceInfoBean_35.setDevice_ID(21);
         deviceList4.add(deviceInfoBean_35);
 
-        mCount = deviceAliDAO.isDevTypeExists(SmartProduct.EE_TEMP_CONTROL1.getDevType());
+        mCount = DeviceDaoUtil.getInstance().isDevTypeExists(SmartProduct.EE_TEMP_CONTROL1.getDevType());
         DeviceInfoBean deviceInfoBean_36 = new DeviceInfoBean();
         deviceInfoBean_36.setDevice_type(SmartProduct.EE_TEMP_CONTROL1.getDevType());
         deviceInfoBean_36.setOwned(mCount == 0 ? 0:1);

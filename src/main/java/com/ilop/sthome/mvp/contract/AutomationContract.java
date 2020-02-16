@@ -4,8 +4,8 @@ import android.content.Intent;
 
 import com.example.common.mvp.IBasePresenter;
 import com.example.common.mvp.IBaseView;
-import com.ilop.sthome.data.bean.DeviceInfoBean;
 import com.ilop.sthome.data.bean.SceneAliBean;
+import com.ilop.sthome.data.greenDao.DeviceInfoBean;
 
 import java.util.List;
 
@@ -17,6 +17,7 @@ import java.util.List;
 public interface AutomationContract {
 
     interface IView extends IBaseView{
+
         void showInputList(List<DeviceInfoBean> deviceList);
 
         void showOutputList(List<DeviceInfoBean> deviceList);

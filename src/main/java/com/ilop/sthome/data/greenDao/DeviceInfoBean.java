@@ -1,11 +1,14 @@
 package com.ilop.sthome.data.greenDao;
 
+import android.os.Parcel;
+import android.os.Parcelable;
+
 import org.greenrobot.greendao.annotation.Entity;
 import org.greenrobot.greendao.annotation.Id;
 import org.greenrobot.greendao.annotation.Generated;
 
 @Entity
-public class DeviceInfoBean {
+public class DeviceInfoBean implements Parcelable {
 
 
     /**
@@ -69,14 +72,14 @@ public class DeviceInfoBean {
 
     private int current_mode;
 
-    private int is_open;
+    private int scene_id;
 
-    @Generated(hash = 1433700444)
+    @Generated(hash = 1949649412)
     public DeviceInfoBean(Long id, long gmtModified, String categoryImage, String netType, String nodeType,
             String productKey, String deviceName, String productName, String identityAlias, String iotId,
             int owned, String identityId, String thingType, int status, String nickName, int isEdgeGateway,
             String binVersion, String subdeviceName, int device_ID, String device_type, String device_status,
-            int current_mode, int is_open) {
+            int current_mode, int scene_id) {
         this.id = id;
         this.gmtModified = gmtModified;
         this.categoryImage = categoryImage;
@@ -99,11 +102,41 @@ public class DeviceInfoBean {
         this.device_type = device_type;
         this.device_status = device_status;
         this.current_mode = current_mode;
-        this.is_open = is_open;
+        this.scene_id = scene_id;
     }
 
     @Generated(hash = 784809703)
     public DeviceInfoBean() {
+    }
+
+    protected DeviceInfoBean(Parcel in) {
+        if (in.readByte() == 0) {
+            id = null;
+        } else {
+            id = in.readLong();
+        }
+        gmtModified = in.readLong();
+        categoryImage = in.readString();
+        netType = in.readString();
+        nodeType = in.readString();
+        productKey = in.readString();
+        deviceName = in.readString();
+        productName = in.readString();
+        identityAlias = in.readString();
+        iotId = in.readString();
+        owned = in.readInt();
+        identityId = in.readString();
+        thingType = in.readString();
+        status = in.readInt();
+        nickName = in.readString();
+        isEdgeGateway = in.readInt();
+        binVersion = in.readString();
+        subdeviceName = in.readString();
+        device_ID = in.readInt();
+        device_type = in.readString();
+        device_status = in.readString();
+        current_mode = in.readInt();
+        scene_id = in.readInt();
     }
 
     public Long getId() {
@@ -282,12 +315,79 @@ public class DeviceInfoBean {
         this.current_mode = current_mode;
     }
 
-    public int getIs_open() {
-        return this.is_open;
+    public int getScene_id() {
+        return this.scene_id;
     }
 
-    public void setIs_open(int is_open) {
-        this.is_open = is_open;
+    public void setScene_id(int scene_id) {
+        this.scene_id = scene_id;
     }
 
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel parcel, int i) {
+        parcel.writeLong(id);
+        parcel.writeLong(gmtModified);
+        parcel.writeString(categoryImage);
+        parcel.writeString(netType);
+        parcel.writeString(nodeType);
+        parcel.writeString(productKey);
+        parcel.writeString(deviceName);
+        parcel.writeString(productName);
+        parcel.writeString(identityAlias);
+        parcel.writeString(iotId);
+        parcel.writeInt(owned);
+        parcel.writeString(identityId);
+        parcel.writeString(thingType);
+        parcel.writeInt(status);
+        parcel.writeString(nickName);
+        parcel.writeInt(isEdgeGateway);
+        parcel.writeString(binVersion);
+        parcel.writeString(subdeviceName);
+        parcel.writeInt(device_ID);
+        parcel.writeString(device_type);
+        parcel.writeString(device_status);
+        parcel.writeInt(current_mode);
+        parcel.writeInt(scene_id);
+    }
+
+    public static final Creator<DeviceInfoBean> CREATOR = new Creator<DeviceInfoBean>() {
+        @Override
+        public DeviceInfoBean createFromParcel(Parcel in) {
+            DeviceInfoBean device = new DeviceInfoBean();
+            device.id = in.readLong();
+            device.gmtModified = in.readLong();
+            device.categoryImage = in.readString();
+            device.netType= in.readString();
+            device.nodeType= in.readString();
+            device.productKey= in.readString();
+            device.deviceName= in.readString();
+            device.productName= in.readString();
+            device.identityAlias= in.readString();
+            device.iotId= in.readString();
+            device.owned= in.readInt();
+            device.identityId= in.readString();
+            device.thingType= in.readString();
+            device.status= in.readInt();
+            device.nickName= in.readString();
+            device.isEdgeGateway= in.readInt();
+            device.binVersion= in.readString();
+            device.subdeviceName= in.readString();
+            device.device_ID= in.readInt();
+            device.device_type= in.readString();
+            device.device_status= in.readString();
+            device.current_mode= in.readInt();
+            device.scene_id= in.readInt();
+            return device;
+        }
+
+        @Override
+        public DeviceInfoBean[] newArray(int size) {
+            return new DeviceInfoBean[size];
+        }
+    };
 }

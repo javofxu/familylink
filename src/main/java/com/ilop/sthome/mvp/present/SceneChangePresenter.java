@@ -3,12 +3,12 @@ package com.ilop.sthome.mvp.present;
 import android.content.Context;
 
 import com.example.common.mvp.BasePresenterImpl;
-import com.ilop.sthome.data.bean.DeviceInfoBean;
 import com.ilop.sthome.data.bean.SysModelAliBean;
-import com.ilop.sthome.data.db.DeviceAliDAO;
 import com.ilop.sthome.data.db.SysmodelAliDAO;
+import com.ilop.sthome.data.greenDao.DeviceInfoBean;
 import com.ilop.sthome.mvp.contract.SceneChangeContract;
 import com.ilop.sthome.network.api.SendSceneGroupDataAli;
+import com.ilop.sthome.utils.greenDao.DeviceDaoUtil;
 
 import java.util.List;
 
@@ -30,8 +30,7 @@ public class SceneChangePresenter extends BasePresenterImpl<SceneChangeContract.
         this.mContext = context;
         this.mDeviceName = deviceName;
         mSysModelAliDAO = new SysmodelAliDAO(mContext);
-        DeviceAliDAO mDeviceAliDAO = new DeviceAliDAO(mContext);
-        DeviceInfoBean mDeviceInfo = mDeviceAliDAO.findByDeviceid(mDeviceName, 0);
+        DeviceInfoBean mDeviceInfo = DeviceDaoUtil.getInstance().findGatewayByDeviceName(mDeviceName);
         mSendSceneDataAli = new SendSceneGroupDataAli(mContext, mDeviceInfo);
     }
 

@@ -12,10 +12,9 @@ import com.aliyun.iot.aep.sdk.apiclient.callback.IoTResponse;
 import com.example.common.base.OnCallBackToEdit;
 import com.example.common.base.OnCallBackToRefresh;
 import com.example.common.mvp.BasePresenterImpl;
-import com.ilop.sthome.data.bean.DeviceInfoBean;
-import com.ilop.sthome.data.db.DeviceAliDAO;
 import com.ilop.sthome.data.enums.DevType;
 import com.ilop.sthome.data.enums.SmartProduct;
+import com.ilop.sthome.data.greenDao.DeviceInfoBean;
 import com.ilop.sthome.mvp.contract.DeviceSetContract;
 import com.ilop.sthome.mvp.model.CommonModel;
 import com.ilop.sthome.mvp.model.common.CommonModelImpl;
@@ -28,6 +27,7 @@ import com.ilop.sthome.ui.dialog.BaseEditDialog;
 import com.ilop.sthome.ui.ota.OTAConstants;
 import com.ilop.sthome.ui.ota.bean.OTADeviceSimpleInfo;
 import com.ilop.sthome.utils.CoderALiUtils;
+import com.ilop.sthome.utils.greenDao.DeviceDaoUtil;
 import com.ilop.sthome.utils.tools.ByteUtil;
 import com.ilop.sthome.utils.tools.UnitTools;
 import com.siterwell.familywellplus.R;
@@ -48,7 +48,6 @@ public class DeviceSetPresenter extends BasePresenterImpl<DeviceSetContract.IVie
     private String mNickName;
     private String mDeviceName;
     private CommonModelImpl mModel;
-    private DeviceAliDAO mDeviceAliDAO;
     private DeviceInfoBean mDeviceInfoBean;
     private SendEquipmentDataAli mSendEquipment;
     private Handler mHandler;
@@ -59,15 +58,14 @@ public class DeviceSetPresenter extends BasePresenterImpl<DeviceSetContract.IVie
         this.mDeviceName = deviceName;
         mModel = new CommonModel();
         mHandler = new Handler();
-        mDeviceAliDAO = new DeviceAliDAO(mContext);
-        DeviceInfoBean deviceInfoBean = mDeviceAliDAO.findByDeviceid(deviceName,0);
+        DeviceInfoBean deviceInfoBean = DeviceDaoUtil.getInstance().findGatewayByDeviceName(deviceName);
         mSendEquipment = new SendEquipmentDataAli(mContext, deviceInfoBean);
     }
 
 
     @Override
     public void onRefreshView() {
-        mDeviceInfoBean = mDeviceAliDAO.findByDeviceid(mDeviceName, mDeviceId);
+        mDeviceInfoBean = DeviceDaoUtil.getInstance().findByDeviceId(mDeviceName, mDeviceId);
         if(mDeviceId==0){
             String name = TextUtils.isEmpty(mDeviceInfoBean.getNickName())? mContext.getResources().getString(DevType.getType(mDeviceInfoBean.getProductKey()).getTypeStrId()):mDeviceInfoBean.getNickName();
             mView.showDeviceName(name);
@@ -122,7 +120,7 @@ public class DeviceSetPresenter extends BasePresenterImpl<DeviceSetContract.IVie
             @Override
             public void onResponse(IoTResponse response) {
                 if (response.getCode() == 200){
-                    mDeviceAliDAO.updateGatewayName(mDeviceName, mNickName);
+                    DeviceDaoUtil.getInstance().updateGatewayName(mDeviceName, mNickName);
                     mHandler.post(()->onRefreshView());
                 }
             }
@@ -145,7 +143,7 @@ public class DeviceSetPresenter extends BasePresenterImpl<DeviceSetContract.IVie
                         @Override
                         public void onResponse(IoTResponse response) {
                             if (response.getCode() == 200){
-                                mDeviceAliDAO.deleteByDeviceName(mDeviceName,0);
+                                DeviceDaoUtil.getInstance().deleteByDeviceName(mDeviceName, 0);
                                 Intent intent = new Intent(mContext, MainActivity.class);
                                 intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                                 mView.startActivityByIntent(intent);
@@ -169,7 +167,7 @@ public class DeviceSetPresenter extends BasePresenterImpl<DeviceSetContract.IVie
             baseDialog.setMsg(String.format(mContext.getResources().getString(R.string.ali_gateay_unbind_hint), name));
             baseDialog.show();
         }else {
-            DeviceInfoBean deviceInfoBean1 = mDeviceAliDAO.findByDeviceid(mDeviceInfoBean.getDeviceName(),0);
+            DeviceInfoBean deviceInfoBean1 = DeviceDaoUtil.getInstance().findGatewayByDeviceName(mDeviceInfoBean.getDeviceName());
             String name1 = TextUtils.isEmpty(deviceInfoBean1.getNickName())? mContext.getResources().getString(DevType.getType(deviceInfoBean1.getProductKey()).getTypeStrId()):deviceInfoBean1.getNickName();
             String name = String.format(mContext.getResources().getString(R.string.ali_delete_sub_device_from_gateway),name1);
             BaseDialog baseDialog = new BaseDialog(mContext, new OnCallBackToRefresh() {
@@ -229,7 +227,7 @@ public class DeviceSetPresenter extends BasePresenterImpl<DeviceSetContract.IVie
     @Override
     public void onRouterToOTA() {
         if(mDeviceId==0){
-            DeviceInfoBean deviceInfoBean = mDeviceAliDAO.findByDeviceid(mDeviceName, mDeviceId);
+            DeviceInfoBean deviceInfoBean = DeviceDaoUtil.getInstance().findByDeviceId(mDeviceName, mDeviceId);
             OTADeviceSimpleInfo info = new OTADeviceSimpleInfo();
             info.iotId = deviceInfoBean.getIotId();
             info.deviceName = deviceInfoBean.getDeviceName();
@@ -249,7 +247,7 @@ public class DeviceSetPresenter extends BasePresenterImpl<DeviceSetContract.IVie
             if(mDeviceId == 0){
                 url = SmartProduct.EE_SIMULATE_GATEWAY.getIns_url();
             }else {
-                DeviceInfoBean deviceInfoBean = mDeviceAliDAO.findByDeviceid(mDeviceName, mDeviceId);
+                DeviceInfoBean deviceInfoBean = DeviceDaoUtil.getInstance().findByDeviceId(mDeviceName, mDeviceId);
                 url = SmartProduct.getType(deviceInfoBean.getDevice_type()).getIns_url();
             }
             Uri content_url = Uri.parse(url);
@@ -260,7 +258,7 @@ public class DeviceSetPresenter extends BasePresenterImpl<DeviceSetContract.IVie
             if(mDeviceId == 0){
                 url = SmartProduct.EE_SIMULATE_GATEWAY.getIns_url_en();
             }else {
-                DeviceInfoBean deviceInfoBean = mDeviceAliDAO.findByDeviceid(mDeviceName, mDeviceId);
+                DeviceInfoBean deviceInfoBean = DeviceDaoUtil.getInstance().findByDeviceId(mDeviceName, mDeviceId);
                 url = SmartProduct.getType(deviceInfoBean.getDevice_type()).getIns_url_en();
             }
             Uri content_url = Uri.parse(url);
@@ -275,12 +273,12 @@ public class DeviceSetPresenter extends BasePresenterImpl<DeviceSetContract.IVie
         deviceInfoBean.setSubdeviceName(mNickName);
         deviceInfoBean.setDeviceName(mDeviceName);
         deviceInfoBean.setDevice_ID(mDeviceId);
-        mDeviceAliDAO.updateName(deviceInfoBean);
+        DeviceDaoUtil.getInstance().getDeviceDao().update(deviceInfoBean);
         onRefreshView();
     }
 
     @Override
     public void onDeleteSuccess() {
-        mDeviceAliDAO.deleteByDeviceName(mDeviceName, mDeviceId);
+        DeviceDaoUtil.getInstance().deleteByDeviceName(mDeviceName, mDeviceId);
     }
 }

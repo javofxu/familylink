@@ -8,9 +8,8 @@ import android.text.TextUtils;
 import com.example.common.base.OnCallBackToEdit;
 import com.example.common.base.OnCallBackToRefresh;
 import com.example.common.mvp.BasePresenterImpl;
-import com.ilop.sthome.data.bean.DeviceInfoBean;
-import com.ilop.sthome.data.db.DeviceAliDAO;
 import com.ilop.sthome.data.enums.DevType;
+import com.ilop.sthome.data.greenDao.DeviceInfoBean;
 import com.ilop.sthome.mvp.contract.SubDeviceContract;
 import com.ilop.sthome.network.api.SendEquipmentDataAli;
 import com.ilop.sthome.ui.activity.detail.ButtonDetailActivity;
@@ -34,6 +33,7 @@ import com.ilop.sthome.ui.dialog.BaseDialog;
 import com.ilop.sthome.ui.dialog.BaseEditDialog;
 import com.ilop.sthome.ui.dialog.BaseListDialog;
 import com.ilop.sthome.utils.CoderALiUtils;
+import com.ilop.sthome.utils.greenDao.DeviceDaoUtil;
 import com.ilop.sthome.utils.tools.ByteUtil;
 import com.ilop.sthome.utils.tools.EmojiFilter;
 import com.siterwell.familywellplus.R;
@@ -50,7 +50,6 @@ import java.util.List;
 public class SubDevicePresenter extends BasePresenterImpl<SubDeviceContract.IView> implements SubDeviceContract.IPresent {
 
     private Context mContext;
-    private DeviceAliDAO mDeviceAliDAO;
     private List<DeviceInfoBean> mList;
     private BaseListDialog mListDialog;
     private BaseEditDialog mEditDialog;
@@ -62,8 +61,7 @@ public class SubDevicePresenter extends BasePresenterImpl<SubDeviceContract.IVie
 
     @Override
     public void getAllSubDevice(String deviceName) {
-        mDeviceAliDAO = new DeviceAliDAO(mContext);
-        mList = mDeviceAliDAO.findAllSubDevice(deviceName);
+        mList = DeviceDaoUtil.getInstance().findAllSubDevice(deviceName);
         if (mList.size()>0){
             mView.getAllSubDevice(mList);
         }else {
@@ -169,8 +167,7 @@ public class SubDevicePresenter extends BasePresenterImpl<SubDeviceContract.IVie
                                 mView.getDeviceInfo(device.getDevice_ID(), name);
                                 String ds = CoderALiUtils.getAscii(name);
                                 String dsCRC = ByteUtil.CRCmaker(ds);
-                                DeviceAliDAO deviceAliDAO = new DeviceAliDAO(mContext);
-                                DeviceInfoBean deviceInfoBean1 = deviceAliDAO.findByDeviceid(device.getDeviceName(),0);
+                                DeviceInfoBean deviceInfoBean1 = DeviceDaoUtil.getInstance().findGatewayByDeviceName(device.getDeviceName());
                                 SendEquipmentDataAli sendEquipmentDataAli = new SendEquipmentDataAli(mContext, deviceInfoBean1);
                                 sendEquipmentDataAli.modifyEquipmentName(device.getDevice_ID(), ds + dsCRC);
                                 mView.showProgress();
@@ -198,15 +195,13 @@ public class SubDevicePresenter extends BasePresenterImpl<SubDeviceContract.IVie
     }
 
     private void deleteDevice(DeviceInfoBean device){
-        DeviceAliDAO deviceAliDAO = new DeviceAliDAO(mContext);
-        DeviceInfoBean deviceInfoBean1 = deviceAliDAO.findByDeviceid(device.getDeviceName(),0);
+        DeviceInfoBean deviceInfoBean1 = DeviceDaoUtil.getInstance().findGatewayByDeviceName(device.getDeviceName());
         String name1 = TextUtils.isEmpty(deviceInfoBean1.getNickName())? mContext.getString(DevType.getType(deviceInfoBean1.getProductKey()).getTypeStrId()) : deviceInfoBean1.getNickName();
         String content = String.format(mContext.getString(R.string.ali_delete_sub_device_from_gateway), name1);
         mDialog = new BaseDialog(mContext, new OnCallBackToRefresh() {
             @Override
             public void onConfirm() {
-                DeviceAliDAO deviceAliDAO1 = new DeviceAliDAO(mContext);
-                DeviceInfoBean deviceInfoBean11 = deviceAliDAO1.findByDeviceid(device.getDeviceName(), 0);
+                DeviceInfoBean deviceInfoBean11 = DeviceDaoUtil.getInstance().findGatewayByDeviceName(device.getDeviceName());
                 SendEquipmentDataAli sendEquipmentDataAli = new SendEquipmentDataAli(mContext, deviceInfoBean11);
                 sendEquipmentDataAli.deleteEquipment(device.getDevice_ID());
                 mView.showProgress();

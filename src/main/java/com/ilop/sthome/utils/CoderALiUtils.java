@@ -4,21 +4,19 @@ package com.ilop.sthome.utils;
 import android.content.Context;
 import android.text.TextUtils;
 
-import com.ilop.sthome.data.bean.DeviceInfoBean;
-import com.ilop.sthome.data.bean.ResolveAliTimer;
 import com.ilop.sthome.data.bean.SceneAliBean;
 import com.ilop.sthome.data.bean.SceneRelationBean;
 import com.ilop.sthome.data.bean.ShortcutAliBean;
 import com.ilop.sthome.data.bean.SysModelAliBean;
-import com.ilop.sthome.data.bean.TimerGatewayAliBean;
-import com.ilop.sthome.data.db.DeviceAliDAO;
 import com.ilop.sthome.data.db.SceneAliDAO;
 import com.ilop.sthome.data.db.SceneRelaitonAliDAO;
 import com.ilop.sthome.data.db.ShortcutAliDAO;
 import com.ilop.sthome.data.db.SysmodelAliDAO;
-import com.ilop.sthome.data.db.TimerAliDAO;
+import com.ilop.sthome.data.greenDao.DeviceInfoBean;
+import com.ilop.sthome.utils.greenDao.DeviceDaoUtil;
 import com.ilop.sthome.utils.tools.ByteUtil;
 import com.litesuits.android.log.Log;
+import com.siterwell.familywellplus.R;
 
 import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
@@ -90,6 +88,27 @@ public class CoderALiUtils {
 
     }
 
+    public static String getWeekInfo(String week,Context context){
+
+        try {
+            String weektime = "";
+            byte ds = ByteUtil.hexStr2Bytes(week)[0];
+            byte f = 0x00;
+            for(int i=0;i<7;i++){
+
+                f =   (byte)((0x02 << i) & ds);
+                if(f!=0){
+                    weektime += (context.getResources().getStringArray(R.array.week2)[i] + " 、");
+                }
+            }
+            weektime = weektime.substring(0,weektime.length()-1);
+            return weektime;
+        }catch (Exception e){
+            android.util.Log.i(TAG,"week is null");
+            return "";
+        }
+
+    }
 
     /**
      * the scene name to code
@@ -205,8 +224,7 @@ public class CoderALiUtils {
      */
     public static String getEqCRC(Context context,String deviceid) {
 
-            DeviceAliDAO ED = new DeviceAliDAO(context);
-            List<DeviceInfoBean> allEquipmentInformation = ED.findAllSubDevice(deviceid);
+            List<DeviceInfoBean> allEquipmentInformation = DeviceDaoUtil.getInstance().findAllSubDevice(deviceid);
             if (allEquipmentInformation.size() > 0) {
 
 
@@ -250,8 +268,7 @@ public class CoderALiUtils {
      * syn get device name
      */
     public static String getEqNameCRC(Context context,String deviceid) {
-           DeviceAliDAO ED = new DeviceAliDAO(context);
-            List<DeviceInfoBean> allEquipmentInformation = ED.findAllSubDevice(deviceid);
+            List<DeviceInfoBean> allEquipmentInformation = DeviceDaoUtil.getInstance().findAllSubDevice(deviceid);
             if (allEquipmentInformation.size() > 0) {
                 int listLength = allEquipmentInformation.get(allEquipmentInformation.size() - 1).getDevice_ID();
                 List<Integer> eqid = new ArrayList<>();
@@ -493,52 +510,6 @@ public class CoderALiUtils {
             return "00040000";
         }
 
-    }
-
-    /**
-     * get
-     * @param context
-     * @return
-     */
-    public static String getTimeCRC(Context context,String deviceid){
-        String getSceneGroupCRC="",num="";
-
-        TimerAliDAO SD = new TimerAliDAO(context);
-        List<TimerGatewayAliBean> slist = SD.findAllTimer(deviceid);
-
-        if(slist.size()>0) {
-            int codeLength = 2;
-            List<Integer> tid = new ArrayList<>();
-            for (TimerGatewayAliBean e : slist) {
-                tid.add(e.getTimerid());
-            }
-
-
-            for (int i = 0; i < slist.get(slist.size() - 1).getTimerid() + 1; i++) {//for here come with "0" , used slist.size()
-                codeLength += 2;
-                if (tid.contains(i)) {
-                    TimerGatewayAliBean timerGatewayBean = SD.findByTid(i,deviceid);
-                    getSceneGroupCRC += ResolveAliTimer.getCRCCode(timerGatewayBean);
-                } else {
-                    getSceneGroupCRC += "0000";
-                }
-            }
-
-
-            String oooo = "0";
-
-            if (Integer.toHexString(codeLength).length() < 4) {
-                for (int i = 0; i < 4 - Integer.toHexString(codeLength).length() - 1; i++) {
-                    oooo += 0;
-                }
-                num = oooo + Integer.toHexString(codeLength);
-            } else {
-                num = Integer.toHexString(codeLength);
-            }
-            return num + getSceneGroupCRC;
-        }else {
-            return "0000";
-        }
     }
 
 }

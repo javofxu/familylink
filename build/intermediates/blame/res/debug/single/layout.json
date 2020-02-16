@@ -80,10 +80,6 @@
         "source": "/Users/siterwell/github/familylink/src/main/res/layout/activity_histroy_detail.xml"
     },
     {
-        "merged": "/Users/siterwell/github/familylink/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_add_timer.xml",
-        "source": "/Users/siterwell/github/familylink/src/main/res/layout/activity_add_timer.xml"
-    },
-    {
         "merged": "/Users/siterwell/github/familylink/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_sub_device.xml",
         "source": "/Users/siterwell/github/familylink/src/main/res/layout/fragment_sub_device.xml"
     },
@@ -114,10 +110,6 @@
     {
         "merged": "/Users/siterwell/github/familylink/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_recovery_guide.xml",
         "source": "/Users/siterwell/github/familylink/src/main/res/layout/activity_recovery_guide.xml"
-    },
-    {
-        "merged": "/Users/siterwell/github/familylink/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_timer.xml",
-        "source": "/Users/siterwell/github/familylink/src/main/res/layout/fragment_timer.xml"
     },
     {
         "merged": "/Users/siterwell/github/familylink/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_ipc_video.xml",

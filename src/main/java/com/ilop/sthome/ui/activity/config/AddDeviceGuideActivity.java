@@ -1,21 +1,17 @@
 package com.ilop.sthome.ui.activity.config;
 
 import android.graphics.drawable.AnimationDrawable;
-import android.util.Log;
 import android.view.KeyEvent;
 
 import com.example.common.base.BasePActivity;
 import com.example.common.utils.MediaPlayerUtil;
-import com.example.common.utils.RxTimerUtil;
-import com.ilop.sthome.data.bean.DeviceInfoBean;
-import com.ilop.sthome.data.db.DeviceAliDAO;
 import com.ilop.sthome.data.enums.ProductGroup;
 import com.ilop.sthome.data.enums.SmartProduct;
-import com.ilop.sthome.data.event.EventAnswerOK;
 import com.ilop.sthome.data.event.EventRefreshDevice;
+import com.ilop.sthome.data.greenDao.DeviceInfoBean;
 import com.ilop.sthome.mvp.contract.AddDeviceContract;
 import com.ilop.sthome.mvp.present.AddDevicePresenter;
-import com.ilop.sthome.network.api.SendCommandAli;
+import com.ilop.sthome.utils.greenDao.DeviceDaoUtil;
 import com.siterwell.familywellplus.R;
 import com.siterwell.familywellplus.databinding.ActivityAddDeviceGuideBinding;
 
@@ -80,7 +76,7 @@ public class AddDeviceGuideActivity extends BasePActivity<AddDevicePresenter, Ac
             }
             mPresent.onInsertDevice();
         }else {
-            DeviceInfoBean deviceInfoBean = new DeviceAliDAO(mContext).findByDeviceid(deviceName,mDeviceId);
+            DeviceInfoBean deviceInfoBean = DeviceDaoUtil.getInstance().findByDeviceId(deviceName, mDeviceId);
             mDBind.ivConfigGuide.setBackgroundResource(SmartProduct.getType(deviceInfoBean.getDevice_type()).getDrawGuideResId());
             mName = getResources().getString(R.string.replace_equipment);
             mPresent.onReplaceDevice(mDeviceId);

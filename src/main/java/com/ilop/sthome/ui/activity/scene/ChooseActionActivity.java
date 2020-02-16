@@ -6,7 +6,7 @@ import android.support.v7.widget.GridLayoutManager;
 
 import com.example.common.base.BasePActivity;
 import com.example.common.utils.LiveDataBus;
-import com.ilop.sthome.data.bean.DeviceInfoBean;
+import com.ilop.sthome.data.greenDao.DeviceInfoBean;
 import com.ilop.sthome.mvp.contract.ChooseActionContract;
 import com.ilop.sthome.mvp.present.ChooseActionPresenter;
 import com.ilop.sthome.ui.adapter.scene.ChoseDeviceAdapter;

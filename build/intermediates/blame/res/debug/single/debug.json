@@ -12,12 +12,12 @@
         "source": "/Users/siterwell/github/familylink/common/build/intermediates/bundles/debug/res/mipmap-xhdpi-v4/gs300d.png"
     },
     {
-        "merged": "/Users/siterwell/github/familylink/build/intermediates/res/merged/debug/layout_item_scene_switch.xml.flat",
-        "source": "/Users/siterwell/github/familylink/src/main/res/layout/item_scene_switch.xml"
-    },
-    {
         "merged": "/Users/siterwell/github/familylink/build/intermediates/res/merged/debug/mipmap-xxhdpi-v4_hot_config8.jpg.flat",
         "source": "/Users/siterwell/github/familylink/common/build/intermediates/bundles/debug/res/mipmap-xxhdpi-v4/hot_config8.jpg"
+    },
+    {
+        "merged": "/Users/siterwell/github/familylink/build/intermediates/res/merged/debug/layout_item_scene_switch.xml.flat",
+        "source": "/Users/siterwell/github/familylink/src/main/res/layout/item_scene_switch.xml"
     },
     {
         "merged": "/Users/siterwell/github/familylink/build/intermediates/res/merged/debug/mipmap-xxhdpi-v4_lock_config9.jpg.flat",
@@ -44,24 +44,24 @@
         "source": "/Users/siterwell/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/cdf0e5878771048595b465556c8c5a65/res/layout-watch-v20/abc_alert_dialog_title_material.xml"
     },
     {
-        "merged": "/Users/siterwell/github/familylink/build/intermediates/res/merged/debug/mipmap-xxhdpi-v4_reset14.png.flat",
-        "source": "/Users/siterwell/github/familylink/common/build/intermediates/bundles/debug/res/mipmap-xxhdpi-v4/reset14.png"
+        "merged": "/Users/siterwell/github/familylink/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_list_pressed_holo_dark.9.png.flat",
+        "source": "/Users/siterwell/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/cdf0e5878771048595b465556c8c5a65/res/drawable-xxhdpi-v4/abc_list_pressed_holo_dark.9.png"
     },
     {
         "merged": "/Users/siterwell/github/familylink/build/intermediates/res/merged/debug/mipmap-xxhdpi-v4_sos_config7.jpg.flat",
         "source": "/Users/siterwell/github/familylink/common/build/intermediates/bundles/debug/res/mipmap-xxhdpi-v4/sos_config7.jpg"
     },
     {
-        "merged": "/Users/siterwell/github/familylink/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_list_pressed_holo_dark.9.png.flat",
-        "source": "/Users/siterwell/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/cdf0e5878771048595b465556c8c5a65/res/drawable-xxhdpi-v4/abc_list_pressed_holo_dark.9.png"
-    },
-    {
-        "merged": "/Users/siterwell/github/familylink/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_ic_star_half_black_36dp.png.flat",
-        "source": "/Users/siterwell/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/cdf0e5878771048595b465556c8c5a65/res/drawable-xxhdpi-v4/abc_ic_star_half_black_36dp.png"
+        "merged": "/Users/siterwell/github/familylink/build/intermediates/res/merged/debug/mipmap-xxhdpi-v4_reset14.png.flat",
+        "source": "/Users/siterwell/github/familylink/common/build/intermediates/bundles/debug/res/mipmap-xxhdpi-v4/reset14.png"
     },
     {
         "merged": "/Users/siterwell/github/familylink/build/intermediates/res/merged/debug/layout_activity_histroy_detail.xml.flat",
         "source": "/Users/siterwell/github/familylink/src/main/res/layout/activity_histroy_detail.xml"
+    },
+    {
+        "merged": "/Users/siterwell/github/familylink/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_ic_star_half_black_36dp.png.flat",
+        "source": "/Users/siterwell/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/cdf0e5878771048595b465556c8c5a65/res/drawable-xxhdpi-v4/abc_ic_star_half_black_36dp.png"
     },
     {
         "merged": "/Users/siterwell/github/familylink/build/intermediates/res/merged/debug/mipmap-xxhdpi-v4_mode_button_config4.jpg.flat",
@@ -92,12 +92,12 @@
         "source": "/Users/siterwell/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/cdf0e5878771048595b465556c8c5a65/res/drawable/abc_seekbar_thumb_material.xml"
     },
     {
-        "merged": "/Users/siterwell/github/familylink/build/intermediates/res/merged/debug/mipmap_icon_camera_video.png.flat",
-        "source": "/Users/siterwell/github/familylink/xmpic/build/intermediates/bundles/debug/res/mipmap/icon_camera_video.png"
-    },
-    {
         "merged": "/Users/siterwell/github/familylink/build/intermediates/res/merged/debug/drawable_abc_seekbar_track_material.xml.flat",
         "source": "/Users/siterwell/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/cdf0e5878771048595b465556c8c5a65/res/drawable/abc_seekbar_track_material.xml"
+    },
+    {
+        "merged": "/Users/siterwell/github/familylink/build/intermediates/res/merged/debug/mipmap_icon_camera_video.png.flat",
+        "source": "/Users/siterwell/github/familylink/xmpic/build/intermediates/bundles/debug/res/mipmap/icon_camera_video.png"
     },
     {
         "merged": "/Users/siterwell/github/familylink/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_ic_star_half_black_16dp.png.flat",
@@ -168,12 +168,12 @@
         "source": "/Users/siterwell/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/b57f5816f3598660d986927756c27a84/res/anim-v21/design_bottom_sheet_slide_in.xml"
     },
     {
-        "merged": "/Users/siterwell/github/familylink/build/intermediates/res/merged/debug/mipmap-xhdpi_set_click.png.flat",
-        "source": "/Users/siterwell/github/familylink/src/main/res/mipmap-xhdpi/set_click.png"
-    },
-    {
         "merged": "/Users/siterwell/github/familylink/build/intermediates/res/merged/debug/color_mtrl_text_btn_text_color_selector.xml.flat",
         "source": "/Users/siterwell/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/b57f5816f3598660d986927756c27a84/res/color/mtrl_text_btn_text_color_selector.xml"
+    },
+    {
+        "merged": "/Users/siterwell/github/familylink/build/intermediates/res/merged/debug/mipmap-xhdpi_set_click.png.flat",
+        "source": "/Users/siterwell/github/familylink/src/main/res/mipmap-xhdpi/set_click.png"
     },
     {
         "merged": "/Users/siterwell/github/familylink/build/intermediates/res/merged/debug/drawable-ldrtl-xxhdpi-v17_abc_spinner_mtrl_am_alpha.9.png.flat",
@@ -220,20 +220,20 @@
         "source": "/Users/siterwell/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/b57f5816f3598660d986927756c27a84/res/layout/design_layout_snackbar_include.xml"
     },
     {
-        "merged": "/Users/siterwell/github/familylink/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_com_taobao_tae_sdk_web_view_title_bar_back.9.png.flat",
-        "source": "/Users/siterwell/.gradle/caches/transforms-1/files-1.1/openaccount-ui-default-3.5.3.9.aar/94f47ff55e8a7772bbf8fee3233cad73/res/drawable-xxhdpi-v4/com_taobao_tae_sdk_web_view_title_bar_back.9.png"
-    },
-    {
         "merged": "/Users/siterwell/github/familylink/build/intermediates/res/merged/debug/mipmap-xxhdpi-v4_gas_config10.jpg.flat",
         "source": "/Users/siterwell/github/familylink/common/build/intermediates/bundles/debug/res/mipmap-xxhdpi-v4/gas_config10.jpg"
     },
     {
-        "merged": "/Users/siterwell/github/familylink/build/intermediates/res/merged/debug/mipmap-xhdpi_scene_at_home.png.flat",
-        "source": "/Users/siterwell/github/familylink/src/main/res/mipmap-xhdpi/scene_at_home.png"
+        "merged": "/Users/siterwell/github/familylink/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_com_taobao_tae_sdk_web_view_title_bar_back.9.png.flat",
+        "source": "/Users/siterwell/.gradle/caches/transforms-1/files-1.1/openaccount-ui-default-3.5.3.9.aar/94f47ff55e8a7772bbf8fee3233cad73/res/drawable-xxhdpi-v4/com_taobao_tae_sdk_web_view_title_bar_back.9.png"
     },
     {
         "merged": "/Users/siterwell/github/familylink/build/intermediates/res/merged/debug/layout_activity_product.xml.flat",
         "source": "/Users/siterwell/github/familylink/src/main/res/layout/activity_product.xml"
+    },
+    {
+        "merged": "/Users/siterwell/github/familylink/build/intermediates/res/merged/debug/mipmap-xhdpi_scene_at_home.png.flat",
+        "source": "/Users/siterwell/github/familylink/src/main/res/mipmap-xhdpi/scene_at_home.png"
     },
     {
         "merged": "/Users/siterwell/github/familylink/build/intermediates/res/merged/debug/drawable_scene_corner_bg2.xml.flat",
@@ -288,16 +288,16 @@
         "source": "/Users/siterwell/github/familylink/src/main/res/mipmap-xxhdpi/btn_off_48.png"
     },
     {
-        "merged": "/Users/siterwell/github/familylink/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4_abc_btn_radio_to_on_mtrl_015.png.flat",
-        "source": "/Users/siterwell/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/cdf0e5878771048595b465556c8c5a65/res/drawable-xxxhdpi-v4/abc_btn_radio_to_on_mtrl_015.png"
+        "merged": "/Users/siterwell/github/familylink/build/intermediates/res/merged/debug/drawable_config_hot.xml.flat",
+        "source": "/Users/siterwell/github/familylink/src/main/res/drawable/config_hot.xml"
     },
     {
         "merged": "/Users/siterwell/github/familylink/build/intermediates/res/merged/debug/mipmap-xhdpi_signal4.png.flat",
         "source": "/Users/siterwell/github/familylink/src/main/res/mipmap-xhdpi/signal4.png"
     },
     {
-        "merged": "/Users/siterwell/github/familylink/build/intermediates/res/merged/debug/drawable_config_hot.xml.flat",
-        "source": "/Users/siterwell/github/familylink/src/main/res/drawable/config_hot.xml"
+        "merged": "/Users/siterwell/github/familylink/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4_abc_btn_radio_to_on_mtrl_015.png.flat",
+        "source": "/Users/siterwell/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/cdf0e5878771048595b465556c8c5a65/res/drawable-xxxhdpi-v4/abc_btn_radio_to_on_mtrl_015.png"
     },
     {
         "merged": "/Users/siterwell/github/familylink/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_ic_commit_search_api_mtrl_alpha.png.flat",
@@ -988,10 +988,6 @@
         "source": "/Users/siterwell/github/familylink/common/build/intermediates/bundles/debug/res/mipmap-xxhdpi-v4/socket_config4.jpg"
     },
     {
-        "merged": "/Users/siterwell/github/familylink/build/intermediates/res/merged/debug/layout_dialog_chose_timer.xml.flat",
-        "source": "/Users/siterwell/github/familylink/src/main/res/layout/dialog_chose_timer.xml"
-    },
-    {
         "merged": "/Users/siterwell/github/familylink/build/intermediates/res/merged/debug/mipmap-xxhdpi_device_prevent.png.flat",
         "source": "/Users/siterwell/github/familylink/src/main/res/mipmap-xxhdpi/device_prevent.png"
     },
@@ -1408,12 +1404,12 @@
         "source": "/Users/siterwell/github/familylink/src/main/res/mipmap-xhdpi/details_click.png"
     },
     {
-        "merged": "/Users/siterwell/github/familylink/build/intermediates/res/merged/debug/mipmap-xxhdpi_me_about.png.flat",
-        "source": "/Users/siterwell/github/familylink/src/main/res/mipmap-xxhdpi/me_about.png"
-    },
-    {
         "merged": "/Users/siterwell/github/familylink/build/intermediates/res/merged/debug/layout_activity_input_detail.xml.flat",
         "source": "/Users/siterwell/github/familylink/src/main/res/layout/activity_input_detail.xml"
+    },
+    {
+        "merged": "/Users/siterwell/github/familylink/build/intermediates/res/merged/debug/mipmap-xxhdpi_me_about.png.flat",
+        "source": "/Users/siterwell/github/familylink/src/main/res/mipmap-xxhdpi/me_about.png"
     },
     {
         "merged": "/Users/siterwell/github/familylink/build/intermediates/res/merged/debug/mipmap-xxhdpi-v4_thcheck_config4.jpg.flat",
@@ -4320,10 +4316,6 @@
         "source": "/Users/siterwell/github/familylink/common/build/intermediates/bundles/debug/res/mipmap-xhdpi-v4/gs870w.png"
     },
     {
-        "merged": "/Users/siterwell/github/familylink/build/intermediates/res/merged/debug/layout_activity_add_timer.xml.flat",
-        "source": "/Users/siterwell/github/familylink/src/main/res/layout/activity_add_timer.xml"
-    },
-    {
         "merged": "/Users/siterwell/github/familylink/build/intermediates/res/merged/debug/mipmap-xhdpi-v4_icon_ship.png.flat",
         "source": "/Users/siterwell/github/familylink/common/build/intermediates/bundles/debug/res/mipmap-xhdpi-v4/icon_ship.png"
     },
@@ -5434,10 +5426,6 @@
     {
         "merged": "/Users/siterwell/github/familylink/build/intermediates/res/merged/debug/layout_dialog_ali_sdk_openaccount.xml.flat",
         "source": "/Users/siterwell/github/familylink/src/main/res/layout/dialog_ali_sdk_openaccount.xml"
-    },
-    {
-        "merged": "/Users/siterwell/github/familylink/build/intermediates/res/merged/debug/layout_item_timer.xml.flat",
-        "source": "/Users/siterwell/github/familylink/src/main/res/layout/item_timer.xml"
     },
     {
         "merged": "/Users/siterwell/github/familylink/build/intermediates/res/merged/debug/layout_abc_popup_menu_item_layout.xml.flat",

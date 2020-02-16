@@ -29,11 +29,11 @@ public final class R {
         public static final int rect_round_white_bg = 0x7f0800f0;
     }
     public static final class id {
-        public static final int imageview_resultview_view = 0x7f0a013f;
-        public static final int textview_resultview_des = 0x7f0a031d;
+        public static final int imageview_resultview_view = 0x7f0a013d;
+        public static final int textview_resultview_des = 0x7f0a0317;
     }
     public static final class layout {
-        public static final int view_showalbumpic = 0x7f0d0104;
+        public static final int view_showalbumpic = 0x7f0d0101;
     }
     public static final class raw {
         public static final int beep = 0x7f100001;

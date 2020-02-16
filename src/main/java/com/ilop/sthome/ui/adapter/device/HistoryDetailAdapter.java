@@ -11,12 +11,12 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.common.view.CustomTextView;
-import com.ilop.sthome.data.bean.DeviceInfoBean;
-import com.ilop.sthome.data.db.DeviceAliDAO;
 import com.ilop.sthome.data.enums.DevType;
 import com.ilop.sthome.data.enums.SmartProduct;
+import com.ilop.sthome.data.greenDao.DeviceInfoBean;
 import com.ilop.sthome.data.greenDao.WarnBean;
 import com.ilop.sthome.utils.HistoryDataUtil;
+import com.ilop.sthome.utils.greenDao.DeviceDaoUtil;
 import com.siterwell.familywellplus.R;
 
 import java.util.List;
@@ -35,11 +35,9 @@ public class HistoryDetailAdapter extends RecyclerView.Adapter<HistoryDetailAdap
 
     private Context mContext;
     private List<WarnBean> mList;
-    private DeviceAliDAO mDeviceAliDAO;
 
     public HistoryDetailAdapter(Context mContext) {
         this.mContext = mContext;
-        mDeviceAliDAO = new DeviceAliDAO(mContext);
     }
 
     public void setList(List<WarnBean> mList) {
@@ -57,7 +55,7 @@ public class HistoryDetailAdapter extends RecyclerView.Adapter<HistoryDetailAdap
     public void onBindViewHolder(@NonNull ItemHolder itemHolder, int i) {
         WarnBean mWarnBean = mList.get(i);
         String name;
-        DeviceInfoBean gateway = mDeviceAliDAO.findByDeviceid(mWarnBean.getDeviceName(),0);
+        DeviceInfoBean gateway = DeviceDaoUtil.getInstance().findGatewayByDeviceName(mWarnBean.getDeviceName());
         if(TextUtils.isEmpty(gateway.getNickName())){
             name = mContext.getResources().getString(DevType.getType(gateway.getProductKey()).getTypeStrId());
         }else {
@@ -67,7 +65,7 @@ public class HistoryDetailAdapter extends RecyclerView.Adapter<HistoryDetailAdap
             itemHolder.mName.setText(name);
             itemHolder.mStatus.setText(HistoryDataUtil.getGatewayAlert(mContext, mWarnBean.getDevice_status()));
         }else {
-            DeviceInfoBean deviceInfoBean = mDeviceAliDAO.findByDeviceid(mWarnBean.getDeviceName(),mWarnBean.getDevice_id());
+            DeviceInfoBean deviceInfoBean = DeviceDaoUtil.getInstance().findByDeviceId(mWarnBean.getDeviceName(),mWarnBean.getDevice_id());
 
             if(deviceInfoBean==null){
                 itemHolder.mName.setText(mContext.getResources().getString(SmartProduct.getType(mWarnBean.getDevice_type()).getTypeStrId())+mWarnBean.getDevice_id());

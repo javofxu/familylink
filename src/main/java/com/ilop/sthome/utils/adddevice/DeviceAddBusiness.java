@@ -10,11 +10,11 @@ import com.aliyun.iot.aep.sdk.apiclient.callback.IoTCallback;
 import com.aliyun.iot.aep.sdk.apiclient.callback.IoTResponse;
 import com.aliyun.iot.aep.sdk.apiclient.request.IoTRequest;
 import com.aliyun.iot.aep.sdk.apiclient.request.IoTRequestBuilder;
-import com.ilop.sthome.data.db.DeviceAliDAO;
 import com.ilop.sthome.data.device.FoundDevice;
 import com.ilop.sthome.data.device.FoundDeviceListItem;
 import com.ilop.sthome.data.device.SupportDeviceListItem;
 import com.ilop.sthome.data.enums.DevType;
+import com.ilop.sthome.utils.greenDao.DeviceDaoUtil;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -134,8 +134,7 @@ public class DeviceAddBusiness {
             }
         }
         localFoundDevice.addAll(localFoundDevice);
-        DeviceAliDAO deviceAliDAO = new DeviceAliDAO(context);
-        List<String> localdevicenames = deviceAliDAO.findAllGatewayDeviceName();
+        List<String> localdevicenames = DeviceDaoUtil.getInstance().findAllGatewayDeviceName();
         Iterator<FoundDeviceListItem> iterator1 = foundDeviceListItems.iterator();
         while (iterator1.hasNext()) {//只保留过滤后的设备
             FoundDeviceListItem foundDeviceListItem = iterator1.next();

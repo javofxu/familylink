@@ -10,13 +10,12 @@ import com.aliyun.iot.aep.sdk.apiclient.callback.IoTResponse;
 import com.example.common.mvp.BasePresenterImpl;
 import com.example.common.utils.SpUtil;
 import com.ilop.sthome.app.MyApplication;
-import com.ilop.sthome.data.bean.DeviceInfoBean;
 import com.ilop.sthome.data.bean.GatewayBean;
 import com.ilop.sthome.data.bean.SysModelAliBean;
 import com.ilop.sthome.data.bean.VirtualUserBean;
-import com.ilop.sthome.data.db.DeviceAliDAO;
 import com.ilop.sthome.data.db.SysmodelAliDAO;
 import com.ilop.sthome.data.greenDao.CameraBean;
+import com.ilop.sthome.data.greenDao.DeviceInfoBean;
 import com.ilop.sthome.data.greenDao.RoomBean;
 import com.ilop.sthome.mvp.contract.DeviceContract;
 import com.ilop.sthome.mvp.model.CommonModel;
@@ -42,6 +41,7 @@ import com.ilop.sthome.ui.activity.detail.ThermalDetailActivity;
 import com.ilop.sthome.ui.activity.detail.WaterDetailActivity;
 import com.ilop.sthome.utils.CoderALiUtils;
 import com.ilop.sthome.utils.greenDao.CameraDaoUtil;
+import com.ilop.sthome.utils.greenDao.DeviceDaoUtil;
 import com.ilop.sthome.utils.greenDao.RoomDaoUtil;
 import com.siterwell.familywellplus.R;
 
@@ -62,7 +62,6 @@ public class DevicePresenter extends BasePresenterImpl<DeviceContract.IView> imp
 
     private static final String TAG = "DevicePresenter";
     private Context mContext;
-    private DeviceAliDAO deviceAliDAO;
     private SysmodelAliDAO sysmodelAliDAO;
     private CommonModelImpl mModel;
     private Handler mHandler;
@@ -80,7 +79,6 @@ public class DevicePresenter extends BasePresenterImpl<DeviceContract.IView> imp
         this.mContext = mContext;
         mModel = new CommonModel();
         mHandler = new Handler();
-        deviceAliDAO = new DeviceAliDAO(mContext);
         sysmodelAliDAO = new SysmodelAliDAO(mContext);
     }
 
@@ -97,8 +95,8 @@ public class DevicePresenter extends BasePresenterImpl<DeviceContract.IView> imp
                         List<DeviceInfoBean> deviceInfoBeanList = JSON.parseArray(jsonArray.toString(), DeviceInfoBean.class);
                         if (deviceInfoBeanList.size() > 0) {
                             for (DeviceInfoBean deviceInfoBean : deviceInfoBeanList) {
-                                if (deviceAliDAO.findByDeviceid(deviceInfoBean.getDeviceName(), deviceInfoBean.getDevice_ID()) == null){
-                                    deviceAliDAO.insertGateway(deviceInfoBean);
+                                if ( DeviceDaoUtil.getInstance().findByDeviceId(deviceInfoBean.getDeviceName(), deviceInfoBean.getDevice_ID()) == null){
+                                    DeviceDaoUtil.getInstance().insertGateway(deviceInfoBean);
                                 }
                                 if (sysmodelAliDAO.findAllSys(deviceInfoBean.getDeviceName()).size() <= 0) {
                                     initSaveSceneAndAuto(deviceInfoBean);
@@ -119,7 +117,7 @@ public class DevicePresenter extends BasePresenterImpl<DeviceContract.IView> imp
                             SpUtil.putString(mContext, "iotId", deviceInfoBeanList.get(0).getIotId());
                             GatewayUdpListConstant.getInstance().setDeviceInfoBeans(deviceInfoBeanList);//从服务器端获取到的网关--网关列表
                         } else {
-                            deviceAliDAO.deleteAll();
+                            DeviceDaoUtil.getInstance().getDeviceDao().deleteAll();
                             SpUtil.putString(mContext, "iotId", "");
                         }
                     } catch (Exception e) {
@@ -132,8 +130,7 @@ public class DevicePresenter extends BasePresenterImpl<DeviceContract.IView> imp
 
             @Override
             public void onFailure(Exception e) {
-                DeviceAliDAO deviceAliDAO = new DeviceAliDAO(MyApplication.getAppContext());
-                GatewayUdpListConstant.getInstance().setDeviceInfoBeans(deviceAliDAO.findAllDeviceWithOpen());//没有成功直接获取手机数据
+                GatewayUdpListConstant.getInstance().setDeviceInfoBeans(DeviceDaoUtil.getInstance().findAllDevice());//没有成功直接获取手机数据
             }
         });
     }
@@ -216,7 +213,7 @@ public class DevicePresenter extends BasePresenterImpl<DeviceContract.IView> imp
         if (!TextUtils.isEmpty(gateway)){
             String[] gatewayList = gateway.split(",");
             for (String gateways: gatewayList) {
-                DeviceInfoBean mDevice = deviceAliDAO.findByDeviceid(gateways,0);
+                DeviceInfoBean mDevice = DeviceDaoUtil.getInstance().findGatewayByDeviceName(gateways);
                 if (mDevice !=null){
                     mGatewayList.add(mDevice);
                 }
@@ -228,7 +225,7 @@ public class DevicePresenter extends BasePresenterImpl<DeviceContract.IView> imp
         if (!TextUtils.isEmpty(camera)){
             String[] cameraList = camera.split(",");
             for (String cameras: cameraList) {
-                DeviceInfoBean mDevice = deviceAliDAO.findByDeviceid(cameras, 0);
+                DeviceInfoBean mDevice = DeviceDaoUtil.getInstance().findGatewayByDeviceName(cameras);
                 mCameraList.add(mDevice);
             }
             roomBean.setCameraList(mCameraList);
@@ -238,7 +235,7 @@ public class DevicePresenter extends BasePresenterImpl<DeviceContract.IView> imp
             for (String subDevices: subDeviceList) {
                 String deviceName = subDevices.split("_")[0];
                 String deviceId = subDevices.split("_")[1];
-                DeviceInfoBean mDevice = deviceAliDAO.findByDeviceid(deviceName, Integer.parseInt(deviceId));
+                DeviceInfoBean mDevice = DeviceDaoUtil.getInstance().findByDeviceId(deviceName, Integer.parseInt(deviceId));
                 if (mDevice != null){
                     mSubDeviceList.add(mDevice);
                 }

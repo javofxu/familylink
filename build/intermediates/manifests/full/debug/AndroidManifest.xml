@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.siterwell.familywellplus"
-    android:versionCode="18307"
+    android:versionCode="18308"
     android:versionName="3.0.0" >
 
     <uses-sdk
@@ -103,7 +103,6 @@
             android:windowSoftInputMode="stateHidden|adjustPan" />
         <activity android:name="com.ilop.sthome.ui.activity.scene.ChooseActionActivity" />
         <activity android:name="com.ilop.sthome.ui.activity.config.ProductActivity" />
-        <activity android:name="com.ilop.sthome.ui.activity.device.AddTimerActivity" />
         <activity android:name="com.ilop.sthome.ui.activity.main.QRCodeActivity" />
         <activity android:name="com.ilop.sthome.ui.activity.mine.WebViewActivity" />
         <activity android:name="com.ilop.sthome.ui.activity.device.SubDeviceHistoryActivity" />

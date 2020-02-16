@@ -7,15 +7,15 @@ import android.util.Log;
 
 import com.example.common.mvp.BasePresenterImpl;
 import com.example.common.utils.LiveDataBus;
-import com.ilop.sthome.data.bean.DeviceInfoBean;
-import com.ilop.sthome.data.db.DeviceAliDAO;
 import com.ilop.sthome.data.enums.DeviceTrigger;
+import com.ilop.sthome.data.greenDao.DeviceInfoBean;
 import com.ilop.sthome.mvp.contract.ChooseActionContract;
 import com.ilop.sthome.ui.activity.scene.SettingActionActivity;
 import com.ilop.sthome.ui.activity.scene.SettingDoubleSwitchActivity;
 import com.ilop.sthome.ui.activity.scene.SettingHumitureActivity;
 import com.ilop.sthome.ui.activity.scene.SettingTempControlActivity;
 import com.ilop.sthome.ui.activity.scene.SettingTimingActivity;
+import com.ilop.sthome.utils.greenDao.DeviceDaoUtil;
 import com.siterwell.familywellplus.R;
 
 import java.util.ArrayList;
@@ -33,20 +33,18 @@ public class ChooseActionPresenter extends BasePresenterImpl<ChooseActionContrac
     private Context mContext;
     private int mDeviceNum;
     private String mDeviceName;
-    private DeviceAliDAO mDeviceAliDAO;
     private List<DeviceInfoBean> deviceInfoBeanList;
 
     public ChooseActionPresenter(Context mContext, String mDeviceName, int deviceNum) {
         this.mContext = mContext;
         this.mDeviceNum = deviceNum;
         this.mDeviceName = mDeviceName;
-        mDeviceAliDAO = new DeviceAliDAO(mContext);
         deviceInfoBeanList = new ArrayList<>();
     }
 
     @Override
     public void getDeviceInList(String deviceName) {
-        deviceInfoBeanList.addAll(mDeviceAliDAO.findInput(mDeviceName));
+        deviceInfoBeanList.addAll(DeviceDaoUtil.getInstance().findInputDevice(mDeviceName));
         if (mDeviceNum == 0) {
             DeviceInfoBean device = new DeviceInfoBean();
             device.setDevice_type("TIMER");
@@ -65,9 +63,9 @@ public class ChooseActionPresenter extends BasePresenterImpl<ChooseActionContrac
 
     @Override
     public void getDeviceOutList(String deviceName) {
-        List<DeviceInfoBean> gateway = mDeviceAliDAO.findAllGateway();
+        List<DeviceInfoBean> gateway = DeviceDaoUtil.getInstance().findAllGateway();
         deviceInfoBeanList.addAll(gateway);
-        List<DeviceInfoBean> subDevice = mDeviceAliDAO.findOutput(mDeviceName);
+        List<DeviceInfoBean> subDevice = DeviceDaoUtil.getInstance().findOutputDevice(mDeviceName);
         deviceInfoBeanList.addAll(subDevice);
         DeviceInfoBean deviceInfoBean = new DeviceInfoBean();
         deviceInfoBean.setDevice_type("PHONE");

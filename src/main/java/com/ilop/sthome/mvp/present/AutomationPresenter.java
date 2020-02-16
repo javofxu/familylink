@@ -2,18 +2,17 @@ package com.ilop.sthome.mvp.present;
 
 import android.content.Context;
 import android.content.Intent;
-import android.util.Log;
+import android.os.Parcelable;
 
 import com.example.common.mvp.BasePresenterImpl;
-import com.ilop.sthome.data.bean.DeviceInfoBean;
 import com.ilop.sthome.data.bean.SceneAliBean;
 import com.ilop.sthome.data.bean.SceneRelationBean;
 import com.ilop.sthome.data.bean.SysModelAliBean;
-import com.ilop.sthome.data.db.DeviceAliDAO;
 import com.ilop.sthome.data.db.SceneAliDAO;
 import com.ilop.sthome.data.db.SceneRelaitonAliDAO;
 import com.ilop.sthome.data.db.SysmodelAliDAO;
 import com.ilop.sthome.data.enums.SmartProduct;
+import com.ilop.sthome.data.greenDao.DeviceInfoBean;
 import com.ilop.sthome.mvp.contract.AutomationContract;
 import com.ilop.sthome.network.api.DataFromAliSceneGroup;
 import com.ilop.sthome.network.api.SendSceneDataAli;
@@ -21,6 +20,7 @@ import com.ilop.sthome.ui.activity.scene.ChooseActionActivity;
 import com.ilop.sthome.ui.activity.scene.InputDetailActivity;
 import com.ilop.sthome.ui.activity.scene.SettingTimingActivity;
 import com.ilop.sthome.utils.CommandUtil;
+import com.ilop.sthome.utils.greenDao.DeviceDaoUtil;
 import com.siterwell.familywellplus.R;
 
 import java.io.Serializable;
@@ -57,9 +57,8 @@ public class AutomationPresenter extends BasePresenterImpl<AutomationContract.IV
     public AutomationPresenter(Context mContext, String deviceName) {
         this.mContext = mContext;
         this.mDeviceName = deviceName;
-        DeviceAliDAO mDeviceDAO = new DeviceAliDAO(mContext);
         mSceneAliDAO = new SceneAliDAO(mContext);
-        mDeviceInfoBean = mDeviceDAO.findByDeviceid(deviceName,0);
+        mDeviceInfoBean = DeviceDaoUtil.getInstance().findGatewayByDeviceName(mDeviceName);
         mSendSceneData = new SendSceneDataAli(mContext, mDeviceInfoBean);
     }
 

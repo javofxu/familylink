@@ -11,11 +11,11 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.ilop.sthome.data.bean.DeviceInfoBean;
-import com.ilop.sthome.data.db.DeviceAliDAO;
 import com.ilop.sthome.data.enums.SmartProduct;
+import com.ilop.sthome.data.greenDao.DeviceInfoBean;
 import com.ilop.sthome.network.api.SendEquipmentDataAli;
 import com.ilop.sthome.utils.HistoryDataUtil;
+import com.ilop.sthome.utils.greenDao.DeviceDaoUtil;
 import com.siterwell.familywellplus.R;
 
 import java.util.List;
@@ -119,8 +119,7 @@ public class SubDeviceAdapter extends RecyclerView.Adapter<SubDeviceAdapter.Item
         }
 
         holder.childSwitch.setOnClickListener(v -> {
-            DeviceAliDAO deviceAliDAO = new DeviceAliDAO(mContext);
-            DeviceInfoBean deviceInfoBean = deviceAliDAO.findByDeviceid(device.getDeviceName(),0);
+            DeviceInfoBean deviceInfoBean = DeviceDaoUtil.getInstance().findGatewayByDeviceName(device.getDeviceName());
             SendEquipmentDataAli sendEquipmentDataAli = new SendEquipmentDataAli(mContext, deviceInfoBean);
             sendEquipmentDataAli.sendEquipmentCommand(device.getDevice_ID(),"01"+(isOpen==1?"01":"00")+"0000");
         });

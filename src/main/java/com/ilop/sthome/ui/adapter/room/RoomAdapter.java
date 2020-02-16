@@ -12,7 +12,7 @@ import android.widget.TextView;
 
 import com.example.common.utils.LiveDataBus;
 import com.example.common.view.CustomTextView;
-import com.ilop.sthome.data.bean.DeviceInfoBean;
+import com.ilop.sthome.data.greenDao.DeviceInfoBean;
 import com.ilop.sthome.data.greenDao.RoomBean;
 import com.ilop.sthome.ui.adapter.device.DeviceChildAdapter;
 import com.siterwell.familywellplus.R;

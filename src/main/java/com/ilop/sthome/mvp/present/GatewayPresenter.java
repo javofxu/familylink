@@ -5,11 +5,10 @@ import android.content.Intent;
 import android.text.TextUtils;
 
 import com.example.common.mvp.BasePresenterImpl;
-import com.ilop.sthome.data.bean.DeviceInfoBean;
 import com.ilop.sthome.data.bean.SysModelAliBean;
-import com.ilop.sthome.data.db.DeviceAliDAO;
 import com.ilop.sthome.data.db.SysmodelAliDAO;
 import com.ilop.sthome.data.enums.DevType;
+import com.ilop.sthome.data.greenDao.DeviceInfoBean;
 import com.ilop.sthome.mvp.contract.GatewayContract;
 import com.ilop.sthome.ui.activity.detail.ButtonDetailActivity;
 import com.ilop.sthome.ui.activity.detail.CoDetailActivity;
@@ -27,6 +26,7 @@ import com.ilop.sthome.ui.activity.detail.THCheckDetailActivity;
 import com.ilop.sthome.ui.activity.detail.TempControlDetailActivity;
 import com.ilop.sthome.ui.activity.detail.ThermalDetailActivity;
 import com.ilop.sthome.ui.activity.detail.WaterDetailActivity;
+import com.ilop.sthome.utils.greenDao.DeviceDaoUtil;
 import com.siterwell.familywellplus.R;
 
 import java.util.Arrays;
@@ -43,19 +43,17 @@ public class GatewayPresenter extends BasePresenterImpl<GatewayContract.IView> i
 
     private Context mContext;
     private String mDeviceName;
-    private DeviceAliDAO mDeviceAliDAO;
     private SysmodelAliDAO mSysModelAliDAO;
 
     public GatewayPresenter(Context mContext, String deviceName) {
         this.mContext = mContext;
         this.mDeviceName = deviceName;
-        mDeviceAliDAO = new DeviceAliDAO(mContext);
         mSysModelAliDAO = new SysmodelAliDAO(mContext);
     }
 
     @Override
     public void findAllSubDevice() {
-        List<DeviceInfoBean> deviceList = mDeviceAliDAO.findAllSubDevice(mDeviceName);
+        List<DeviceInfoBean> deviceList = DeviceDaoUtil.getInstance().findAllSubDevice(mDeviceName);
         if (deviceList.size()>0){
             mView.refreshSubList(deviceList);
         }else {
@@ -65,7 +63,7 @@ public class GatewayPresenter extends BasePresenterImpl<GatewayContract.IView> i
 
     @Override
     public void getDeviceState() {
-        DeviceInfoBean deviceInfoBean = mDeviceAliDAO.findByDeviceid(mDeviceName,0);
+        DeviceInfoBean deviceInfoBean = DeviceDaoUtil.getInstance().findGatewayByDeviceName(mDeviceName);
         int state = deviceInfoBean.getStatus();
         String name = TextUtils.isEmpty(deviceInfoBean.getNickName())? mContext.getResources().getString(DevType.getType(deviceInfoBean.getProductKey()).getTypeStrId()):deviceInfoBean.getNickName();
         SysModelAliBean sysModelAliBean = mSysModelAliDAO.findIdByChoice(mDeviceName);

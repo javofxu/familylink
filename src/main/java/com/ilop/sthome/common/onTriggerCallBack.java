@@ -1,6 +1,7 @@
 package com.ilop.sthome.common;
 
-import com.ilop.sthome.data.bean.DeviceInfoBean;
+
+import com.ilop.sthome.data.greenDao.DeviceInfoBean;
 
 import java.util.List;
 

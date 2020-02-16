@@ -7,9 +7,9 @@ import android.view.View;
 
 import com.example.common.base.BasePActivity;
 import com.example.common.utils.LiveDataBus;
-import com.ilop.sthome.data.bean.DeviceInfoBean;
 import com.ilop.sthome.data.bean.SceneAliBean;
 import com.ilop.sthome.data.event.EventAnswerOK;
+import com.ilop.sthome.data.greenDao.DeviceInfoBean;
 import com.ilop.sthome.mvp.contract.AutomationContract;
 import com.ilop.sthome.mvp.present.AutomationPresenter;
 import com.ilop.sthome.network.api.SendCommandAli;

@@ -7,11 +7,11 @@ import android.util.Log;
 import android.view.View;
 
 import com.example.common.base.BaseFragment;
-import com.ilop.sthome.data.bean.DeviceInfoBean;
-import com.ilop.sthome.data.db.DeviceAliDAO;
 import com.ilop.sthome.data.enums.DevType;
 import com.ilop.sthome.data.event.EventRefreshDevice;
+import com.ilop.sthome.data.greenDao.DeviceInfoBean;
 import com.ilop.sthome.ui.adapter.main.PagerAdapter;
+import com.ilop.sthome.utils.greenDao.DeviceDaoUtil;
 import com.siterwell.familywellplus.R;
 import com.siterwell.familywellplus.databinding.FragmentSceneBinding;
 
@@ -33,7 +33,6 @@ public class SceneFragment extends BaseFragment<FragmentSceneBinding> {
     private List<Fragment> mFragment;
     private List<String> mTabName;
     private PagerAdapter mAdapter;
-    private DeviceAliDAO mDeviceAliDAO;
 
     @Override
     protected int getLayoutId() {
@@ -51,7 +50,6 @@ public class SceneFragment extends BaseFragment<FragmentSceneBinding> {
         super.initView();
         mFragment = new ArrayList<>();
         mTabName = new ArrayList<>();
-        mDeviceAliDAO = new DeviceAliDAO(mContext);
     }
 
     @Override
@@ -88,7 +86,7 @@ public class SceneFragment extends BaseFragment<FragmentSceneBinding> {
     @Subscribe
     public void onEventMainThread(EventRefreshDevice event){
         Log.i(TAG, "onEventMainThread: A");
-        List<DeviceInfoBean> deviceList = mDeviceAliDAO.findAllGateway();
+        List<DeviceInfoBean> deviceList = DeviceDaoUtil.getInstance().findAllGateway();
         if (deviceList.size() == mTabName.size()){
             for (int i = 0; i < deviceList.size(); i++) {
                 if (TextUtils.isEmpty(deviceList.get(i).getNickName())) {
@@ -108,7 +106,7 @@ public class SceneFragment extends BaseFragment<FragmentSceneBinding> {
 
 
     private void onCreateView(){
-        List<DeviceInfoBean> list = mDeviceAliDAO.findAllGateway();
+        List<DeviceInfoBean> list = DeviceDaoUtil.getInstance().findAllGateway();
         if (list.size()>0){
             mDBind.sceneHas.setVisibility(View.VISIBLE);
             mDBind.sceneWithout.setVisibility(View.GONE);

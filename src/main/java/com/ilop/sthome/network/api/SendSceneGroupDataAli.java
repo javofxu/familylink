@@ -6,8 +6,8 @@ import android.util.Log;
 import com.aliyun.alink.linksdk.tmp.device.panel.PanelDevice;
 import com.aliyun.alink.linksdk.tmp.device.panel.listener.IPanelCallback;
 import com.ilop.sthome.common.SendWithReHelper;
-import com.ilop.sthome.data.bean.DeviceInfoBean;
 import com.ilop.sthome.data.bean.GatewayBean;
+import com.ilop.sthome.data.greenDao.DeviceInfoBean;
 import com.ilop.sthome.network.udp.GatewayUdpListConstant;
 import com.ilop.sthome.utils.SiterwellUtil;
 

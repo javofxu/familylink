@@ -5,12 +5,12 @@ import android.os.Build;
 import android.support.annotation.RequiresApi;
 
 import com.example.common.mvp.BasePresenterImpl;
-import com.ilop.sthome.data.bean.DeviceInfoBean;
 import com.ilop.sthome.data.bean.SubDeviceHistoryBean;
-import com.ilop.sthome.data.db.DeviceAliDAO;
+import com.ilop.sthome.data.greenDao.DeviceInfoBean;
 import com.ilop.sthome.data.greenDao.HistoryBean;
 import com.ilop.sthome.mvp.contract.SubDeviceHistoryContract;
 import com.ilop.sthome.network.api.SendOtherDataAli;
+import com.ilop.sthome.utils.greenDao.DeviceDaoUtil;
 import com.ilop.sthome.utils.greenDao.HistoryDaoUtil;
 
 import java.text.SimpleDateFormat;
@@ -51,8 +51,7 @@ public class SubDeviceHistoryPresenter extends BasePresenterImpl<SubDeviceHistor
     public void getDeviceInfo(String deviceName, int deviceId) {
         this.mDeviceName = deviceName;
         this.mDeviceId = deviceId;
-        DeviceAliDAO mDeviceDAO = new DeviceAliDAO(mContext);
-        DeviceInfoBean deviceInfoBean = mDeviceDAO.findByDeviceid(mDeviceName,0);
+        DeviceInfoBean deviceInfoBean = DeviceDaoUtil.getInstance().findGatewayByDeviceName(mDeviceName);
         mSendData = new SendOtherDataAli(mContext, deviceInfoBean);
     }
 

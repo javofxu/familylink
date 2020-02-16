@@ -2,12 +2,10 @@ package com.ilop.sthome.mvp.contract;
 
 import android.content.Intent;
 
-import com.aliyun.iot.aep.sdk.apiclient.request.IoTRequest;
 import com.example.common.mvp.IBasePresenter;
 import com.example.common.mvp.IBaseView;
-import com.ilop.sthome.data.bean.DeviceInfoBean;
+import com.ilop.sthome.data.greenDao.DeviceInfoBean;
 import com.ilop.sthome.data.greenDao.RoomBean;
-import com.ilop.sthome.mvp.model.common.onModelCallBack;
 
 import java.util.List;
 

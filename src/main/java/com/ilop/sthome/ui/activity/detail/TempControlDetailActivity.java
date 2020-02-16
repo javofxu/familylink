@@ -7,6 +7,7 @@ import android.text.TextUtils;
 import android.view.View;
 import android.view.View.OnClickListener;
 
+import com.example.common.utils.SpUtil;
 import com.ilop.sthome.data.event.EventAnswerOK;
 import com.ilop.sthome.data.event.EventRefreshDevice;
 import com.ilop.sthome.network.api.SendCommandAli;
@@ -170,11 +171,11 @@ public class TempControlDetailActivity extends BaseDetailActivity<ActivityDetail
                 mDBind.root.setBackgroundResource(R.drawable.device_status_off_line);
             }else{
                 if(mode2==0){
-                    mDeviceDAO.updateFangTemp(mDevice.getDevice_ID(), mDevice.getDeviceName(),String.valueOf(setting_temp));
+                    SpUtil.putString(mContext, "cold", String.valueOf(setting_temp));
                 }else if(mode2 == 1){
-                    mDeviceDAO.updateAutoTemp(mDevice.getDevice_ID(), mDevice.getDeviceName(),String.valueOf(setting_temp));
+                    SpUtil.putString(mContext, "auto", String.valueOf(setting_temp));
                 }else if(mode2 == 2){
-                    mDeviceDAO.updateHandTemp(mDevice.getDevice_ID(), mDevice.getDeviceName(),String.valueOf(setting_temp));
+                    SpUtil.putString(mContext, "hand", String.valueOf(setting_temp));
                 }
 
                 mDBind.settingTemp.setCurrentValues(setting_temp);
@@ -277,11 +278,11 @@ public class TempControlDetailActivity extends BaseDetailActivity<ActivityDetail
                 }else {
                     setting_mode = 1;
                     mDBind.settingTemp.setMaxValues(30f);
-                    String autotemp = mDeviceDAO.findTempByAutoModel(mDevice.getDeviceName(),mDevice.getDevice_ID());
-                    if(TextUtils.isEmpty(autotemp)){
+                    String auto_temp = SpUtil.getString(mContext, "auto");
+                    if(TextUtils.isEmpty(auto_temp)){
                         mDBind.settingTemp.setCurrentValues(21f);
                     }else {
-                        mDBind.settingTemp.setCurrentValues(Float.parseFloat(autotemp));
+                        mDBind.settingTemp.setCurrentValues(Float.parseFloat(auto_temp));
                     }
                     showFunctionView(R.mipmap.timing_sel, R.mipmap.manual_nor, R.mipmap.freeze_nor);
                 }
@@ -290,22 +291,22 @@ public class TempControlDetailActivity extends BaseDetailActivity<ActivityDetail
             case R.id.handle_mode:
                 setting_mode = 2;
                 mDBind.settingTemp.setMaxValues(30f);
-                String handtemp = mDeviceDAO.findTempByHandModel(mDevice.getDeviceName(),mDevice.getDevice_ID());
-                if(TextUtils.isEmpty(handtemp)){
+                String hand_temp = SpUtil.getString(mContext, "hand");
+                if(TextUtils.isEmpty(hand_temp)){
                     mDBind.settingTemp.setCurrentValues(21f);
                 }else {
-                    mDBind.settingTemp.setCurrentValues(Float.parseFloat(handtemp));
+                    mDBind.settingTemp.setCurrentValues(Float.parseFloat(hand_temp));
                 }
                 showFunctionView(R.mipmap.timing_nor, R.mipmap.manual_sel, R.mipmap.freeze_nor);
                 break;
             case R.id.fangdong_mode:
                 setting_mode = 0;
                 mDBind.settingTemp.setMaxValues(15f);
-                String fangtemp = mDeviceDAO.findTempByFangModel(mDevice.getDeviceName(),mDevice.getDevice_ID());
-                if(TextUtils.isEmpty(fangtemp)){
+                String fang_temp = SpUtil.getString(mContext, "cold");
+                if(TextUtils.isEmpty(fang_temp)){
                     mDBind.settingTemp.setCurrentValues(5f);
                 }else {
-                    mDBind.settingTemp.setCurrentValues(Float.parseFloat(fangtemp));
+                    mDBind.settingTemp.setCurrentValues(Float.parseFloat(fang_temp));
                 }
                 showFunctionView(R.mipmap.timing_nor, R.mipmap.manual_nor, R.mipmap.freeze_sel);
                 break;

@@ -3,15 +3,14 @@ package com.ilop.sthome.mvp.present;
 import android.content.Context;
 import android.os.Build;
 import android.support.annotation.RequiresApi;
-import android.util.Log;
 
 import com.example.common.mvp.BasePresenterImpl;
 import com.ilop.sthome.data.bean.DeviceHistoryBean;
-import com.ilop.sthome.data.bean.DeviceInfoBean;
-import com.ilop.sthome.data.db.DeviceAliDAO;
+import com.ilop.sthome.data.greenDao.DeviceInfoBean;
 import com.ilop.sthome.data.greenDao.WarnBean;
 import com.ilop.sthome.mvp.contract.DeviceHistoryContract;
 import com.ilop.sthome.network.api.SendOtherDataAli;
+import com.ilop.sthome.utils.greenDao.DeviceDaoUtil;
 import com.ilop.sthome.utils.greenDao.WarnDaoUtil;
 
 import java.text.SimpleDateFormat;
@@ -38,7 +37,6 @@ public class DeviceHistoryPresenter extends BasePresenterImpl<DeviceHistoryContr
     private List<DeviceInfoBean> mGatewayList;
     private List<DeviceHistoryBean> mHistoryList;
     private SendOtherDataAli mSendDeviceHistory;
-    private DeviceAliDAO mDeviceAliDAO;
 
     private SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM");
     private SimpleDateFormat sdf1 = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
@@ -46,7 +44,6 @@ public class DeviceHistoryPresenter extends BasePresenterImpl<DeviceHistoryContr
 
     public DeviceHistoryPresenter(Context context) {
         this.mContext = context;
-        mDeviceAliDAO = new DeviceAliDAO(mContext);
         mList = new ArrayList<>();
         mWarnList = new ArrayList<>();
         mHistoryList = new ArrayList<>();
@@ -54,7 +51,7 @@ public class DeviceHistoryPresenter extends BasePresenterImpl<DeviceHistoryContr
 
     @Override
     public void getAllGateway() {
-        mGatewayList = mDeviceAliDAO.findAllGateway();
+        mGatewayList = DeviceDaoUtil.getInstance().findAllGateway();
         if (mGatewayList.size() > 0) {
             sendSync(1);
         }else {
@@ -65,7 +62,7 @@ public class DeviceHistoryPresenter extends BasePresenterImpl<DeviceHistoryContr
     @Override
     public void getGatewayByName(String deviceName) {
         this.mDeviceName = deviceName;
-        DeviceInfoBean gateway = mDeviceAliDAO.findByDeviceid(deviceName, 0);
+        DeviceInfoBean gateway = DeviceDaoUtil.getInstance().findGatewayByDeviceName(deviceName);
         mSendDeviceHistory = new SendOtherDataAli(mContext, gateway);
     }
 
@@ -120,7 +117,7 @@ public class DeviceHistoryPresenter extends BasePresenterImpl<DeviceHistoryContr
     public void sendSync(int num) {
         for (int i = 0; i < mGatewayList.size(); i++) {
             String deviceName = mGatewayList.get(i).getDeviceName();
-            DeviceInfoBean gateway = mDeviceAliDAO.findByDeviceid(deviceName, 0);
+            DeviceInfoBean gateway = DeviceDaoUtil.getInstance().findGatewayByDeviceName(deviceName);
             SendOtherDataAli mSendOtherDataAli = new SendOtherDataAli(mContext, gateway);
             mSendOtherDataAli.syncAlarms(num);
         }

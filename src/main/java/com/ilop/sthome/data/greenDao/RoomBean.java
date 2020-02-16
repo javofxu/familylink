@@ -1,7 +1,6 @@
 package com.ilop.sthome.data.greenDao;
 
-import com.ilop.sthome.data.bean.DeviceInfoBean;
-import com.ilop.sthome.utils.greenDao.DeviceConverter;
+import com.ilop.sthome.utils.greenDao.converter.DeviceConverter;
 
 import org.greenrobot.greendao.annotation.Convert;
 import org.greenrobot.greendao.annotation.Entity;

@@ -5,17 +5,16 @@ import android.text.TextUtils;
 import android.util.Log;
 
 import com.example.common.mvp.BasePresenterImpl;
-import com.ilop.sthome.data.bean.DeviceInfoBean;
 import com.ilop.sthome.data.bean.SceneAliBean;
 import com.ilop.sthome.data.bean.SceneRelationBean;
 import com.ilop.sthome.data.bean.SysModelAliBean;
-import com.ilop.sthome.data.db.DeviceAliDAO;
-import com.ilop.sthome.data.db.SceneAliDAO;
 import com.ilop.sthome.data.db.SceneRelaitonAliDAO;
 import com.ilop.sthome.data.db.SysmodelAliDAO;
+import com.ilop.sthome.data.greenDao.DeviceInfoBean;
 import com.ilop.sthome.mvp.contract.AddSceneContract;
 import com.ilop.sthome.network.api.SendSceneGroupDataAli;
 import com.ilop.sthome.utils.CoderALiUtils;
+import com.ilop.sthome.utils.greenDao.DeviceDaoUtil;
 import com.ilop.sthome.utils.tools.ByteUtil;
 import com.siterwell.familywellplus.R;
 
@@ -38,13 +37,11 @@ public class AddScenePresenter extends BasePresenterImpl<AddSceneContract.IView>
     private SendSceneGroupDataAli mSendScene;
     private List<SceneAliBean> mSceneList;
     private List<DeviceInfoBean> mGatewayList;
-    private DeviceAliDAO deviceAliDAO;
 
     public AddScenePresenter(Context mContext) {
         this.mContext = mContext;
         mGatewayList = new ArrayList<>();
         mSysModelAliDAO = new SysmodelAliDAO(mContext);
-        deviceAliDAO = new DeviceAliDAO(mContext);
     }
 
     @Override
@@ -55,7 +52,7 @@ public class AddScenePresenter extends BasePresenterImpl<AddSceneContract.IView>
     @Override
     public void getGatewayList() {
         mGatewayList.clear();
-        mGatewayList = deviceAliDAO.findAllGateway();
+        mGatewayList = DeviceDaoUtil.getInstance().findAllGateway();
         if (mGatewayList.size()>0){
             mView.showGatewayList(mGatewayList);
         }else {

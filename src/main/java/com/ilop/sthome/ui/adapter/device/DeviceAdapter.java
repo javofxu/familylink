@@ -8,8 +8,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.ilop.sthome.data.bean.DeviceInfoBean;
-import com.ilop.sthome.data.db.DeviceAliDAO;
+import com.ilop.sthome.data.greenDao.DeviceInfoBean;
+import com.ilop.sthome.utils.greenDao.DeviceDaoUtil;
 import com.siterwell.familywellplus.R;
 
 import java.util.ArrayList;
@@ -27,12 +27,10 @@ public class DeviceAdapter extends RecyclerView.Adapter<DeviceAdapter.ItemHolder
 
     private Context mContext;
     private List<DeviceInfoBean> mList;
-    private DeviceAliDAO mDeviceAliDAO;
     private List<DeviceInfoBean> mDeviceList;
 
     public DeviceAdapter(Context mContext) {
         this.mContext = mContext;
-        mDeviceAliDAO = new DeviceAliDAO(mContext);
         mDeviceList = new ArrayList<>();
     }
 
@@ -53,7 +51,7 @@ public class DeviceAdapter extends RecyclerView.Adapter<DeviceAdapter.ItemHolder
         DeviceInfoBean deviceInfo = mList.get(i);
         mDeviceList.clear();
         mDeviceList.add(deviceInfo);
-        List<DeviceInfoBean> deviceInfoBeanList = mDeviceAliDAO.findAllSubDevice(deviceInfo.getDeviceName());
+        List<DeviceInfoBean> deviceInfoBeanList = DeviceDaoUtil.getInstance().findAllSubDevice(deviceInfo.getDeviceName());
         mDeviceList.addAll(deviceInfoBeanList);
         DeviceChildAdapter mAdapter = new DeviceChildAdapter(mContext);
         holder.mRecycle.setLayoutManager(new GridLayoutManager(mContext, 2));

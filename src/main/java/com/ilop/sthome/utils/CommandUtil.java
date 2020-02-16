@@ -2,9 +2,9 @@ package com.ilop.sthome.utils;
 
 import android.content.Context;
 
-import com.ilop.sthome.data.bean.DeviceInfoBean;
 import com.ilop.sthome.data.bean.SceneAliBean;
 import com.ilop.sthome.data.db.SceneAliDAO;
+import com.ilop.sthome.data.greenDao.DeviceInfoBean;
 import com.ilop.sthome.utils.tools.ByteUtil;
 import com.ilop.sthome.utils.tools.UnitTools;
 

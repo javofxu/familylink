@@ -3,9 +3,10 @@ package com.ilop.sthome.data.bean;
 import android.content.Context;
 import android.text.TextUtils;
 
-import com.ilop.sthome.data.db.DeviceAliDAO;
+import com.ilop.sthome.data.greenDao.DeviceInfoBean;
 import com.ilop.sthome.utils.CoderALiUtils;
 import com.ilop.sthome.utils.SceneModelUtil;
+import com.ilop.sthome.utils.greenDao.DeviceDaoUtil;
 import com.siterwell.familywellplus.R;
 
 import java.io.Serializable;
@@ -130,8 +131,7 @@ public class SceneAliBean implements Serializable {
 
         if(iLength>0){
             for(int i = 1 ; i<= iLength;i++){
-                DeviceAliDAO deviceAliDAO = new DeviceAliDAO(context);
-                DeviceInfoBean devType= deviceAliDAO.findDeviceTypeByDeviceid(deviceName,Integer.parseInt(inputCode.substring(0,4),16));
+                DeviceInfoBean devType= DeviceDaoUtil.getInstance().findByDeviceId(deviceName,Integer.parseInt(inputCode.substring(0,4),16));
                 DeviceInfoBean equipmentBean = new DeviceInfoBean();
                 equipmentBean.setDevice_ID(Integer.parseInt(inputCode.substring(0,4),16));
                 equipmentBean.setDevice_status(inputCode.substring(4,12));
@@ -174,8 +174,7 @@ public class SceneAliBean implements Serializable {
                 equipmentBean.setSubdeviceName(context.getResources().getString(R.string.delay));
                 output.add(equipmentBean);
             }
-            DeviceAliDAO deviceAliDAO = new DeviceAliDAO(context);
-            DeviceInfoBean devType= deviceAliDAO.findDeviceTypeByDeviceid(deviceName,Integer.parseInt(eqid,16));
+            DeviceInfoBean devType= DeviceDaoUtil.getInstance().findByDeviceId(deviceName,Integer.parseInt(eqid,16));
             DeviceInfoBean equipmentBean1 = new DeviceInfoBean();
             equipmentBean1.setDevice_ID(Integer.parseInt(eqid,16));
             equipmentBean1.setDevice_status(status);

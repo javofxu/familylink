@@ -44,7 +44,7 @@ public class DeviceInfoBeanDao extends AbstractDao<DeviceInfoBean, Long> {
         public final static Property Device_type = new Property(19, String.class, "device_type", false, "DEVICE_TYPE");
         public final static Property Device_status = new Property(20, String.class, "device_status", false, "DEVICE_STATUS");
         public final static Property Current_mode = new Property(21, int.class, "current_mode", false, "CURRENT_MODE");
-        public final static Property Is_open = new Property(22, int.class, "is_open", false, "IS_OPEN");
+        public final static Property Scene_id = new Property(22, int.class, "scene_id", false, "SCENE_ID");
     }
 
 
@@ -82,7 +82,7 @@ public class DeviceInfoBeanDao extends AbstractDao<DeviceInfoBean, Long> {
                 "\"DEVICE_TYPE\" TEXT," + // 19: device_type
                 "\"DEVICE_STATUS\" TEXT," + // 20: device_status
                 "\"CURRENT_MODE\" INTEGER NOT NULL ," + // 21: current_mode
-                "\"IS_OPEN\" INTEGER NOT NULL );"); // 22: is_open
+                "\"SCENE_ID\" INTEGER NOT NULL );"); // 22: scene_id
     }
 
     /** Drops the underlying database table. */
@@ -180,7 +180,7 @@ public class DeviceInfoBeanDao extends AbstractDao<DeviceInfoBean, Long> {
             stmt.bindString(21, device_status);
         }
         stmt.bindLong(22, entity.getCurrent_mode());
-        stmt.bindLong(23, entity.getIs_open());
+        stmt.bindLong(23, entity.getScene_id());
     }
 
     @Override
@@ -272,7 +272,7 @@ public class DeviceInfoBeanDao extends AbstractDao<DeviceInfoBean, Long> {
             stmt.bindString(21, device_status);
         }
         stmt.bindLong(22, entity.getCurrent_mode());
-        stmt.bindLong(23, entity.getIs_open());
+        stmt.bindLong(23, entity.getScene_id());
     }
 
     @Override
@@ -305,7 +305,7 @@ public class DeviceInfoBeanDao extends AbstractDao<DeviceInfoBean, Long> {
             cursor.isNull(offset + 19) ? null : cursor.getString(offset + 19), // device_type
             cursor.isNull(offset + 20) ? null : cursor.getString(offset + 20), // device_status
             cursor.getInt(offset + 21), // current_mode
-            cursor.getInt(offset + 22) // is_open
+            cursor.getInt(offset + 22) // scene_id
         );
         return entity;
     }
@@ -334,7 +334,7 @@ public class DeviceInfoBeanDao extends AbstractDao<DeviceInfoBean, Long> {
         entity.setDevice_type(cursor.isNull(offset + 19) ? null : cursor.getString(offset + 19));
         entity.setDevice_status(cursor.isNull(offset + 20) ? null : cursor.getString(offset + 20));
         entity.setCurrent_mode(cursor.getInt(offset + 21));
-        entity.setIs_open(cursor.getInt(offset + 22));
+        entity.setScene_id(cursor.getInt(offset + 22));
      }
     
     @Override

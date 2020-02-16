@@ -11,10 +11,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.common.utils.LiveDataBus;
-import com.ilop.sthome.data.bean.DeviceInfoBean;
 import com.ilop.sthome.data.enums.DevType;
 import com.ilop.sthome.data.enums.SmartProduct;
-import com.ilop.sthome.data.enums.SmartProduct;
+import com.ilop.sthome.data.greenDao.DeviceInfoBean;
 import com.ilop.sthome.utils.HistoryDataUtil;
 import com.siterwell.familywellplus.R;
 

@@ -20,16 +20,16 @@ import com.aliyun.iot.aep.sdk.log.ALog;
 import com.aliyun.iot.aep.sdk.login.ILogoutCallback;
 import com.aliyun.iot.aep.sdk.login.LoginBusiness;
 import com.example.common.base.BaseActivity;
-import com.ilop.sthome.data.bean.DeviceInfoBean;
 import com.ilop.sthome.data.bean.SceneAliBean;
 import com.ilop.sthome.data.bean.SysModelAliBean;
-import com.ilop.sthome.data.db.DeviceAliDAO;
 import com.ilop.sthome.data.db.SceneAliDAO;
 import com.ilop.sthome.data.db.SysmodelAliDAO;
+import com.ilop.sthome.data.greenDao.DeviceInfoBean;
 import com.ilop.sthome.ui.activity.main.QRCodeActivity;
 import com.ilop.sthome.ui.activity.main.StartActivity;
 import com.ilop.sthome.ui.adapter.device.DeviceShareAdapter;
 import com.ilop.sthome.ui.dialog.TipDialog;
+import com.ilop.sthome.utils.greenDao.DeviceDaoUtil;
 import com.siterwell.familywellplus.R;
 import com.siterwell.familywellplus.databinding.ActivityShareListBinding;
 
@@ -53,7 +53,6 @@ public class ShareListActivity extends BaseActivity<ActivityShareListBinding> {
 
     private DeviceShareAdapter mAdapter;
     private List<DeviceInfoBean> mDeviceInfoList;
-    private DeviceAliDAO mDeviceAliDAO;
     private SysmodelAliDAO mSysModelAliDAO;
     private SceneAliDAO mSceneAliDAO;
 
@@ -71,7 +70,6 @@ public class ShareListActivity extends BaseActivity<ActivityShareListBinding> {
     @Override
     protected void initView() {
         super.initView();
-        mDeviceAliDAO = new DeviceAliDAO(this);
         mSceneAliDAO = new SceneAliDAO(this);
         mSysModelAliDAO = new SysmodelAliDAO(this);
         View empty = findViewById(R.id.empty);
@@ -83,7 +81,7 @@ public class ShareListActivity extends BaseActivity<ActivityShareListBinding> {
     @Override
     protected void initData() {
         super.initData();
-        mDeviceInfoList = mDeviceAliDAO.findAllWifiShareDevice();
+        mDeviceInfoList = DeviceDaoUtil.getInstance().findAllWifiShareDevice();
         mAdapter = new DeviceShareAdapter(this, mDeviceInfoList);
         mDBind.eqList.setAdapter(mAdapter);
     }
@@ -103,7 +101,7 @@ public class ShareListActivity extends BaseActivity<ActivityShareListBinding> {
     @Override
     protected void onResume() {
         super.onResume();
-        mDeviceInfoList = mDeviceAliDAO.findAllWifiShareDevice();
+        mDeviceInfoList = DeviceDaoUtil.getInstance().findAllWifiShareDevice();
         mAdapter.addAll(mDeviceInfoList);
     }
 
@@ -235,9 +233,8 @@ public class ShareListActivity extends BaseActivity<ActivityShareListBinding> {
             switch (msg.what){
                 case DELETE_GATEWAY_SUCCESS:
                     String ds = (String)msg.obj;
-                    DeviceAliDAO deviceAliDAO = new DeviceAliDAO(ShareListActivity.this);
-                    deviceAliDAO.deleteByDeviceName(ds,0);
-                    mDeviceInfoList = deviceAliDAO.findAllWifiShareDevice();
+                    DeviceDaoUtil.getInstance().deleteByDeviceName(ds,0);
+                    mDeviceInfoList = DeviceDaoUtil.getInstance().findAllWifiShareDevice();
                     mAdapter.addAll(mDeviceInfoList);
                     break;
                 case GET_MESSAGE:
@@ -247,8 +244,7 @@ public class ShareListActivity extends BaseActivity<ActivityShareListBinding> {
                     listByAccount();
                     break;
                 case REFRESH:
-                    deviceAliDAO = new DeviceAliDAO(ShareListActivity.this);
-                    mDeviceInfoList = deviceAliDAO.findAllWifiShareDevice();
+                    mDeviceInfoList = DeviceDaoUtil.getInstance().findAllWifiShareDevice();
                     mAdapter.addAll(mDeviceInfoList);
                     break;
             }
@@ -327,7 +323,7 @@ public class ShareListActivity extends BaseActivity<ActivityShareListBinding> {
 
                     List<DeviceInfoBean> deviceInfoBeanList = JSON.parseArray(jsonArray.toString(), DeviceInfoBean.class);
 
-                    List<DeviceInfoBean> deviceInfoBeans = mDeviceAliDAO.findAllWifiDevice();
+                    List<DeviceInfoBean> deviceInfoBeans = DeviceDaoUtil.getInstance().findAllWifiDevice();
 
                     for(DeviceInfoBean deviceInfoBean : deviceInfoBeans){
 
@@ -340,14 +336,14 @@ public class ShareListActivity extends BaseActivity<ActivityShareListBinding> {
                         }
 
                         if(!flag){
-                            mDeviceAliDAO.deleteByDeviceName(deviceInfoBean.getDeviceName(),0);
+                            DeviceDaoUtil.getInstance().deleteByDeviceName(deviceInfoBean.getDeviceName(),0);
                         }
 
                     }
 
 
                     for (DeviceInfoBean deviceInfoBean:deviceInfoBeanList){
-                        mDeviceAliDAO.insertGateway(deviceInfoBean);
+                        DeviceDaoUtil.getInstance().insertGateway(deviceInfoBean);
                         SysModelAliBean sysModelAliBean = new SysModelAliBean();
                         sysModelAliBean.setDeviceName(deviceInfoBean.getDeviceName());
                         sysModelAliBean.setSid(0);

@@ -1,5 +1,7 @@
 package com.ilop.sthome.data.bean;
 
+import com.ilop.sthome.data.greenDao.DeviceInfoBean;
+
 import java.util.List;
 
 /**

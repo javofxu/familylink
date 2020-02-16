@@ -186,7 +186,6 @@
     <orderEntry type="library" name="Gradle: com.android.databinding:adapters:1.3.1@aar" level="project" />
     <orderEntry type="library" name="Gradle: android.arch.lifecycle:viewmodel:1.1.1@aar" level="project" />
     <orderEntry type="library" name="Gradle: __local_aars__:/Users/siterwell/github/familylink/libs/highlight.jar:unspecified@jar" level="project" />
-    <orderEntry type="library" name="Gradle: org.apache.commons:commons-lang3:3.7@jar" level="project" />
     <orderEntry type="library" name="Gradle: android.arch.core:runtime:1.1.1@aar" level="project" />
     <orderEntry type="library" name="Gradle: com.facebook.fresco:imagepipeline-base:1.3.0@aar" level="project" />
     <orderEntry type="library" name="Gradle: com.google.android:flexbox:0.3.1@aar" level="project" />

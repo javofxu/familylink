@@ -7,9 +7,8 @@ import com.aliyun.iot.aep.sdk.apiclient.callback.IoTResponse;
 import com.example.common.base.OnCallBackToRefresh;
 import com.example.common.mvp.BasePresenterImpl;
 import com.example.common.utils.SpUtil;
-import com.ilop.sthome.data.bean.DeviceInfoBean;
-import com.ilop.sthome.data.db.DeviceAliDAO;
 import com.ilop.sthome.data.event.EventRefreshDevice;
+import com.ilop.sthome.data.greenDao.DeviceInfoBean;
 import com.ilop.sthome.data.greenDao.RoomBean;
 import com.ilop.sthome.mvp.contract.AddDeviceContract;
 import com.ilop.sthome.mvp.model.CommonModel;
@@ -18,6 +17,7 @@ import com.ilop.sthome.mvp.model.common.onModelCallBack;
 import com.ilop.sthome.network.api.SendEquipmentDataAli;
 import com.ilop.sthome.ui.dialog.BaseDialog;
 import com.ilop.sthome.utils.CoderALiUtils;
+import com.ilop.sthome.utils.greenDao.DeviceDaoUtil;
 import com.ilop.sthome.utils.greenDao.RoomDaoUtil;
 import com.ilop.sthome.utils.tools.ByteUtil;
 import com.siterwell.familywellplus.R;
@@ -46,7 +46,6 @@ public class AddDevicePresenter extends BasePresenterImpl<AddDeviceContract.IVie
     private String mNickName;
     private List<RoomBean> mRoomList;
     private List<DeviceInfoBean> mDeviceList;
-    private DeviceAliDAO mDeviceDao;
     private SendEquipmentDataAli mSendEquipment;
     private CommonModelImpl mModel;
 
@@ -54,9 +53,8 @@ public class AddDevicePresenter extends BasePresenterImpl<AddDeviceContract.IVie
         this.mContext = mContext;
         this.mDeviceName = deviceName;
         mModel = new CommonModel();
-        mDeviceDao = new DeviceAliDAO(mContext);
         mDeviceList = new ArrayList<>();
-        DeviceInfoBean deviceInfoBean = mDeviceDao.findByDeviceid(deviceName,0);
+        DeviceInfoBean deviceInfoBean = DeviceDaoUtil.getInstance().findGatewayByDeviceName(deviceName);
         mSendEquipment = new SendEquipmentDataAli(mContext, deviceInfoBean);
     }
 
@@ -121,8 +119,8 @@ public class AddDevicePresenter extends BasePresenterImpl<AddDeviceContract.IVie
             deviceInfoBean.setDeviceName(mDeviceName);
             deviceInfoBean.setDevice_ID(mDeviceId);
             deviceInfoBean.setNodeType(String.valueOf(mRoomId));
-            mDeviceDao.updateName(deviceInfoBean);
-            List<DeviceInfoBean> deviceList = mDeviceDao.findAllSubDevice(mDeviceName);
+            DeviceDaoUtil.getInstance().getDeviceDao().update(deviceInfoBean);
+            List<DeviceInfoBean> deviceList = DeviceDaoUtil.getInstance().findAllSubDevice(mDeviceName);
             List<String> stringList = new ArrayList<>();
             for (DeviceInfoBean mDevice: deviceList) {
                 stringList.add(mDevice.getDeviceName()+"_"+mDevice.getDevice_ID());
