@@ -6,18 +6,18 @@ import com.example.common.base.BaseActivity;
 import com.example.common.utils.LiveDataBus;
 import com.ilop.sthome.data.bean.SceneAliBean;
 import com.ilop.sthome.data.bean.ShortcutAliBean;
-import com.ilop.sthome.data.bean.SysModelAliBean;
 import com.ilop.sthome.data.db.SceneAliDAO;
 import com.ilop.sthome.data.db.ShortcutAliDAO;
-import com.ilop.sthome.data.db.SysmodelAliDAO;
 import com.ilop.sthome.data.event.EventAnswerOK;
 import com.ilop.sthome.data.greenDao.DeviceInfoBean;
+import com.ilop.sthome.data.greenDao.SceneBean;
 import com.ilop.sthome.network.api.SendCommandAli;
 import com.ilop.sthome.network.api.SendSceneGroupDataAli;
 import com.ilop.sthome.ui.adapter.detail.SceneSwitchAdapter;
 import com.ilop.sthome.ui.dialog.BaseListDialog;
 import com.ilop.sthome.utils.CoderALiUtils;
 import com.ilop.sthome.utils.greenDao.DeviceDaoUtil;
+import com.ilop.sthome.utils.greenDao.SceneDaoUtil;
 import com.ilop.sthome.utils.tools.ByteUtil;
 import com.siterwell.familywellplus.R;
 import com.siterwell.familywellplus.databinding.ActivityModeSwitchBinding;
@@ -42,11 +42,10 @@ public class AddModeSwitchActivity extends BaseActivity<ActivityModeSwitchBindin
 
     private SceneSwitchAdapter mAdapter;
     private SceneAliDAO mSceneDAO;
-    private SysmodelAliDAO mSysModelDAO;
     private ShortcutAliDAO shortcutDAO;
     private ShortcutAliBean shortcutBean;
     private SendSceneGroupDataAli mSend;
-    private List<SysModelAliBean> mSysModelBean;
+    private List<SceneBean> mScene;
     private List<String> mSysModelName;
 
     @Override
@@ -70,10 +69,9 @@ public class AddModeSwitchActivity extends BaseActivity<ActivityModeSwitchBindin
     protected void initView() {
         super.initView();
         mSceneDAO = new SceneAliDAO(this);
-        mSysModelDAO = new SysmodelAliDAO(this);
         shortcutDAO = new ShortcutAliDAO(this);
-        mSysModelBean = mSysModelDAO.findAllSys(mDeviceName);
-        mSysModelName = mSysModelDAO.findAllSysName(mDeviceName);
+        mScene = SceneDaoUtil.getInstance().findAllScene(mDeviceName);
+        mSysModelName = SceneDaoUtil.getInstance().findAllSceneName(mDeviceName);
         mAdapter = new SceneSwitchAdapter(mContext, mDevice);
         mDBind.modeList.setLayoutManager(new LinearLayoutManager(mContext));
         mDBind.modeList.setAdapter(mAdapter);
@@ -87,7 +85,7 @@ public class AddModeSwitchActivity extends BaseActivity<ActivityModeSwitchBindin
             mSysModelName.set(1,getResources().getString(R.string.out_mode));
             mSysModelName.set(2,getResources().getString(R.string.sleep_mode));
         }
-        mAdapter.setList(mSysModelBean);
+        mAdapter.setList(mScene);
     }
 
     @Override
@@ -97,16 +95,16 @@ public class AddModeSwitchActivity extends BaseActivity<ActivityModeSwitchBindin
         LiveDataBus.get().with("Switch_Mode", Integer.class).observe(this, integer -> {
             BaseListDialog mDialog = new BaseListDialog(mContext, i -> {
                 shortcutBean = new ShortcutAliBean();
-                shortcutBean.setDes_sid(mSysModelBean.get(i).getSid());
-                shortcutBean.setSrc_sid(mSysModelBean.get(integer).getSid());
+                shortcutBean.setDes_sid(mScene.get(i).getSid());
+                shortcutBean.setSrc_sid(mScene.get(integer).getSid());
                 shortcutBean.setDelay(0);
                 shortcutBean.setDeviceName(mDevice.getDeviceName());
                 shortcutBean.setEqid(mDevice.getDevice_ID());
-                String code = getCode(mSysModelBean.get(integer),shortcutBean.getEqid(),shortcutBean.getDes_sid());
+                String code = getCode(mScene.get(integer),shortcutBean.getEqid(),shortcutBean.getDes_sid());
                 String crc = ByteUtil.CRCmakerCharAndCode(code);
                 mSend.increaceSceneGroup(code+crc);
             });
-            String[] name = new String[mSysModelBean.size()];
+            String[] name = new String[mScene.size()];
             name = mSysModelName.toArray(name);
             mDialog.setMsgAndButton(name, getString(R.string.cancel));
             mDialog.setTitle(getString(R.string.please_choose_mode));
@@ -128,13 +126,13 @@ public class AddModeSwitchActivity extends BaseActivity<ActivityModeSwitchBindin
         }
     }
 
-    private String getCode(SysModelAliBean sysModelBean, int thiseqid, int des_sid) {
+    private String getCode(SceneBean mScene, int thiseqid, int des_sid) {
 
         String name = null;
-        if(sysModelBean.getSid()>2){
-            name = sysModelBean.getModleName();
+        if(mScene.getSid()>2){
+            name = mScene.getModleName();
         }else{
-            switch (sysModelBean.getSid()){
+            switch (mScene.getSid()){
                 case 0:
                     name = "Home";
                     break;
@@ -151,11 +149,11 @@ public class AddModeSwitchActivity extends BaseActivity<ActivityModeSwitchBindin
         int  length = 0;
         length+=2;//the total num length
 
-        String id2 = String.valueOf(sysModelBean.getSid());
+        String id2 = String.valueOf(mScene.getSid());
         length += 1;//the scene id
 
         String btnNum = "";
-        List<ShortcutAliBean> shortcutBeans = shortcutDAO.findShorcutsBysid(mDevice.getDeviceName(),sysModelBean.getSid());
+        List<ShortcutAliBean> shortcutBeans = shortcutDAO.findShorcutsBysid(mDevice.getDeviceName(),mScene.getSid());
 
 
 
@@ -247,7 +245,7 @@ public class AddModeSwitchActivity extends BaseActivity<ActivityModeSwitchBindin
         int scene =0;
         //scene id
         String sceneCode ="";
-        List<SceneAliBean> sceneBeanList = mSceneDAO.findAllAmBySid(sysModelBean.getSid(), mDevice.getDeviceName());
+        List<SceneAliBean> sceneBeanList = mSceneDAO.findAllAmBySid(mScene.getSid(), mDevice.getDeviceName());
         if(sceneBeanList.size()>0){
             for(int i = 0; i<sceneBeanList.size();i++){
                 scene++;
@@ -287,7 +285,7 @@ public class AddModeSwitchActivity extends BaseActivity<ActivityModeSwitchBindin
             oo = Integer.toHexString(scene);
         }
         String ds = CoderALiUtils.getAscii(name);
-        String fullCode = oooo +"0"+id2 + ds + btnNum  + oo + shortcut + sceneCode + sysModelBean.getColor();
+        String fullCode = oooo +"0"+id2 + ds + btnNum  + oo + shortcut + sceneCode + mScene.getColor();
         return fullCode;
 
     }

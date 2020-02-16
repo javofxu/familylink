@@ -9,14 +9,12 @@ import com.alibaba.fastjson.JSON;
 import com.aliyun.iot.aep.sdk.apiclient.callback.IoTResponse;
 import com.example.common.mvp.BasePresenterImpl;
 import com.example.common.utils.SpUtil;
-import com.ilop.sthome.app.MyApplication;
 import com.ilop.sthome.data.bean.GatewayBean;
-import com.ilop.sthome.data.bean.SysModelAliBean;
 import com.ilop.sthome.data.bean.VirtualUserBean;
-import com.ilop.sthome.data.db.SysmodelAliDAO;
 import com.ilop.sthome.data.greenDao.CameraBean;
 import com.ilop.sthome.data.greenDao.DeviceInfoBean;
 import com.ilop.sthome.data.greenDao.RoomBean;
+import com.ilop.sthome.data.greenDao.SceneBean;
 import com.ilop.sthome.mvp.contract.DeviceContract;
 import com.ilop.sthome.mvp.model.CommonModel;
 import com.ilop.sthome.mvp.model.common.CommonModelImpl;
@@ -43,6 +41,7 @@ import com.ilop.sthome.utils.CoderALiUtils;
 import com.ilop.sthome.utils.greenDao.CameraDaoUtil;
 import com.ilop.sthome.utils.greenDao.DeviceDaoUtil;
 import com.ilop.sthome.utils.greenDao.RoomDaoUtil;
+import com.ilop.sthome.utils.greenDao.SceneDaoUtil;
 import com.siterwell.familywellplus.R;
 
 import org.json.JSONArray;
@@ -62,7 +61,6 @@ public class DevicePresenter extends BasePresenterImpl<DeviceContract.IView> imp
 
     private static final String TAG = "DevicePresenter";
     private Context mContext;
-    private SysmodelAliDAO sysmodelAliDAO;
     private CommonModelImpl mModel;
     private Handler mHandler;
 
@@ -79,7 +77,6 @@ public class DevicePresenter extends BasePresenterImpl<DeviceContract.IView> imp
         this.mContext = mContext;
         mModel = new CommonModel();
         mHandler = new Handler();
-        sysmodelAliDAO = new SysmodelAliDAO(mContext);
     }
 
     @Override
@@ -98,7 +95,7 @@ public class DevicePresenter extends BasePresenterImpl<DeviceContract.IView> imp
                                 if ( DeviceDaoUtil.getInstance().findByDeviceId(deviceInfoBean.getDeviceName(), deviceInfoBean.getDevice_ID()) == null){
                                     DeviceDaoUtil.getInstance().insertGateway(deviceInfoBean);
                                 }
-                                if (sysmodelAliDAO.findAllSys(deviceInfoBean.getDeviceName()).size() <= 0) {
+                                if (SceneDaoUtil.getInstance().findAllScene(deviceInfoBean.getDeviceName()).size() <= 0) {
                                     initSaveSceneAndAuto(deviceInfoBean);
                                 }
 
@@ -323,13 +320,13 @@ public class DevicePresenter extends BasePresenterImpl<DeviceContract.IView> imp
 
     private void initSaveSceneAndAuto(DeviceInfoBean deviceInfoBean){
         for (int i = 0; i < 4; i++) {
-            SysModelAliBean sysModelAliBean = new SysModelAliBean();
-            sysModelAliBean.setDeviceName(deviceInfoBean.getDeviceName());
-            sysModelAliBean.setSid(i);
-            sysModelAliBean.setColor("F"+i);
-            sysModelAliBean.setModleName("");
-            if (i == 0) sysModelAliBean.setChoice(1);
-            sysmodelAliDAO.addinit(sysModelAliBean);
+            SceneBean mScene = new SceneBean();
+            mScene.setDeviceName(deviceInfoBean.getDeviceName());
+            mScene.setSid(i);
+            mScene.setColor("F"+i);
+            mScene.setModleName("");
+            if (i == 0) mScene.setChoice(1);
+            SceneDaoUtil.getInstance().addInitScene(mScene);
         }
     }
 

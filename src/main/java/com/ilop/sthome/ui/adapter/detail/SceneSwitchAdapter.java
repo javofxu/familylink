@@ -11,10 +11,10 @@ import android.widget.TextView;
 
 import com.example.common.utils.LiveDataBus;
 import com.ilop.sthome.data.bean.ShortcutAliBean;
-import com.ilop.sthome.data.bean.SysModelAliBean;
 import com.ilop.sthome.data.db.ShortcutAliDAO;
-import com.ilop.sthome.data.db.SysmodelAliDAO;
 import com.ilop.sthome.data.greenDao.DeviceInfoBean;
+import com.ilop.sthome.data.greenDao.SceneBean;
+import com.ilop.sthome.utils.greenDao.SceneDaoUtil;
 import com.siterwell.familywellplus.R;
 
 import java.util.List;
@@ -33,8 +33,7 @@ import butterknife.ButterKnife;
 public class SceneSwitchAdapter extends RecyclerView.Adapter<SceneSwitchAdapter.ItemHolder> {
 
     private Context mContext;
-    private List<SysModelAliBean> mList;
-    private SysmodelAliDAO mSysModelDAO;
+    private List<SceneBean> mList;
     private ShortcutAliDAO mShortCutDAO;
     private Map<Integer,String> mModel;
     private DeviceInfoBean equipmentBean;
@@ -42,12 +41,11 @@ public class SceneSwitchAdapter extends RecyclerView.Adapter<SceneSwitchAdapter.
     public SceneSwitchAdapter(Context mContext, DeviceInfoBean equipmentBean) {
         this.mContext = mContext;
         this.equipmentBean = equipmentBean;
-        mSysModelDAO = new SysmodelAliDAO(mContext);
         mShortCutDAO = new ShortcutAliDAO(mContext);
-        mModel = mSysModelDAO.findAllSysByHash(equipmentBean.getDeviceName());
+        mModel = SceneDaoUtil.getInstance().findAllSceneByMap(equipmentBean.getDeviceName());
     }
 
-    public void setList(List<SysModelAliBean> mList) {
+    public void setList(List<SceneBean> mList) {
         this.mList = mList;
         notifyDataSetChanged();
     }
@@ -61,7 +59,7 @@ public class SceneSwitchAdapter extends RecyclerView.Adapter<SceneSwitchAdapter.
 
     @Override
     public void onBindViewHolder(@NonNull ItemHolder itemHolder, int i) {
-        SysModelAliBean bean = mList.get(i);
+        SceneBean bean = mList.get(i);
         ShortcutAliBean shortcutBean = mShortCutDAO.findShortcutByeqid(bean.getSid(),equipmentBean.getDevice_ID(),equipmentBean.getDeviceName());
         if(shortcutBean==null){
             itemHolder.desImg.setImageResource(R.mipmap.icon_custom_online);

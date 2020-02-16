@@ -5,17 +5,17 @@ import android.content.Context;
 import com.example.common.mvp.BasePresenterImpl;
 import com.ilop.sthome.data.bean.SceneAliBean;
 import com.ilop.sthome.data.bean.ShortcutAliBean;
-import com.ilop.sthome.data.bean.SysModelAliBean;
 import com.ilop.sthome.data.db.SceneAliDAO;
 import com.ilop.sthome.data.db.SceneRelaitonAliDAO;
 import com.ilop.sthome.data.db.ShortcutAliDAO;
-import com.ilop.sthome.data.db.SysmodelAliDAO;
 import com.ilop.sthome.data.greenDao.DeviceInfoBean;
+import com.ilop.sthome.data.greenDao.SceneBean;
 import com.ilop.sthome.mvp.contract.SceneEditContract;
 import com.ilop.sthome.network.api.SendSceneGroupDataAli;
 import com.ilop.sthome.ui.dialog.TipDialog;
 import com.ilop.sthome.utils.CoderALiUtils;
 import com.ilop.sthome.utils.greenDao.DeviceDaoUtil;
+import com.ilop.sthome.utils.greenDao.SceneDaoUtil;
 import com.ilop.sthome.utils.tools.ByteUtil;
 import com.siterwell.familywellplus.R;
 
@@ -37,7 +37,6 @@ public class SceneEditPresenter extends BasePresenterImpl<SceneEditContract.IVie
     private String mColors;
     private SceneAliDAO mSceneAliDao;
     private ShortcutAliDAO mShortcutDAO;
-    private SysmodelAliDAO mSysModelAliDAO;
     private SendSceneGroupDataAli mSendSceneDataAli;
 
     public SceneEditPresenter(Context mContext, String mDeviceName, int sceneId) {
@@ -46,14 +45,13 @@ public class SceneEditPresenter extends BasePresenterImpl<SceneEditContract.IVie
         this.mDeviceName = mDeviceName;
         mSceneAliDao = new SceneAliDAO(mContext);
         mShortcutDAO = new ShortcutAliDAO(mContext);
-        mSysModelAliDAO = new SysmodelAliDAO(mContext);
         DeviceInfoBean mDeviceInfo = DeviceDaoUtil.getInstance().findGatewayByDeviceName(mDeviceName);
         mSendSceneDataAli = new SendSceneGroupDataAli(mContext, mDeviceInfo);
     }
 
     @Override
     public void refreshName() {
-        SysModelAliBean sysModelBean = mSysModelAliDAO.findBySid(mSceneId, mDeviceName);
+        SceneBean sysModelBean = SceneDaoUtil.getInstance().findSceneBySid(mSceneId, mDeviceName);
         mColors = sysModelBean.getColor();
         switch (mSceneId){
             case 0:
@@ -90,12 +88,12 @@ public class SceneEditPresenter extends BasePresenterImpl<SceneEditContract.IVie
 
     @Override
     public void onSaveSuccess() {
-        SysModelAliBean sys= new SysModelAliBean();
+        SceneBean sys= new SceneBean();
         sys.setSid(mSceneId);
         sys.setDeviceName(mDeviceName);
         sys.setColor(mColors);
         sys.setModleName(mName);
-        mSysModelAliDAO.insertSysmodel(sys);
+        SceneDaoUtil.getInstance().insertScene(sys);
         mView.onSuccess();
     }
 
@@ -119,7 +117,7 @@ public class SceneEditPresenter extends BasePresenterImpl<SceneEditContract.IVie
     public void deleteSceneSuccess(int sceneId) {
         SceneRelaitonAliDAO sceneRelaitonAliDAO = new SceneRelaitonAliDAO(mContext);
         ShortcutAliDAO shortcutAliDAO = new ShortcutAliDAO(mContext);
-        mSysModelAliDAO.delete(sceneId, mDeviceName);
+        SceneDaoUtil.getInstance().deleteBySid(sceneId, mDeviceName);
         sceneRelaitonAliDAO.deleteAllShortcurt(sceneId, mDeviceName);
         shortcutAliDAO.deleteAllShortcurt(sceneId, mDeviceName);
         mView.onSuccess();

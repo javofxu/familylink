@@ -10,7 +10,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.common.utils.LiveDataBus;
-import com.ilop.sthome.data.bean.SysModelAliBean;
+import com.ilop.sthome.data.greenDao.SceneBean;
 import com.siterwell.familywellplus.R;
 
 import java.util.List;
@@ -28,13 +28,13 @@ import butterknife.ButterKnife;
 public class SceneChangeAdapter extends RecyclerView.Adapter<SceneChangeAdapter.ItemHolder> {
 
     private Context mContext;
-    private List<SysModelAliBean> mList;
+    private List<SceneBean> mList;
 
     public SceneChangeAdapter(Context mContext) {
         this.mContext = mContext;
     }
 
-    public void setList(List<SysModelAliBean> mList) {
+    public void setList(List<SceneBean> mList) {
         this.mList = mList;
         notifyDataSetChanged();
     }
@@ -48,7 +48,7 @@ public class SceneChangeAdapter extends RecyclerView.Adapter<SceneChangeAdapter.
 
     @Override
     public void onBindViewHolder(@NonNull ItemHolder itemHolder, int i) {
-        SysModelAliBean mBean = mList.get(i);
+        SceneBean mBean = mList.get(i);
         switch (mBean.getSid()){
             case 0:
                 itemHolder.mIcon.setImageResource(R.mipmap.scene_at_home);

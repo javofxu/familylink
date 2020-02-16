@@ -7,13 +7,13 @@ import android.text.TextUtils;
 import com.ilop.sthome.data.bean.SceneAliBean;
 import com.ilop.sthome.data.bean.SceneRelationBean;
 import com.ilop.sthome.data.bean.ShortcutAliBean;
-import com.ilop.sthome.data.bean.SysModelAliBean;
 import com.ilop.sthome.data.db.SceneAliDAO;
 import com.ilop.sthome.data.db.SceneRelaitonAliDAO;
 import com.ilop.sthome.data.db.ShortcutAliDAO;
-import com.ilop.sthome.data.db.SysmodelAliDAO;
 import com.ilop.sthome.data.greenDao.DeviceInfoBean;
+import com.ilop.sthome.data.greenDao.SceneBean;
 import com.ilop.sthome.utils.greenDao.DeviceDaoUtil;
+import com.ilop.sthome.utils.greenDao.SceneDaoUtil;
 import com.ilop.sthome.utils.tools.ByteUtil;
 import com.litesuits.android.log.Log;
 import com.siterwell.familywellplus.R;
@@ -372,14 +372,13 @@ public class CoderALiUtils {
     public static String getSceneGroupCRC(Context context,String deviceid){
         String getSceneGroupCRC="",num="";
 
-        SysmodelAliDAO SD = new SysmodelAliDAO(context);
         ShortcutAliDAO shortcutDAO = new ShortcutAliDAO(context);
-        List<SysModelAliBean> slist = SD.findAllSys(deviceid);
+        List<SceneBean> slist = SceneDaoUtil.getInstance().findAllScene(deviceid);
 
         if(slist.size()>0){
             int codeLength = 2;
             List<Integer> sid = new ArrayList<>();
-            for(SysModelAliBean e : slist){
+            for(SceneBean e : slist){
                 sid.add(e.getSid());
             }
             for(int i = 0 ; i <slist.get(slist.size()-1).getSid()+1 ; i++) {//for here come with "0" , used slist.size()
@@ -387,7 +386,7 @@ public class CoderALiUtils {
                 if (sid.contains(i)) {
                     SceneRelaitonAliDAO SED = new SceneRelaitonAliDAO(context);
                     List<SceneRelationBean> sysSceneList = SED.findRelationsBysid(deviceid,i);
-                    SysModelAliBean sysModelBean = SD.findBySid(i,deviceid);
+                    SceneBean sysModelBean = SceneDaoUtil.getInstance().findSceneBySid(i,deviceid);
                     String name = sysModelBean.getModleName();
                     int length = 0;
                     byte scene_default = 0;

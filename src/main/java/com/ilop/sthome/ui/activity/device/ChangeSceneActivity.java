@@ -5,8 +5,8 @@ import android.support.v7.widget.LinearLayoutManager;
 import com.example.common.base.BasePActivity;
 import com.example.common.utils.LiveDataBus;
 import com.example.common.view.refresh.CustomRefreshView;
-import com.ilop.sthome.data.bean.SysModelAliBean;
 import com.ilop.sthome.data.event.EventRefreshScene;
+import com.ilop.sthome.data.greenDao.SceneBean;
 import com.ilop.sthome.mvp.contract.SceneChangeContract;
 import com.ilop.sthome.mvp.present.SceneChangePresenter;
 import com.ilop.sthome.ui.adapter.scene.SceneChangeAdapter;
@@ -60,8 +60,8 @@ public class ChangeSceneActivity extends BasePActivity<SceneChangePresenter, Act
     protected void initData() {
         super.initData();
         mPresent.getSceneList();
-        LiveDataBus.get().with("scene_change_list", SysModelAliBean.class).observe(this, sysModelAliBean -> {
-            mPresent.changeScene(sysModelAliBean);
+        LiveDataBus.get().with("scene_change_list", SceneBean.class).observe(this, sceneBean -> {
+            mPresent.changeScene(sceneBean);
         });
     }
 
@@ -92,7 +92,7 @@ public class ChangeSceneActivity extends BasePActivity<SceneChangePresenter, Act
     }
 
     @Override
-    public void showSceneList(List<SysModelAliBean> scene) {
+    public void showSceneList(List<SceneBean> scene) {
         mAdapter.setList(scene);
     }
 

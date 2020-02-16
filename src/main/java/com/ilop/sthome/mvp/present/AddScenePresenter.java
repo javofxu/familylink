@@ -7,14 +7,14 @@ import android.util.Log;
 import com.example.common.mvp.BasePresenterImpl;
 import com.ilop.sthome.data.bean.SceneAliBean;
 import com.ilop.sthome.data.bean.SceneRelationBean;
-import com.ilop.sthome.data.bean.SysModelAliBean;
 import com.ilop.sthome.data.db.SceneRelaitonAliDAO;
-import com.ilop.sthome.data.db.SysmodelAliDAO;
 import com.ilop.sthome.data.greenDao.DeviceInfoBean;
+import com.ilop.sthome.data.greenDao.SceneBean;
 import com.ilop.sthome.mvp.contract.AddSceneContract;
 import com.ilop.sthome.network.api.SendSceneGroupDataAli;
 import com.ilop.sthome.utils.CoderALiUtils;
 import com.ilop.sthome.utils.greenDao.DeviceDaoUtil;
+import com.ilop.sthome.utils.greenDao.SceneDaoUtil;
 import com.ilop.sthome.utils.tools.ByteUtil;
 import com.siterwell.familywellplus.R;
 
@@ -32,8 +32,7 @@ public class AddScenePresenter extends BasePresenterImpl<AddSceneContract.IView>
     private int length = 0;
     private int mGateway = 0;
     private String mColorCode = "F0";
-    private SysmodelAliDAO mSysModelAliDAO;
-    private SysModelAliBean mSysModelAliBean;
+    private SceneBean mScene;
     private SendSceneGroupDataAli mSendScene;
     private List<SceneAliBean> mSceneList;
     private List<DeviceInfoBean> mGatewayList;
@@ -41,7 +40,6 @@ public class AddScenePresenter extends BasePresenterImpl<AddSceneContract.IView>
     public AddScenePresenter(Context mContext) {
         this.mContext = mContext;
         mGatewayList = new ArrayList<>();
-        mSysModelAliDAO = new SysmodelAliDAO(mContext);
     }
 
     @Override
@@ -88,12 +86,11 @@ public class AddScenePresenter extends BasePresenterImpl<AddSceneContract.IView>
 
     @Override
     public void onSaveSuccess() {
-        mSysModelAliDAO = new SysmodelAliDAO(mContext);
-        if(!mSysModelAliDAO.isHasSysmodel(mSysModelAliBean.getSid(), mDeviceName)){
-            mSysModelAliDAO.add(mSysModelAliBean);
+        if(!SceneDaoUtil.getInstance().isHasScene(mScene.getSid(), mDeviceName)){
+            SceneDaoUtil.getInstance().getSceneDao().insert(mScene);
             for (int i = 0; i < mSceneList.size(); i++) {
                 SceneAliBean ab = mSceneList.get(i);
-                doAddToSceneTable(ab, mSysModelAliBean);
+                doAddToSceneTable(ab, mScene);
             }
         }
     }
@@ -107,7 +104,7 @@ public class AddScenePresenter extends BasePresenterImpl<AddSceneContract.IView>
 
     @Override
     public int getSid() {
-        List<Integer> list = mSysModelAliDAO.findAllSysmodelSid(mDeviceName);
+        List<Integer> list = SceneDaoUtil.getInstance().findAllSceneId(mDeviceName);
         if(list.size()<3){
             return -1;
         }else{
@@ -125,7 +122,7 @@ public class AddScenePresenter extends BasePresenterImpl<AddSceneContract.IView>
     }
 
 
-    private void doAddToSceneTable(SceneAliBean ab, SysModelAliBean sys2) {
+    private void doAddToSceneTable(SceneAliBean ab, SceneBean sys2) {
         try {
             SceneRelaitonAliDAO sceneRelaitonAliDAO = new SceneRelaitonAliDAO(mContext);
             SceneRelationBean sceneRelationBean = new SceneRelationBean();
@@ -163,11 +160,11 @@ public class AddScenePresenter extends BasePresenterImpl<AddSceneContract.IView>
     private void confirmToSys(List<SceneAliBean> list) {
         byte scene_default = 0;
         int id2 = getSid();
-        mSysModelAliBean = new SysModelAliBean();
-        mSysModelAliBean.setModleName(mSceneName);
-        mSysModelAliBean.setChoice(0);
-        mSysModelAliBean.setSid(id2);
-        mSysModelAliBean.setDeviceName(mDeviceName);
+        mScene = new SceneBean();
+        mScene.setModleName(mSceneName);
+        mScene.setChoice(0);
+        mScene.setSid(id2);
+        mScene.setDeviceName(mDeviceName);
         length += 2;
         length += 1;
         length += 1;
@@ -201,7 +198,7 @@ public class AddScenePresenter extends BasePresenterImpl<AddSceneContract.IView>
         scene_default = (byte)(scene_default|0x80);
         //增加了颜色的定制
         length+=2;
-        mSysModelAliBean.setColor(mColorCode);
+        mScene.setColor(mColorCode);
 
         String oooo = "0";
         if (Integer.toHexString(length+32).length() < 4) {

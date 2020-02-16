@@ -5,12 +5,12 @@ import android.util.Log;
 
 import com.ilop.sthome.data.bean.SceneRelationBean;
 import com.ilop.sthome.data.bean.ShortcutAliBean;
-import com.ilop.sthome.data.bean.SysModelAliBean;
 import com.ilop.sthome.data.db.SceneRelaitonAliDAO;
 import com.ilop.sthome.data.db.ShortcutAliDAO;
-import com.ilop.sthome.data.db.SysmodelAliDAO;
 import com.ilop.sthome.data.greenDao.DeviceInfoBean;
+import com.ilop.sthome.data.greenDao.SceneBean;
 import com.ilop.sthome.utils.CoderALiUtils;
+import com.ilop.sthome.utils.greenDao.SceneDaoUtil;
 import com.ilop.sthome.utils.tools.ByteUtil;
 
 import java.util.ArrayList;
@@ -25,7 +25,7 @@ public class DataFromAliSceneGroup {
     private DeviceInfoBean deviceInfoBean;
     private Context context;
     private SendSceneGroupDataAli ssgd;
-    private List<SysModelAliBean> sceneList;
+    private List<SceneBean> sceneList;
     public DataFromAliSceneGroup(Context context,DeviceInfoBean deviceInfoBean){
         this.context = context;
         sceneList = new ArrayList<>();
@@ -33,16 +33,14 @@ public class DataFromAliSceneGroup {
         getAllSceneId();
     }
 
-    public List<SysModelAliBean> getAllSceneId(){
-        SysmodelAliDAO SMD = new SysmodelAliDAO(context);
-        sceneList = SMD.findAllSys(this.deviceInfoBean.getDeviceName());
+    public List<SceneBean> getAllSceneId(){
+        sceneList = SceneDaoUtil.getInstance().findAllScene(this.deviceInfoBean.getDeviceName());
         ssgd = new SendSceneGroupDataAli(context,this.deviceInfoBean);
         return sceneList;
     }
 
     public void doSendSynCode(){
-        for (SysModelAliBean smb : sceneList){
-            Log.i(TAG,"for get syn data"+makeSceneCode(smb));
+        for (SceneBean smb : sceneList){
             ssgd.increaceSceneGroup(makeSceneCode(smb));
         }
     }
@@ -52,7 +50,7 @@ public class DataFromAliSceneGroup {
      * get scene group from local sql
      * @return
      */
-    public String makeSceneCode(SysModelAliBean smb){
+    public String makeSceneCode(SceneBean smb){
         byte scene_default  = 0;
         ShortcutAliDAO shortcutDAO = new ShortcutAliDAO(context);
         int sceneGroupId = smb.getSid();

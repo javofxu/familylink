@@ -2,17 +2,15 @@ package com.ilop.sthome.mvp.present;
 
 import android.content.Context;
 import android.content.Intent;
-import android.os.Parcelable;
 
 import com.example.common.mvp.BasePresenterImpl;
 import com.ilop.sthome.data.bean.SceneAliBean;
 import com.ilop.sthome.data.bean.SceneRelationBean;
-import com.ilop.sthome.data.bean.SysModelAliBean;
 import com.ilop.sthome.data.db.SceneAliDAO;
 import com.ilop.sthome.data.db.SceneRelaitonAliDAO;
-import com.ilop.sthome.data.db.SysmodelAliDAO;
 import com.ilop.sthome.data.enums.SmartProduct;
 import com.ilop.sthome.data.greenDao.DeviceInfoBean;
+import com.ilop.sthome.data.greenDao.SceneBean;
 import com.ilop.sthome.mvp.contract.AutomationContract;
 import com.ilop.sthome.network.api.DataFromAliSceneGroup;
 import com.ilop.sthome.network.api.SendSceneDataAli;
@@ -21,9 +19,9 @@ import com.ilop.sthome.ui.activity.scene.InputDetailActivity;
 import com.ilop.sthome.ui.activity.scene.SettingTimingActivity;
 import com.ilop.sthome.utils.CommandUtil;
 import com.ilop.sthome.utils.greenDao.DeviceDaoUtil;
+import com.ilop.sthome.utils.greenDao.SceneDaoUtil;
 import com.siterwell.familywellplus.R;
 
-import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -199,16 +197,15 @@ public class AutomationPresenter extends BasePresenterImpl<AutomationContract.IV
 
             if(!mModify){
                 mSceneAliDAO.addScence(mSceneAli);
-                SysmodelAliDAO sysModelDAO = new SysmodelAliDAO(mContext);
-                SysModelAliBean sysModelAliBean =  sysModelDAO.findIdByChoice(mDeviceName);
+                SceneBean mScene =  SceneDaoUtil.getInstance().findSceneByChoice(mDeviceName);
 
-                if(sysModelAliBean!=null){
+                if(mScene!=null){
                     SceneRelaitonAliDAO sceneRelaitonAliDAO = new SceneRelaitonAliDAO(mContext);
                     sceneRelaitonAliDAO.deleteAllShortcurt2(mSceneAli.getMid(), mDeviceName);
                     SceneRelationBean sceneRelationBean = new SceneRelationBean();
                     sceneRelationBean.setDeviceName(mDeviceName);
                     sceneRelationBean.setMid(mSceneAli.getMid());
-                    sceneRelationBean.setSid(sysModelAliBean.getSid());
+                    sceneRelationBean.setSid(mScene.getSid());
                     sceneRelaitonAliDAO.insertSceneRelation(sceneRelationBean);
                 }
             }else{

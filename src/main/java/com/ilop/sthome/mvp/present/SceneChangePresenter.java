@@ -3,12 +3,12 @@ package com.ilop.sthome.mvp.present;
 import android.content.Context;
 
 import com.example.common.mvp.BasePresenterImpl;
-import com.ilop.sthome.data.bean.SysModelAliBean;
-import com.ilop.sthome.data.db.SysmodelAliDAO;
 import com.ilop.sthome.data.greenDao.DeviceInfoBean;
+import com.ilop.sthome.data.greenDao.SceneBean;
 import com.ilop.sthome.mvp.contract.SceneChangeContract;
 import com.ilop.sthome.network.api.SendSceneGroupDataAli;
 import com.ilop.sthome.utils.greenDao.DeviceDaoUtil;
+import com.ilop.sthome.utils.greenDao.SceneDaoUtil;
 
 import java.util.List;
 
@@ -23,20 +23,18 @@ public class SceneChangePresenter extends BasePresenterImpl<SceneChangeContract.
 
     private Context mContext;
     private String mDeviceName;
-    private SysmodelAliDAO mSysModelAliDAO;
     private SendSceneGroupDataAli mSendSceneDataAli;
 
     public SceneChangePresenter(Context context, String deviceName) {
         this.mContext = context;
         this.mDeviceName = deviceName;
-        mSysModelAliDAO = new SysmodelAliDAO(mContext);
         DeviceInfoBean mDeviceInfo = DeviceDaoUtil.getInstance().findGatewayByDeviceName(mDeviceName);
         mSendSceneDataAli = new SendSceneGroupDataAli(mContext, mDeviceInfo);
     }
 
     @Override
     public void getSceneList() {
-        List<SysModelAliBean> mList = mSysModelAliDAO.findAllSys(mDeviceName);
+        List<SceneBean> mList = SceneDaoUtil.getInstance().findAllScene(mDeviceName);
         if (mList.size()>0){
             mView.showSceneList(mList);
         }else {
@@ -45,7 +43,7 @@ public class SceneChangePresenter extends BasePresenterImpl<SceneChangeContract.
     }
 
     @Override
-    public void changeScene(SysModelAliBean scene) {
+    public void changeScene(SceneBean scene) {
         if(scene.getChoice()!=1 && mDeviceName.equals(scene.getDeviceName())){
             mSendSceneDataAli.sceneGroupChose(scene.getSid());
             mView.showProgress();

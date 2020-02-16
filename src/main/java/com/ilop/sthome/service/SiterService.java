@@ -22,13 +22,7 @@ import com.example.common.utils.RxTimerUtil;
 import com.ilop.sthome.common.ControllerWifi;
 import com.ilop.sthome.common.SearchWifiHelper;
 import com.ilop.sthome.data.bean.SceneAliBean;
-import com.ilop.sthome.data.bean.SceneRelationBean;
-import com.ilop.sthome.data.bean.ShortcutAliBean;
-import com.ilop.sthome.data.bean.SysModelAliBean;
 import com.ilop.sthome.data.db.SceneAliDAO;
-import com.ilop.sthome.data.db.SceneRelaitonAliDAO;
-import com.ilop.sthome.data.db.ShortcutAliDAO;
-import com.ilop.sthome.data.db.SysmodelAliDAO;
 import com.ilop.sthome.data.enums.SmartProduct;
 import com.ilop.sthome.data.event.EventAnswerOK;
 import com.ilop.sthome.data.event.EventRefreshDevice;
@@ -39,6 +33,9 @@ import com.ilop.sthome.data.event.EventUdpReceive;
 import com.ilop.sthome.data.event.STEvent;
 import com.ilop.sthome.data.greenDao.DeviceInfoBean;
 import com.ilop.sthome.data.greenDao.HistoryBean;
+import com.ilop.sthome.data.greenDao.SceneBean;
+import com.ilop.sthome.data.greenDao.SceneRelationBean;
+import com.ilop.sthome.data.greenDao.SceneSwitchBean;
 import com.ilop.sthome.data.greenDao.WarnBean;
 import com.ilop.sthome.network.api.SendCommandAli;
 import com.ilop.sthome.network.api.SendEquipmentDataAli;
@@ -53,6 +50,9 @@ import com.ilop.sthome.utils.HistoryDataUtil;
 import com.ilop.sthome.utils.NetWorkUtil;
 import com.ilop.sthome.utils.greenDao.DeviceDaoUtil;
 import com.ilop.sthome.utils.greenDao.HistoryDaoUtil;
+import com.ilop.sthome.utils.greenDao.SceneDaoUtil;
+import com.ilop.sthome.utils.greenDao.SceneRelationDaoUtil;
+import com.ilop.sthome.utils.greenDao.SceneSwitchDaoUtil;
 import com.ilop.sthome.utils.greenDao.UserInfoDaoUtil;
 import com.ilop.sthome.utils.greenDao.WarnDaoUtil;
 import com.ilop.sthome.utils.tools.CacheUtil;
@@ -135,10 +135,9 @@ public class SiterService extends Service {
                             DeviceInfoBean deviceInfoBean = DeviceDaoUtil.getInstance().findGatewayByDeviceName(deviceName);
                             if(deviceInfoBean!=null){
                                 SendSceneDataAli sendSceneDataAli = new SendSceneDataAli(SiterService.this,deviceInfoBean);
-                                SysmodelAliDAO sysmodelAliDAO = new SysmodelAliDAO(SiterService.this);
-                                SysModelAliBean sysModelAliBean = sysmodelAliDAO.findIdByChoice(deviceName);
-                                if(sysModelAliBean!=null){
-                                    currentGroup = sysModelAliBean.getSid();
+                                SceneBean mScene = SceneDaoUtil.getInstance().findSceneByChoice(deviceName);
+                                if(mScene!=null){
+                                    currentGroup = mScene.getSid();
                                     String crcscene= CoderALiUtils.getSceneCRC(SiterService.this,deviceName);
                                     String crcscene_group= CoderALiUtils.getSceneGroupCRC(SiterService.this,deviceName);
                                     sendSceneDataAli.synGetSceneInformation(currentGroup,crcscene_group,crcscene);
@@ -560,8 +559,7 @@ public class SiterService extends Service {
 
     private void uploadCurrentSceneGroup(String deviceName, String current){
         int sid = Integer.parseInt(current, 16);
-        SysmodelAliDAO sysmodelAliDAO = new SysmodelAliDAO(SiterService.this);
-        sysmodelAliDAO.updateChoice(sid, deviceName);
+        SceneDaoUtil.getInstance().updateChoice(sid, deviceName);
         DeviceDaoUtil.getInstance().updateGatewayCurrentSid(deviceName, sid);
         EventRefreshScene eventRefreshDevice = new EventRefreshScene();
         eventRefreshDevice.setDeviceName(deviceName);
@@ -571,71 +569,64 @@ public class SiterService extends Service {
     private void uploadSceneGroupInfo(String deviceName, String content){
         if (content.startsWith("0000")) {
             int sid = Integer.parseInt(content.substring(4), 16);
-            SceneRelaitonAliDAO sceneRelaitonAliDAO = new SceneRelaitonAliDAO(SiterService.this);
-            ShortcutAliDAO shortcutAliDAO = new ShortcutAliDAO(SiterService.this);
-            sceneRelaitonAliDAO.deleteAllShortcurt(sid, deviceName);
-            SysmodelAliDAO sysmodelAliDAO = new SysmodelAliDAO(SiterService.this);
+            SceneRelationDaoUtil.getInstance().deleteAllRelation(sid, deviceName);
             if (sid <= 2) {
-                sysmodelAliDAO.updateColor(sid, "F" + sid, deviceName);
+                SceneDaoUtil.getInstance().updateColor(sid, "F" + sid, deviceName);
             } else {
-                sysmodelAliDAO.delete(sid, deviceName);
+                SceneDaoUtil.getInstance().deleteBySid(sid, deviceName);
             }
-            sceneRelaitonAliDAO.deleteAllShortcurt(sid, deviceName);
-            shortcutAliDAO.deleteAllShortcurt(sid, deviceName);
+            SceneRelationDaoUtil.getInstance().deleteAllRelation(sid, deviceName);
+            SceneSwitchDaoUtil.getInstance().deleteAllSwitch(sid, deviceName);
         } else {
-            SysModelAliBean sysModelAliBean = new SysModelAliBean();
-            sysModelAliBean.setCode(content);
-            sysModelAliBean.setDeviceName(deviceName);
+            SceneBean mScene = new SceneBean();
+            mScene.setCode(content);
+            mScene.setDeviceName(deviceName);
             if (content.length() >= 32) {
-                sysModelAliBean.create(deviceName);
-                SceneRelaitonAliDAO sceneRelaitonAliDAO = new SceneRelaitonAliDAO(SiterService.this);
-                SysmodelAliDAO sysmodelAliDAO = new SysmodelAliDAO(SiterService.this);
-                sysmodelAliDAO.insertSysmodel(sysModelAliBean);
+                mScene.createScene(deviceName);
+                SceneDaoUtil.getInstance().insertScene(mScene);
 
-                if (sysModelAliBean.getSceneRelationBeanList() != null && sysModelAliBean.getSceneRelationBeanList().size() > 0) {
-
-                    sceneRelaitonAliDAO.deleteAllShortcurt(sysModelAliBean.getSid(), deviceName);
-                    for (SceneRelationBean sceneRelationBean : sysModelAliBean.getSceneRelationBeanList()) {
-                        sceneRelaitonAliDAO.insertSceneRelation(sceneRelationBean);
+                if (mScene.getRelationList() != null && mScene.getRelationList().size() > 0) {
+                    SceneRelationDaoUtil.getInstance().deleteAllRelation(mScene.getSid(), deviceName);
+                    for (SceneRelationBean sceneRelationBean : mScene.getRelationList()) {
+                        SceneRelationDaoUtil.getInstance().insertSceneRelation(sceneRelationBean);
                     }
                 }
 
-                if (sysModelAliBean.getShortcutAliBeanList() != null && sysModelAliBean.getShortcutAliBeanList().size() > 0) {
-                    ShortcutAliDAO shortcutAliDAO = new ShortcutAliDAO(SiterService.this);
-                    shortcutAliDAO.deleteAllShortcurt(sysModelAliBean.getSid(), deviceName);
-                    for (ShortcutAliBean shortcutAliBean : sysModelAliBean.getShortcutAliBeanList()) {
-                        shortcutAliDAO.insertShortcut(shortcutAliBean);
+                if (mScene.getSwitchList() != null && mScene.getSwitchList().size() > 0) {
+                    SceneSwitchDaoUtil.getInstance().deleteAllSwitch(mScene.getSid(), deviceName);
+                    for (SceneSwitchBean shortcutAliBean : mScene.getSwitchList()) {
+                        SceneSwitchDaoUtil.getInstance().insertSwitch(shortcutAliBean);
                     }
                 }
 
-                if ((sysModelAliBean.getScene_default() & 0x01) != 0) {
+                if ((mScene.getScene_default() & 0x01) != 0) {
                     SceneRelationBean sceneRelationBean = new SceneRelationBean();
-                    sceneRelationBean.setSid(sysModelAliBean.getSid());
+                    sceneRelationBean.setSid(mScene.getSid());
                     sceneRelationBean.setMid(129);
                     sceneRelationBean.setDeviceName(deviceName);
-                    sceneRelaitonAliDAO.insertSceneRelation(sceneRelationBean);
+                    SceneRelationDaoUtil.getInstance().insertSceneRelation(sceneRelationBean);
                 } else {
-                    sceneRelaitonAliDAO.deleteRelation(129, sysModelAliBean.getSid(), deviceName);
+                    SceneRelationDaoUtil.getInstance().deleteRelation(129, mScene.getSid(), deviceName);
                 }
 
-                if ((sysModelAliBean.getScene_default() & 0x02) != 0) {
+                if ((mScene.getScene_default() & 0x02) != 0) {
                     SceneRelationBean sceneRelationBean = new SceneRelationBean();
-                    sceneRelationBean.setSid(sysModelAliBean.getSid());
+                    sceneRelationBean.setSid(mScene.getSid());
                     sceneRelationBean.setMid(130);
                     sceneRelationBean.setDeviceName(deviceName);
-                    sceneRelaitonAliDAO.insertSceneRelation(sceneRelationBean);
+                    SceneRelationDaoUtil.getInstance().insertSceneRelation(sceneRelationBean);
                 } else {
-                    sceneRelaitonAliDAO.deleteRelation(130, sysModelAliBean.getSid(), deviceName);
+                    SceneRelationDaoUtil.getInstance().deleteRelation(130, mScene.getSid(), deviceName);
                 }
 
-                if ((sysModelAliBean.getScene_default() & 0x04) != 0) {
+                if ((mScene.getScene_default() & 0x04) != 0) {
                     SceneRelationBean sceneRelationBean = new SceneRelationBean();
-                    sceneRelationBean.setSid(sysModelAliBean.getSid());
+                    sceneRelationBean.setSid(mScene.getSid());
                     sceneRelationBean.setMid(131);
                     sceneRelationBean.setDeviceName(deviceName);
-                    sceneRelaitonAliDAO.insertSceneRelation(sceneRelationBean);
+                    SceneRelationDaoUtil.getInstance().insertSceneRelation(sceneRelationBean);
                 } else {
-                    sceneRelaitonAliDAO.deleteRelation(131, sysModelAliBean.getSid(), deviceName);
+                    SceneRelationDaoUtil.getInstance().deleteRelation(131, mScene.getSid(), deviceName);
                 }
             }
 
@@ -647,8 +638,7 @@ public class SiterService extends Service {
         if ("OVER".equals(content)) {
             int current_mode = DeviceDaoUtil.getInstance().findGatewayCurrentSid(deviceName);
             if (current_mode >= 0) {
-                SysmodelAliDAO sysmodelAliDAO = new SysmodelAliDAO(SiterService.this);
-                sysmodelAliDAO.updateChoice(current_mode, deviceName);
+                SceneDaoUtil.getInstance().updateChoice(current_mode, deviceName);
             }
             Message message = Message.obtain();
             message.obj = deviceName;
@@ -656,10 +646,9 @@ public class SiterService extends Service {
             handler.sendMessageDelayed(message, 0);
         } else if (content.startsWith("0000")) {
             int mid = Integer.parseInt(content.substring(4, 6), 16);
-            SceneRelaitonAliDAO sceneRelaitonAliDAO = new SceneRelaitonAliDAO(SiterService.this);
             SceneAliDAO sceneAliDAO = new SceneAliDAO(SiterService.this);
             sceneAliDAO.deleteByMid(mid, deviceName);
-            sceneRelaitonAliDAO.deleteAllShortcurt2(mid, deviceName);
+            SceneRelationDaoUtil.getInstance().deleteAllRelation2(mid, deviceName);
         } else {
             SceneAliBean sceneAliBean = new SceneAliBean();
             sceneAliBean.setCode(content);

@@ -8,17 +8,17 @@ import com.example.common.mvp.BasePresenterImpl;
 import com.ilop.sthome.data.bean.SceneAliBean;
 import com.ilop.sthome.data.bean.SceneRelationBean;
 import com.ilop.sthome.data.bean.ShortcutAliBean;
-import com.ilop.sthome.data.bean.SysModelAliBean;
 import com.ilop.sthome.data.db.SceneAliDAO;
 import com.ilop.sthome.data.db.SceneRelaitonAliDAO;
 import com.ilop.sthome.data.db.ShortcutAliDAO;
-import com.ilop.sthome.data.db.SysmodelAliDAO;
 import com.ilop.sthome.data.greenDao.DeviceInfoBean;
+import com.ilop.sthome.data.greenDao.SceneBean;
 import com.ilop.sthome.mvp.contract.SceneDetailContract;
 import com.ilop.sthome.network.api.SendSceneGroupDataAli;
 import com.ilop.sthome.ui.activity.scene.AutomationDetailActivity;
 import com.ilop.sthome.utils.CoderALiUtils;
 import com.ilop.sthome.utils.greenDao.DeviceDaoUtil;
+import com.ilop.sthome.utils.greenDao.SceneDaoUtil;
 import com.ilop.sthome.utils.tools.ByteUtil;
 import com.siterwell.familywellplus.R;
 
@@ -38,7 +38,6 @@ public class SceneDetailPresenter extends BasePresenterImpl<SceneDetailContract.
     private Context mContext;
     private SceneAliDAO mSceneAliDAO;
     private ShortcutAliDAO mShortcutDAO;
-    private SysmodelAliDAO mSysModelAliDAO;
     private SendSceneGroupDataAli mSendScene;
     private SceneRelaitonAliDAO mSceneRelationAliDAO;
 
@@ -51,7 +50,6 @@ public class SceneDetailPresenter extends BasePresenterImpl<SceneDetailContract.
         this.mContext = mContext;
         this.mDeviceName = deviceName;
         this.mSceneId = sceneId;
-        mSysModelAliDAO = new SysmodelAliDAO(mContext);
         mSceneAliDAO = new SceneAliDAO(mContext);
         mShortcutDAO = new ShortcutAliDAO(mContext);
         mSceneRelationAliDAO = new SceneRelaitonAliDAO(mContext);
@@ -61,7 +59,7 @@ public class SceneDetailPresenter extends BasePresenterImpl<SceneDetailContract.
 
     @Override
     public void getSceneName() {
-        SysModelAliBean sysModelBean = mSysModelAliDAO.findBySid(mSceneId, mDeviceName);
+        SceneBean sysModelBean = SceneDaoUtil.getInstance().findSceneBySid(mSceneId, mDeviceName);
         mColors = sysModelBean.getColor();
         String mTitleName = sysModelBean.getModleName();
         switch (mSceneId){
@@ -103,12 +101,12 @@ public class SceneDetailPresenter extends BasePresenterImpl<SceneDetailContract.
 
     @Override
     public void onSaveSuccess(List<SceneAliBean> mSceneList) {
-        SysModelAliBean sys= new SysModelAliBean();
+        SceneBean sys= new SceneBean();
         sys.setSid(mSceneId);
         sys.setDeviceName(mDeviceName);
         sys.setColor(mColors);
         sys.setModleName(mSceneName);
-        mSysModelAliDAO.insertSysmodel(sys);
+        SceneDaoUtil.getInstance().insertScene(sys);
         mSceneRelationAliDAO.deleteAllShortcurt(mSceneId, mDeviceName);
         if(mSceneList.size()>0) {
             for (int i = 0; i < mSceneList.size(); i++) {
@@ -223,7 +221,7 @@ public class SceneDetailPresenter extends BasePresenterImpl<SceneDetailContract.
         mSendScene.increaceSceneGroup(fullCode + crc);
     }
 
-    private void toAddSceneDb(SceneAliBean ab, SysModelAliBean sys2) {
+    private void toAddSceneDb(SceneAliBean ab, SceneBean sys2) {
         try {
             SceneRelationBean sceneRelationBean = new SceneRelationBean();
             sceneRelationBean.setSid(sys2.getSid());

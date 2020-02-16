@@ -2,7 +2,7 @@ package com.ilop.sthome.mvp.contract;
 
 import com.example.common.mvp.IBasePresenter;
 import com.example.common.mvp.IBaseView;
-import com.ilop.sthome.data.bean.SysModelAliBean;
+import com.ilop.sthome.data.greenDao.SceneBean;
 
 import java.util.List;
 
@@ -17,7 +17,7 @@ public interface SceneChangeContract{
 
     interface IView extends IBaseView{
 
-        void showSceneList(List<SysModelAliBean> scene);
+        void showSceneList(List<SceneBean> scene);
 
         void withOutScene();
 
@@ -28,6 +28,6 @@ public interface SceneChangeContract{
 
         void getSceneList();
 
-        void changeScene(SysModelAliBean scene);
+        void changeScene(SceneBean scene);
     }
 }

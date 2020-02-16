@@ -5,10 +5,9 @@ import android.content.Intent;
 import android.text.TextUtils;
 
 import com.example.common.mvp.BasePresenterImpl;
-import com.ilop.sthome.data.bean.SysModelAliBean;
-import com.ilop.sthome.data.db.SysmodelAliDAO;
 import com.ilop.sthome.data.enums.DevType;
 import com.ilop.sthome.data.greenDao.DeviceInfoBean;
+import com.ilop.sthome.data.greenDao.SceneBean;
 import com.ilop.sthome.mvp.contract.GatewayContract;
 import com.ilop.sthome.ui.activity.detail.ButtonDetailActivity;
 import com.ilop.sthome.ui.activity.detail.CoDetailActivity;
@@ -27,6 +26,7 @@ import com.ilop.sthome.ui.activity.detail.TempControlDetailActivity;
 import com.ilop.sthome.ui.activity.detail.ThermalDetailActivity;
 import com.ilop.sthome.ui.activity.detail.WaterDetailActivity;
 import com.ilop.sthome.utils.greenDao.DeviceDaoUtil;
+import com.ilop.sthome.utils.greenDao.SceneDaoUtil;
 import com.siterwell.familywellplus.R;
 
 import java.util.Arrays;
@@ -43,12 +43,10 @@ public class GatewayPresenter extends BasePresenterImpl<GatewayContract.IView> i
 
     private Context mContext;
     private String mDeviceName;
-    private SysmodelAliDAO mSysModelAliDAO;
 
     public GatewayPresenter(Context mContext, String deviceName) {
         this.mContext = mContext;
         this.mDeviceName = deviceName;
-        mSysModelAliDAO = new SysmodelAliDAO(mContext);
     }
 
     @Override
@@ -66,12 +64,12 @@ public class GatewayPresenter extends BasePresenterImpl<GatewayContract.IView> i
         DeviceInfoBean deviceInfoBean = DeviceDaoUtil.getInstance().findGatewayByDeviceName(mDeviceName);
         int state = deviceInfoBean.getStatus();
         String name = TextUtils.isEmpty(deviceInfoBean.getNickName())? mContext.getResources().getString(DevType.getType(deviceInfoBean.getProductKey()).getTypeStrId()):deviceInfoBean.getNickName();
-        SysModelAliBean sysModelAliBean = mSysModelAliDAO.findIdByChoice(mDeviceName);
+        SceneBean mScene = SceneDaoUtil.getInstance().findSceneByChoice(mDeviceName);
         String mode ;
-        if(sysModelAliBean==null){
+        if(mScene==null){
             mode = mContext.getString(R.string.current_mode) + mContext.getString(R.string.home_mode);
         }else {
-            switch (sysModelAliBean.getSid()){
+            switch (mScene.getSid()){
                 case 0:
                     mode = mContext.getString(R.string.current_mode) + mContext.getString(R.string.home_mode);
                     break;
@@ -82,7 +80,7 @@ public class GatewayPresenter extends BasePresenterImpl<GatewayContract.IView> i
                     mode = mContext.getString(R.string.current_mode) + mContext.getString(R.string.sleep_mode);
                     break;
                 default:
-                    mode = mContext.getString(R.string.current_mode) + sysModelAliBean.getModleName();
+                    mode = mContext.getString(R.string.current_mode) + mScene.getModleName();
                     break;
             }
         }

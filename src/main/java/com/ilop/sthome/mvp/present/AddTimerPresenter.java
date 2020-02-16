@@ -3,9 +3,9 @@ package com.ilop.sthome.mvp.present;
 import android.content.Context;
 
 import com.example.common.mvp.BasePresenterImpl;
-import com.ilop.sthome.data.bean.SysModelAliBean;
-import com.ilop.sthome.data.db.SysmodelAliDAO;
+import com.ilop.sthome.data.greenDao.SceneBean;
 import com.ilop.sthome.mvp.contract.AddTimerContract;
+import com.ilop.sthome.utils.greenDao.SceneDaoUtil;
 import com.ilop.sthome.utils.tools.ByteUtil;
 import com.siterwell.familywellplus.R;
 
@@ -21,22 +21,20 @@ import java.util.List;
 public class AddTimerPresenter extends BasePresenterImpl<AddTimerContract.IView> implements AddTimerContract.IPresent {
 
     private Context mContext;
-    private List<SysModelAliBean> mSysList;
+    private List<SceneBean> mSceneList;
     private ArrayList<String> items_hour;
     private ArrayList<String> items_min;
     private ArrayList<String> mSysNameList;
     private String deviceName;
 
-    private SysmodelAliDAO mSysModelDAO;
 
     public AddTimerPresenter(Context mContext, String deviceName) {
         this.mContext = mContext;
         this.deviceName = deviceName;
-        mSysList = new ArrayList<>();
+        mSceneList = new ArrayList<>();
         items_hour = new ArrayList<>();
         items_min = new ArrayList<>();
         mSysNameList = new ArrayList<>();
-        mSysModelDAO = new SysmodelAliDAO(mContext);
     }
 
     @Override
@@ -57,8 +55,8 @@ public class AddTimerPresenter extends BasePresenterImpl<AddTimerContract.IView>
             items_min.add(item);
         }
         mSysNameList.clear();
-        mSysList = mSysModelDAO.findAllSys(deviceName);
-        for(SysModelAliBean sysModelBean : mSysList){
+        mSceneList = SceneDaoUtil.getInstance().findAllScene(deviceName);
+        for(SceneBean sysModelBean : mSceneList){
             if(sysModelBean.getSid()==0){
                 mSysNameList.add(mContext.getString(R.string.home_mode));
             }else if(sysModelBean.getSid()==1){

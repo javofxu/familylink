@@ -21,15 +21,15 @@ import com.aliyun.iot.aep.sdk.login.ILogoutCallback;
 import com.aliyun.iot.aep.sdk.login.LoginBusiness;
 import com.example.common.base.BaseActivity;
 import com.ilop.sthome.data.bean.SceneAliBean;
-import com.ilop.sthome.data.bean.SysModelAliBean;
 import com.ilop.sthome.data.db.SceneAliDAO;
-import com.ilop.sthome.data.db.SysmodelAliDAO;
 import com.ilop.sthome.data.greenDao.DeviceInfoBean;
+import com.ilop.sthome.data.greenDao.SceneBean;
 import com.ilop.sthome.ui.activity.main.QRCodeActivity;
 import com.ilop.sthome.ui.activity.main.StartActivity;
 import com.ilop.sthome.ui.adapter.device.DeviceShareAdapter;
 import com.ilop.sthome.ui.dialog.TipDialog;
 import com.ilop.sthome.utils.greenDao.DeviceDaoUtil;
+import com.ilop.sthome.utils.greenDao.SceneDaoUtil;
 import com.siterwell.familywellplus.R;
 import com.siterwell.familywellplus.databinding.ActivityShareListBinding;
 
@@ -53,7 +53,6 @@ public class ShareListActivity extends BaseActivity<ActivityShareListBinding> {
 
     private DeviceShareAdapter mAdapter;
     private List<DeviceInfoBean> mDeviceInfoList;
-    private SysmodelAliDAO mSysModelAliDAO;
     private SceneAliDAO mSceneAliDAO;
 
     @Override
@@ -71,7 +70,6 @@ public class ShareListActivity extends BaseActivity<ActivityShareListBinding> {
     protected void initView() {
         super.initView();
         mSceneAliDAO = new SceneAliDAO(this);
-        mSysModelAliDAO = new SysmodelAliDAO(this);
         View empty = findViewById(R.id.empty);
         TextView textView_em  = empty.findViewById(R.id.tv_empty);
         textView_em.setText(getResources().getString(R.string.ali_device_empty));
@@ -344,27 +342,27 @@ public class ShareListActivity extends BaseActivity<ActivityShareListBinding> {
 
                     for (DeviceInfoBean deviceInfoBean:deviceInfoBeanList){
                         DeviceDaoUtil.getInstance().insertGateway(deviceInfoBean);
-                        SysModelAliBean sysModelAliBean = new SysModelAliBean();
-                        sysModelAliBean.setDeviceName(deviceInfoBean.getDeviceName());
-                        sysModelAliBean.setSid(0);
-                        sysModelAliBean.setColor("F0");
-                        sysModelAliBean.setModleName("");
-                        sysModelAliBean.setChoice(1);
-                        mSysModelAliDAO.addinit(sysModelAliBean);
+                        SceneBean mScene = new SceneBean();
+                        mScene.setDeviceName(deviceInfoBean.getDeviceName());
+                        mScene.setSid(0);
+                        mScene.setColor("F0");
+                        mScene.setModleName("");
+                        mScene.setChoice(1);
+                        SceneDaoUtil.getInstance().addInitScene(mScene);
 
-                        SysModelAliBean sysModelAliBean1 = new SysModelAliBean();
-                        sysModelAliBean1.setDeviceName(deviceInfoBean.getDeviceName());
-                        sysModelAliBean1.setSid(1);
-                        sysModelAliBean1.setModleName("");
-                        sysModelAliBean1.setColor("F1");
-                        mSysModelAliDAO.addinit(sysModelAliBean1);
+                        SceneBean mScene1 = new SceneBean();
+                        mScene1.setDeviceName(deviceInfoBean.getDeviceName());
+                        mScene1.setSid(1);
+                        mScene1.setModleName("");
+                        mScene1.setColor("F1");
+                        SceneDaoUtil.getInstance().addInitScene(mScene1);
 
-                        SysModelAliBean sysModelAliBean2 = new SysModelAliBean();
-                        sysModelAliBean2.setDeviceName(deviceInfoBean.getDeviceName());
-                        sysModelAliBean2.setSid(2);
-                        sysModelAliBean2.setColor("F2");
-                        sysModelAliBean2.setModleName("");
-                        mSysModelAliDAO.addinit(sysModelAliBean2);
+                        SceneBean mScene2 = new SceneBean();
+                        mScene2.setDeviceName(deviceInfoBean.getDeviceName());
+                        mScene2.setSid(2);
+                        mScene2.setColor("F2");
+                        mScene2.setModleName("");
+                        SceneDaoUtil.getInstance().addInitScene(mScene2);
 
                         SceneAliBean sceneBean = new SceneAliBean();
                         sceneBean.setDeviceName(deviceInfoBean.getDeviceName());
