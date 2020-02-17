@@ -2,9 +2,9 @@ package com.ilop.sthome.utils;
 
 import android.content.Context;
 
-import com.ilop.sthome.data.bean.SceneAliBean;
-import com.ilop.sthome.data.db.SceneAliDAO;
+import com.ilop.sthome.data.greenDao.AutomationBean;
 import com.ilop.sthome.data.greenDao.DeviceInfoBean;
+import com.ilop.sthome.utils.greenDao.AutomationDaoUtil;
 import com.ilop.sthome.utils.tools.ByteUtil;
 import com.ilop.sthome.utils.tools.UnitTools;
 
@@ -17,12 +17,12 @@ import java.util.List;
  */
 public class CommandUtil {
 
-    private static SceneAliBean mScene;
+    private static AutomationBean mAutomation;
     private static String mMessageCode;
 
-    public static String addModle(String name, String trigger, SceneAliBean sceneAliBean, List<DeviceInfoBean> input, List<DeviceInfoBean> output){
+    public static String addModle(String name, String trigger, AutomationBean mAuto, List<DeviceInfoBean> input, List<DeviceInfoBean> output){
 
-        mScene = sceneAliBean;
+        mAutomation = mAuto;
         int length = 2;//自动化长度
         length += 1;//系统自动化编号
 
@@ -148,9 +148,9 @@ public class CommandUtil {
         }
 
         String ooo = "";
-        int amid2 = mScene.getMid();
+        int amid2 = mAutomation.getMid();
         String amid1 = Integer.toHexString(amid2);
-        if(Integer.toHexString(mScene.getMid()).length()<2){
+        if(Integer.toHexString(mAutomation.getMid()).length()<2){
             for(int i =0; i<2 - amid1.length();i++){
                 ooo += 0;
             }
@@ -183,7 +183,7 @@ public class CommandUtil {
         return abc;
     }
 
-    public static String  getCode(String name, String trigger, SceneAliBean sceneAliBean, List<DeviceInfoBean> input, List<DeviceInfoBean> output) {
+    public static String  getCode(String name, String trigger, AutomationBean mAutomation, List<DeviceInfoBean> input, List<DeviceInfoBean> output) {
         int length = 2;//自动化长度
         length += 1;//系统自动化编号
 
@@ -310,9 +310,9 @@ public class CommandUtil {
         }
 
         String ooo = "";
-        int amid2 = sceneAliBean.getMid();
+        int amid2 = mAutomation.getMid();
         String amid1 = Integer.toHexString(amid2);
-        if(Integer.toHexString(sceneAliBean.getMid()).length()<2){
+        if(Integer.toHexString(mAutomation.getMid()).length()<2){
             for(int i =0; i<2 - amid1.length();i++){
                 ooo += 0;
             }
@@ -347,8 +347,7 @@ public class CommandUtil {
     }
 
     public static int getMid(Context context, String deviceName){
-        SceneAliDAO SED = new SceneAliDAO(context);
-        List<Integer> list = SED.findAllMid(deviceName);
+        List<Integer> list = AutomationDaoUtil.getInstance().findAllMid(deviceName);
 
         if(list.size()==0){
             return 1;

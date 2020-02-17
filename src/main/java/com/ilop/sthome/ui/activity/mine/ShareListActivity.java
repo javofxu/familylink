@@ -20,8 +20,6 @@ import com.aliyun.iot.aep.sdk.log.ALog;
 import com.aliyun.iot.aep.sdk.login.ILogoutCallback;
 import com.aliyun.iot.aep.sdk.login.LoginBusiness;
 import com.example.common.base.BaseActivity;
-import com.ilop.sthome.data.bean.SceneAliBean;
-import com.ilop.sthome.data.db.SceneAliDAO;
 import com.ilop.sthome.data.greenDao.DeviceInfoBean;
 import com.ilop.sthome.data.greenDao.SceneBean;
 import com.ilop.sthome.ui.activity.main.QRCodeActivity;
@@ -53,7 +51,6 @@ public class ShareListActivity extends BaseActivity<ActivityShareListBinding> {
 
     private DeviceShareAdapter mAdapter;
     private List<DeviceInfoBean> mDeviceInfoList;
-    private SceneAliDAO mSceneAliDAO;
 
     @Override
     protected int getLayoutId() {
@@ -69,7 +66,6 @@ public class ShareListActivity extends BaseActivity<ActivityShareListBinding> {
     @Override
     protected void initView() {
         super.initView();
-        mSceneAliDAO = new SceneAliDAO(this);
         View empty = findViewById(R.id.empty);
         TextView textView_em  = empty.findViewById(R.id.tv_empty);
         textView_em.setText(getResources().getString(R.string.ali_device_empty));
@@ -363,27 +359,6 @@ public class ShareListActivity extends BaseActivity<ActivityShareListBinding> {
                         mScene2.setColor("F2");
                         mScene2.setModleName("");
                         SceneDaoUtil.getInstance().addInitScene(mScene2);
-
-                        SceneAliBean sceneBean = new SceneAliBean();
-                        sceneBean.setDeviceName(deviceInfoBean.getDeviceName());
-                        sceneBean.setMid(129);
-                        sceneBean.setCode("");
-                        sceneBean.setName("");
-                        mSceneAliDAO.addinit(sceneBean);
-
-                        SceneAliBean sceneBean2 = new SceneAliBean();
-                        sceneBean2.setDeviceName(deviceInfoBean.getDeviceName());
-                        sceneBean2.setMid(130);
-                        sceneBean2.setCode("");
-                        sceneBean2.setName("");
-                        mSceneAliDAO.addinit(sceneBean2);
-
-                        SceneAliBean sceneBean3 = new SceneAliBean();
-                        sceneBean3.setDeviceName(deviceInfoBean.getDeviceName());
-                        sceneBean3.setMid(131);
-                        sceneBean3.setCode("");
-                        sceneBean3.setName("");
-                        mSceneAliDAO.addinit(sceneBean3);
                     }
                     handler.sendEmptyMessage(REFRESH);
                 } catch (Exception e) {

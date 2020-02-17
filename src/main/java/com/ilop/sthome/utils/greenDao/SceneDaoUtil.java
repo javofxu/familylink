@@ -33,27 +33,23 @@ public class SceneDaoUtil {
      * @param scene
      * @return
      */
-    public int addInitScene(SceneBean scene){
-        int row = -1;
+    public void addInitScene(SceneBean scene){
         int count =  findAllSceneCount(scene);
 
         if(count > 0){
-            return row;
+            return;
         }
         mSceneUtils.insert(scene);
-        return 1;
     }
 
-    public long insertScene(SceneBean scene){
+    public void insertScene(SceneBean scene){
         if(scene == null || scene.getSid()<0 || !scene.getColor().contains("F")) {
-            return -1L;
+            return;
         }
         if(!isHasScene(scene.getSid(), scene.getDeviceName())) {
             mSceneUtils.insert(scene);
-            return 1L;
         }else {
             mSceneUtils.update(scene);
-            return 1L;
         }
     }
 
@@ -66,6 +62,7 @@ public class SceneDaoUtil {
         return mSceneDao.queryBuilder()
                 .where(SceneBeanDao.Properties.DeviceName.eq(deviceName))
                 .orderAsc(SceneBeanDao.Properties.Sid)
+                .build()
                 .list();
     }
 
@@ -79,6 +76,7 @@ public class SceneDaoUtil {
                 .where(SceneBeanDao.Properties.DeviceName.eq(deviceName),
                         SceneBeanDao.Properties.Sid.eq(sid))
                 .orderAsc(SceneBeanDao.Properties.Sid)
+                .build()
                 .list();
     }
 
@@ -88,12 +86,11 @@ public class SceneDaoUtil {
      * @return 场景
      */
     public SceneBean findSceneByChoice(String deviceName){
-        List<SceneBean> sceneList = mSceneUtils.queryByQueryBuilder(SceneBeanDao.Properties.Choice.eq(1),
-                SceneBeanDao.Properties.DeviceName.eq(deviceName));
-        if (sceneList.size()>0){
-            return sceneList.get(0);
-        }
-        return null;
+        return mSceneDao.queryBuilder()
+                .where(SceneBeanDao.Properties.Choice.eq(1),
+                        SceneBeanDao.Properties.DeviceName.eq(deviceName))
+                .build()
+                .unique();
     }
 
     /**
@@ -103,12 +100,11 @@ public class SceneDaoUtil {
      * @return 场景
      */
     public SceneBean findSceneBySid(int sid, String deviceName){
-        List<SceneBean> sceneList = mSceneUtils.queryByQueryBuilder(SceneBeanDao.Properties.Sid.eq(sid),
-                SceneBeanDao.Properties.DeviceName.eq(deviceName));
-        if (sceneList.size()>0){
-            return sceneList.get(0);
-        }
-        return null;
+        return mSceneDao.queryBuilder()
+                .where(SceneBeanDao.Properties.Sid.eq(sid),
+                        SceneBeanDao.Properties.DeviceName.eq(deviceName))
+                .build()
+                .unique();
     }
 
     /**
@@ -120,6 +116,7 @@ public class SceneDaoUtil {
         return mSceneDao.queryBuilder()
                 .where(SceneBeanDao.Properties.DeviceName.eq(scene.getDeviceName()),
                         SceneBeanDao.Properties.Sid.eq(scene.getSid()))
+                .build()
                 .list()
                 .size();
     }

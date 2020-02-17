@@ -5,16 +5,16 @@ import android.text.TextUtils;
 import android.util.Log;
 
 import com.example.common.mvp.BasePresenterImpl;
-import com.ilop.sthome.data.bean.SceneAliBean;
-import com.ilop.sthome.data.bean.SceneRelationBean;
-import com.ilop.sthome.data.db.SceneRelaitonAliDAO;
+import com.ilop.sthome.data.greenDao.AutomationBean;
 import com.ilop.sthome.data.greenDao.DeviceInfoBean;
 import com.ilop.sthome.data.greenDao.SceneBean;
+import com.ilop.sthome.data.greenDao.SceneRelationBean;
 import com.ilop.sthome.mvp.contract.AddSceneContract;
 import com.ilop.sthome.network.api.SendSceneGroupDataAli;
 import com.ilop.sthome.utils.CoderALiUtils;
 import com.ilop.sthome.utils.greenDao.DeviceDaoUtil;
 import com.ilop.sthome.utils.greenDao.SceneDaoUtil;
+import com.ilop.sthome.utils.greenDao.SceneRelationDaoUtil;
 import com.ilop.sthome.utils.tools.ByteUtil;
 import com.siterwell.familywellplus.R;
 
@@ -34,7 +34,7 @@ public class AddScenePresenter extends BasePresenterImpl<AddSceneContract.IView>
     private String mColorCode = "F0";
     private SceneBean mScene;
     private SendSceneGroupDataAli mSendScene;
-    private List<SceneAliBean> mSceneList;
+    private List<AutomationBean> mSceneList;
     private List<DeviceInfoBean> mGatewayList;
 
     public AddScenePresenter(Context mContext) {
@@ -60,7 +60,7 @@ public class AddScenePresenter extends BasePresenterImpl<AddSceneContract.IView>
 
 
     @Override
-    public void onSaveScene(String name, int gateway, List<SceneAliBean> list) {
+    public void onSaveScene(String name, int gateway, List<AutomationBean> list) {
         mView.showProgress();
         this.mGateway = gateway;
         mDeviceName = mGatewayList.get(gateway).getDeviceName();
@@ -89,7 +89,7 @@ public class AddScenePresenter extends BasePresenterImpl<AddSceneContract.IView>
         if(!SceneDaoUtil.getInstance().isHasScene(mScene.getSid(), mDeviceName)){
             SceneDaoUtil.getInstance().getSceneDao().insert(mScene);
             for (int i = 0; i < mSceneList.size(); i++) {
-                SceneAliBean ab = mSceneList.get(i);
+                AutomationBean ab = mSceneList.get(i);
                 doAddToSceneTable(ab, mScene);
             }
         }
@@ -122,14 +122,13 @@ public class AddScenePresenter extends BasePresenterImpl<AddSceneContract.IView>
     }
 
 
-    private void doAddToSceneTable(SceneAliBean ab, SceneBean sys2) {
+    private void doAddToSceneTable(AutomationBean ab, SceneBean sys2) {
         try {
-            SceneRelaitonAliDAO sceneRelaitonAliDAO = new SceneRelaitonAliDAO(mContext);
             SceneRelationBean sceneRelationBean = new SceneRelationBean();
             sceneRelationBean.setSid(sys2.getSid());
             sceneRelationBean.setMid(ab.getMid());
             sceneRelationBean.setDeviceName(ab.getDeviceName());
-            sceneRelaitonAliDAO.insertSceneRelation(sceneRelationBean);
+            SceneRelationDaoUtil.getInstance().insertSceneRelation(sceneRelationBean);
         }catch (Exception e){
             Log.i(TAG,"SceneBean is null or SysModleBean is null");
         }
@@ -157,7 +156,7 @@ public class AddScenePresenter extends BasePresenterImpl<AddSceneContract.IView>
         }
     }
 
-    private void confirmToSys(List<SceneAliBean> list) {
+    private void confirmToSys(List<AutomationBean> list) {
         byte scene_default = 0;
         int id2 = getSid();
         mScene = new SceneBean();
@@ -174,7 +173,7 @@ public class AddScenePresenter extends BasePresenterImpl<AddSceneContract.IView>
         //scene id
         String sceneCode = "";
         for (int i = 0; i < list.size(); i++) {
-            SceneAliBean ab = list.get(i);
+            AutomationBean ab = list.get(i);
             if(ab.getMid()<=128){
                 scene++;
                 length++;

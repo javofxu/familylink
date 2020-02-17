@@ -4,16 +4,16 @@ package com.ilop.sthome.utils;
 import android.content.Context;
 import android.text.TextUtils;
 
-import com.ilop.sthome.data.bean.SceneAliBean;
-import com.ilop.sthome.data.bean.SceneRelationBean;
-import com.ilop.sthome.data.bean.ShortcutAliBean;
-import com.ilop.sthome.data.db.SceneAliDAO;
-import com.ilop.sthome.data.db.SceneRelaitonAliDAO;
-import com.ilop.sthome.data.db.ShortcutAliDAO;
+import com.ilop.sthome.data.greenDao.AutomationBean;
 import com.ilop.sthome.data.greenDao.DeviceInfoBean;
 import com.ilop.sthome.data.greenDao.SceneBean;
+import com.ilop.sthome.data.greenDao.SceneRelationBean;
+import com.ilop.sthome.data.greenDao.SceneSwitchBean;
+import com.ilop.sthome.utils.greenDao.AutomationDaoUtil;
 import com.ilop.sthome.utils.greenDao.DeviceDaoUtil;
 import com.ilop.sthome.utils.greenDao.SceneDaoUtil;
+import com.ilop.sthome.utils.greenDao.SceneRelationDaoUtil;
+import com.ilop.sthome.utils.greenDao.SceneSwitchDaoUtil;
 import com.ilop.sthome.utils.tools.ByteUtil;
 import com.litesuits.android.log.Log;
 import com.siterwell.familywellplus.R;
@@ -321,15 +321,14 @@ public class CoderALiUtils {
      */
     public static String getSceneCRC(Context context,String deviceid){
 
-        SceneAliDAO SD = new SceneAliDAO(context);
-        List<SceneAliBean> sceneList = SD.findAllAmWithoutDefault(deviceid);
+        List<AutomationBean> sceneList = AutomationDaoUtil.getInstance().findAllAutoWithoutDefault(deviceid);
         if(sceneList != null && sceneList.size()>0) {
 
             String oooo = "0", num = "";
             int codeLength = 2;
             int listLength = sceneList.get(sceneList.size() - 1).getMid();
             List<Integer> eqid = new ArrayList<>();
-            for (SceneAliBean e : sceneList) {
+            for (AutomationBean e : sceneList) {
                 eqid.add(e.getMid());
             }
             String sceneCRC = "";
@@ -369,11 +368,11 @@ public class CoderALiUtils {
      * @param context
      * @return
      */
-    public static String getSceneGroupCRC(Context context,String deviceid){
-        String getSceneGroupCRC="",num="";
+    public static String getSceneGroupCRC(Context context,String deviceName){
+        String getSceneGroupCRC="";
+        String num;
 
-        ShortcutAliDAO shortcutDAO = new ShortcutAliDAO(context);
-        List<SceneBean> slist = SceneDaoUtil.getInstance().findAllScene(deviceid);
+        List<SceneBean> slist = SceneDaoUtil.getInstance().findAllScene(deviceName);
 
         if(slist.size()>0){
             int codeLength = 2;
@@ -384,9 +383,8 @@ public class CoderALiUtils {
             for(int i = 0 ; i <slist.get(slist.size()-1).getSid()+1 ; i++) {//for here come with "0" , used slist.size()
                 codeLength += 2;
                 if (sid.contains(i)) {
-                    SceneRelaitonAliDAO SED = new SceneRelaitonAliDAO(context);
-                    List<SceneRelationBean> sysSceneList = SED.findRelationsBysid(deviceid,i);
-                    SceneBean sysModelBean = SceneDaoUtil.getInstance().findSceneBySid(i,deviceid);
+                    List<SceneRelationBean> mRelation = SceneRelationDaoUtil.getInstance().findRelationsBySid(deviceName,i);
+                    SceneBean sysModelBean = SceneDaoUtil.getInstance().findSceneBySid(i,deviceName);
                     String name = sysModelBean.getModleName();
                     int length = 0;
                     byte scene_default = 0;
@@ -397,33 +395,33 @@ public class CoderALiUtils {
                     length += 1;//the scene id
 
                     String btnNum = "";
-                    List<ShortcutAliBean> shortcutBeans = shortcutDAO.findShorcutsBysid(deviceid,sysModelBean.getSid());
+                    List<SceneSwitchBean> mSwitch = SceneSwitchDaoUtil.getInstance().findSwitchBySid(sysModelBean.getSid(), deviceName);
 
-                    if (Integer.toHexString(shortcutBeans.size()).length()<2){  //new mid
-                        btnNum = "0"+Integer.toHexString(shortcutBeans.size());
+                    if (Integer.toHexString(mSwitch.size()).length()<2){  //new mid
+                        btnNum = "0"+Integer.toHexString(mSwitch.size());
                     }else{
-                        btnNum =Integer.toHexString(shortcutBeans.size());
+                        btnNum =Integer.toHexString(mSwitch.size());
                     }
                     length+=1;//button num
 
                     String shortcut = "";
 
-                    for (int j = 0;j<shortcutBeans.size();j++){
+                    for (int j = 0;j<mSwitch.size();j++){
 
 
 
                         String eqid = "";
                         String dessid = "";
-                        if (Integer.toHexString(shortcutBeans.get(j).getEqid()).length()<2){  //new mid
-                            eqid = "000"+Integer.toHexString(shortcutBeans.get(j).getEqid());
+                        if (Integer.toHexString(mSwitch.get(j).getDeviceId()).length()<2){  //new mid
+                            eqid = "000"+Integer.toHexString(mSwitch.get(j).getDeviceId());
                         }else{
-                            eqid ="00"+Integer.toHexString(shortcutBeans.get(j).getEqid());
+                            eqid ="00"+Integer.toHexString(mSwitch.get(j).getDeviceId());
                         }
 
-                        if (Integer.toHexString(shortcutBeans.get(j).getDes_sid()).length()<2){  //new mid
-                            dessid = "0"+Integer.toHexString(shortcutBeans.get(j).getDes_sid())+"000000";
+                        if (Integer.toHexString(mSwitch.get(j).getDes_sid()).length()<2){  //new mid
+                            dessid = "0"+Integer.toHexString(mSwitch.get(j).getDes_sid())+"000000";
                         }else{
-                            dessid =Integer.toHexString(shortcutBeans.get(j).getDes_sid())+"000000";
+                            dessid =Integer.toHexString(mSwitch.get(j).getDes_sid())+"000000";
                         }
 
                         shortcut+=(eqid+dessid+"00");
@@ -437,24 +435,24 @@ public class CoderALiUtils {
                     int scene = 0;
                     //scene id
                     String sceneCode = "";
-                    for (int j = 0; j < sysSceneList.size(); j++) {
-                        if(sysSceneList.get(j).getMid()<=128){
+                    for (int j = 0; j < mRelation.size(); j++) {
+                        if(mRelation.get(j).getMid()<=128){
                             scene++;
                             length++;
                             String singleCode = "";
 
-                            if (Integer.toHexString(sysSceneList.get(j).getMid()).length() < 2) {  //new mid
-                                singleCode = "0" + Integer.toHexString(sysSceneList.get(j).getMid());
+                            if (Integer.toHexString(mRelation.get(j).getMid()).length() < 2) {  //new mid
+                                singleCode = "0" + Integer.toHexString(mRelation.get(j).getMid());
                             } else {
-                                singleCode = Integer.toHexString(sysSceneList.get(j).getMid());
+                                singleCode = Integer.toHexString(mRelation.get(j).getMid());
                             }
                             sceneCode += singleCode;
                         }else{
-                            if(sysSceneList.get(j).getMid()==129){
+                            if(mRelation.get(j).getMid()==129){
                                 scene_default = (byte)(scene_default|0x81);
-                            }else if(sysSceneList.get(j).getMid()==130){
+                            }else if(mRelation.get(j).getMid()==130){
                                 scene_default = (byte)(scene_default|0x82);
-                            }else if(sysSceneList.get(j).getMid()==131){
+                            }else if(mRelation.get(j).getMid()==131){
                                 scene_default = (byte)(scene_default|0x84);
                             }
                         }

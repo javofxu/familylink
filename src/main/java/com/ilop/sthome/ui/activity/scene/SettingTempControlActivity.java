@@ -38,7 +38,7 @@ public class SettingTempControlActivity extends BaseActivity<ActivitySetTempCont
     protected void initialize() {
         super.initialize();
         isUpdate = getIntent().getBooleanExtra("isUpdate", false);
-        mDevice = getIntent().getParcelableExtra("device");
+        mDevice = (DeviceInfoBean) getIntent().getSerializableExtra("device");
     }
 
     @Override

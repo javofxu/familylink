@@ -1,4 +1,4 @@
-1581844081248
+1581926796047
 /Users/siterwell/github/familylink/src/main/java/com/ilop/sthome/data/greenDao/HistoryBean.java
 /Users/siterwell/github/familylink/src/main/java/com/ilop/sthome/data/greenDao/WarnBean.java
 /Users/siterwell/github/familylink/src/main/java/com/ilop/sthome/data/greenDao/CameraBean.java
@@ -8,3 +8,4 @@
 /Users/siterwell/github/familylink/src/main/java/com/ilop/sthome/data/greenDao/SceneRelationBean.java
 /Users/siterwell/github/familylink/src/main/java/com/ilop/sthome/data/greenDao/SceneBean.java
 /Users/siterwell/github/familylink/src/main/java/com/ilop/sthome/data/greenDao/SceneSwitchBean.java
+/Users/siterwell/github/familylink/src/main/java/com/ilop/sthome/data/greenDao/AutomationBean.java

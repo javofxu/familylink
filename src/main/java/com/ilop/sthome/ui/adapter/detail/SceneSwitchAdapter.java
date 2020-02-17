@@ -10,11 +10,11 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.common.utils.LiveDataBus;
-import com.ilop.sthome.data.bean.ShortcutAliBean;
-import com.ilop.sthome.data.db.ShortcutAliDAO;
 import com.ilop.sthome.data.greenDao.DeviceInfoBean;
 import com.ilop.sthome.data.greenDao.SceneBean;
+import com.ilop.sthome.data.greenDao.SceneSwitchBean;
 import com.ilop.sthome.utils.greenDao.SceneDaoUtil;
+import com.ilop.sthome.utils.greenDao.SceneSwitchDaoUtil;
 import com.siterwell.familywellplus.R;
 
 import java.util.List;
@@ -34,14 +34,12 @@ public class SceneSwitchAdapter extends RecyclerView.Adapter<SceneSwitchAdapter.
 
     private Context mContext;
     private List<SceneBean> mList;
-    private ShortcutAliDAO mShortCutDAO;
     private Map<Integer,String> mModel;
     private DeviceInfoBean equipmentBean;
 
     public SceneSwitchAdapter(Context mContext, DeviceInfoBean equipmentBean) {
         this.mContext = mContext;
         this.equipmentBean = equipmentBean;
-        mShortCutDAO = new ShortcutAliDAO(mContext);
         mModel = SceneDaoUtil.getInstance().findAllSceneByMap(equipmentBean.getDeviceName());
     }
 
@@ -60,37 +58,37 @@ public class SceneSwitchAdapter extends RecyclerView.Adapter<SceneSwitchAdapter.
     @Override
     public void onBindViewHolder(@NonNull ItemHolder itemHolder, int i) {
         SceneBean bean = mList.get(i);
-        ShortcutAliBean shortcutBean = mShortCutDAO.findShortcutByeqid(bean.getSid(),equipmentBean.getDevice_ID(),equipmentBean.getDeviceName());
-        if(shortcutBean==null){
-            itemHolder.desImg.setImageResource(R.mipmap.icon_custom_online);
+        SceneSwitchBean mSwitch = SceneSwitchDaoUtil.getInstance().findSwitchByDeviceId(bean.getSid(), equipmentBean.getDevice_ID(), equipmentBean.getDeviceName());
+        if(mSwitch==null){
+            itemHolder.desImg.setImageResource(R.mipmap.scene_custom);
             itemHolder.desName.setText(mContext.getResources().getString(R.string.please_choose));
         }else {
-            if(shortcutBean.getDes_sid()==0){
-                itemHolder.desImg.setImageResource(R.mipmap.icon_home_online);
+            if(mSwitch.getDes_sid()==0){
+                itemHolder.desImg.setImageResource(R.mipmap.scene_at_home);
                 itemHolder.desName.setText(mContext.getResources().getString(R.string.home_mode));
-            }else if(shortcutBean.getDes_sid()==1){
-                itemHolder.desImg.setImageResource(R.mipmap.icon_leave_online);
+            }else if(mSwitch.getDes_sid()==1){
+                itemHolder.desImg.setImageResource(R.mipmap.scene_leave_home);
                 itemHolder.desName.setText(mContext.getResources().getString(R.string.out_mode));
-            }else if(shortcutBean.getDes_sid()==2){
-                itemHolder.desImg.setImageResource(R.mipmap.icon_sleep_online);
+            }else if(mSwitch.getDes_sid()==2){
+                itemHolder.desImg.setImageResource(R.mipmap.scene_sleep);
                 itemHolder.desName.setText(mContext.getResources().getString(R.string.sleep_mode));
             }else{
-                itemHolder.desImg.setImageResource(R.mipmap.icon_custom_online);
-                itemHolder.desName.setText(mModel.get(shortcutBean.getDes_sid()));
+                itemHolder.desImg.setImageResource(R.mipmap.scene_custom);
+                itemHolder.desName.setText(mModel.get(mSwitch.getDes_sid()));
             }
         }
 
         if(bean.getSid()==0){
-            itemHolder.srcImg.setImageResource(R.mipmap.icon_home_online);
+            itemHolder.srcImg.setImageResource(R.mipmap.scene_at_home);
             itemHolder.srcName.setText(mContext.getResources().getString(R.string.home_mode));
         }else if(bean.getSid()==1){
-            itemHolder.srcImg.setImageResource(R.mipmap.icon_leave_online);
+            itemHolder.srcImg.setImageResource(R.mipmap.scene_leave_home);
             itemHolder.srcName.setText(mContext.getResources().getString(R.string.out_mode));
         }else if(bean.getSid()==2){
-            itemHolder.srcImg.setImageResource(R.mipmap.icon_sleep_online);
+            itemHolder.srcImg.setImageResource(R.mipmap.scene_sleep);
             itemHolder.srcName.setText(mContext.getResources().getString(R.string.sleep_mode));
         }else{
-            itemHolder.srcImg.setImageResource(R.mipmap.icon_custom_online);
+            itemHolder.srcImg.setImageResource(R.mipmap.scene_custom);
             itemHolder.srcName.setText(bean.getModleName());
         }
         itemHolder.desImg.setOnClickListener(view -> LiveDataBus.get().with("Switch_Mode").setValue(i));

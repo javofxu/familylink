@@ -4,20 +4,20 @@ import android.support.v7.widget.LinearLayoutManager;
 
 import com.example.common.base.BaseActivity;
 import com.example.common.utils.LiveDataBus;
-import com.ilop.sthome.data.bean.SceneAliBean;
-import com.ilop.sthome.data.bean.ShortcutAliBean;
-import com.ilop.sthome.data.db.SceneAliDAO;
-import com.ilop.sthome.data.db.ShortcutAliDAO;
 import com.ilop.sthome.data.event.EventAnswerOK;
+import com.ilop.sthome.data.greenDao.AutomationBean;
 import com.ilop.sthome.data.greenDao.DeviceInfoBean;
 import com.ilop.sthome.data.greenDao.SceneBean;
+import com.ilop.sthome.data.greenDao.SceneSwitchBean;
 import com.ilop.sthome.network.api.SendCommandAli;
 import com.ilop.sthome.network.api.SendSceneGroupDataAli;
 import com.ilop.sthome.ui.adapter.detail.SceneSwitchAdapter;
 import com.ilop.sthome.ui.dialog.BaseListDialog;
 import com.ilop.sthome.utils.CoderALiUtils;
+import com.ilop.sthome.utils.greenDao.AutomationDaoUtil;
 import com.ilop.sthome.utils.greenDao.DeviceDaoUtil;
 import com.ilop.sthome.utils.greenDao.SceneDaoUtil;
+import com.ilop.sthome.utils.greenDao.SceneSwitchDaoUtil;
 import com.ilop.sthome.utils.tools.ByteUtil;
 import com.siterwell.familywellplus.R;
 import com.siterwell.familywellplus.databinding.ActivityModeSwitchBinding;
@@ -41,9 +41,7 @@ public class AddModeSwitchActivity extends BaseActivity<ActivityModeSwitchBindin
     private DeviceInfoBean mDevice;
 
     private SceneSwitchAdapter mAdapter;
-    private SceneAliDAO mSceneDAO;
-    private ShortcutAliDAO shortcutDAO;
-    private ShortcutAliBean shortcutBean;
+    private SceneSwitchBean mSwitch;
     private SendSceneGroupDataAli mSend;
     private List<SceneBean> mScene;
     private List<String> mSysModelName;
@@ -68,8 +66,6 @@ public class AddModeSwitchActivity extends BaseActivity<ActivityModeSwitchBindin
     @Override
     protected void initView() {
         super.initView();
-        mSceneDAO = new SceneAliDAO(this);
-        shortcutDAO = new ShortcutAliDAO(this);
         mScene = SceneDaoUtil.getInstance().findAllScene(mDeviceName);
         mSysModelName = SceneDaoUtil.getInstance().findAllSceneName(mDeviceName);
         mAdapter = new SceneSwitchAdapter(mContext, mDevice);
@@ -94,13 +90,13 @@ public class AddModeSwitchActivity extends BaseActivity<ActivityModeSwitchBindin
         mDBind.ivModeBack.setOnClickListener(view -> finish());
         LiveDataBus.get().with("Switch_Mode", Integer.class).observe(this, integer -> {
             BaseListDialog mDialog = new BaseListDialog(mContext, i -> {
-                shortcutBean = new ShortcutAliBean();
-                shortcutBean.setDes_sid(mScene.get(i).getSid());
-                shortcutBean.setSrc_sid(mScene.get(integer).getSid());
-                shortcutBean.setDelay(0);
-                shortcutBean.setDeviceName(mDevice.getDeviceName());
-                shortcutBean.setEqid(mDevice.getDevice_ID());
-                String code = getCode(mScene.get(integer),shortcutBean.getEqid(),shortcutBean.getDes_sid());
+                mSwitch = new SceneSwitchBean();
+                mSwitch.setDes_sid(mScene.get(i).getSid());
+                mSwitch.setSrc_sid(mScene.get(integer).getSid());
+                mSwitch.setDelay(0);
+                mSwitch.setDeviceName(mDevice.getDeviceName());
+                mSwitch.setDeviceId(mDevice.getDevice_ID());
+                String code = getCode(mScene.get(integer),mSwitch.getDeviceId(),mSwitch.getDes_sid());
                 String crc = ByteUtil.CRCmakerCharAndCode(code);
                 mSend.increaceSceneGroup(code+crc);
             });
@@ -118,7 +114,7 @@ public class AddModeSwitchActivity extends BaseActivity<ActivityModeSwitchBindin
             int cmd = Integer.parseInt(event.getData_str1().substring(0, 4), 16);
             if (cmd == SendCommandAli.INCREACE_SCENE_GROUP) {
                 if ("OK".equals(event.getData_str2())) {
-                    shortcutDAO.insertShortcut(shortcutBean);
+                    SceneSwitchDaoUtil.getInstance().insertSwitch(mSwitch);
                     mAdapter.notifyDataSetChanged();
                     showToast(getString(R.string.success_set));
                 }
@@ -153,17 +149,17 @@ public class AddModeSwitchActivity extends BaseActivity<ActivityModeSwitchBindin
         length += 1;//the scene id
 
         String btnNum = "";
-        List<ShortcutAliBean> shortcutBeans = shortcutDAO.findShorcutsBysid(mDevice.getDeviceName(),mScene.getSid());
+        List<SceneSwitchBean> mSwitch = SceneSwitchDaoUtil.getInstance().findSwitchBySid(mScene.getSid(), mDevice.getDeviceName());
 
 
 
         String shortcut = "";
 
         boolean flag_this_eqid = false;
-        for (int i = 0;i<shortcutBeans.size();i++){
+        for (int i = 0;i<mSwitch.size();i++){
             String eqid = "";
             String dessid = "";
-            if(thiseqid == shortcutBeans.get(i).getEqid()){
+            if(thiseqid == mSwitch.get(i).getDeviceId()){
                 flag_this_eqid = true;
 
                 if (Integer.toHexString(thiseqid).length()<2){  //new mid
@@ -183,16 +179,16 @@ public class AddModeSwitchActivity extends BaseActivity<ActivityModeSwitchBindin
 
             }else{
 
-                if (Integer.toHexString(shortcutBeans.get(i).getEqid()).length()<2){  //new mid
-                    eqid = "000"+Integer.toHexString(shortcutBeans.get(i).getEqid());
+                if (Integer.toHexString(mSwitch.get(i).getDeviceId()).length()<2){  //new mid
+                    eqid = "000"+Integer.toHexString(mSwitch.get(i).getDeviceId());
                 }else{
-                    eqid ="00"+Integer.toHexString(shortcutBeans.get(i).getEqid());
+                    eqid ="00"+Integer.toHexString(mSwitch.get(i).getDeviceId());
                 }
 
-                if (Integer.toHexString(shortcutBeans.get(i).getDes_sid()).length()<2){  //new mid
-                    dessid = "0"+Integer.toHexString(shortcutBeans.get(i).getDes_sid())+"000000";
+                if (Integer.toHexString(mSwitch.get(i).getDes_sid()).length()<2){  //new mid
+                    dessid = "0"+Integer.toHexString(mSwitch.get(i).getDes_sid())+"000000";
                 }else{
-                    dessid =Integer.toHexString(shortcutBeans.get(i).getDes_sid())+"000000";
+                    dessid =Integer.toHexString(mSwitch.get(i).getDes_sid())+"000000";
                 }
 
                 shortcut+=(eqid+dessid+"00");
@@ -222,15 +218,15 @@ public class AddModeSwitchActivity extends BaseActivity<ActivityModeSwitchBindin
             length += 7;
 
 
-            if (Integer.toHexString(shortcutBeans.size()+1).length()<2){  //new mid
-                btnNum = "0"+Integer.toHexString(shortcutBeans.size()+1);
+            if (Integer.toHexString(mSwitch.size()+1).length()<2){  //new mid
+                btnNum = "0"+Integer.toHexString(mSwitch.size()+1);
             }else{
-                btnNum =Integer.toHexString(shortcutBeans.size()+1);
+                btnNum =Integer.toHexString(mSwitch.size()+1);
             }
             length+=1;//button num
 
         }else{
-            int ds = shortcutBeans.size();
+            int ds = mSwitch.size();
 
             if (Integer.toHexString(ds).length()<2){  //new mid
                 btnNum = "0"+Integer.toHexString(ds);
@@ -245,18 +241,18 @@ public class AddModeSwitchActivity extends BaseActivity<ActivityModeSwitchBindin
         int scene =0;
         //scene id
         String sceneCode ="";
-        List<SceneAliBean> sceneBeanList = mSceneDAO.findAllAmBySid(mScene.getSid(), mDevice.getDeviceName());
-        if(sceneBeanList.size()>0){
-            for(int i = 0; i<sceneBeanList.size();i++){
+        List<AutomationBean> autoList = AutomationDaoUtil.getInstance().findAllAutoBySid(mScene.getSid(), mDevice.getDeviceName());
+        if(autoList.size()>0){
+            for(int i = 0; i<autoList.size();i++){
                 scene++;
                 length++;
-                String singleCode ="";
+                String singleCode;
                 //do count
 //                if (Integer.toHexString(sceneLists.get(i).getActivityId()).length()<2){  defore
-                if (Integer.toHexString(sceneBeanList.get(i).getMid()).length()<2){  //new mid
-                    singleCode = "0"+Integer.toHexString(sceneBeanList.get(i).getMid());
+                if (Integer.toHexString(autoList.get(i).getMid()).length()<2){  //new mid
+                    singleCode = "0"+Integer.toHexString(autoList.get(i).getMid());
                 }else{
-                    singleCode =Integer.toHexString(sceneBeanList.get(i).getMid());
+                    singleCode =Integer.toHexString(autoList.get(i).getMid());
                 }
                 sceneCode += singleCode;
             }

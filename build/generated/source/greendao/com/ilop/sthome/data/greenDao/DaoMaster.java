@@ -30,6 +30,7 @@ public class DaoMaster extends AbstractDaoMaster {
         SceneRelationBeanDao.createTable(db, ifNotExists);
         SceneBeanDao.createTable(db, ifNotExists);
         SceneSwitchBeanDao.createTable(db, ifNotExists);
+        AutomationBeanDao.createTable(db, ifNotExists);
     }
 
     /** Drops underlying database table using DAOs. */
@@ -43,6 +44,7 @@ public class DaoMaster extends AbstractDaoMaster {
         SceneRelationBeanDao.dropTable(db, ifExists);
         SceneBeanDao.dropTable(db, ifExists);
         SceneSwitchBeanDao.dropTable(db, ifExists);
+        AutomationBeanDao.dropTable(db, ifExists);
     }
 
     /**
@@ -70,6 +72,7 @@ public class DaoMaster extends AbstractDaoMaster {
         registerDaoClass(SceneRelationBeanDao.class);
         registerDaoClass(SceneBeanDao.class);
         registerDaoClass(SceneSwitchBeanDao.class);
+        registerDaoClass(AutomationBeanDao.class);
     }
 
     public DaoSession newSession() {

@@ -4,7 +4,7 @@ import android.content.Intent;
 
 import com.example.common.mvp.IBasePresenter;
 import com.example.common.mvp.IBaseView;
-import com.ilop.sthome.data.bean.SceneAliBean;
+import com.ilop.sthome.data.greenDao.AutomationBean;
 import com.ilop.sthome.data.greenDao.DeviceInfoBean;
 
 import java.util.List;
@@ -33,9 +33,9 @@ public interface AutomationContract {
         /**
          * 是修改还是添加？
          * @param modify
-         * @param mSceneAli
+         * @param mAuto
          */
-        void isModifyForShow(boolean modify, SceneAliBean mSceneAli);
+        void isModifyForShow(boolean modify, AutomationBean mAuto);
 
         void setInputList(List<DeviceInfoBean> deviceList);
 
@@ -66,6 +66,8 @@ public interface AutomationContract {
         boolean checkContent();
 
         boolean checkInput(List<DeviceInfoBean> device);
+
+        boolean checkOutput(List<DeviceInfoBean> device);
 
         void checkUpdateInput(List<DeviceInfoBean> device);
 

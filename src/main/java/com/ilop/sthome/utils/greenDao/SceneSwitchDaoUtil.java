@@ -9,6 +9,7 @@ public class SceneSwitchDaoUtil {
 
     private volatile static SceneSwitchDaoUtil instance = new SceneSwitchDaoUtil();
     private CommonDaoUtils<SceneSwitchBean> mSceneSwitchUtils;
+    private SceneSwitchBeanDao mSceneSwitchDao;
 
     public static SceneSwitchDaoUtil getInstance(){
         return instance;
@@ -16,7 +17,7 @@ public class SceneSwitchDaoUtil {
 
     private SceneSwitchDaoUtil() {
         DaoManager mManager = DaoManager.getInstance();
-        SceneSwitchBeanDao mSceneSwitchDao= mManager.getDaoSession().getSceneSwitchBeanDao();
+        mSceneSwitchDao= mManager.getDaoSession().getSceneSwitchBeanDao();
         mSceneSwitchUtils = new CommonDaoUtils(SceneSwitchBean.class, mSceneSwitchDao);
     }
 
@@ -24,27 +25,48 @@ public class SceneSwitchDaoUtil {
         return mSceneSwitchUtils;
     }
 
-    public long insertSwitch(SceneSwitchBean sceneSwitch){
+    /**
+     * 插入或更新已存在的场景开关
+     * @param sceneSwitch
+     * @return
+     */
+    public void insertSwitch(SceneSwitchBean sceneSwitch){
         if(sceneSwitch == null ||sceneSwitch.getDeviceId()<=0) {
-            return -1L;
+            return;
         }
         if (!isHasSwitch(sceneSwitch.getSrc_sid(), sceneSwitch.getDeviceId(), sceneSwitch.getDeviceName())){
             mSceneSwitchUtils.insert(sceneSwitch);
         }else {
             mSceneSwitchUtils.update(sceneSwitch);
         }
-        return 1L;
     }
 
-    public SceneSwitchBean findSwitchByDeviceId(int sid, int deviceId, String deviceName){
-        List<SceneSwitchBean> sceneSwitch = mSceneSwitchUtils.queryByQueryBuilder(
+    /**
+     * 根据deviceId查询场景开关
+     * @param sid
+     * @param deviceName
+     * @return
+     */
+    public List<SceneSwitchBean> findSwitchBySid(int sid, String deviceName){
+        return  mSceneSwitchUtils.queryByQueryBuilder(
                 SceneSwitchBeanDao.Properties.Src_sid.eq(sid),
-                SceneSwitchBeanDao.Properties.DeviceId.eq(deviceId),
                 SceneSwitchBeanDao.Properties.DeviceName.eq(deviceName));
-        if (sceneSwitch.size()>0){
-            return sceneSwitch.get(0);
-        }
-        return null;
+    }
+
+    /**
+     * 根据deviceId查询场景开关
+     * @param sid
+     * @param deviceId
+     * @param deviceName
+     * @return
+     */
+    public SceneSwitchBean findSwitchByDeviceId(int sid, int deviceId, String deviceName){
+        return mSceneSwitchDao.queryBuilder()
+                .where(SceneSwitchBeanDao.Properties.Src_sid.eq(sid),
+                        SceneSwitchBeanDao.Properties.DeviceId.eq(deviceId),
+                        SceneSwitchBeanDao.Properties.DeviceName.eq(deviceName))
+                .build()
+                .unique();
     }
 
     /**

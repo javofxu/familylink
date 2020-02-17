@@ -2,13 +2,12 @@ package com.ilop.sthome.ui.activity.scene;
 
 import android.content.Intent;
 import android.support.v7.widget.LinearLayoutManager;
-import android.util.Log;
 import android.view.View;
 
 import com.example.common.base.BasePActivity;
 import com.example.common.utils.LiveDataBus;
-import com.ilop.sthome.data.bean.SceneAliBean;
 import com.ilop.sthome.data.event.EventAnswerOK;
+import com.ilop.sthome.data.greenDao.AutomationBean;
 import com.ilop.sthome.mvp.contract.SceneDetailContract;
 import com.ilop.sthome.mvp.present.SceneDetailPresenter;
 import com.ilop.sthome.network.api.SendCommandAli;
@@ -66,7 +65,7 @@ public class SceneDetailActivity extends BasePActivity<SceneDetailPresenter, Act
         super.initData();
         mPresent.getSceneName();
 
-        LiveDataBus.get().with("auto_item_click", SceneAliBean.class).observe(this, sceneAliBean -> mPresent.skipActivityToUpdate(sceneAliBean));
+        LiveDataBus.get().with("auto_item_click", AutomationBean.class).observe(this, sceneAliBean -> mPresent.skipActivityToUpdate(sceneAliBean));
 
         LiveDataBus.get().with("change_scene_auto",Integer.class).observe(this, integer -> {
             showProgressDialog();
@@ -131,7 +130,7 @@ public class SceneDetailActivity extends BasePActivity<SceneDetailPresenter, Act
     }
 
     @Override
-    public void showAutoList(List<SceneAliBean> mSceneList, List<Integer> mBeforeList) {
+    public void showAutoList(List<AutomationBean> mSceneList, List<Integer> mBeforeList) {
         mDBind.sceneWithoutAuto.setVisibility(View.GONE);
         mDBind.sceneHasAuto.setVisibility(View.VISIBLE);
         mAdapter.setList(mSceneList);

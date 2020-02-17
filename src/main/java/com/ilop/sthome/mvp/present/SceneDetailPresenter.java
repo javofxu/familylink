@@ -5,20 +5,20 @@ import android.content.Intent;
 import android.util.Log;
 
 import com.example.common.mvp.BasePresenterImpl;
-import com.ilop.sthome.data.bean.SceneAliBean;
-import com.ilop.sthome.data.bean.SceneRelationBean;
-import com.ilop.sthome.data.bean.ShortcutAliBean;
-import com.ilop.sthome.data.db.SceneAliDAO;
-import com.ilop.sthome.data.db.SceneRelaitonAliDAO;
-import com.ilop.sthome.data.db.ShortcutAliDAO;
+import com.ilop.sthome.data.greenDao.AutomationBean;
 import com.ilop.sthome.data.greenDao.DeviceInfoBean;
 import com.ilop.sthome.data.greenDao.SceneBean;
+import com.ilop.sthome.data.greenDao.SceneRelationBean;
+import com.ilop.sthome.data.greenDao.SceneSwitchBean;
 import com.ilop.sthome.mvp.contract.SceneDetailContract;
 import com.ilop.sthome.network.api.SendSceneGroupDataAli;
 import com.ilop.sthome.ui.activity.scene.AutomationDetailActivity;
 import com.ilop.sthome.utils.CoderALiUtils;
+import com.ilop.sthome.utils.greenDao.AutomationDaoUtil;
 import com.ilop.sthome.utils.greenDao.DeviceDaoUtil;
 import com.ilop.sthome.utils.greenDao.SceneDaoUtil;
+import com.ilop.sthome.utils.greenDao.SceneRelationDaoUtil;
+import com.ilop.sthome.utils.greenDao.SceneSwitchDaoUtil;
 import com.ilop.sthome.utils.tools.ByteUtil;
 import com.siterwell.familywellplus.R;
 
@@ -36,10 +36,7 @@ public class SceneDetailPresenter extends BasePresenterImpl<SceneDetailContract.
     private static final String TAG = "SceneDetailPresenter";
 
     private Context mContext;
-    private SceneAliDAO mSceneAliDAO;
-    private ShortcutAliDAO mShortcutDAO;
     private SendSceneGroupDataAli mSendScene;
-    private SceneRelaitonAliDAO mSceneRelationAliDAO;
 
     private String mDeviceName;
     private String mSceneName;
@@ -50,9 +47,6 @@ public class SceneDetailPresenter extends BasePresenterImpl<SceneDetailContract.
         this.mContext = mContext;
         this.mDeviceName = deviceName;
         this.mSceneId = sceneId;
-        mSceneAliDAO = new SceneAliDAO(mContext);
-        mShortcutDAO = new ShortcutAliDAO(mContext);
-        mSceneRelationAliDAO = new SceneRelaitonAliDAO(mContext);
         DeviceInfoBean mDeviceInfoBean = DeviceDaoUtil.getInstance().findGatewayByDeviceName(deviceName);
         mSendScene = new SendSceneGroupDataAli(mContext, mDeviceInfoBean);
     }
@@ -85,9 +79,9 @@ public class SceneDetailPresenter extends BasePresenterImpl<SceneDetailContract.
 
     @Override
     public void getAutoList() {
-        List<SceneAliBean> mSceneList = mSceneAliDAO.findAllAmWithoutDefault(mDeviceName);
+        List<AutomationBean> mSceneList = AutomationDaoUtil.getInstance().findAllAutoWithoutDefault(mDeviceName);
         if (mSceneList.size()>0){
-            List<Integer> beforeList = mSceneRelationAliDAO.findRelationsBysid2(mDeviceName, mSceneId);
+            List<Integer> beforeList = SceneRelationDaoUtil.getInstance().findMidBySid(mDeviceName, mSceneId);
             mView.showAutoList(mSceneList, beforeList);
         }else {
             mView.withoutAuto();
@@ -95,19 +89,19 @@ public class SceneDetailPresenter extends BasePresenterImpl<SceneDetailContract.
     }
 
     @Override
-    public void onSaveScene(List<SceneAliBean> list) {
+    public void onSaveScene(List<AutomationBean> list) {
         createCode(list);
     }
 
     @Override
-    public void onSaveSuccess(List<SceneAliBean> mSceneList) {
+    public void onSaveSuccess(List<AutomationBean> mSceneList) {
         SceneBean sys= new SceneBean();
         sys.setSid(mSceneId);
         sys.setDeviceName(mDeviceName);
         sys.setColor(mColors);
         sys.setModleName(mSceneName);
         SceneDaoUtil.getInstance().insertScene(sys);
-        mSceneRelationAliDAO.deleteAllShortcurt(mSceneId, mDeviceName);
+        SceneRelationDaoUtil.getInstance().deleteAllRelation(mSceneId, mDeviceName);
         if(mSceneList.size()>0) {
             for (int i = 0; i < mSceneList.size(); i++) {
                 toAddSceneDb(mSceneList.get(i), sys);
@@ -116,16 +110,16 @@ public class SceneDetailPresenter extends BasePresenterImpl<SceneDetailContract.
     }
 
     @Override
-    public void skipActivityToUpdate(SceneAliBean sceneAliBean) {
+    public void skipActivityToUpdate(AutomationBean automationBean) {
         Intent intent = new Intent();
         intent.setClass(mContext, AutomationDetailActivity.class);
-        intent.putExtra("deviceName", sceneAliBean.getDeviceName());
+        intent.putExtra("deviceName", automationBean.getDeviceName());
         intent.putExtra("Modify", true);
-        intent.putExtra("Scene", sceneAliBean);
+        intent.putExtra("Scene", automationBean);
         mView.skipActivity(intent);
     }
 
-    private void createCode(List<SceneAliBean> mSceneLists) {
+    private void createCode(List<AutomationBean> mSceneLists) {
         byte scene_default = 0;
         String name;
         if(mSceneId>3){
@@ -141,30 +135,30 @@ public class SceneDetailPresenter extends BasePresenterImpl<SceneDetailContract.
         length += 1;//the scene id
 
         String btnNum;
-        List<ShortcutAliBean> shortcutBeans = mShortcutDAO.findShorcutsBysid(mDeviceName, mSceneId);
+        List<SceneSwitchBean> mSwitch = SceneSwitchDaoUtil.getInstance().findSwitchBySid(mSceneId, mDeviceName);
 
-        if (Integer.toHexString(shortcutBeans.size()).length()<2){  //new mid
-            btnNum = "0"+Integer.toHexString(shortcutBeans.size());
+        if (Integer.toHexString(mSwitch.size()).length()<2){  //new mid
+            btnNum = "0"+Integer.toHexString(mSwitch.size());
         }else{
-            btnNum =Integer.toHexString(shortcutBeans.size());
+            btnNum =Integer.toHexString(mSwitch.size());
         }
         length +=1;//button num
 
         String shortcut = "";
 
-        for (int i = 0;i<shortcutBeans.size();i++){
+        for (int i = 0;i<mSwitch.size();i++){
             String eqid ;
             String dessid ;
-            if (Integer.toHexString(shortcutBeans.get(i).getEqid()).length()<2){  //new mid
-                eqid = "000"+Integer.toHexString(shortcutBeans.get(i).getEqid());
+            if (Integer.toHexString(mSwitch.get(i).getDeviceId()).length()<2){  //new mid
+                eqid = "000"+Integer.toHexString(mSwitch.get(i).getDeviceId());
             }else{
-                eqid ="00"+Integer.toHexString(shortcutBeans.get(i).getEqid());
+                eqid ="00"+Integer.toHexString(mSwitch.get(i).getDeviceId());
             }
 
-            if (Integer.toHexString(shortcutBeans.get(i).getDes_sid()).length()<2){  //new mid
-                dessid = "0"+Integer.toHexString(shortcutBeans.get(i).getDes_sid())+"000000";
+            if (Integer.toHexString(mSwitch.get(i).getDes_sid()).length()<2){  //new mid
+                dessid = "0"+Integer.toHexString(mSwitch.get(i).getDes_sid())+"000000";
             }else{
-                dessid =Integer.toHexString(shortcutBeans.get(i).getDes_sid())+"000000";
+                dessid =Integer.toHexString(mSwitch.get(i).getDes_sid())+"000000";
             }
 
             shortcut+=(eqid+dessid+"00");
@@ -221,13 +215,13 @@ public class SceneDetailPresenter extends BasePresenterImpl<SceneDetailContract.
         mSendScene.increaceSceneGroup(fullCode + crc);
     }
 
-    private void toAddSceneDb(SceneAliBean ab, SceneBean sys2) {
+    private void toAddSceneDb(AutomationBean ab, SceneBean sys2) {
         try {
             SceneRelationBean sceneRelationBean = new SceneRelationBean();
             sceneRelationBean.setSid(sys2.getSid());
             sceneRelationBean.setDeviceName(ab.getDeviceName());
             sceneRelationBean.setMid(ab.getMid());
-            mSceneRelationAliDAO.insertSceneRelation(sceneRelationBean);
+            SceneRelationDaoUtil.getInstance().insertSceneRelation(sceneRelationBean);
         }catch (Exception e){
             Log.i(TAG,"SceneBean is null or SysModelBean is null");
         }

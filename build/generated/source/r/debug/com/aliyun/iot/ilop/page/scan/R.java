@@ -33,18 +33,18 @@ public final class R {
         public static final int scan_rect_tranblack_bg = 0x7f080109;
     }
     public static final class id {
-        public static final int imageview_resultview_view = 0x7f0a013d;
-        public static final int scan_fragment = 0x7f0a0287;
-        public static final int scan_preview_surfaceview = 0x7f0a0288;
-        public static final int scanactivity_album_textview = 0x7f0a0289;
-        public static final int scanactivity_back_linearlayout = 0x7f0a028a;
-        public static final int scanactivity_topbar_linearlayout = 0x7f0a028b;
-        public static final int textview_resultview_des = 0x7f0a0317;
+        public static final int imageview_resultview_view = 0x7f0a013a;
+        public static final int scan_fragment = 0x7f0a0283;
+        public static final int scan_preview_surfaceview = 0x7f0a0284;
+        public static final int scanactivity_album_textview = 0x7f0a0285;
+        public static final int scanactivity_back_linearlayout = 0x7f0a0286;
+        public static final int scanactivity_topbar_linearlayout = 0x7f0a0287;
+        public static final int textview_resultview_des = 0x7f0a0312;
     }
     public static final class layout {
-        public static final int scan_activity = 0x7f0d00fb;
-        public static final int scan_frgment = 0x7f0d00fc;
-        public static final int view_showalbumpic = 0x7f0d0101;
+        public static final int scan_activity = 0x7f0d00f9;
+        public static final int scan_frgment = 0x7f0d00fa;
+        public static final int view_showalbumpic = 0x7f0d00ff;
     }
     public static final class raw {
         public static final int beep = 0x7f100001;

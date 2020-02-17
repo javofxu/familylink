@@ -3,6 +3,7 @@ package com.ilop.sthome.data.greenDao;
 import org.greenrobot.greendao.annotation.Entity;
 import org.greenrobot.greendao.annotation.Id;
 import org.greenrobot.greendao.annotation.Generated;
+import org.greenrobot.greendao.annotation.Unique;
 
 /**
  * @author skygge
@@ -17,10 +18,13 @@ public class SceneRelationBean {
     @Id(autoincrement = true)
     private Long id;
 
+    @Unique
     private int sid;
 
+    @Unique
     private int mid;
 
+    @Unique
     private String deviceName;
 
     @Generated(hash = 1054057970)

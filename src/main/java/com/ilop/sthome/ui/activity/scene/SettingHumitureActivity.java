@@ -40,7 +40,7 @@ public class SettingHumitureActivity extends BaseActivity<ActivitySetHumitureBin
     protected void initialize() {
         super.initialize();
         isUpdate = getIntent().getBooleanExtra("isUpdate", false);
-        mDevice = getIntent().getParcelableExtra("device");
+        mDevice = (DeviceInfoBean) getIntent().getSerializableExtra("device");
     }
 
     @Override

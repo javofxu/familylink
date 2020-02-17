@@ -11,8 +11,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.common.utils.LiveDataBus;
-import com.ilop.sthome.data.bean.SceneAliBean;
 import com.ilop.sthome.data.enums.SmartProduct;
+import com.ilop.sthome.data.greenDao.AutomationBean;
 import com.ilop.sthome.data.greenDao.DeviceInfoBean;
 import com.siterwell.familywellplus.R;
 
@@ -31,15 +31,15 @@ import butterknife.ButterKnife;
 public class DefaultAutoAdapter extends RecyclerView.Adapter<DefaultAutoAdapter.ItemHolder> {
 
     private Context mContext;
-    private List<SceneAliBean> mList;
-    private List<SceneAliBean> mBeanList = new ArrayList<>();
+    private List<AutomationBean> mList;
+    private List<AutomationBean> mBeanList = new ArrayList<>();
     private HashMap<Integer, Boolean> isSelected = new HashMap<>();
 
     public DefaultAutoAdapter(Context mContext) {
         this.mContext = mContext;
     }
 
-    public void setList(List<SceneAliBean> mList) {
+    public void setList(List<AutomationBean> mList) {
         this.mList = mList;
         notifyDataSetChanged();
     }
@@ -58,7 +58,7 @@ public class DefaultAutoAdapter extends RecyclerView.Adapter<DefaultAutoAdapter.
         }
     }
 
-    public List<SceneAliBean> getSceneBeanList(){
+    public List<AutomationBean> getSceneBeanList(){
         return mBeanList;
     }
 
@@ -71,7 +71,7 @@ public class DefaultAutoAdapter extends RecyclerView.Adapter<DefaultAutoAdapter.
 
     @Override
     public void onBindViewHolder(@NonNull ItemHolder itemHolder, int i) {
-        SceneAliBean bean = mList.get(i);
+        AutomationBean bean = mList.get(i);
         itemHolder.mTitle.setText(bean.getName());
 
         List<DeviceInfoBean> inputList = bean.getInput(mContext, bean.getDeviceName());

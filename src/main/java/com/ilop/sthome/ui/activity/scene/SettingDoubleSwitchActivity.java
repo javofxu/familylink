@@ -42,7 +42,7 @@ public class SettingDoubleSwitchActivity extends BaseActivity<ActivitySetDoubleS
         super.initialize();
         isInput = getIntent().getBooleanExtra("isInput", false);
         isUpdate = getIntent().getBooleanExtra("isUpdate", false);
-        mDevice = getIntent().getParcelableExtra("device");
+        mDevice = (DeviceInfoBean) getIntent().getSerializableExtra("device");
         if (isInput){
             mDBind.tvSetTitle.setText(getString(R.string.set_criteria));
         }else {

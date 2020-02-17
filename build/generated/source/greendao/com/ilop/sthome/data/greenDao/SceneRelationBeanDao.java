@@ -42,9 +42,9 @@ public class SceneRelationBeanDao extends AbstractDao<SceneRelationBean, Long> {
         String constraint = ifNotExists? "IF NOT EXISTS ": "";
         db.execSQL("CREATE TABLE " + constraint + "\"SCENE_RELATION_BEAN\" (" + //
                 "\"_id\" INTEGER PRIMARY KEY AUTOINCREMENT ," + // 0: id
-                "\"SID\" INTEGER NOT NULL ," + // 1: sid
-                "\"MID\" INTEGER NOT NULL ," + // 2: mid
-                "\"DEVICE_NAME\" TEXT);"); // 3: deviceName
+                "\"SID\" INTEGER NOT NULL UNIQUE ," + // 1: sid
+                "\"MID\" INTEGER NOT NULL UNIQUE ," + // 2: mid
+                "\"DEVICE_NAME\" TEXT UNIQUE );"); // 3: deviceName
     }
 
     /** Drops the underlying database table. */

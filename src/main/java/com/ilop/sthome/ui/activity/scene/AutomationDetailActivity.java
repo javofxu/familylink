@@ -7,8 +7,8 @@ import android.view.View;
 
 import com.example.common.base.BasePActivity;
 import com.example.common.utils.LiveDataBus;
-import com.ilop.sthome.data.bean.SceneAliBean;
 import com.ilop.sthome.data.event.EventAnswerOK;
+import com.ilop.sthome.data.greenDao.AutomationBean;
 import com.ilop.sthome.data.greenDao.DeviceInfoBean;
 import com.ilop.sthome.mvp.contract.AutomationContract;
 import com.ilop.sthome.mvp.present.AutomationPresenter;
@@ -34,7 +34,7 @@ import java.util.List;
  */
 public class AutomationDetailActivity extends BasePActivity<AutomationPresenter, ActivityAutomationDetailBinding> implements AutomationContract.IView {
 
-    private SceneAliBean mSceneAliBean;
+    private AutomationBean mAutomation;
     private String mDeviceName;
     private boolean mModify;
 
@@ -55,11 +55,11 @@ public class AutomationDetailActivity extends BasePActivity<AutomationPresenter,
         EventBus.getDefault().register(this);
         mDeviceName = getIntent().getStringExtra("deviceName");
         mModify = getIntent().getBooleanExtra("Modify", false);
-        mSceneAliBean = (SceneAliBean) getIntent().getSerializableExtra("Scene");
+        mAutomation = (AutomationBean) getIntent().getSerializableExtra("Scene");
         if (!mModify){
             mDBind.btDeleteAutomation.setVisibility(View.GONE);
         }else {
-            mDBind.tvAutomationName.setText(mSceneAliBean.getName());
+            mDBind.tvAutomationName.setText(mAutomation.getName());
         }
     }
 
@@ -85,14 +85,14 @@ public class AutomationDetailActivity extends BasePActivity<AutomationPresenter,
     @Override
     protected void initData() {
         super.initData();
-        mPresent.isModifyForShow(mModify, mSceneAliBean);
+        mPresent.isModifyForShow(mModify, mAutomation);
         LiveDataBus.get().with("input_condition",List.class).observe(this, list -> {
             if (inputList.size() == 0){
                 inputList.addAll(list);
                 mPresent.setInputList(inputList);
             }else{
                 if (mPresent.checkInput((List<DeviceInfoBean>) list)){
-                    inputList.add(((List<DeviceInfoBean>) list).get(0));
+                    inputList.addAll(((List<DeviceInfoBean>) list));
                     mPresent.setInputList(inputList);
                 }else {
                     showToast(getString(R.string.input_exist));
@@ -100,8 +100,17 @@ public class AutomationDetailActivity extends BasePActivity<AutomationPresenter,
             }
         });
         LiveDataBus.get().with("output_condition", List.class).observe(this, list -> {
-            outputList.addAll(list);
-            mPresent.setOutputList(outputList);
+            if (outputList.size() == 0){
+                outputList.addAll(list);
+                mPresent.setOutputList(outputList);
+            }else{
+                if (mPresent.checkOutput((List<DeviceInfoBean>) list)){
+                    outputList.addAll(((List<DeviceInfoBean>) list));
+                    mPresent.setOutputList(outputList);
+                }else {
+                    showToast(getString(R.string.input_exist));
+                }
+            }
         });
         LiveDataBus.get().with("update_input", List.class).observe(this, list -> {
             mPresent.checkUpdateInput((List<DeviceInfoBean>)list);
@@ -136,10 +145,10 @@ public class AutomationDetailActivity extends BasePActivity<AutomationPresenter,
         });
 
         mDBind.btDeleteAutomation.setOnClickListener(v -> {
-            String dsa = String.format(getString(R.string.want_to_delete_confirm_eq),mSceneAliBean.getName());
+            String dsa = String.format(getString(R.string.want_to_delete_confirm_eq),mAutomation.getName());
             TipDialog dialog = new TipDialog(mContext, ()->{
                 showProgressDialog();
-                mPresent.onDeleteAutomation(mSceneAliBean.getMid());
+                mPresent.onDeleteAutomation(mAutomation.getMid());
             });
             dialog.setMsg(dsa);
             dialog.show();

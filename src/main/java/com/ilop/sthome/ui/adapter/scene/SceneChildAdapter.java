@@ -15,7 +15,7 @@ import android.widget.LinearLayout;
 
 import com.example.common.utils.LiveDataBus;
 import com.example.common.view.CustomTextView;
-import com.ilop.sthome.data.bean.SysModelAliBean;
+import com.ilop.sthome.data.greenDao.SceneBean;
 import com.ilop.sthome.ui.activity.scene.SceneDetailActivity;
 import com.siterwell.familywellplus.R;
 
@@ -35,14 +35,14 @@ public class SceneChildAdapter extends RecyclerView.Adapter<SceneChildAdapter.It
 
     private Context mContext;
     private TypedArray mColors;
-    private List<SysModelAliBean> mList;
+    private List<SceneBean> mList;
 
     public SceneChildAdapter(Context mContext) {
         this.mContext = mContext;
         mColors = mContext.getResources().obtainTypedArray(R.array.scene_color);
     }
 
-    public void setList(List<SysModelAliBean> mList) {
+    public void setList(List<SceneBean> mList) {
         this.mList = mList;
         notifyDataSetChanged();
     }
@@ -56,7 +56,7 @@ public class SceneChildAdapter extends RecyclerView.Adapter<SceneChildAdapter.It
 
     @Override
     public void onBindViewHolder(@NonNull ItemHolder itemHolder, int i) {
-        SysModelAliBean mBean = mList.get(i);
+        SceneBean mBean = mList.get(i);
         switch (mBean.getSid()){
             case 0:
                 itemHolder.mName.setText(mContext.getString(R.string.home_mode));

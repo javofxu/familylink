@@ -3,14 +3,14 @@ package com.ilop.sthome.network.api;
 import android.content.Context;
 import android.util.Log;
 
-import com.ilop.sthome.data.bean.SceneRelationBean;
-import com.ilop.sthome.data.bean.ShortcutAliBean;
-import com.ilop.sthome.data.db.SceneRelaitonAliDAO;
-import com.ilop.sthome.data.db.ShortcutAliDAO;
 import com.ilop.sthome.data.greenDao.DeviceInfoBean;
 import com.ilop.sthome.data.greenDao.SceneBean;
+import com.ilop.sthome.data.greenDao.SceneRelationBean;
+import com.ilop.sthome.data.greenDao.SceneSwitchBean;
 import com.ilop.sthome.utils.CoderALiUtils;
 import com.ilop.sthome.utils.greenDao.SceneDaoUtil;
+import com.ilop.sthome.utils.greenDao.SceneRelationDaoUtil;
+import com.ilop.sthome.utils.greenDao.SceneSwitchDaoUtil;
 import com.ilop.sthome.utils.tools.ByteUtil;
 
 import java.util.ArrayList;
@@ -52,7 +52,6 @@ public class DataFromAliSceneGroup {
      */
     public String makeSceneCode(SceneBean smb){
         byte scene_default  = 0;
-        ShortcutAliDAO shortcutDAO = new ShortcutAliDAO(context);
         int sceneGroupId = smb.getSid();
         int length = 0;
         String name = null;
@@ -68,33 +67,33 @@ public class DataFromAliSceneGroup {
         length += 1;//the scene id
 
         String btnNum = "";
-        List<ShortcutAliBean> shortcutBeans = shortcutDAO.findShorcutsBysid(smb.getDeviceName(),smb.getSid());
+        List<SceneSwitchBean> mSwitch = SceneSwitchDaoUtil.getInstance().findSwitchBySid(smb.getSid(), smb.getDeviceName());
 
-        if (Integer.toHexString(shortcutBeans.size()).length()<2){  //new mid
-            btnNum = "0"+Integer.toHexString(shortcutBeans.size());
+        if (Integer.toHexString(mSwitch.size()).length()<2){  //new mid
+            btnNum = "0"+Integer.toHexString(mSwitch.size());
         }else{
-            btnNum =Integer.toHexString(shortcutBeans.size());
+            btnNum =Integer.toHexString(mSwitch.size());
         }
         length+=1;//button num
 
         String shortcut = "";
 
-        for (int j = 0;j<shortcutBeans.size();j++){
+        for (int j = 0;j<mSwitch.size();j++){
 
 
 
             String eqid = "";
             String dessid = "";
-            if (Integer.toHexString(shortcutBeans.get(j).getEqid()).length()<2){  //new mid
-                eqid = "000"+Integer.toHexString(shortcutBeans.get(j).getEqid());
+            if (Integer.toHexString(mSwitch.get(j).getDeviceId()).length()<2){  //new mid
+                eqid = "000"+Integer.toHexString(mSwitch.get(j).getDeviceId());
             }else{
-                eqid ="00"+Integer.toHexString(shortcutBeans.get(j).getEqid());
+                eqid ="00"+Integer.toHexString(mSwitch.get(j).getDeviceId());
             }
 
-            if (Integer.toHexString(shortcutBeans.get(j).getDes_sid()).length()<2){  //new mid
-                dessid = "0"+Integer.toHexString(shortcutBeans.get(j).getDes_sid())+"000000";
+            if (Integer.toHexString(mSwitch.get(j).getDes_sid()).length()<2){  //new mid
+                dessid = "0"+Integer.toHexString(mSwitch.get(j).getDes_sid())+"000000";
             }else{
-                dessid =Integer.toHexString(shortcutBeans.get(j).getDes_sid())+"000000";
+                dessid =Integer.toHexString(mSwitch.get(j).getDes_sid())+"000000";
             }
 
             shortcut+=(eqid+dessid+"00");
@@ -114,8 +113,7 @@ public class DataFromAliSceneGroup {
         int scene =0;
         //scene id
         String sceneCode ="";
-        SceneRelaitonAliDAO SED = new SceneRelaitonAliDAO(context);
-        List<SceneRelationBean> sceneLists = SED.findRelationsBysid(deviceInfoBean.getDeviceName(),smb.getSid());
+        List<SceneRelationBean> sceneLists = SceneRelationDaoUtil.getInstance().findRelationsBySid(deviceInfoBean.getDeviceName(),smb.getSid());
         if(sceneLists != null && sceneLists.size()>0){
             for(int i = 0; i<sceneLists.size();i++){
                 if(sceneLists.get(i).getMid()<=128){

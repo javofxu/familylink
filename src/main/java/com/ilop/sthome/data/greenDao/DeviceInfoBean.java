@@ -1,15 +1,17 @@
 package com.ilop.sthome.data.greenDao;
 
 import android.os.Parcel;
-import android.os.Parcelable;
 
 import org.greenrobot.greendao.annotation.Entity;
 import org.greenrobot.greendao.annotation.Id;
 import org.greenrobot.greendao.annotation.Generated;
 
-@Entity
-public class DeviceInfoBean implements Parcelable {
+import java.io.Serializable;
 
+@Entity
+public class DeviceInfoBean implements Serializable {
+
+    static final long serialVersionUID = 42L;
 
     /**
      * gmtModified : 1531360639000
@@ -323,71 +325,4 @@ public class DeviceInfoBean implements Parcelable {
         this.scene_id = scene_id;
     }
 
-    @Override
-    public int describeContents() {
-        return 0;
-    }
-
-    @Override
-    public void writeToParcel(Parcel parcel, int i) {
-        parcel.writeLong(id);
-        parcel.writeLong(gmtModified);
-        parcel.writeString(categoryImage);
-        parcel.writeString(netType);
-        parcel.writeString(nodeType);
-        parcel.writeString(productKey);
-        parcel.writeString(deviceName);
-        parcel.writeString(productName);
-        parcel.writeString(identityAlias);
-        parcel.writeString(iotId);
-        parcel.writeInt(owned);
-        parcel.writeString(identityId);
-        parcel.writeString(thingType);
-        parcel.writeInt(status);
-        parcel.writeString(nickName);
-        parcel.writeInt(isEdgeGateway);
-        parcel.writeString(binVersion);
-        parcel.writeString(subdeviceName);
-        parcel.writeInt(device_ID);
-        parcel.writeString(device_type);
-        parcel.writeString(device_status);
-        parcel.writeInt(current_mode);
-        parcel.writeInt(scene_id);
-    }
-
-    public static final Creator<DeviceInfoBean> CREATOR = new Creator<DeviceInfoBean>() {
-        @Override
-        public DeviceInfoBean createFromParcel(Parcel in) {
-            DeviceInfoBean device = new DeviceInfoBean();
-            device.id = in.readLong();
-            device.gmtModified = in.readLong();
-            device.categoryImage = in.readString();
-            device.netType= in.readString();
-            device.nodeType= in.readString();
-            device.productKey= in.readString();
-            device.deviceName= in.readString();
-            device.productName= in.readString();
-            device.identityAlias= in.readString();
-            device.iotId= in.readString();
-            device.owned= in.readInt();
-            device.identityId= in.readString();
-            device.thingType= in.readString();
-            device.status= in.readInt();
-            device.nickName= in.readString();
-            device.isEdgeGateway= in.readInt();
-            device.binVersion= in.readString();
-            device.subdeviceName= in.readString();
-            device.device_ID= in.readInt();
-            device.device_type= in.readString();
-            device.device_status= in.readString();
-            device.current_mode= in.readInt();
-            device.scene_id= in.readInt();
-            return device;
-        }
-
-        @Override
-        public DeviceInfoBean[] newArray(int size) {
-            return new DeviceInfoBean[size];
-        }
-    };
 }

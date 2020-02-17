@@ -48,9 +48,10 @@ public class DeviceDaoUtil {
     public List<DeviceInfoBean> findAllGateway(){
         String productKey = DevType.EE_GATEWAY.getProductkey();
         return mDeviceDao.queryBuilder()
-                .where(DeviceInfoBeanDao.Properties.Device_ID.eq(0)
-                ,DeviceInfoBeanDao.Properties.ProductKey.eq(productKey))
+                .where(DeviceInfoBeanDao.Properties.Device_ID.eq(0),
+                        DeviceInfoBeanDao.Properties.ProductKey.eq(productKey))
                 .orderAsc(DeviceInfoBeanDao.Properties.DeviceName, DeviceInfoBeanDao.Properties.Device_ID)
+                .build()
                 .list();
     }
 
@@ -59,12 +60,12 @@ public class DeviceDaoUtil {
      * @return DeviceInfoBean
      */
     public DeviceInfoBean findGatewayByDeviceName(String deviceName){
-        List<DeviceInfoBean> mDevice = mDeviceUtils.queryByQueryBuilder(DeviceInfoBeanDao.Properties.DeviceName.eq(deviceName),
-                DeviceInfoBeanDao.Properties.Device_ID.eq(0));
-        if (mDevice.size()>0){
-            return mDevice.get(0);
-        }
-        return null;
+        return mDeviceDao.queryBuilder()
+                .where(DeviceInfoBeanDao.Properties.DeviceName.eq(deviceName),
+                        DeviceInfoBeanDao.Properties.Device_ID.eq(0))
+                .build()
+                .unique();
+
     }
 
     /**
@@ -72,12 +73,11 @@ public class DeviceDaoUtil {
      * @return DeviceInfoBean
      */
     public DeviceInfoBean findByDeviceId(String deviceName, int deviceId){
-        List<DeviceInfoBean> mDevice = mDeviceUtils.queryByQueryBuilder(DeviceInfoBeanDao.Properties.DeviceName.eq(deviceName),
-                DeviceInfoBeanDao.Properties.Device_ID.eq(deviceId));
-        if (mDevice.size()>0){
-            return mDevice.get(0);
-        }
-        return null;
+        return  mDeviceDao.queryBuilder()
+                .where(DeviceInfoBeanDao.Properties.DeviceName.eq(deviceName),
+                        DeviceInfoBeanDao.Properties.Device_ID.eq(deviceId))
+                .build()
+                .unique();
     }
 
     /**
@@ -89,6 +89,7 @@ public class DeviceDaoUtil {
                 .where(DeviceInfoBeanDao.Properties.Device_ID.notEq(0)
                         ,DeviceInfoBeanDao.Properties.DeviceName.eq(deviceName))
                 .orderAsc(DeviceInfoBeanDao.Properties.Device_ID)
+                .build()
                 .list();
     }
 
@@ -100,6 +101,7 @@ public class DeviceDaoUtil {
         return mDeviceDao.queryBuilder()
                 .where(DeviceInfoBeanDao.Properties.Device_ID.eq(0))
                 .orderAsc(DeviceInfoBeanDao.Properties.DeviceName, DeviceInfoBeanDao.Properties.Device_ID)
+                .build()
                 .list();
     }
 
@@ -111,6 +113,7 @@ public class DeviceDaoUtil {
         return mDeviceDao.queryBuilder()
                 .where(DeviceInfoBeanDao.Properties.Device_ID.eq(0), DeviceInfoBeanDao.Properties.Owned.notEq(1))
                 .orderAsc(DeviceInfoBeanDao.Properties.DeviceName, DeviceInfoBeanDao.Properties.Device_ID)
+                .build()
                 .list();
     }
 
@@ -122,6 +125,7 @@ public class DeviceDaoUtil {
         List<DeviceInfoBean> mList = mDeviceDao.queryBuilder()
                 .where(DeviceInfoBeanDao.Properties.Device_ID.eq(0), DeviceInfoBeanDao.Properties.Owned.notEq(1))
                 .orderAsc(DeviceInfoBeanDao.Properties.DeviceName, DeviceInfoBeanDao.Properties.Device_ID)
+                .build()
                 .list();
         List<String> deviceName = new ArrayList<>();
         for (DeviceInfoBean device:mList) {
@@ -143,6 +147,7 @@ public class DeviceDaoUtil {
                         DeviceInfoBeanDao.Properties.Device_type.like("%2__"),
                         DeviceInfoBeanDao.Properties.Device_type.like("%6__"),
                         DeviceInfoBeanDao.Properties.Device_type.eq("1213"))
+                .build()
                 .list();
     }
 
@@ -156,6 +161,7 @@ public class DeviceDaoUtil {
                 .where(DeviceInfoBeanDao.Properties.DeviceName.eq(deviceName),
                         DeviceInfoBeanDao.Properties.Device_type.notEq("1213"),
                         DeviceInfoBeanDao.Properties.Device_type.like("%2__"))
+                .build()
                 .list();
     }
 
@@ -179,6 +185,7 @@ public class DeviceDaoUtil {
                 .where(DeviceInfoBeanDao.Properties.DeviceName.eq(deviceName),
                         DeviceInfoBeanDao.Properties.Device_ID.eq(0))
                 .orderAsc(DeviceInfoBeanDao.Properties.DeviceName, DeviceInfoBeanDao.Properties.Device_ID)
+                .build()
                 .list();
         if (deviceList.size()>0){
             DeviceInfoBean deviceInfo = deviceList.get(0);

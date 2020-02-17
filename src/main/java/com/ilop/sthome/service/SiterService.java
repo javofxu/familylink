@@ -21,8 +21,6 @@ import com.example.common.base.OnCallBackToRefresh;
 import com.example.common.utils.RxTimerUtil;
 import com.ilop.sthome.common.ControllerWifi;
 import com.ilop.sthome.common.SearchWifiHelper;
-import com.ilop.sthome.data.bean.SceneAliBean;
-import com.ilop.sthome.data.db.SceneAliDAO;
 import com.ilop.sthome.data.enums.SmartProduct;
 import com.ilop.sthome.data.event.EventAnswerOK;
 import com.ilop.sthome.data.event.EventRefreshDevice;
@@ -31,6 +29,7 @@ import com.ilop.sthome.data.event.EventRefreshScene;
 import com.ilop.sthome.data.event.EventRefreshSubDeviceLogs;
 import com.ilop.sthome.data.event.EventUdpReceive;
 import com.ilop.sthome.data.event.STEvent;
+import com.ilop.sthome.data.greenDao.AutomationBean;
 import com.ilop.sthome.data.greenDao.DeviceInfoBean;
 import com.ilop.sthome.data.greenDao.HistoryBean;
 import com.ilop.sthome.data.greenDao.SceneBean;
@@ -48,6 +47,7 @@ import com.ilop.sthome.ui.dialog.BaseDialog;
 import com.ilop.sthome.utils.CoderALiUtils;
 import com.ilop.sthome.utils.HistoryDataUtil;
 import com.ilop.sthome.utils.NetWorkUtil;
+import com.ilop.sthome.utils.greenDao.AutomationDaoUtil;
 import com.ilop.sthome.utils.greenDao.DeviceDaoUtil;
 import com.ilop.sthome.utils.greenDao.HistoryDaoUtil;
 import com.ilop.sthome.utils.greenDao.SceneDaoUtil;
@@ -388,6 +388,7 @@ public class SiterService extends Service {
             }
 
             int cmd = jsonObject1.getIntValue("CMD_CODE");
+            Log.i(TAG, "doDealUdpData: "+ cmd);
             if (cmd == SendCommandAli.UPLOAD_DEVICE_STATUS) {
                 String content = jsonObject1.getString("data_str1");
                 if (content.length() == 8) {
@@ -451,6 +452,7 @@ public class SiterService extends Service {
             }
 
             int cmd = jsonObject1.getIntValue("CMD_CODE");
+            Log.i(TAG, "doDealData: " + cmd);
                 if (cmd == SendCommandAli.UPLOAD_DEVICE_STATUS) {
                     String content = jsonObject1.getString("data_str1");
                     if (content.length() == 8) {
@@ -461,6 +463,7 @@ public class SiterService extends Service {
                     String content = jsonObject1.getString("data_str2");
                 } else if (cmd == SendCommandAli.SEND_ACK) {
                     String content = jsonObject1.toString();
+                    Log.i(TAG, "doDealData: "+ content);
                     sendAck(content);
                 } else if (cmd == SendCommandAli.UPLOAD_CURRENT_SCENE_GROUP) {
                     String current = jsonObject1.getString("data_str1");
@@ -646,16 +649,14 @@ public class SiterService extends Service {
             handler.sendMessageDelayed(message, 0);
         } else if (content.startsWith("0000")) {
             int mid = Integer.parseInt(content.substring(4, 6), 16);
-            SceneAliDAO sceneAliDAO = new SceneAliDAO(SiterService.this);
-            sceneAliDAO.deleteByMid(mid, deviceName);
+            AutomationDaoUtil.getInstance().deleteByMid(mid, deviceName);
             SceneRelationDaoUtil.getInstance().deleteAllRelation2(mid, deviceName);
         } else {
-            SceneAliBean sceneAliBean = new SceneAliBean();
-            sceneAliBean.setCode(content);
-            sceneAliBean.create(deviceName);
-            if (sceneAliBean.getMid() > 0) {
-                SceneAliDAO sceneAliDAO = new SceneAliDAO(SiterService.this);
-                sceneAliDAO.insertScene(sceneAliBean);
+            AutomationBean automationBean = new AutomationBean();
+            automationBean.setCode(content);
+            automationBean.create(deviceName);
+            if (automationBean.getMid() > 0) {
+                AutomationDaoUtil.getInstance().insertAutomation(automationBean);
             }
         }
     }
@@ -859,7 +860,6 @@ public class SiterService extends Service {
     @TargetApi(Build.VERSION_CODES.JELLY_BEAN)
     private void doAliSceneAlertShow(int mid,String deviceName){
         try {
-            SceneAliDAO SED = new SceneAliDAO(this);
             String SceneName;
             String dname;
 
@@ -876,14 +876,14 @@ public class SiterService extends Service {
                 }
 
             }
-            SceneAliBean sceneAliBean = SED.findScenceBymid(mid,deviceName);
+            AutomationBean automationBean = AutomationDaoUtil.getInstance().findAutomationByMid(mid,deviceName);
 
 
             String title = "";
-                if(sceneAliBean == null){
+                if(automationBean == null){
                     title = String.format(getResources().getString(R.string.ali_gateway_scene_is_happen_has_no_scene),dname,mid);
                 }else{
-                    SceneName = sceneAliBean.getName();
+                    SceneName = automationBean.getName();
                     title = String.format(getResources().getString(R.string.ali_gateway_scene_is_happen_has_scene),dname,SceneName);
                 }
 

@@ -6,8 +6,8 @@ import android.view.View;
 
 import com.example.common.base.BasePActivity;
 import com.example.common.utils.LiveDataBus;
-import com.ilop.sthome.data.bean.SceneAliBean;
 import com.ilop.sthome.data.event.EventAnswerOK;
+import com.ilop.sthome.data.greenDao.AutomationBean;
 import com.ilop.sthome.data.greenDao.DeviceInfoBean;
 import com.ilop.sthome.mvp.contract.AddSceneContract;
 import com.ilop.sthome.mvp.present.AddScenePresenter;
@@ -37,7 +37,7 @@ public class AddSceneActivity extends BasePActivity<AddScenePresenter, ActivityA
     private int mGateway = -1;
     private ChoseColorAdapter mColorAdapter;
     private GatewayListAdapter mGatewayAdapter;
-    private List<SceneAliBean> mSceneList;
+    private List<AutomationBean> mAutoList;
 
     @Override
     protected int getLayoutId() {
@@ -59,7 +59,7 @@ public class AddSceneActivity extends BasePActivity<AddScenePresenter, ActivityA
     @Override
     protected void initView() {
         super.initView();
-        mSceneList = new ArrayList<>();
+        mAutoList = new ArrayList<>();
         mDBind.etSceneName.setText(getString(R.string.system_scene)+mPresent.getSid());
         mColorAdapter = new ChoseColorAdapter(mContext);
         mGatewayAdapter = new GatewayListAdapter(mContext);
@@ -95,7 +95,7 @@ public class AddSceneActivity extends BasePActivity<AddScenePresenter, ActivityA
             }else if (TextUtils.isEmpty(mSceneName)){
                 showToastMsg(getString(R.string.input_scene_name));
             }else {
-                mPresent.onSaveScene(mSceneName, mGateway, mSceneList);
+                mPresent.onSaveScene(mSceneName, mGateway, mAutoList);
             }
         });
         mDBind.ivAddGateway.setOnClickListener(v -> {

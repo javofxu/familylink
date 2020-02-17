@@ -4,13 +4,11 @@ import android.content.Context;
 import android.content.Intent;
 
 import com.example.common.mvp.BasePresenterImpl;
-import com.ilop.sthome.data.bean.SceneAliBean;
-import com.ilop.sthome.data.bean.SceneRelationBean;
-import com.ilop.sthome.data.db.SceneAliDAO;
-import com.ilop.sthome.data.db.SceneRelaitonAliDAO;
 import com.ilop.sthome.data.enums.SmartProduct;
+import com.ilop.sthome.data.greenDao.AutomationBean;
 import com.ilop.sthome.data.greenDao.DeviceInfoBean;
 import com.ilop.sthome.data.greenDao.SceneBean;
+import com.ilop.sthome.data.greenDao.SceneRelationBean;
 import com.ilop.sthome.mvp.contract.AutomationContract;
 import com.ilop.sthome.network.api.DataFromAliSceneGroup;
 import com.ilop.sthome.network.api.SendSceneDataAli;
@@ -18,8 +16,10 @@ import com.ilop.sthome.ui.activity.scene.ChooseActionActivity;
 import com.ilop.sthome.ui.activity.scene.InputDetailActivity;
 import com.ilop.sthome.ui.activity.scene.SettingTimingActivity;
 import com.ilop.sthome.utils.CommandUtil;
+import com.ilop.sthome.utils.greenDao.AutomationDaoUtil;
 import com.ilop.sthome.utils.greenDao.DeviceDaoUtil;
 import com.ilop.sthome.utils.greenDao.SceneDaoUtil;
+import com.ilop.sthome.utils.greenDao.SceneRelationDaoUtil;
 import com.siterwell.familywellplus.R;
 
 import java.util.ArrayList;
@@ -41,8 +41,7 @@ public class AutomationPresenter extends BasePresenterImpl<AutomationContract.IV
     private boolean mModify;
     private int mDeleteSceneId;
 
-    private SceneAliDAO mSceneAliDAO;
-    private SceneAliBean mSceneAli;
+    private AutomationBean mAutomation;
     private SendSceneDataAli mSendSceneData;
 
     private DeviceInfoBean mDeviceInfoBean;
@@ -55,22 +54,21 @@ public class AutomationPresenter extends BasePresenterImpl<AutomationContract.IV
     public AutomationPresenter(Context mContext, String deviceName) {
         this.mContext = mContext;
         this.mDeviceName = deviceName;
-        mSceneAliDAO = new SceneAliDAO(mContext);
         mDeviceInfoBean = DeviceDaoUtil.getInstance().findGatewayByDeviceName(mDeviceName);
         mSendSceneData = new SendSceneDataAli(mContext, mDeviceInfoBean);
     }
 
     @Override
-    public void isModifyForShow(boolean modify, SceneAliBean mSceneAli) {
+    public void isModifyForShow(boolean modify, AutomationBean mAutomation) {
         mModify = modify;
         if (!modify){
-            this.mSceneAli = new SceneAliBean();
+            this.mAutomation = new AutomationBean();
             inputShow = new ArrayList<>();
             outputShow = new ArrayList<>();
         }else {
-            this.mSceneAli = mSceneAli;
-            setInputList(mSceneAli.getInput(mContext, mDeviceName));
-            setOutputList(mSceneAli.getOutput(mContext, mDeviceName));
+            this.mAutomation = mAutomation;
+            setInputList(mAutomation.getInput(mContext, mDeviceName));
+            setOutputList(mAutomation.getOutput(mContext, mDeviceName));
         }
     }
 
@@ -173,12 +171,12 @@ public class AutomationPresenter extends BasePresenterImpl<AutomationContract.IV
             }
             mAutoName = mAutoName.substring(0, mAutoName.length()-1);
             if(!mModify){
-                mSceneAli.setName(mAutoName);
-                mSceneAli.setDeviceName(mDeviceName);
+                mAutomation.setName(mAutoName);
+                mAutomation.setDeviceName(mDeviceName);
                 int amid = CommandUtil.getMid(mContext, mDeviceName);
-                mSceneAli.setMid(amid);
+                mAutomation.setMid(amid);
             }
-            String msg = CommandUtil.addModle( mAutoName, mTrigger, mSceneAli, inputShow, outputShow);
+            String msg = CommandUtil.addModle( mAutoName, mTrigger, mAutomation, inputShow, outputShow);
             mSendSceneData.increaceScene(msg);
         }
     }
@@ -192,25 +190,24 @@ public class AutomationPresenter extends BasePresenterImpl<AutomationContract.IV
     @Override
     public void sendSuccess() {
         try{
-            mSceneAli.setName(mAutoName);
-            mSceneAli.setCode(CommandUtil.getMessageCode());
+            mAutomation.setName(mAutoName);
+            mAutomation.setCode(CommandUtil.getMessageCode());
 
             if(!mModify){
-                mSceneAliDAO.addScence(mSceneAli);
+                AutomationDaoUtil.getInstance().getAutomationDao().insert(mAutomation);
                 SceneBean mScene =  SceneDaoUtil.getInstance().findSceneByChoice(mDeviceName);
 
                 if(mScene!=null){
-                    SceneRelaitonAliDAO sceneRelaitonAliDAO = new SceneRelaitonAliDAO(mContext);
-                    sceneRelaitonAliDAO.deleteAllShortcurt2(mSceneAli.getMid(), mDeviceName);
+                    SceneRelationDaoUtil.getInstance().deleteAllRelation2(mAutomation.getMid(), mDeviceName);
                     SceneRelationBean sceneRelationBean = new SceneRelationBean();
                     sceneRelationBean.setDeviceName(mDeviceName);
-                    sceneRelationBean.setMid(mSceneAli.getMid());
+                    sceneRelationBean.setMid(mAutomation.getMid());
                     sceneRelationBean.setSid(mScene.getSid());
-                    sceneRelaitonAliDAO.insertSceneRelation(sceneRelationBean);
+                    SceneRelationDaoUtil.getInstance().insertSceneRelation(sceneRelationBean);
                 }
             }else{
                 try{
-                    mSceneAliDAO.updateByMid(mSceneAli);
+                    AutomationDaoUtil.getInstance().getAutomationDao().update(mAutomation);
                 }catch (Exception e){
                     e.printStackTrace();
                 }
@@ -224,9 +221,8 @@ public class AutomationPresenter extends BasePresenterImpl<AutomationContract.IV
     @Override
     public void deleteSuccess() {
         if(mDeleteSceneId>-1){
-            SceneRelaitonAliDAO sceneRelaitonAliDAO = new SceneRelaitonAliDAO(mContext);
-            sceneRelaitonAliDAO.deleteAllShortcurt2(mDeleteSceneId, mDeviceName);
-            mSceneAliDAO.deleteByMid(mDeleteSceneId, mDeviceName);
+            SceneRelationDaoUtil.getInstance().deleteAllRelation2(mDeleteSceneId, mDeviceName);
+            AutomationDaoUtil.getInstance().deleteByMid(mDeleteSceneId, mDeviceName);
             mDeleteSceneId = -1;
             DataFromAliSceneGroup dataFromAliSceneGroup = new DataFromAliSceneGroup(mContext, mDeviceInfoBean);
             dataFromAliSceneGroup.doSendSynCode();
@@ -254,6 +250,19 @@ public class AutomationPresenter extends BasePresenterImpl<AutomationContract.IV
             if (inputShow.get(i).getDevice_type().equals(device.get(0).getDevice_type())&&
                     inputShow.get(i).getDevice_status().equals(device.get(0).getDevice_status())){
                 isIdentical = false;
+            }
+        }
+        return isIdentical;
+    }
+
+    @Override
+    public boolean checkOutput(List<DeviceInfoBean> device) {
+        boolean isIdentical = true;
+        for (int i = 0; i < outputShow.size(); i++) {
+            if ("PHONE".equals(device.get(0).getDevice_type())){
+                if ("PHONE".equals(outputShow.get(i).getDevice_type())){
+                    isIdentical = false;
+                }
             }
         }
         return isIdentical;

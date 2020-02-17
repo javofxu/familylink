@@ -140,10 +140,6 @@
         "source": "/Users/siterwell/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/cdf0e5878771048595b465556c8c5a65/res/drawable/abc_switch_thumb_material.xml"
     },
     {
-        "merged": "/Users/siterwell/github/familylink/build/intermediates/res/merged/debug/layout_item_scene_auto.xml.flat",
-        "source": "/Users/siterwell/github/familylink/src/main/res/layout/item_scene_auto.xml"
-    },
-    {
         "merged": "/Users/siterwell/github/familylink/build/intermediates/res/merged/debug/layout_design_layout_snackbar.xml.flat",
         "source": "/Users/siterwell/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/b57f5816f3598660d986927756c27a84/res/layout/design_layout_snackbar.xml"
     },
@@ -4722,10 +4718,6 @@
     {
         "merged": "/Users/siterwell/github/familylink/build/intermediates/res/merged/debug/drawable_btn_eq_detail_press.xml.flat",
         "source": "/Users/siterwell/github/familylink/src/main/res/drawable/btn_eq_detail_press.xml"
-    },
-    {
-        "merged": "/Users/siterwell/github/familylink/build/intermediates/res/merged/debug/layout_item_scene.xml.flat",
-        "source": "/Users/siterwell/github/familylink/src/main/res/layout/item_scene.xml"
     },
     {
         "merged": "/Users/siterwell/github/familylink/build/intermediates/res/merged/debug/mipmap-xhdpi-v4_box_select_f.png.flat",

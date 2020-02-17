@@ -6,8 +6,8 @@ import android.support.v7.widget.LinearLayoutManager;
 import com.example.common.base.BasePFragment;
 import com.example.common.utils.LiveDataBus;
 import com.example.common.view.refresh.CustomRefreshView;
-import com.ilop.sthome.data.bean.SysModelAliBean;
 import com.ilop.sthome.data.event.EventRefreshScene;
+import com.ilop.sthome.data.greenDao.SceneBean;
 import com.ilop.sthome.mvp.contract.SceneChangeContract;
 import com.ilop.sthome.mvp.present.SceneChangePresenter;
 import com.ilop.sthome.ui.adapter.scene.SceneChildAdapter;
@@ -76,8 +76,8 @@ public class SceneChildFragment extends BasePFragment<SceneChangePresenter, Frag
     @Override
     protected void initListener() {
         super.initListener();
-        LiveDataBus.get().with("scene_change", SysModelAliBean.class).observe(this, sysModelAliBean -> {
-            mPresenter.changeScene(sysModelAliBean);
+        LiveDataBus.get().with("scene_change", SceneBean.class).observe(this, sceneBean -> {
+            mPresenter.changeScene(sceneBean);
         });
 
         mDBind.sceneChildRecycle.setOnLoadListener(new CustomRefreshView.OnLoadListener() {
@@ -109,7 +109,7 @@ public class SceneChildFragment extends BasePFragment<SceneChangePresenter, Frag
     }
 
     @Override
-    public void showSceneList(List<SysModelAliBean> scene) {
+    public void showSceneList(List<SceneBean> scene) {
         mAdapter.setList(scene);
     }
 

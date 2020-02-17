@@ -3,19 +3,19 @@ package com.ilop.sthome.mvp.present;
 import android.content.Context;
 
 import com.example.common.mvp.BasePresenterImpl;
-import com.ilop.sthome.data.bean.SceneAliBean;
-import com.ilop.sthome.data.bean.ShortcutAliBean;
-import com.ilop.sthome.data.db.SceneAliDAO;
-import com.ilop.sthome.data.db.SceneRelaitonAliDAO;
-import com.ilop.sthome.data.db.ShortcutAliDAO;
+import com.ilop.sthome.data.greenDao.AutomationBean;
 import com.ilop.sthome.data.greenDao.DeviceInfoBean;
 import com.ilop.sthome.data.greenDao.SceneBean;
+import com.ilop.sthome.data.greenDao.SceneSwitchBean;
 import com.ilop.sthome.mvp.contract.SceneEditContract;
 import com.ilop.sthome.network.api.SendSceneGroupDataAli;
 import com.ilop.sthome.ui.dialog.TipDialog;
 import com.ilop.sthome.utils.CoderALiUtils;
+import com.ilop.sthome.utils.greenDao.AutomationDaoUtil;
 import com.ilop.sthome.utils.greenDao.DeviceDaoUtil;
 import com.ilop.sthome.utils.greenDao.SceneDaoUtil;
+import com.ilop.sthome.utils.greenDao.SceneRelationDaoUtil;
+import com.ilop.sthome.utils.greenDao.SceneSwitchDaoUtil;
 import com.ilop.sthome.utils.tools.ByteUtil;
 import com.siterwell.familywellplus.R;
 
@@ -35,16 +35,12 @@ public class SceneEditPresenter extends BasePresenterImpl<SceneEditContract.IVie
     private String mDeviceName;
     private String mName;
     private String mColors;
-    private SceneAliDAO mSceneAliDao;
-    private ShortcutAliDAO mShortcutDAO;
     private SendSceneGroupDataAli mSendSceneDataAli;
 
     public SceneEditPresenter(Context mContext, String mDeviceName, int sceneId) {
         this.mContext = mContext;
         this.mSceneId = sceneId;
         this.mDeviceName = mDeviceName;
-        mSceneAliDao = new SceneAliDAO(mContext);
-        mShortcutDAO = new ShortcutAliDAO(mContext);
         DeviceInfoBean mDeviceInfo = DeviceDaoUtil.getInstance().findGatewayByDeviceName(mDeviceName);
         mSendSceneDataAli = new SendSceneGroupDataAli(mContext, mDeviceInfo);
     }
@@ -82,7 +78,7 @@ public class SceneEditPresenter extends BasePresenterImpl<SceneEditContract.IVie
 
     @Override
     public void onSaveScene() {
-        List<SceneAliBean> mSceneList = mSceneAliDao.findAllAmWithoutDefault(mDeviceName);
+        List<AutomationBean> mSceneList = AutomationDaoUtil.getInstance().findAllAutoWithoutDefault(mDeviceName);
         createCode(mSceneList);
     }
 
@@ -99,7 +95,7 @@ public class SceneEditPresenter extends BasePresenterImpl<SceneEditContract.IVie
 
     @Override
     public void deleteScene() {
-        List<SceneAliBean> sceneList = mSceneAliDao.findAllAmBySid(mSceneId, mDeviceName);
+        List<AutomationBean> sceneList = AutomationDaoUtil.getInstance().findAllAutoBySid(mSceneId, mDeviceName);
         if (sceneList.size()>0){
             mView.showToastMsg(mContext.getString(R.string.current_mode_not_allow_delete));
         }else {
@@ -115,15 +111,13 @@ public class SceneEditPresenter extends BasePresenterImpl<SceneEditContract.IVie
 
     @Override
     public void deleteSceneSuccess(int sceneId) {
-        SceneRelaitonAliDAO sceneRelaitonAliDAO = new SceneRelaitonAliDAO(mContext);
-        ShortcutAliDAO shortcutAliDAO = new ShortcutAliDAO(mContext);
         SceneDaoUtil.getInstance().deleteBySid(sceneId, mDeviceName);
-        sceneRelaitonAliDAO.deleteAllShortcurt(sceneId, mDeviceName);
-        shortcutAliDAO.deleteAllShortcurt(sceneId, mDeviceName);
+        SceneRelationDaoUtil.getInstance().deleteAllRelation(sceneId, mDeviceName);
+        SceneSwitchDaoUtil.getInstance().deleteAllSwitch(sceneId, mDeviceName);
         mView.onSuccess();
     }
 
-    private void createCode(List<SceneAliBean> mSceneLists) {
+    private void createCode(List<AutomationBean> mAutoLists) {
         byte scene_default = 0;
         String name;
         if(mSceneId>3){
@@ -139,30 +133,30 @@ public class SceneEditPresenter extends BasePresenterImpl<SceneEditContract.IVie
         length += 1;//the scene id
 
         String btnNum;
-        List<ShortcutAliBean> shortcutBeans = mShortcutDAO.findShorcutsBysid(mDeviceName, mSceneId);
+        List<SceneSwitchBean> mSwitch = SceneSwitchDaoUtil.getInstance().findSwitchBySid(mSceneId, mDeviceName);
 
-        if (Integer.toHexString(shortcutBeans.size()).length()<2){  //new mid
-            btnNum = "0"+Integer.toHexString(shortcutBeans.size());
+        if (Integer.toHexString(mSwitch.size()).length()<2){  //new mid
+            btnNum = "0"+Integer.toHexString(mSwitch.size());
         }else{
-            btnNum =Integer.toHexString(shortcutBeans.size());
+            btnNum =Integer.toHexString(mSwitch.size());
         }
         length +=1;//button num
 
         String shortcut = "";
 
-        for (int i = 0;i<shortcutBeans.size();i++){
+        for (int i = 0;i<mSwitch.size();i++){
             String eqid ;
             String dessid ;
-            if (Integer.toHexString(shortcutBeans.get(i).getEqid()).length()<2){  //new mid
-                eqid = "000"+Integer.toHexString(shortcutBeans.get(i).getEqid());
+            if (Integer.toHexString(mSwitch.get(i).getDeviceId()).length()<2){  //new mid
+                eqid = "000"+Integer.toHexString(mSwitch.get(i).getDeviceId());
             }else{
-                eqid ="00"+Integer.toHexString(shortcutBeans.get(i).getEqid());
+                eqid ="00"+Integer.toHexString(mSwitch.get(i).getDeviceId());
             }
 
-            if (Integer.toHexString(shortcutBeans.get(i).getDes_sid()).length()<2){  //new mid
-                dessid = "0"+Integer.toHexString(shortcutBeans.get(i).getDes_sid())+"000000";
+            if (Integer.toHexString(mSwitch.get(i).getDes_sid()).length()<2){  //new mid
+                dessid = "0"+Integer.toHexString(mSwitch.get(i).getDes_sid())+"000000";
             }else{
-                dessid =Integer.toHexString(shortcutBeans.get(i).getDes_sid())+"000000";
+                dessid =Integer.toHexString(mSwitch.get(i).getDes_sid())+"000000";
             }
 
             shortcut+=(eqid+dessid+"00");
@@ -175,15 +169,15 @@ public class SceneEditPresenter extends BasePresenterImpl<SceneEditContract.IVie
         int scene =0;
         //scene id
         String sceneCode ="";
-        if(mSceneLists.size()>0){
-            for(int i = 0; i< mSceneLists.size();i++){
+        if(mAutoLists.size()>0){
+            for(int i = 0; i< mAutoLists.size();i++){
                 scene++;
                 length++;
                 String singleCode;
-                if (Integer.toHexString(mSceneLists.get(i).getMid()).length()<2){  //new mid
-                    singleCode = "0"+Integer.toHexString(mSceneLists.get(i).getMid());
+                if (Integer.toHexString(mAutoLists.get(i).getMid()).length()<2){  //new mid
+                    singleCode = "0"+Integer.toHexString(mAutoLists.get(i).getMid());
                 }else{
-                    singleCode =Integer.toHexString(mSceneLists.get(i).getMid());
+                    singleCode =Integer.toHexString(mAutoLists.get(i).getMid());
                 }
                 sceneCode += singleCode;
             }
