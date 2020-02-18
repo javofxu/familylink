@@ -42,6 +42,7 @@ public class SceneDetailPresenter extends BasePresenterImpl<SceneDetailContract.
     private String mSceneName;
     private String mColors;
     private int mSceneId;
+    private SceneBean mScene;
 
     public SceneDetailPresenter(Context mContext, String deviceName, int sceneId) {
         this.mContext = mContext;
@@ -53,9 +54,9 @@ public class SceneDetailPresenter extends BasePresenterImpl<SceneDetailContract.
 
     @Override
     public void getSceneName() {
-        SceneBean sysModelBean = SceneDaoUtil.getInstance().findSceneBySid(mSceneId, mDeviceName);
-        mColors = sysModelBean.getColor();
-        String mTitleName = sysModelBean.getModleName();
+        mScene = SceneDaoUtil.getInstance().findSceneBySid(mSceneId, mDeviceName);
+        mColors = mScene.getColor();
+        String mTitleName = mScene.getModleName();
         switch (mSceneId){
             case 0:
                 mSceneName = mContext.getString(R.string.home_mode);
@@ -95,16 +96,10 @@ public class SceneDetailPresenter extends BasePresenterImpl<SceneDetailContract.
 
     @Override
     public void onSaveSuccess(List<AutomationBean> mSceneList) {
-        SceneBean sys= new SceneBean();
-        sys.setSid(mSceneId);
-        sys.setDeviceName(mDeviceName);
-        sys.setColor(mColors);
-        sys.setModleName(mSceneName);
-        SceneDaoUtil.getInstance().insertScene(sys);
         SceneRelationDaoUtil.getInstance().deleteAllRelation(mSceneId, mDeviceName);
         if(mSceneList.size()>0) {
             for (int i = 0; i < mSceneList.size(); i++) {
-                toAddSceneDb(mSceneList.get(i), sys);
+                toAddSceneDb(mSceneList.get(i), mScene);
             }
         }
     }

@@ -18,17 +18,12 @@ import com.aliyun.alink.linksdk.channel.mobile.api.MobileChannel;
 import com.aliyun.iot.aep.sdk.log.ALog;
 import com.aliyun.iot.aep.sdk.login.LoginBusiness;
 import com.example.common.base.OnCallBackToRefresh;
-import com.example.common.utils.RxTimerUtil;
-import com.ilop.sthome.common.ControllerWifi;
-import com.ilop.sthome.common.SearchWifiHelper;
 import com.ilop.sthome.data.enums.SmartProduct;
 import com.ilop.sthome.data.event.EventAnswerOK;
 import com.ilop.sthome.data.event.EventRefreshDevice;
 import com.ilop.sthome.data.event.EventRefreshLogs;
 import com.ilop.sthome.data.event.EventRefreshScene;
 import com.ilop.sthome.data.event.EventRefreshSubDeviceLogs;
-import com.ilop.sthome.data.event.EventUdpReceive;
-import com.ilop.sthome.data.event.STEvent;
 import com.ilop.sthome.data.greenDao.AutomationBean;
 import com.ilop.sthome.data.greenDao.DeviceInfoBean;
 import com.ilop.sthome.data.greenDao.HistoryBean;
@@ -38,15 +33,10 @@ import com.ilop.sthome.data.greenDao.SceneSwitchBean;
 import com.ilop.sthome.data.greenDao.WarnBean;
 import com.ilop.sthome.network.api.SendCommandAli;
 import com.ilop.sthome.network.api.SendEquipmentDataAli;
-import com.ilop.sthome.network.api.SendOtherDataAli;
 import com.ilop.sthome.network.api.SendSceneDataAli;
-import com.ilop.sthome.network.udp.GatewayUdpListConstant;
-import com.ilop.sthome.network.udp.UDPRecData;
-import com.ilop.sthome.network.udp.UDPSendData;
 import com.ilop.sthome.ui.dialog.BaseDialog;
 import com.ilop.sthome.utils.CoderALiUtils;
 import com.ilop.sthome.utils.HistoryDataUtil;
-import com.ilop.sthome.utils.NetWorkUtil;
 import com.ilop.sthome.utils.greenDao.AutomationDaoUtil;
 import com.ilop.sthome.utils.greenDao.DeviceDaoUtil;
 import com.ilop.sthome.utils.greenDao.HistoryDaoUtil;
@@ -55,26 +45,15 @@ import com.ilop.sthome.utils.greenDao.SceneRelationDaoUtil;
 import com.ilop.sthome.utils.greenDao.SceneSwitchDaoUtil;
 import com.ilop.sthome.utils.greenDao.UserInfoDaoUtil;
 import com.ilop.sthome.utils.greenDao.WarnDaoUtil;
-import com.ilop.sthome.utils.tools.CacheUtil;
-import com.ilop.sthome.utils.tools.ConnectionPojo;
-import com.ilop.sthome.utils.tools.SiterSDK;
 import com.ilop.sthome.utils.tools.UnitTools;
 import com.siterwell.familywellplus.R;
 
 import org.greenrobot.eventbus.EventBus;
-import org.greenrobot.eventbus.Subscribe;
 
 import java.io.IOException;
 import java.math.BigInteger;
-import java.net.DatagramSocket;
-import java.net.InetAddress;
-import java.net.SocketException;
-import java.net.UnknownHostException;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
-import java.util.concurrent.TimeUnit;
 
 /**
  * Created by Administrator on 2017/7/3.
@@ -82,12 +61,7 @@ import java.util.concurrent.TimeUnit;
 
 public class SiterService extends Service {
     private final String TAG = this.getClass().getName();
-    private UDPRecData udpRecData;
-    private ExecutorService mSendService,mReceiveService;
-    private String now_SSId = null;
-    private int now_netType = -1;
     private BaseDialog mDialog;
-    private int mCount = 0;
 
     @Nullable
     @Override
@@ -98,18 +72,10 @@ public class SiterService extends Service {
     @Override
     public void onCreate() {
         Log.i(TAG,"on onCreate");
-        EventBus.getDefault().register(this);
-        mSendService = Executors.newSingleThreadExecutor();
-        mReceiveService = Executors.newSingleThreadExecutor();
         if (null != mDownStreamListener) {
             MobileChannel.getInstance().unRegisterDownstreamListener(mDownStreamListener);
             MobileChannel.getInstance().registerDownstreamListener(true, mDownStreamListener);
         }
-        initBroadcastReceiveUdp();
-        //发现内网设备
-        STEvent stEvent3 = new STEvent();
-        stEvent3.setServiceevent(6);
-        EventBus.getDefault().post(stEvent3);
         super.onCreate();
     }
 
@@ -163,181 +129,9 @@ public class SiterService extends Service {
                         }
                     }
                     break;
-                case 20:
-                    String deviceName = (String)msg.obj;
-                    doDealUdpData(deviceName);
-                    break;
             }
         }
     };
-
-
-
-    @Subscribe          //订阅事件FirstEvent
-    public  void onEventMainThread(STEvent event){
-           switch (event.getServiceevent()){
-               case 6:
-                   STEvent stEvent3 = new STEvent();
-                   stEvent3.setRefreshevent(7);
-                   stEvent3.setProgressText(getResources().getString(R.string.search_local_net));
-                   EventBus.getDefault().post(stEvent3);
-                   RxTimerUtil.interval(1000, number -> {
-                       mCount++;
-                       if (mCount>3){
-                           RxTimerUtil.cancel();
-                       }else {
-                           searchUdp();
-                       }
-                   });
-                   break;
-               case 7:
-                   //监听网络变化做出相应动作
-                   String newSSid = event.getSsid();
-                   int netType = event.getNettype();
-                   if (netType == 4) {
-                       if ((!newSSid.equals(now_SSId) && !TextUtils.isEmpty(now_SSId)) || (now_netType < 4 && !TextUtils.isEmpty(now_SSId))) {
-                           SearchWifiHelper.MyTaskCallback taskCallback3 = new SearchWifiHelper.MyTaskCallback() {
-                               @Override
-                               public void operationFailed() {
-                                   Log.i(TAG, "+++++++++++++++++++++++++++++++++++++++++++++++ failed");
-                                   udpRecData.close();
-                               }
-
-                               @Override
-                               public void operationSuccess() {
-                                   Log.i(TAG, "+++++++++++++++++++++++++++++++++++++++++++++++ success");
-                                   initReceiveUdp();
-                                   startUdp();
-                               }
-
-                               @Override
-                               public void doReSendAction() {
-
-                               }
-                           };
-
-                           SearchWifiHelper searchWifiHelper3 = new SearchWifiHelper(taskCallback3);
-                           searchWifiHelper3.startReSend();
-                       }
-                       now_SSId = newSSid;
-                   }
-                   now_netType = netType;
-                   break;
-           }
-    }
-
-    private void searchUdp(){
-        try {
-            String localAddress = NetWorkUtil.getLocalIpAddress(this);
-            InetAddress target = null;
-            String targetip = localAddress.substring(0,localAddress.lastIndexOf(".")+1)+255;
-            try {
-                target = InetAddress.getByName(targetip);
-            } catch (UnknownHostException e) {
-                e.printStackTrace();
-            }
-            Log.i(TAG," 发送搜索udp广播地址 ===" + target.toString());
-            String searchUdp = "{\"action\":\"IOT_KEY?\",\"devID\":\"NULL\"}";
-
-            UDPSendData udpSendData = new UDPSendData(ControllerWifi.getInstance().ds,target,searchUdp);
-            mSendService.execute(udpSendData);
-            mSendService.awaitTermination(50, TimeUnit.MICROSECONDS);
-
-
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }catch (NullPointerException e){
-            Log.i(TAG," targetip is null" );
-        }
-    }
-
-
-    private void initBroadcastReceiveUdp() {
-        Log.i(TAG,"initBroadcastReceiveUdp");
-        if(udpRecData!=null){
-            udpRecData.close();
-        }
-        if(mReceiveService!=null){
-            mReceiveService.shutdown();
-        }
-
-
-        String localAddress = NetWorkUtil.getLocalIpAddress(this);
-        InetAddress ip = null;
-        try {
-            ip = InetAddress.getByName(localAddress);
-        } catch (UnknownHostException e) {
-            e.printStackTrace();
-            Log.i(TAG, " send create ip failed");
-        }
-
-
-
-        InetAddress target = null;
-            String targetip = localAddress.substring(0, localAddress.lastIndexOf(".") + 1) + 255;
-        Log.i(TAG," 广播接收udp地址 ===" + targetip);
-            try {
-                target = InetAddress.getByName(targetip);
-            } catch (UnknownHostException e) {
-                e.printStackTrace();
-            }
-
-        DatagramSocket datagramSocket = null;
-        try {
-
-            datagramSocket = new DatagramSocket(1025, ip);
-            ControllerWifi.getInstance().ds = datagramSocket;
-        } catch (SocketException e) {
-            e.printStackTrace();
-        }
-
-
-        mReceiveService = Executors.newSingleThreadExecutor();
-        udpRecData = new UDPRecData(datagramSocket,target,this,0);
-        mReceiveService.execute(udpRecData);
-    }
-
-    private void initReceiveUdp() {
-
-            if(udpRecData!=null){
-                udpRecData.close();
-            }
-            if(mReceiveService!=null){
-                mReceiveService.shutdown();
-            }
-
-            Log.i(TAG,"initReceiveUdp");
-            DatagramSocket datagramSocket = null;
-            try {
-                    datagramSocket = new DatagramSocket(null);
-                    datagramSocket.setReuseAddress(true);
-                    datagramSocket.connect(ControllerWifi.getInstance().targetip,1025);
-                    ControllerWifi.getInstance().ds = datagramSocket;
-            } catch (SocketException e) {
-                e.printStackTrace();
-            }
-        Log.i(TAG," 接收udp地址 ===" + ControllerWifi.getInstance().targetip.toString());
-        mReceiveService = Executors.newSingleThreadExecutor();
-        udpRecData = new UDPRecData(ControllerWifi.getInstance().ds, ControllerWifi.getInstance().targetip,this,0);
-        mReceiveService.execute(udpRecData);
-
-
-    }
-
-
-    private void startUdp(){
-        try {
-            Log.i(TAG," ControllerWifi.getInstance().targetip ===" + ControllerWifi.getInstance().targetip.toString());
-            UDPSendData udpSendData = new UDPSendData(ControllerWifi.getInstance().ds, ControllerWifi.getInstance().targetip,"IOT_KEY?"+ ConnectionPojo.getInstance().deviceTid+":"+ CacheUtil.getString(SiterSDK.SETTINGS_CONFIG_UDP_SETTING,""));
-            mSendService.execute(udpSendData);
-            mSendService.awaitTermination(50, TimeUnit.MICROSECONDS);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }catch (NullPointerException e){
-            Log.i(TAG," targetip is null" );
-        }
-    }
-
 
     private IMobileDownstreamListener mDownStreamListener = new IMobileDownstreamListener() {
         @Override
@@ -353,79 +147,10 @@ public class SiterService extends Service {
         }
     };
 
-    @Subscribe          //订阅事件FirstEvent
-    public  void onEventMainThread(EventUdpReceive event){
-        Log.i(TAG,"内网接收数据："+event.getMsg());
-        Message message = Message.obtain();
-        message.obj = event.getMsg();
-        message.what = 20;
-        handler.sendMessage(message);
-    }
-
-    public  void doDealUdpData(String data){
-        try {
-            com.alibaba.fastjson.JSONObject jsonObject = JSON.parseObject(data);
-            String deviceName = jsonObject.getString("devID");
-            com.alibaba.fastjson.JSONObject jsonObject1;
-            jsonObject1 = jsonObject.getJSONObject("msg");
-            if("NODE_SEND".equalsIgnoreCase(jsonObject.getString("action"))){
-                    SendOtherDataAli sendOtherDataAli = new SendOtherDataAli(this, GatewayUdpListConstant.getInstance().getDeviceIfoBeanByName(deviceName));
-                    sendOtherDataAli.dataGetOk(11);//反馈数据为 11 固定值
-            }
-            if(!LoginBusiness.isLogin()|| UserInfoDaoUtil.getInstance().getUserInfoDao().queryAll().size()==0){
-                return;
-            }
-
-            try{
-                String content = jsonObject1.getString("alarmMessage");
-                if(content!=null){
-                    AliAlertPushInfo(content,deviceName);
-                    return;
-                }
-            }catch (Exception e){
-                Log.i(TAG,"报警不处理事件");
-                e.printStackTrace();
-            }
-
-            int cmd = jsonObject1.getIntValue("CMD_CODE");
-            Log.i(TAG, "doDealUdpData: "+ cmd);
-            if (cmd == SendCommandAli.UPLOAD_DEVICE_STATUS) {
-                String content = jsonObject1.getString("data_str1");
-                if (content.length() == 8) {
-                    String status = jsonObject1.getString("data_str2");
-                    uploadDeviceStatus(deviceName, content, status);
-                }
-            } else if (cmd == SendCommandAli.UPLOAD_TIMER_INFO) {
-                String content = jsonObject1.getString("data_str2");
-            } else if (cmd == SendCommandAli.SEND_ACK) {
-                String content = jsonObject1.toString();
-                sendAck(content);
-            } else if (cmd == SendCommandAli.UPLOAD_CURRENT_SCENE_GROUP) {
-                String current = jsonObject1.getString("data_str1");
-                uploadCurrentSceneGroup(deviceName, current);
-            } else if (cmd == SendCommandAli.UPLOAD_SCENE_GROUP_INFO) {
-                String content = jsonObject1.getString("data_str2");
-                uploadSceneGroupInfo(deviceName, content);
-            } else if (cmd == SendCommandAli.UPLOAD_SCENE_INFO) {
-                String content = jsonObject1.getString("data_str2");
-                uploadSceneInfo(deviceName, content);
-            } else if (cmd == SendCommandAli.UPLOAD_DEVICE_NAME) {
-                String content = jsonObject1.getString("data_str2");
-                uploadDeviceName(deviceName, content);
-            } else if (cmd == SendCommandAli.UPLOAD_ALARM_LOGS_INFO) {
-                String page = jsonObject1.getString("data_str1");
-                String content = jsonObject1.getString("data_str2");
-                uploadAlarmLogsInfo(deviceName, page, content);
-            } else if (cmd == SendCommandAli.UPLOAD_SUBDEVICE_ALARM_LOGS_INFO) {
-                String page = jsonObject1.getString("data_str1");
-                String content = jsonObject1.getString("data_str2");
-                uploadSubDeviceAlarmLogsInfo(deviceName, page, content);
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-
+    /**
+     * 处理数据
+     * @param data
+     */
     public void doDealData(String data){
         try {
             com.alibaba.fastjson.JSONObject jsonObject = JSON.parseObject(data);
@@ -436,15 +161,6 @@ public class SiterService extends Service {
 
             String eventType = jsonObject.getString("name");
 
-            if(GatewayUdpListConstant.getInstance().checkByname(deviceName)!=null
-                    &&GatewayUdpListConstant.getInstance().checkByname(deviceName).isOnline()){//如果是内网 则外网退出
-                return;
-            }
-
-            if(!LoginBusiness.isLogin() || UserInfoDaoUtil.getInstance().getUserInfoDao().queryAll().size()>0){
-                return;
-            }
-
             if("事件推送".equals(eventType)){
                 String content = jsonObject1.getString("alarmMessage");
                 AliAlertPushInfo(content,deviceName);
@@ -452,43 +168,45 @@ public class SiterService extends Service {
             }
 
             int cmd = jsonObject1.getIntValue("CMD_CODE");
+            String content = jsonObject1.getString("data_str1");
+            String content2 = jsonObject1.getString("data_str2");
             Log.i(TAG, "doDealData: " + cmd);
-                if (cmd == SendCommandAli.UPLOAD_DEVICE_STATUS) {
-                    String content = jsonObject1.getString("data_str1");
+            switch (cmd){
+                case SendCommandAli.SEND_ACK:
+                    sendAck(jsonObject1.toString());
+                    break;
+                case SendCommandAli.UPLOAD_DEVICE_STATUS:
                     if (content.length() == 8) {
-                        String status = jsonObject1.getString("data_str2");
-                        uploadDeviceStatus(deviceName, content, status);
+                        uploadDeviceStatus(deviceName, content, content2);
                     }
-                } else if (cmd == SendCommandAli.UPLOAD_TIMER_INFO) {
-                    String content = jsonObject1.getString("data_str2");
-                } else if (cmd == SendCommandAli.SEND_ACK) {
-                    String content = jsonObject1.toString();
-                    Log.i(TAG, "doDealData: "+ content);
-                    sendAck(content);
-                } else if (cmd == SendCommandAli.UPLOAD_CURRENT_SCENE_GROUP) {
-                    String current = jsonObject1.getString("data_str1");
-                    uploadCurrentSceneGroup(deviceName, current);
-                } else if (cmd == SendCommandAli.UPLOAD_SCENE_GROUP_INFO) {
-                    String content = jsonObject1.getString("data_str2");
-                    uploadSceneGroupInfo(deviceName, content);
-                } else if (cmd == SendCommandAli.UPLOAD_SCENE_INFO) {
-                    String content = jsonObject1.getString("data_str2");
+                    break;
+                case SendCommandAli.UPLOAD_CURRENT_SCENE_GROUP:
+                    uploadCurrentSceneGroup(deviceName, content);
+                    break;
+                case SendCommandAli.UPLOAD_SCENE_GROUP_INFO:
+                    uploadSceneGroupInfo(deviceName, content2);
+                    break;
+                case SendCommandAli.UPLOAD_SCENE_INFO:
                     uploadSceneInfo(deviceName, content);
-                } else if (cmd == SendCommandAli.UPLOAD_DEVICE_NAME) {
-                    String content = jsonObject1.getString("data_str2");
+                    break;
+                case SendCommandAli.UPLOAD_DEVICE_NAME:
                     uploadDeviceName(deviceName, content);
-                } else if (cmd == SendCommandAli.UPLOAD_ALARM_LOGS_INFO) {
-                    String page = jsonObject1.getString("data_str1");
-                    String content = jsonObject1.getString("data_str2");
-                    uploadAlarmLogsInfo(deviceName, page, content);
-                } else if (cmd == SendCommandAli.UPLOAD_SUBDEVICE_ALARM_LOGS_INFO) {
-                    String page = jsonObject1.getString("data_str1");
-                    String content = jsonObject1.getString("data_str2");
-                    uploadSubDeviceAlarmLogsInfo(deviceName, page, content);
-                }
+                    break;
+                case SendCommandAli.UPLOAD_ALARM_LOGS_INFO:
+                    uploadAlarmLogsInfo(deviceName, content, content2);
+                    break;
+                case SendCommandAli.UPLOAD_SUBDEVICE_ALARM_LOGS_INFO:
+                    uploadSubDeviceAlarmLogsInfo(deviceName, content, content2);
+                    break;
+            }
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+
+    private void sendAck(String content){
+        EventAnswerOK eventAnswerOK = JSON.parseObject(content, EventAnswerOK.class);
+        EventBus.getDefault().post(eventAnswerOK);
     }
 
     private void uploadDeviceStatus(String deviceName, String content, String status){
@@ -545,15 +263,11 @@ public class SiterService extends Service {
             if (value.length() == 32) {
                 String lastName = CoderALiUtils.getStringFromAscii(value);
                 Log.i(TAG, "name+++++" + lastName);
-                DeviceInfoBean deviceInfoBean = new DeviceInfoBean();
-                deviceInfoBean.setDevice_ID(ds);
-                deviceInfoBean.setDeviceName(deviceName);
+                DeviceInfoBean deviceInfoBean = DeviceDaoUtil.getInstance().findByDeviceId(deviceName, ds);
                 deviceInfoBean.setSubdeviceName(lastName);
                 DeviceDaoUtil.getInstance().getDeviceDao().update(deviceInfoBean);
             } else {
-                DeviceInfoBean deviceInfoBean = new DeviceInfoBean();
-                deviceInfoBean.setDevice_ID(ds);
-                deviceInfoBean.setDeviceName(deviceName);
+                DeviceInfoBean deviceInfoBean = DeviceDaoUtil.getInstance().findByDeviceId(deviceName, ds);
                 deviceInfoBean.setSubdeviceName("");
                 DeviceDaoUtil.getInstance().getDeviceDao().update(deviceInfoBean);
             }
@@ -659,11 +373,6 @@ public class SiterService extends Service {
                 AutomationDaoUtil.getInstance().insertAutomation(automationBean);
             }
         }
-    }
-
-    private void sendAck(String content){
-        EventAnswerOK eventAnswerOK = JSON.parseObject(content, EventAnswerOK.class);
-        EventBus.getDefault().post(eventAnswerOK);
     }
 
     private void uploadAlarmLogsInfo(String deviceName, String page, String content){
@@ -1061,18 +770,5 @@ public class SiterService extends Service {
     @Override
     public void onDestroy(){
         handler.removeCallbacksAndMessages(null);
-        EventBus.getDefault().unregister(this);
-        if(udpRecData!=null){
-            udpRecData.close();
-        }
-
-        if(!mReceiveService.isShutdown()){
-            mReceiveService.shutdown();
-        }
-
-        if(!mSendService.isShutdown()){
-            mSendService.shutdown();
-        }
-        RxTimerUtil.cancel();
     }
 }

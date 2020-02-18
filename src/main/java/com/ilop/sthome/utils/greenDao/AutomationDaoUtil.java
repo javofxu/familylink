@@ -1,6 +1,7 @@
 package com.ilop.sthome.utils.greenDao;
 
 import android.database.Cursor;
+import android.util.Log;
 
 import com.ilop.sthome.data.greenDao.AutomationBean;
 import com.ilop.sthome.data.greenDao.AutomationBeanDao;
@@ -9,6 +10,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class AutomationDaoUtil {
+
+    private static final String TAG = AutomationDaoUtil.class.getSimpleName();
 
     private volatile static AutomationDaoUtil instance = new AutomationDaoUtil();
     private CommonDaoUtils<AutomationBean> mAutomationUtils;
@@ -80,7 +83,7 @@ public class AutomationDaoUtil {
             }
             cursor.close();
         }catch (NullPointerException e){
-
+            Log.e(TAG, "findAllAutoBySid: "+ e.getMessage());
         }
         return mList;
     }

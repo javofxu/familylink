@@ -35,6 +35,7 @@ public class SceneEditPresenter extends BasePresenterImpl<SceneEditContract.IVie
     private String mDeviceName;
     private String mName;
     private String mColors;
+    private SceneBean mScene;
     private SendSceneGroupDataAli mSendSceneDataAli;
 
     public SceneEditPresenter(Context mContext, String mDeviceName, int sceneId) {
@@ -47,8 +48,8 @@ public class SceneEditPresenter extends BasePresenterImpl<SceneEditContract.IVie
 
     @Override
     public void refreshName() {
-        SceneBean sysModelBean = SceneDaoUtil.getInstance().findSceneBySid(mSceneId, mDeviceName);
-        mColors = sysModelBean.getColor();
+        mScene = SceneDaoUtil.getInstance().findSceneBySid(mSceneId, mDeviceName);
+        mColors = mScene.getColor();
         switch (mSceneId){
             case 0:
                 mName = mContext.getString(R.string.home_mode);
@@ -63,7 +64,7 @@ public class SceneEditPresenter extends BasePresenterImpl<SceneEditContract.IVie
                 mName = mContext.getString(R.string.custom_scene);
                 break;
             default:
-                mName = sysModelBean.getModleName();
+                mName = mScene.getModleName();
                 break;
 
         }
@@ -84,12 +85,9 @@ public class SceneEditPresenter extends BasePresenterImpl<SceneEditContract.IVie
 
     @Override
     public void onSaveSuccess() {
-        SceneBean sys= new SceneBean();
-        sys.setSid(mSceneId);
-        sys.setDeviceName(mDeviceName);
-        sys.setColor(mColors);
-        sys.setModleName(mName);
-        SceneDaoUtil.getInstance().insertScene(sys);
+        mScene.setColor(mColors);
+        mScene.setModleName(mName);
+        SceneDaoUtil.getInstance().getSceneDao().update(mScene);
         mView.onSuccess();
     }
 

@@ -7,11 +7,13 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.text.TextUtils;
 
+import com.alibaba.fastjson.JSON;
 import com.aliyun.iot.aep.component.router.Router;
 import com.aliyun.iot.aep.sdk.apiclient.callback.IoTResponse;
 import com.example.common.base.OnCallBackToEdit;
 import com.example.common.base.OnCallBackToRefresh;
 import com.example.common.mvp.BasePresenterImpl;
+import com.ilop.sthome.data.bean.AlarmNotice;
 import com.ilop.sthome.data.enums.DevType;
 import com.ilop.sthome.data.enums.SmartProduct;
 import com.ilop.sthome.data.greenDao.DeviceInfoBean;
@@ -21,6 +23,7 @@ import com.ilop.sthome.mvp.model.common.CommonModelImpl;
 import com.ilop.sthome.mvp.model.common.onModelCallBack;
 import com.ilop.sthome.network.api.SendEquipmentDataAli;
 import com.ilop.sthome.ui.activity.config.AddDeviceGuideActivity;
+import com.ilop.sthome.ui.activity.device.DeviceRenameActivity;
 import com.ilop.sthome.ui.activity.main.MainActivity;
 import com.ilop.sthome.ui.dialog.BaseDialog;
 import com.ilop.sthome.ui.dialog.BaseEditDialog;
@@ -32,7 +35,10 @@ import com.ilop.sthome.utils.tools.ByteUtil;
 import com.ilop.sthome.utils.tools.UnitTools;
 import com.siterwell.familywellplus.R;
 
+import org.json.JSONArray;
 import org.json.JSONObject;
+
+import java.util.List;
 
 /**
  * @author skygge
@@ -45,8 +51,8 @@ public class DeviceSetPresenter extends BasePresenterImpl<DeviceSetContract.IVie
 
     private Context mContext;
     private int mDeviceId;
-    private String mNickName;
     private String mDeviceName;
+    private String mNickname;
     private CommonModelImpl mModel;
     private DeviceInfoBean mDeviceInfoBean;
     private SendEquipmentDataAli mSendEquipment;
@@ -67,12 +73,12 @@ public class DeviceSetPresenter extends BasePresenterImpl<DeviceSetContract.IVie
     public void onRefreshView() {
         mDeviceInfoBean = DeviceDaoUtil.getInstance().findByDeviceId(mDeviceName, mDeviceId);
         if(mDeviceId==0){
-            String name = TextUtils.isEmpty(mDeviceInfoBean.getNickName())? mContext.getResources().getString(DevType.getType(mDeviceInfoBean.getProductKey()).getTypeStrId()):mDeviceInfoBean.getNickName();
-            mView.showDeviceName(name);
+            mNickname = TextUtils.isEmpty(mDeviceInfoBean.getNickName())? mContext.getResources().getString(DevType.getType(mDeviceInfoBean.getProductKey()).getTypeStrId()):mDeviceInfoBean.getNickName();
+            mView.showDeviceName(mNickname);
             if(mDeviceInfoBean.getOwned()==1) refreshQRCode(mDeviceInfoBean.getIotId());
         }else {
-            String name = TextUtils.isEmpty(mDeviceInfoBean.getSubdeviceName())? (mContext.getResources().getString(SmartProduct.getType(mDeviceInfoBean.getDevice_type()).getTypeStrId())+mDeviceInfoBean.getDevice_ID()):mDeviceInfoBean.getSubdeviceName();
-            mView.showDeviceName(name);
+            mNickname = TextUtils.isEmpty(mDeviceInfoBean.getSubdeviceName())? (mContext.getResources().getString(SmartProduct.getType(mDeviceInfoBean.getDevice_type()).getTypeStrId())+mDeviceInfoBean.getDevice_ID()):mDeviceInfoBean.getSubdeviceName();
+            mView.showDeviceName(mNickname);
         }
     }
 
@@ -86,48 +92,96 @@ public class DeviceSetPresenter extends BasePresenterImpl<DeviceSetContract.IVie
     }
 
     @Override
-    public void setDeviceName(int deviceId) {
-        BaseEditDialog mDialog = new BaseEditDialog(mContext, new OnCallBackToEdit() {
-            @Override
-            public void onConfirm(String name) {
-                if(!TextUtils.isEmpty(name)){
-                    mNickName = name;
-                    if(deviceId == 0){
-                        renameGateway(mDeviceInfoBean.getIotId(), name);
-                    }else {
-                        String ds = CoderALiUtils.getAscii(name);
-                        String dsCRC = ByteUtil.CRCmaker(ds);
-                        mSendEquipment.modifyEquipmentName(deviceId, ds + dsCRC);
-                    }
-                }else{
-                    mView.showToastMsg(mContext.getString(R.string.name_is_null));
-                }
-                mView.hideSoftBoard();
-            }
-
-            @Override
-            public void onCancel() {
-                mView.hideSoftBoard();
-            }
-        });
-        mDialog.setTitle(mContext.getString(R.string.update_name));
-        mDialog.show();
+    public void setDeviceName() {
+        Intent intent = new Intent(mContext, DeviceRenameActivity.class);
+        intent.putExtra("deviceId", mDeviceId);
+        intent.putExtra("deviceName", mDeviceName);
+        intent.putExtra("nickName", mNickname);
+        mView.startActivityByIntent(intent);
     }
 
     @Override
-    public void renameGateway(String itoId, String nickName) {
-        mModel.onRenameGateway(itoId, nickName, new onModelCallBack() {
-            @Override
-            public void onResponse(IoTResponse response) {
-                if (response.getCode() == 200){
-                    DeviceDaoUtil.getInstance().updateGatewayName(mDeviceName, mNickName);
-                    mHandler.post(()->onRefreshView());
-                }
-            }
-
+    public void getDeviceNoticeList() {
+        mModel.getDeviceNoticeList(mDeviceInfoBean.getIotId(), new onModelCallBack() {
             @Override
             public void onFailure(Exception e) {
 
+            }
+
+            @Override
+            public void onResponse(IoTResponse response) {
+                Object data = response.getData();
+                if (data == null) {
+                    return;
+                }
+                if (!(data instanceof JSONArray)) {
+                    return;
+                }
+                mHandler.post(()->{
+                    try {
+                        List<AlarmNotice> mNoticeList = JSON.parseArray(data.toString(), AlarmNotice.class);
+                        if (mNoticeList.size() > 0) {
+                            mView.showNoticeList(mNoticeList);
+                        }else {
+                            mView.withoutNotice();
+                        }
+                        for (AlarmNotice notice: mNoticeList) {
+                            if (notice.isNoticeEnabled()){
+                                mView.showHasEnabledOpen(true);
+                                return;
+                            }else {
+                                mView.showHasEnabledOpen(false);
+                            }
+                        }
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                });
+            }
+        });
+    }
+
+    @Override
+    public void setDeviceFullNoticeEnabled(boolean noticeEnabled) {
+        mModel.setDeviceNoticeReminder(mDeviceInfoBean.getIotId(), noticeEnabled, new onModelCallBack() {
+            @Override
+            public void onFailure(Exception e) {
+                mHandler.post(()-> mView.showToastMsg(mContext.getString(R.string.operation_failed)));
+            }
+
+            @Override
+            public void onResponse(IoTResponse response) {
+                int code = response.getCode();
+                mHandler.post(()->{
+                    if (code == 200){
+                        getDeviceNoticeList();
+                        mView.showToastMsg(mContext.getString(R.string.operation_success));
+                    }else {
+                        mView.showToastMsg(response.getMessage());
+                    }
+                });
+            }
+        });
+    }
+
+    @Override
+    public void setDeviceNoticeEnabled(String eventId, boolean noticeEnabled) {
+        mModel.deviceNoticeSet(mDeviceInfoBean.getIotId(), eventId, noticeEnabled, new onModelCallBack() {
+            @Override
+            public void onFailure(Exception e) {
+                mHandler.post(()-> mView.showToastMsg(mContext.getString(R.string.operation_failed)));
+            }
+
+            @Override
+            public void onResponse(IoTResponse response) {
+                mHandler.post(()->{
+                    if (response.getCode() ==200){
+                        getDeviceNoticeList();
+                        mView.showToastMsg(mContext.getString(R.string.operation_success));
+                    }else {
+                        mView.showToastMsg(response.getMessage());
+                    }
+                });
             }
         });
     }
@@ -265,16 +319,6 @@ public class DeviceSetPresenter extends BasePresenterImpl<DeviceSetContract.IVie
             intent.setData(content_url);
             mView.startActivityByIntent(intent);
         }
-    }
-
-    @Override
-    public void onModifySuccess() {
-        DeviceInfoBean deviceInfoBean = new DeviceInfoBean();
-        deviceInfoBean.setSubdeviceName(mNickName);
-        deviceInfoBean.setDeviceName(mDeviceName);
-        deviceInfoBean.setDevice_ID(mDeviceId);
-        DeviceDaoUtil.getInstance().getDeviceDao().update(deviceInfoBean);
-        onRefreshView();
     }
 
     @Override

@@ -89,4 +89,19 @@ public interface CommonModelImpl {
      * @param callBack 返回信息
      */
     void onDeleteRoom(String userId, onModelCallBack callBack);
+
+    /**
+     * 拉取设备对应的告警配置列表
+     */
+    void getDeviceNoticeList(String iotId, onModelCallBack callBack);
+
+    /**
+     * 设置设备全量告警的提醒配置
+     */
+    void setDeviceNoticeReminder(String iotId, boolean noticeEnabled, onModelCallBack callBack);
+
+    /**
+     * 设置设备告警提醒配置
+     */
+    void deviceNoticeSet(String iotId, String eventId,boolean noticeEnabled, onModelCallBack callBack);
 }

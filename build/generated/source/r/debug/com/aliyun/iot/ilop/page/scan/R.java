@@ -39,7 +39,7 @@ public final class R {
         public static final int scanactivity_album_textview = 0x7f0a0285;
         public static final int scanactivity_back_linearlayout = 0x7f0a0286;
         public static final int scanactivity_topbar_linearlayout = 0x7f0a0287;
-        public static final int textview_resultview_des = 0x7f0a0312;
+        public static final int textview_resultview_des = 0x7f0a0310;
     }
     public static final class layout {
         public static final int scan_activity = 0x7f0d00f9;

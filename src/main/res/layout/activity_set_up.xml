@@ -29,39 +29,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="@dimen/margin_48"
-                    android:background="@color/white"
-                    android:orientation="horizontal">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_centerVertical="true"
-                        android:layout_marginStart="@dimen/margin_15"
-                        android:textSize="@dimen/text_16"
-                        android:textColor="@color/text_title"
-                        android:text="@string/full_notice_push"/>
-                    <ImageView
-                        android:id="@+id/set_up_all"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_centerVertical="true"
-                        android:layout_alignParentEnd="true"
-                        android:layout_marginEnd="@dimen/margin_20"
-                        android:src="@mipmap/btn_on_48"/>
-                </RelativeLayout>
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="@dimen/margin_1"
-                    android:background="@color/line_bg"/>
-                <android.support.v7.widget.RecyclerView
-                    android:id="@+id/rv_notice_list"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/margin_15"
-                    android:background="@color/white">
-                </android.support.v7.widget.RecyclerView>
+
                 <RelativeLayout
                     android:id="@+id/set_up_pwd"
                     android:layout_width="match_parent"

@@ -39,29 +39,74 @@
                     android:id="@+id/imgDeviceQRCode"
                     android:layout_width="@dimen/margin_160"
                     android:layout_height="@dimen/margin_160"
-                    android:layout_margin="@dimen/margin_40"
+                    android:layout_margin="@dimen/margin_24"
                     android:layout_gravity="center_horizontal"/>
 
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/margin_20"
                     android:background="@color/main_ground"/>
+
                 <com.ilop.sthome.view.SettingItem
-                    android:id="@+id/replaceeqid"
+                    android:id="@+id/name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:item_accessoryType = "arrow"
+                    app:item_showDivider="false"
+                    app:item_detailText=""
+                    app:item_titleText="@string/ali_gateway_name" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin_15"
+                    android:background="@color/main_ground"/>
+
+                <RelativeLayout
+                    android:id="@+id/rl_gateway_set"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin_48"
+                    android:background="@color/white"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/margin_15"
+                        android:textSize="@dimen/text_16"
+                        android:textColor="@color/text_title"
+                        android:text="@string/full_notice_push"/>
+                    <ImageView
+                        android:id="@+id/set_up_all"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="@dimen/margin_20"
+                        android:src="@mipmap/btn_on_48"/>
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/main_ground">
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/rv_notice_list"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_15"
+                        android:layout_marginBottom="@dimen/margin_15">
+                    </android.support.v7.widget.RecyclerView>
+                </RelativeLayout>
+
+                <com.ilop.sthome.view.SettingItem
+                    android:id="@+id/replace_device"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     app:item_accessoryType = "arrow"
                     app:item_showDivider="true"
                     app:item_detailText=""
                     app:item_titleText="@string/replace_equipment" />
-                <com.ilop.sthome.view.SettingItem
-                    android:id="@+id/name"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    app:item_accessoryType = "arrow"
-                    app:item_showDivider="true"
-                    app:item_detailText=""
-                    app:item_titleText="@string/ali_gateway_name" />
 
                 <com.ilop.sthome.view.SettingItem
                     android:id="@+id/ota"
@@ -71,24 +116,7 @@
                     app:item_showDivider="true"
                     app:item_detailText=""
                     app:item_titleText="@string/ali_gateway_ota" />
-                <com.ilop.sthome.view.SettingItem
-                    android:id="@+id/share"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    app:item_accessoryType = "arrow"
-                    app:item_showDivider="true"
-                    app:item_detailText=""
-                    android:visibility="gone"
-                    app:item_titleText="@string/ali_gateway_share" />
-                <com.ilop.sthome.view.SettingItem
-                    android:id="@+id/location"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    app:item_accessoryType = "arrow"
-                    app:item_showDivider="true"
-                    app:item_detailText=""
-                    android:visibility="gone"
-                    app:item_titleText="@string/ali_gateway_location_manage" />
+
                 <com.ilop.sthome.view.SettingItem
                     android:id="@+id/ins"
                     android:layout_width="match_parent"

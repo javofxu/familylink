@@ -34,7 +34,7 @@ public interface AddDeviceContract {
 
         void onModifyDevice(int deviceId);
 
-        void onModifySuccess();
+        void onModifySuccess(int deviceId);
 
         void createRoom(String roomName, String deviceList);
 

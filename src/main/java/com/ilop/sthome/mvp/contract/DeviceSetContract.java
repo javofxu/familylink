@@ -4,6 +4,9 @@ import android.content.Intent;
 
 import com.example.common.mvp.IBasePresenter;
 import com.example.common.mvp.IBaseView;
+import com.ilop.sthome.data.bean.AlarmNotice;
+
+import java.util.List;
 
 /**
  * @author skygge
@@ -22,13 +25,17 @@ public interface DeviceSetContract {
 
         void showDeviceName(String name);
 
+        void showNoticeList(List<AlarmNotice> noticeList);
+
+        void withoutNotice();
+
+        void showHasEnabledOpen(boolean open);
+
         void startActivityByIntent(Intent intent);
 
         void showToastMsg(String msg);
 
         void showQRCode(String qrCode);
-
-        void hideSoftBoard();
     }
 
     interface IPresent extends IBasePresenter<IView>{
@@ -37,9 +44,13 @@ public interface DeviceSetContract {
 
         void showViewByDeviceId(int deviceId);
 
-        void setDeviceName(int deviceId);
+        void setDeviceName();
 
-        void renameGateway(String itoId, String nickName);
+        void getDeviceNoticeList();
+
+        void setDeviceFullNoticeEnabled(boolean noticeEnabled);
+
+        void setDeviceNoticeEnabled(String eventId, boolean noticeEnabled);
 
         void onUnBindDevice();
 
@@ -50,8 +61,6 @@ public interface DeviceSetContract {
         void onRouterToOTA();
 
         void onDownloadIns();
-
-        void onModifySuccess();
 
         void onDeleteSuccess();
     }

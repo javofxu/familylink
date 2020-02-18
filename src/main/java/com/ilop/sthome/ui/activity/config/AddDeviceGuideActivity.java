@@ -1,16 +1,19 @@
 package com.ilop.sthome.ui.activity.config;
 
 import android.graphics.drawable.AnimationDrawable;
+import android.util.Log;
 import android.view.KeyEvent;
 
 import com.example.common.base.BasePActivity;
 import com.example.common.utils.MediaPlayerUtil;
 import com.ilop.sthome.data.enums.ProductGroup;
 import com.ilop.sthome.data.enums.SmartProduct;
+import com.ilop.sthome.data.event.EventAnswerOK;
 import com.ilop.sthome.data.event.EventRefreshDevice;
 import com.ilop.sthome.data.greenDao.DeviceInfoBean;
 import com.ilop.sthome.mvp.contract.AddDeviceContract;
 import com.ilop.sthome.mvp.present.AddDevicePresenter;
+import com.ilop.sthome.network.api.SendCommandAli;
 import com.ilop.sthome.utils.greenDao.DeviceDaoUtil;
 import com.siterwell.familywellplus.R;
 import com.siterwell.familywellplus.databinding.ActivityAddDeviceGuideBinding;
@@ -30,7 +33,7 @@ public class AddDeviceGuideActivity extends BasePActivity<AddDevicePresenter, Ac
 
     private AnimationDrawable mAnimation;
     private ProductGroup mConfig;
-    private String deviceName;
+    private String mDeviceName;
     private int mDeviceId;
     private MediaPlayerUtil mMediaPlayer;
 
@@ -44,14 +47,14 @@ public class AddDeviceGuideActivity extends BasePActivity<AddDevicePresenter, Ac
         super.initialize();
         EventBus.getDefault().register(this);
         mDeviceId = getIntent().getIntExtra("deviceId",0);
-        deviceName = getIntent().getStringExtra("deviceName");
+        mDeviceName = getIntent().getStringExtra("deviceName");
         mConfig = (ProductGroup)getIntent().getSerializableExtra("guide");
     }
 
     @Override
     protected void initPresent() {
         super.initPresent();
-        mPresent = new AddDevicePresenter(mContext, deviceName);
+        mPresent = new AddDevicePresenter(mContext, mDeviceName);
     }
 
     @Override
@@ -76,7 +79,7 @@ public class AddDeviceGuideActivity extends BasePActivity<AddDevicePresenter, Ac
             }
             mPresent.onInsertDevice();
         }else {
-            DeviceInfoBean deviceInfoBean = DeviceDaoUtil.getInstance().findByDeviceId(deviceName, mDeviceId);
+            DeviceInfoBean deviceInfoBean = DeviceDaoUtil.getInstance().findByDeviceId(mDeviceName, mDeviceId);
             mDBind.ivConfigGuide.setBackgroundResource(SmartProduct.getType(deviceInfoBean.getDevice_type()).getDrawGuideResId());
             mName = getResources().getString(R.string.replace_equipment);
             mPresent.onReplaceDevice(mDeviceId);
@@ -103,6 +106,20 @@ public class AddDeviceGuideActivity extends BasePActivity<AddDevicePresenter, Ac
             if(mDeviceId==event.getDevice_id()){
                 showToast(getString(R.string.replace_success));
                 finish();
+            }
+        }
+    }
+
+    @Subscribe
+    public  void onEventMainThread(EventAnswerOK event) {
+        if (event.getData_str1().length() == 9) {
+            int cmd = Integer.parseInt(event.getData_str1().substring(0, 4), 16);
+            if (cmd == SendCommandAli.MODIFY_EQUIPMENT_NAME) {
+                if ("OK".equals(event.getData_str2())) {
+                    mPresent.onModifySuccess(mDeviceId);
+                }else {
+                    showToast(getString(R.string.failed));
+                }
             }
         }
     }

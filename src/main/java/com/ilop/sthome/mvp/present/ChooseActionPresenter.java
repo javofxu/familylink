@@ -29,7 +29,7 @@ import java.util.List;
  */
 public class ChooseActionPresenter extends BasePresenterImpl<ChooseActionContract.IView> implements ChooseActionContract.IPresent{
 
-    private static final String TAG = "ChooseActionPresenter";
+    private static final String TAG = ChooseActionPresenter.class.getSimpleName();
     private Context mContext;
     private int mDeviceNum;
     private String mDeviceName;

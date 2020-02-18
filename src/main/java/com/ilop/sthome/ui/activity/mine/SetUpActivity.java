@@ -1,19 +1,11 @@
 package com.ilop.sthome.ui.activity.mine;
 
-import android.support.v7.widget.LinearLayoutManager;
-import android.text.TextUtils;
-
 import com.example.common.base.BasePActivity;
-import com.example.common.utils.LiveDataBus;
-import com.example.common.utils.SpUtil;
-import com.ilop.sthome.data.bean.AlarmNotice;
 import com.ilop.sthome.mvp.contract.SetUpContract;
 import com.ilop.sthome.mvp.present.SetUpPresenter;
-import com.ilop.sthome.ui.adapter.main.SetUpAdapter;
 import com.siterwell.familywellplus.R;
 import com.siterwell.familywellplus.databinding.ActivitySetUpBinding;
 
-import java.util.List;
 import java.util.Locale;
 
 /**
@@ -25,10 +17,7 @@ import java.util.Locale;
  */
 public class SetUpActivity extends BasePActivity<SetUpPresenter, ActivitySetUpBinding> implements SetUpContract.IView {
 
-    private String mIotId;
     private String mLanguage;
-    private boolean mEnabled;
-    private SetUpAdapter mAdapter;
 
     @Override
     protected int getLayoutId() {
@@ -49,37 +38,10 @@ public class SetUpActivity extends BasePActivity<SetUpPresenter, ActivitySetUpBi
     }
 
     @Override
-    protected void initView() {
-        super.initView();
-        mAdapter = new SetUpAdapter(mContext);
-        mDBind.rvNoticeList.setLayoutManager(new LinearLayoutManager(mContext));
-        mDBind.rvNoticeList.setAdapter(mAdapter);
-    }
-
-    @Override
-    protected void initData() {
-        super.initData();
-        mIotId = SpUtil.getString(mContext, "iotId");
-        mPresent.getDeviceNoticeList(mIotId);
-        LiveDataBus.get().with("alarm_notice", AlarmNotice.class).observe(this, alarmNotice -> {
-            assert alarmNotice != null;
-            mPresent.setDeviceNoticeEnabled(mIotId, alarmNotice.getEventId(), !alarmNotice.isNoticeEnabled());
-            showProgressDialog();
-        });
-    }
-
-    @Override
     protected void initListener() {
         super.initListener();
         mDBind.ivSetUpBack.setOnClickListener(view -> finish());
-        mDBind.setUpAll.setOnClickListener(v -> {
-            if (!TextUtils.isEmpty(mIotId)){
-                mPresent.setDeviceFullNoticeEnabled(mIotId, !mEnabled);
-                showProgressDialog();
-            }else {
-                showToast(getString(R.string.ali_device_empty));
-            }
-        });
+
         mDBind.setUpPwd.setOnClickListener(v -> {
             if("zh".equals(mLanguage)){
                 mPresent.modifyPhonePassword();
@@ -91,24 +53,7 @@ public class SetUpActivity extends BasePActivity<SetUpPresenter, ActivitySetUpBi
     }
 
     @Override
-    public void showHasEnabledOpen(boolean open) {
-        mEnabled = open;
-        mDBind.setUpAll.setImageResource(open ? R.mipmap.btn_on_48 : R.mipmap.btn_off_48);
-    }
-
-    @Override
-    public void showNoticeList(List<AlarmNotice> noticeList) {
-        mAdapter.setList(noticeList);
-    }
-
-    @Override
-    public void withoutNotice() {
-        mAdapter.setList(null);
-    }
-
-    @Override
     public void showToastMsg(String msg) {
-        dismissProgressDialog();
         showToast(msg);
     }
 

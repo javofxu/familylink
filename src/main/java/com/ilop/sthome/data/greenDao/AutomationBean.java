@@ -39,10 +39,8 @@ public class AutomationBean implements Serializable {
 
     private String code;
 
-    @Unique
     private int mid;
 
-    @Unique
     private String deviceName;
 
     @Convert(columnType = String.class, converter = SceneModelConverter.class)

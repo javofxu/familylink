@@ -99,7 +99,7 @@ public class DeviceFragment extends BasePFragment<DevicePresenter, FragmentDevic
         mDBind.deviceList.setOnLoadListener(new CustomRefreshView.OnLoadListener() {
             @Override
             public void onRefresh() {
-                mPresenter.getRoomList();
+                mPresenter.getRoomListByAccount(1, 10);
                 mDBind.deviceList.complete();
             }
 
@@ -113,7 +113,7 @@ public class DeviceFragment extends BasePFragment<DevicePresenter, FragmentDevic
     @Subscribe
     public void onEventMainThread(EventRefreshDevice event){
         Log.i(TAG, "onEventMainThread: "+ event.getType());
-        mPresenter.getRoomList();
+        mPresenter.getRoomListByAccount(1, 10);
     }
 
     @Override

@@ -1,7 +1,9 @@
 package com.ilop.sthome.utils.greenDao;
 
 
+import android.database.Cursor;
 import android.text.TextUtils;
+import android.util.Log;
 
 import com.ilop.sthome.data.enums.DevType;
 import com.ilop.sthome.data.greenDao.DeviceInfoBean;
@@ -11,6 +13,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class DeviceDaoUtil {
+
+    private static final String TAG = DeviceDaoUtil.class.getSimpleName();
 
     private volatile static DeviceDaoUtil instance = new DeviceDaoUtil();
 
@@ -139,30 +143,59 @@ public class DeviceDaoUtil {
      * @param deviceName
      * @return
      */
-    public List<DeviceInfoBean> findOutputDevice(String deviceName){
-        return mDeviceDao.queryBuilder()
-                .where(DeviceInfoBeanDao.Properties.DeviceName.eq(deviceName))
-                .whereOr(DeviceInfoBeanDao.Properties.Device_type.like("%0__"),
-                        DeviceInfoBeanDao.Properties.Device_type.like("%1__"),
-                        DeviceInfoBeanDao.Properties.Device_type.like("%2__"),
-                        DeviceInfoBeanDao.Properties.Device_type.like("%6__"),
-                        DeviceInfoBeanDao.Properties.Device_type.eq("1213"))
-                .build()
-                .list();
+    public List<DeviceInfoBean> findInputDevice(String deviceName){
+        List<DeviceInfoBean> mDeviceInfo = new ArrayList<>();
+        try {
+            String sql = "select * from DEVICE_INFO_BEAN where DEVICE_NAME = '" + deviceName + "' and (DEVICE_TYPE GLOB '*0??' or DEVICE_TYPE GLOB '*1??' or DEVICE_TYPE GLOB '*3??' or DEVICE_TYPE GLOB '*6??' or DEVICE_TYPE = '1213')";
+            Cursor cursor = DaoManager.getInstance().getDaoSession().getDatabase().rawQuery(sql, null);
+            while (cursor.moveToNext()){
+                DeviceInfoBean device = new DeviceInfoBean();
+                device.setDeviceName(cursor.getString(cursor.getColumnIndex("DEVICE_NAME")));
+                device.setSubdeviceName(cursor.getString(cursor.getColumnIndex("SUBDEVICE_NAME")));
+                device.setDevice_status(cursor.getString(cursor.getColumnIndex("DEVICE_STATUS")));
+                device.setDevice_type(cursor.getString(cursor.getColumnIndex("DEVICE_TYPE")));
+                device.setDevice_ID(cursor.getInt(cursor.getColumnIndex("DEVICE__ID")));
+                mDeviceInfo.add(device);
+            }
+            cursor.close();
+        }catch (NullPointerException e){
+            Log.e(TAG, "findInputDevice: "+ e.getMessage());
+        }
+        return mDeviceInfo;
     }
 
     /**
      * 查找输出设备
+     * 除去361部分
      * @param deviceName
      * @return
      */
-    public List<DeviceInfoBean> findInputDevice(String deviceName){
-        return mDeviceDao.queryBuilder()
-                .where(DeviceInfoBeanDao.Properties.DeviceName.eq(deviceName),
-                        DeviceInfoBeanDao.Properties.Device_type.notEq("1213"),
-                        DeviceInfoBeanDao.Properties.Device_type.like("%2__"))
-                .build()
-                .list();
+    public List<DeviceInfoBean> findOutputDevice(String deviceName){
+        List<DeviceInfoBean> mDeviceInfo = new ArrayList<>();
+        try {
+            String sql = "select * from DEVICE_INFO_BEAN where DEVICE_NAME = '" + deviceName + "' and DEVICE_TYPE GLOB '*2??' and DEVICE_TYPE !='1213'";
+            Cursor cursor = DaoManager.getInstance().getDaoSession().getDatabase().rawQuery(sql, null);
+            while (cursor.moveToNext()){
+                DeviceInfoBean device = new DeviceInfoBean();
+                device.setDeviceName(cursor.getString(cursor.getColumnIndex("DEVICE_NAME")));
+                device.setSubdeviceName(cursor.getString(cursor.getColumnIndex("SUBDEVICE_NAME")));
+                device.setDevice_status(cursor.getString(cursor.getColumnIndex("DEVICE_STATUS")));
+                device.setDevice_type(cursor.getString(cursor.getColumnIndex("DEVICE_TYPE")));
+                device.setDevice_ID(cursor.getInt(cursor.getColumnIndex("DEVICE__ID")));
+                mDeviceInfo.add(device);
+            }
+            cursor.close();
+        }catch (NullPointerException e){
+            Log.e(TAG, "findOutputDevice: "+ e.getMessage());
+        }
+        return mDeviceInfo;
+    }
+
+     /**
+     * 根据条件删除
+     */
+    public void deleteAllGateway(){
+        mDeviceUtils.deleteByQuery(DeviceInfoBeanDao.Properties.Device_ID.eq(0));
     }
 
     /**

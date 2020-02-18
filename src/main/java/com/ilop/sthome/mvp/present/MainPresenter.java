@@ -31,6 +31,8 @@ import com.ilop.sthome.ui.dialog.BaseDialog;
 import com.ilop.sthome.ui.fragment.DeviceFragment;
 import com.ilop.sthome.ui.fragment.MessageFragment;
 import com.ilop.sthome.ui.fragment.SceneFragment;
+import com.ilop.sthome.utils.greenDao.DeviceDaoUtil;
+import com.ilop.sthome.utils.greenDao.SceneDaoUtil;
 import com.ilop.sthome.utils.greenDao.UserInfoDaoUtil;
 import com.siterwell.familywellplus.R;
 
@@ -207,6 +209,8 @@ public class MainPresenter extends BasePresenterImpl<MainContract.IView> impleme
                     @Override
                     public void onLogoutSuccess() {
                         UserInfoDaoUtil.getInstance().getUserInfoDao().deleteAll();
+                        DeviceDaoUtil.getInstance().deleteAllGateway();
+                        SceneDaoUtil.getInstance().getSceneDao().deleteAll();
                         Intent intent = new Intent(mContext, StartActivity.class);
                         mView.startActivityByIntent(intent);
                     }

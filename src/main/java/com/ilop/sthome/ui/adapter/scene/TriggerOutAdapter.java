@@ -43,7 +43,7 @@ public class TriggerOutAdapter extends RecyclerView.Adapter<TriggerOutAdapter.It
         List<DeviceInfoBean> deviceList = new ArrayList<>();
         for (int i = 0; i < mList.size(); i++) {
             if ("DELAY".equals(mList.get(i).getDevice_type())){
-                mList.get(i+1).setIdentityAlias(mList.get(i).getDevice_status());
+                mList.get(i+1).setBinVersion(mList.get(i).getDevice_status());
             }else {
                 deviceList.add(mList.get(i));
             }
@@ -66,10 +66,10 @@ public class TriggerOutAdapter extends RecyclerView.Adapter<TriggerOutAdapter.It
         itemHolder.mAction.setVisibility(View.VISIBLE);
             String[] mTrigger;
             String[] str;
-            if (!TextUtils.isEmpty(deviceInfoBean.getIdentityAlias())){
-
-                int minute = Integer.parseInt(deviceInfoBean.getIdentityAlias().substring(0,2));
-                int second = Integer.parseInt(deviceInfoBean.getIdentityAlias().substring(2));
+            if (!TextUtils.isEmpty(deviceInfoBean.getBinVersion())){
+                String delay = deviceInfoBean.getBinVersion();
+                int minute = Integer.parseInt(delay.substring(0,2));
+                int second = Integer.parseInt(delay.substring(2));
                 String mDelay;
                 String minuteDw = mContext.getString(R.string.device_setup_record_minute);
                 String secondDw = mContext.getString(R.string.device_setup_record_second);

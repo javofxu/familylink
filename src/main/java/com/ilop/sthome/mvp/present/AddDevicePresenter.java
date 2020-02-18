@@ -103,23 +103,30 @@ public class AddDevicePresenter extends BasePresenterImpl<AddDeviceContract.IVie
         String ds = CoderALiUtils.getAscii(mNickName);
         String dsCRC = ByteUtil.CRCmaker(ds);
         mSendEquipment.modifyEquipmentName(deviceId, ds + dsCRC);
-        onModifySuccess();
     }
 
     @Override
-    public void onModifySuccess() {
+    public void onModifySuccess(int deviceId) {
         String mRoomName = SpUtil.getString(mContext, "room");
         mRoomList = RoomDaoUtil.getInstance().findRoomByName(mRoomName);
         List<RoomBean> roomBeanList = RoomDaoUtil.getInstance().getRoomDao().queryAll();
         int size = roomBeanList.size();
         mRoomId = size == 0 ? 0 : roomBeanList.get(size-1).getId().intValue()+1;
         if(mDeviceId > 0){
-            DeviceInfoBean deviceInfoBean = new DeviceInfoBean();
-            deviceInfoBean.setSubdeviceName(mNickName);
-            deviceInfoBean.setDeviceName(mDeviceName);
-            deviceInfoBean.setDevice_ID(mDeviceId);
-            deviceInfoBean.setNodeType(String.valueOf(mRoomId));
-            DeviceDaoUtil.getInstance().getDeviceDao().update(deviceInfoBean);
+            if (deviceId == 0){
+                DeviceInfoBean deviceInfo = new DeviceInfoBean();
+                deviceInfo.setSubdeviceName(mNickName);
+                deviceInfo.setDeviceName(mDeviceName);
+                deviceInfo.setDevice_ID(mDeviceId);
+                deviceInfo.setNodeType(String.valueOf(mRoomId));
+                DeviceDaoUtil.getInstance().getDeviceDao().insert(deviceInfo);
+            }else {
+                DeviceInfoBean deviceInfo = DeviceDaoUtil.getInstance().findByDeviceId(mDeviceName, deviceId);
+                deviceInfo.setSubdeviceName(mNickName);
+                deviceInfo.setNodeType(String.valueOf(mRoomId));
+                DeviceDaoUtil.getInstance().getDeviceDao().update(deviceInfo);
+            }
+
             List<DeviceInfoBean> deviceList = DeviceDaoUtil.getInstance().findAllSubDevice(mDeviceName);
             List<String> stringList = new ArrayList<>();
             for (DeviceInfoBean mDevice: deviceList) {

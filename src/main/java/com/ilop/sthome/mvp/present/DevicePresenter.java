@@ -230,11 +230,13 @@ public class DevicePresenter extends BasePresenterImpl<DeviceContract.IView> imp
         if (!TextUtils.isEmpty(subDevice)){
             String[] subDeviceList = subDevice.split(",");
             for (String subDevices: subDeviceList) {
-                String deviceName = subDevices.split("_")[0];
-                String deviceId = subDevices.split("_")[1];
-                DeviceInfoBean mDevice = DeviceDaoUtil.getInstance().findByDeviceId(deviceName, Integer.parseInt(deviceId));
-                if (mDevice != null){
-                    mSubDeviceList.add(mDevice);
+                if (subDevices.contains("_")) {
+                    String deviceName = subDevices.split("_")[0];
+                    String deviceId = subDevices.split("_")[1];
+                    DeviceInfoBean mDevice = DeviceDaoUtil.getInstance().findByDeviceId(deviceName, Integer.parseInt(deviceId));
+                    if (mDevice != null) {
+                        mSubDeviceList.add(mDevice);
+                    }
                 }
             }
             if (mSubDeviceList.size()>0) {

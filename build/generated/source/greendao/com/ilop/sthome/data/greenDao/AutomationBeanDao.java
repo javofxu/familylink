@@ -55,8 +55,8 @@ public class AutomationBeanDao extends AbstractDao<AutomationBean, Long> {
                 "\"_id\" INTEGER PRIMARY KEY AUTOINCREMENT ," + // 0: id
                 "\"NAME\" TEXT," + // 1: name
                 "\"CODE\" TEXT," + // 2: code
-                "\"MID\" INTEGER NOT NULL UNIQUE ," + // 3: mid
-                "\"DEVICE_NAME\" TEXT UNIQUE ," + // 4: deviceName
+                "\"MID\" INTEGER NOT NULL ," + // 3: mid
+                "\"DEVICE_NAME\" TEXT," + // 4: deviceName
                 "\"MODEL\" TEXT," + // 5: model
                 "\"INPUT_LIST\" TEXT," + // 6: inputList
                 "\"OUTPUT_LIST\" TEXT);"); // 7: outputList

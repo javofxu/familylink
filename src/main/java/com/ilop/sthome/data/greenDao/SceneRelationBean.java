@@ -18,13 +18,10 @@ public class SceneRelationBean {
     @Id(autoincrement = true)
     private Long id;
 
-    @Unique
     private int sid;
 
-    @Unique
     private int mid;
 
-    @Unique
     private String deviceName;
 
     @Generated(hash = 1054057970)

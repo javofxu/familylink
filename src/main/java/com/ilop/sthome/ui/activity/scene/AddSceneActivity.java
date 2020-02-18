@@ -60,7 +60,6 @@ public class AddSceneActivity extends BasePActivity<AddScenePresenter, ActivityA
     protected void initView() {
         super.initView();
         mAutoList = new ArrayList<>();
-        mDBind.etSceneName.setText(getString(R.string.system_scene)+mPresent.getSid());
         mColorAdapter = new ChoseColorAdapter(mContext);
         mGatewayAdapter = new GatewayListAdapter(mContext);
         mDBind.rvColorList.setLayoutManager(new GridLayoutManager(mContext, 5));

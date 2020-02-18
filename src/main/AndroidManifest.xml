@@ -79,6 +79,7 @@
         <activity android:name="com.ilop.sthome.ui.activity.mine.CancellationActivity"/>
         <activity android:name="com.ilop.sthome.ui.activity.device.RoomManageActivity"/>
         <activity android:name="com.ilop.sthome.ui.activity.device.RoomEditorActivity"/>
+        <activity android:name="com.ilop.sthome.ui.activity.device.DeviceRenameActivity"/>
 
         <meta-data
             android:name="android.max_aspect"
