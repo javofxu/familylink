@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+                                                        
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/white" android:tag="layout/activity_scene_detail_0" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_50"
+            android:background="@color/color_white">
+
+            <TextView
+                android:id="@+id/scene_mode_name"
+                style="@style/TabTitleTextView"
+                android:text="@string/ali_add_scene"/>
+
+            <ImageView
+                android:id="@+id/iv_scene_back"
+                style="@style/TabBackImageView"/>
+
+            <TextView
+                android:id="@+id/tv_scene_setting"
+                style="@style/TabDoTextView"
+                android:text="@string/scene_edit"/>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_1"
+            android:background="@color/top_bar_line" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/main_ground">
+
+            <LinearLayout
+                android:id="@+id/scene_has_auto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin_15"
+                    android:textSize="@dimen/text_12"
+                    android:textColor="@color/text_line"
+                    android:text="@string/check_to_automate"/>
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/scene_recycle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                </android.support.v7.widget.RecyclerView>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1">
+                    <Button
+                        android:id="@+id/add_auto"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/margin_48"
+                        android:layout_alignParentBottom="true"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_18"
+                        android:text="@string/add_auto"
+                        android:background="@color/main_color"/>
+                </RelativeLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/scene_without_auto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
+                <ImageView
+                    android:id="@+id/scene_add_auto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/device_empty_add"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/text_14"
+                    android:textColor="@color/text_normal"
+                    android:text="@string/add_auto"/>
+            </LinearLayout>
+        </FrameLayout>
+    </LinearLayout>
+         

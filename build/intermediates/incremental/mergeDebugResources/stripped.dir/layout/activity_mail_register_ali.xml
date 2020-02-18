@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:inputBox="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:keep="@layout/activity_mail_register_ali">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_50">
+        <TextView
+            style="@style/TabTitleTextView"
+            android:text="@string/register"/>
+        <ImageView
+            android:id="@+id/iv_register_back"
+            style="@style/TabBackImageView"/>
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_1"
+        android:background="@color/top_bar_line" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars="none"
+        android:background="@color/main_ground">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_20"
+                android:background="@color/white"
+                android:orientation="vertical" >
+
+                <com.alibaba.sdk.android.openaccount.ui.widget.InputBoxWithClear
+                    android:id="@+id/mail_input_box"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin_58"
+                    android:gravity="center_vertical"
+                    inputBox:ali_sdk_openaccount_attrs_hint="@string/please_input_email"
+                    inputBox:ali_sdk_openaccount_attrs_inputType="textNormal"
+                    inputBox:ali_sdk_openaccount_attrs_leftIconText="@string/ali_sdk_openaccount_icon_user" />
+
+                <include layout="@layout/ali_sdk_openaccount_horizontal_frame_edge" />
+
+                <com.alibaba.sdk.android.openaccount.ui.widget.SmsCodeInputBox
+                    android:id="@+id/check_code_input_box"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin_58"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    inputBox:ali_sdk_openaccount_attrs_hint="@string/code_hint"/>
+
+                <include layout="@layout/ali_sdk_openaccount_horizontal_frame_edge" />
+
+                <com.alibaba.sdk.android.openaccount.ui.widget.PasswordInputBox
+                    android:id="@+id/password_input_box"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin_58"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    inputBox:ali_sdk_openaccount_attrs_hint="@string/password_hint" >
+                </com.alibaba.sdk.android.openaccount.ui.widget.PasswordInputBox>
+
+                <include layout="@layout/ali_sdk_openaccount_horizontal_frame_edge" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/ali_oa_send_email_success_tip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_15"
+                android:layout_marginEnd="@dimen/margin_15"
+                android:layout_marginTop="@dimen/margin_10"
+                android:gravity="center_vertical"
+                android:textSize="@dimen/text_12"
+                android:text="@string/ali_sdk_openaccount_text_register_password_rule"/>
+
+            <com.alibaba.sdk.android.openaccount.ui.widget.NextStepButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_20"
+                android:text="@string/register" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_20"
+                android:layout_marginEnd="@dimen/margin_20"
+                android:gravity="center_vertical">
+
+                <CheckBox
+                    android:id="@+id/register_box"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@null"
+                    android:checked="false"
+                    android:background="@drawable/bg_checkbox"/>
+
+                <TextView
+                    android:id="@+id/tv_pid"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_10"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

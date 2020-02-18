@@ -24,13 +24,13 @@ public class DaoMaster extends AbstractDaoMaster {
         HistoryBeanDao.createTable(db, ifNotExists);
         WarnBeanDao.createTable(db, ifNotExists);
         CameraBeanDao.createTable(db, ifNotExists);
+        SceneRelationBeanDao.createTable(db, ifNotExists);
+        SceneBeanDao.createTable(db, ifNotExists);
+        AutomationBeanDao.createTable(db, ifNotExists);
+        SceneSwitchBeanDao.createTable(db, ifNotExists);
         RoomBeanDao.createTable(db, ifNotExists);
         UserInfoBeanDao.createTable(db, ifNotExists);
         DeviceInfoBeanDao.createTable(db, ifNotExists);
-        SceneRelationBeanDao.createTable(db, ifNotExists);
-        SceneBeanDao.createTable(db, ifNotExists);
-        SceneSwitchBeanDao.createTable(db, ifNotExists);
-        AutomationBeanDao.createTable(db, ifNotExists);
     }
 
     /** Drops underlying database table using DAOs. */
@@ -38,13 +38,13 @@ public class DaoMaster extends AbstractDaoMaster {
         HistoryBeanDao.dropTable(db, ifExists);
         WarnBeanDao.dropTable(db, ifExists);
         CameraBeanDao.dropTable(db, ifExists);
+        SceneRelationBeanDao.dropTable(db, ifExists);
+        SceneBeanDao.dropTable(db, ifExists);
+        AutomationBeanDao.dropTable(db, ifExists);
+        SceneSwitchBeanDao.dropTable(db, ifExists);
         RoomBeanDao.dropTable(db, ifExists);
         UserInfoBeanDao.dropTable(db, ifExists);
         DeviceInfoBeanDao.dropTable(db, ifExists);
-        SceneRelationBeanDao.dropTable(db, ifExists);
-        SceneBeanDao.dropTable(db, ifExists);
-        SceneSwitchBeanDao.dropTable(db, ifExists);
-        AutomationBeanDao.dropTable(db, ifExists);
     }
 
     /**
@@ -66,13 +66,13 @@ public class DaoMaster extends AbstractDaoMaster {
         registerDaoClass(HistoryBeanDao.class);
         registerDaoClass(WarnBeanDao.class);
         registerDaoClass(CameraBeanDao.class);
+        registerDaoClass(SceneRelationBeanDao.class);
+        registerDaoClass(SceneBeanDao.class);
+        registerDaoClass(AutomationBeanDao.class);
+        registerDaoClass(SceneSwitchBeanDao.class);
         registerDaoClass(RoomBeanDao.class);
         registerDaoClass(UserInfoBeanDao.class);
         registerDaoClass(DeviceInfoBeanDao.class);
-        registerDaoClass(SceneRelationBeanDao.class);
-        registerDaoClass(SceneBeanDao.class);
-        registerDaoClass(SceneSwitchBeanDao.class);
-        registerDaoClass(AutomationBeanDao.class);
     }
 
     public DaoSession newSession() {

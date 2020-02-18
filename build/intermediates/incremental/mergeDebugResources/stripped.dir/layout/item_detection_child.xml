@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_1"
+        android:background="@color/line_bg"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/margin_10">
+        <ImageView
+            android:id="@+id/item_child_icon"
+            android:layout_width="@dimen/margin_36"
+            android:layout_height="@dimen/margin_36"
+            android:layout_marginStart="@dimen/margin_32"
+            android:src="@mipmap/intelligent_system"/>
+        <TextView
+            android:id="@+id/item_child_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/item_child_icon"
+            android:layout_centerVertical="true"
+            android:textSize="@dimen/text_14"
+            android:textColor="@color/text_title"
+            android:layout_marginStart="@dimen/margin_12"
+            android:text="@string/ali_alarm_product"/>
+        <TextView
+            android:id="@+id/item_child_tick"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/margin_32"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:textSize="@dimen/text_14"
+            android:textColor="@color/device_installed"
+            android:text="@string/installed"/>
+    </RelativeLayout>
+</LinearLayout>

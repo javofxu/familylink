@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="@dimen/margin_80">
+
+        <LinearLayout
+            android:id="@+id/item_history_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="@dimen/margin_08"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/iv_history_image"
+                android:layout_width="@dimen/margin_28"
+                android:layout_height="@dimen/margin_28"
+                android:src="@mipmap/gs156"
+                android:padding="@dimen/margin_2"
+                android:background="@drawable/round_history_type"/>
+            <View
+                android:layout_width="@dimen/margin_1"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@color/line"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toEndOf="@id/item_history_state"
+            android:layout_marginStart="@dimen/margin_08"
+            android:orientation="vertical">
+            <com.example.common.view.CustomTextView
+                android:id="@+id/tv_history_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/alarm"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_16" />
+
+            <TextView
+                android:id="@+id/tv_history_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_2"
+                android:textColor="@color/text_normal"
+                android:textSize="@dimen/text_12"
+                android:text="20:23:21"/>
+
+            <TextView
+                android:id="@+id/tv_history_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_05"
+                android:textColor="@color/text_content"
+                android:textSize="16sp"
+                android:text="@string/alarm"/>
+        </LinearLayout>
+</RelativeLayout>

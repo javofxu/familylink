@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+                                                                   
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical" android:tag="layout/activity_pic_setting_expert_0" xmlns:android="http://schemas.android.com/apk/res/android">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_50"
+            android:background="@color/color_white">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/device_setup_expert"
+                android:textColor="@color/top_bar_title"
+                android:textSize="@dimen/title_size" />
+
+            <ImageView
+                android:id="@+id/iv_expert_back"
+                android:layout_width="@dimen/back_image_width"
+                android:layout_height="@dimen/back_image_height"
+                android:padding="@dimen/margin_3"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/back_image_marginLeft"
+                android:src="@mipmap/back"/>
+
+        </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_1"
+            android:background="@color/top_bar_line" />
+
+        <RelativeLayout
+            android:id="@+id/recordsetting"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/margin_15"
+            android:background="@drawable/list_item_selector">
+            <TextView
+                style="@style/CCPFontPreferenceLarge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/device_setup_record"
+                android:layout_marginStart="@dimen/margin_05"
+                android:layout_centerVertical="true"
+                android:textColor="@color/delist_bk"/>
+
+            <ImageView
+                android:layout_width="@dimen/back_image_width"
+                android:layout_height="@dimen/back_image_height"
+                android:padding="@dimen/margin_2"
+                android:src="@mipmap/icon_right"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"/>
+        </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_1"
+            android:background="@color/line_bg"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/line_bg"/>
+    </LinearLayout>
+
+         
