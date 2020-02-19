@@ -2,5 +2,5 @@
 <animation-list
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:oneshot="false">
-    <item android:drawable="@mipmap/ali_moren" android:duration="500"></item>
+    <item android:drawable="@mipmap/default_pic_152" android:duration="500"></item>
 </animation-list>

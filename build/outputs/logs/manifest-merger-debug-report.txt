@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:2:1-422:12
-INJECTED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:2:1-422:12
-INJECTED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:2:1-422:12
-INJECTED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:2:1-422:12
+ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:2:1-423:12
+INJECTED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:2:1-423:12
+INJECTED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:2:1-423:12
+INJECTED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:2:1-423:12
 MERGED from [:common] /Users/siterwell/github/familylink/common/build/intermediates/manifests/full/debug/AndroidManifest.xml:2:1-12:12
 MERGED from [com.android.databinding:adapters:1.3.1] /Users/siterwell/.gradle/caches/transforms-1/files-1.1/adapters-1.3.1.aar/b489e7ef6693a7c1e2f26e5aba2d9ee9/AndroidManifest.xml:17:1-26:12
 MERGED from [com.android.databinding:library:1.3.1] /Users/siterwell/.gradle/caches/transforms-1/files-1.1/library-1.3.1.aar/e21a7dd753e3401911633ed07f0cf595/AndroidManifest.xml:17:1-26:12
@@ -67,7 +67,6 @@ MERGED from [android.arch.lifecycle:livedata:1.1.1] /Users/siterwell/.gradle/cac
 MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /Users/siterwell/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.1.aar/88b3aa3d7fb8a293eeca15259930c18d/AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.core:runtime:1.1.1] /Users/siterwell/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/65fa1fc93d37bff2b7d9730072de3d81/AndroidManifest.xml:17:1-22:12
 MERGED from [io.reactivex.rxjava2:rxandroid:2.0.1] /Users/siterwell/.gradle/caches/transforms-1/files-1.1/rxandroid-2.0.1.aar/6c5c70e631f6688a20e229420c8165c4/AndroidManifest.xml:15:1-21:12
-MERGED from [com.facebook.fresco:fresco:1.3.0] /Users/siterwell/.gradle/caches/transforms-1/files-1.1/fresco-1.3.0.aar/dba6e22d5bd74e605d0a8d4f5fd2dc41/AndroidManifest.xml:2:1-9:12
 MERGED from [com.aliyun.iot.ilop.page:scan:0.0.1] /Users/siterwell/.gradle/caches/transforms-1/files-1.1/scan-0.0.1.aar/2a2c946804c69a2d9ac08dc9f56bb7b6/AndroidManifest.xml:2:1-22:12
 MERGED from [com.aliyun.iot.aep.sdk:push:0.0.3] /Users/siterwell/.gradle/caches/transforms-1/files-1.1/push-0.0.3.aar/c90731f80c38d028edfcce174fbee717/AndroidManifest.xml:2:1-3:37
 MERGED from [com.aliyun.alink.linksdk:api-client-biz:1.0.0] /Users/siterwell/.gradle/caches/transforms-1/files-1.1/api-client-biz-1.0.0.aar/8565872c4adfd589324e7883c4d9e228/AndroidManifest.xml:2:1-17:12
@@ -79,10 +78,6 @@ MERGED from [com.aliyun.iot.aep.sdk:iot-credential:0.0.2.2] /Users/siterwell/.gr
 MERGED from [com.aliyun.alink.linksdk:ilop-devicecenter-ext-boneplugin:1.3.0] /Users/siterwell/.gradle/caches/transforms-1/files-1.1/ilop-devicecenter-ext-boneplugin-1.3.0.aar/9491938c3f7aa71cb5e52bb1ca42be22/AndroidManifest.xml:2:1-35:12
 MERGED from [com.aliyun.alink.linksdk:ilop-devicecenter:1.3.0] /Users/siterwell/.gradle/caches/transforms-1/files-1.1/ilop-devicecenter-1.3.0.aar/21f678211670c6c04ec5cd1db662001e/AndroidManifest.xml:2:1-24:12
 MERGED from [com.journeyapps:zxing-android-embedded:3.6.0] /Users/siterwell/.gradle/caches/transforms-1/files-1.1/zxing-android-embedded-3.6.0.aar/e192048efeaeb501ff9a8705b5924f22/AndroidManifest.xml:17:1-56:12
-MERGED from [com.facebook.fresco:drawee:1.3.0] /Users/siterwell/.gradle/caches/transforms-1/files-1.1/drawee-1.3.0.aar/d2fb51df5dff5dd2f286fcfd9fcf1e30/AndroidManifest.xml:2:1-9:12
-MERGED from [com.facebook.fresco:imagepipeline:1.3.0] /Users/siterwell/.gradle/caches/transforms-1/files-1.1/imagepipeline-1.3.0.aar/60288362a49ee9e9370a41bf0be96ec0/AndroidManifest.xml:2:1-9:12
-MERGED from [com.facebook.fresco:imagepipeline-base:1.3.0] /Users/siterwell/.gradle/caches/transforms-1/files-1.1/imagepipeline-base-1.3.0.aar/946d6ab04f3b580591e74574c1f8c786/AndroidManifest.xml:2:1-9:12
-MERGED from [com.facebook.fresco:fbcore:1.3.0] /Users/siterwell/.gradle/caches/transforms-1/files-1.1/fbcore-1.3.0.aar/92a7dc5ef019e4c37d1027bc949d8ea6/AndroidManifest.xml:2:1-9:12
 MERGED from [com.aliyun.iot.aep.sdk:router:0.0.5] /Users/siterwell/.gradle/caches/transforms-1/files-1.1/router-0.0.5.aar/3fadbad339abe09a5fac31c6537a068e/AndroidManifest.xml:2:1-8:12
 MERGED from [com.aliyun.iot.aep.sdk:scan:0.0.1.2] /Users/siterwell/.gradle/caches/transforms-1/files-1.1/scan-0.0.1.2.aar/ee985fd7fce3ec12edef41f41bca700c/AndroidManifest.xml:2:1-18:12
 MERGED from [com.aliyun.iot.aep.component:scan:0.0.1] /Users/siterwell/.gradle/caches/transforms-1/files-1.1/scan-0.0.1.aar/1de313ba8d475656aee8a0e6d570bc2c/AndroidManifest.xml:2:1-5:12
@@ -100,22 +95,22 @@ MERGED from [com.aliyun.iot.aep.sdk:jsbridge:0.0.4] /Users/siterwell/.gradle/cac
 MERGED from [com.aliyun.iot.aep.sdk:configmanager:0.0.1] /Users/siterwell/.gradle/caches/transforms-1/files-1.1/configmanager-0.0.1.aar/1116639b3a984b4dc7d4282ee5db076c/AndroidManifest.xml:2:1-9:12
 MERGED from [com.aliyun.dpa:oss-android-sdk:2.9.3] /Users/siterwell/.gradle/caches/transforms-1/files-1.1/oss-android-sdk-2.9.3.aar/08559667028bf154b88733a8052de44e/AndroidManifest.xml:2:1-22:12
 MERGED from [com.aliyun.alink.linksdk:opensource-paho:1.2.0.3] /Users/siterwell/.gradle/caches/transforms-1/files-1.1/opensource-paho-1.2.0.3.aar/c5a3e5edd17b24ac51cbe53a3feb816e/AndroidManifest.xml:2:1-18:12
-INJECTED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:2:1-422:12
-INJECTED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:2:1-422:12
-INJECTED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:2:1-422:12
+INJECTED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:2:1-423:12
+INJECTED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:2:1-423:12
+INJECTED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:2:1-423:12
 	package
 		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:4:5-43
 		INJECTED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml
 		INJECTED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml
 	android:versionName
 		INJECTED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:2:1-422:12
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:2:1-423:12
 		INJECTED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml
 	xmlns:tools
 		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:3:5-51
 	android:versionCode
 		INJECTED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:2:1-422:12
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:2:1-423:12
 		INJECTED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml
 	xmlns:android
 		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:2:11-69
@@ -438,7 +433,7 @@ ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:35:5-
 	android:name
 		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:36:9-48
 application
-ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:39:5-420:19
+ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:39:5-421:19
 MERGED from [com.aliyun.iot.sdk:account-oa-ui:0.0.6] /Users/siterwell/.gradle/caches/transforms-1/files-1.1/account-oa-ui-0.0.6.aar/33cff7e9807c2fd9f1c3af81e0edd170/AndroidManifest.xml:7:5-8:19
 MERGED from [com.aliyun.iot.sdk:account-oa-ui:0.0.6] /Users/siterwell/.gradle/caches/transforms-1/files-1.1/account-oa-ui-0.0.6.aar/33cff7e9807c2fd9f1c3af81e0edd170/AndroidManifest.xml:7:5-8:19
 MERGED from [com.aliyun.iot.aep.sdk:alog:0.0.5] /Users/siterwell/.gradle/caches/transforms-1/files-1.1/alog-0.0.5.aar/446b29b785cb7c2a452fcefd0221a3d3/AndroidManifest.xml:17:5-21:19
@@ -619,624 +614,628 @@ activity#com.ilop.sthome.ui.activity.mine.SetUpActivity
 ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:68:9-82
 	android:name
 		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:68:19-80
+activity#com.ilop.sthome.ui.activity.mine.ContactUsActivity
+ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:69:9-86
+	android:name
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:69:19-84
 activity#com.ilop.sthome.ui.activity.scene.SceneDetailActivity
-ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:69:9-89
+ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:70:9-89
 	android:name
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:69:19-87
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:70:19-87
 activity#com.ilop.sthome.ui.activity.scene.SceneEditActivity
-ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:70:9-87
+ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:71:9-87
 	android:name
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:70:19-85
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:71:19-85
 activity#com.ilop.sthome.ui.activity.device.ChangeSceneActivity
-ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:71:9-90
+ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:72:9-90
 	android:name
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:71:19-88
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:72:19-88
 activity#com.ilop.sthome.ui.activity.scene.AutomationDetailActivity
-ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:72:9-94
+ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:73:9-94
 	android:name
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:72:19-92
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:73:19-92
 activity#com.ilop.sthome.ui.activity.scene.InputDetailActivity
-ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:73:9-89
+ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:74:9-89
 	android:name
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:73:19-87
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:74:19-87
 activity#com.ilop.sthome.ui.activity.scene.SettingActionActivity
-ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:74:9-91
+ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:75:9-91
 	android:name
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:74:19-89
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:75:19-89
 activity#com.ilop.sthome.ui.activity.scene.SettingHumitureActivity
-ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:75:9-93
+ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:76:9-93
 	android:name
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:75:19-91
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:76:19-91
 activity#com.ilop.sthome.ui.activity.scene.SettingDoubleSwitchActivity
-ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:76:9-97
+ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:77:9-97
 	android:name
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:76:19-95
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:77:19-95
 activity#com.ilop.sthome.ui.activity.scene.SettingTempControlActivity
-ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:77:9-96
+ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:78:9-96
 	android:name
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:77:19-94
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:78:19-94
 activity#com.ilop.sthome.ui.activity.scene.SettingTimingActivity
-ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:78:9-91
+ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:79:9-91
 	android:name
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:78:19-89
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:79:19-89
 activity#com.ilop.sthome.ui.activity.mine.CancellationActivity
-ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:79:9-89
-	android:name
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:79:19-87
-activity#com.ilop.sthome.ui.activity.device.RoomManageActivity
 ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:80:9-89
 	android:name
 		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:80:19-87
-activity#com.ilop.sthome.ui.activity.device.RoomEditorActivity
+activity#com.ilop.sthome.ui.activity.device.RoomManageActivity
 ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:81:9-89
 	android:name
 		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:81:19-87
+activity#com.ilop.sthome.ui.activity.device.RoomEditorActivity
+ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:82:9-89
+	android:name
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:82:19-87
 activity#com.ilop.sthome.ui.activity.device.DeviceRenameActivity
-ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:82:9-91
+ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:83:9-91
 	android:name
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:82:19-89
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:83:19-89
 meta-data#android.max_aspect
-ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:84:9-86:35
+ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:85:9-87:35
 	android:value
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:86:13-32
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:87:13-32
 	android:name
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:85:13-46
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:86:13-46
 activity#com.ilop.sthome.ui.activity.main.StartActivity
-ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:87:9-96:20
+ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:88:9-97:20
 	android:launchMode
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:89:13-43
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:90:13-43
 	android:theme
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:90:13-46
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:91:13-46
 	android:name
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:88:13-74
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:89:13-74
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
-ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:91:13-95:29
+ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:92:13-96:29
 action#android.intent.action.MAIN
-ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:92:17-69
+ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:93:17-69
 	android:name
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:92:25-66
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:93:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:94:17-77
+ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:95:17-77
 	android:name
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:94:27-74
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:95:27-74
 activity#com.ilop.sthome.ui.activity.main.MainActivity
-ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:98:9-113:20
+ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:99:9-114:20
 	android:screenOrientation
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:101:13-49
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:102:13-49
 	android:launchMode
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:100:13-44
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:101:13-44
 	android:name
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:99:13-73
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:100:13-73
 intent-filter#android.intent.category.DEFAULT+com.aliyun.iot.aep.demo.action.navigation
-ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:102:13-112:29
+ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:103:13-113:29
 	android:priority
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:137:28-49
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:138:28-49
 action#com.aliyun.iot.aep.demo.action.navigation
-ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:103:17-84
+ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:104:17-84
 	android:name
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:103:25-81
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:104:25-81
 category#android.intent.category.DEFAULT
-ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:105:17-76
+ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:106:17-76
 	android:name
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:105:27-73
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:106:27-73
 data
-ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:107:17-47
+ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:108:17-47
 	android:path
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:111:21-50
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:112:21-50
 	android:host
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:110:21-64
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:111:21-64
 	android:scheme
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:107:23-44
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:108:23-44
 activity#com.ilop.sthome.ui.activity.config.AddGatewayActivity
-ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:115:9-130:20
+ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:116:9-131:20
 	android:screenOrientation
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:117:13-49
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:118:13-49
 	android:theme
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:118:13-44
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:119:13-44
 	android:name
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:116:13-81
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:117:13-81
 activity#com.ilop.sthome.ui.activity.config.BindAndUseActivity
-ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:131:9-148:20
+ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:132:9-149:20
 	android:screenOrientation
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:134:13-49
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:135:13-49
 	android:launchMode
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:133:13-44
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:134:13-44
 	android:windowSoftInputMode
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:136:13-67
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:137:13-67
 	android:theme
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:135:13-44
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:136:13-44
 	android:name
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:132:13-81
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:133:13-81
 activity#com.ilop.sthome.ui.activity.mine.AboutActivity
-ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:150:9-154:67
+ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:151:9-155:67
 	android:screenOrientation
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:153:13-49
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:154:13-49
 	android:label
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:152:13-45
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:153:13-45
 	android:windowSoftInputMode
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:154:13-64
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:155:13-64
 	android:name
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:151:13-74
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:152:13-74
 activity#com.ilop.sthome.ui.activity.login.OALoginActivity
-ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:156:9-160:46
+ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:157:9-161:46
 	android:screenOrientation
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:159:13-49
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:160:13-49
 	android:configChanges
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:158:13-106
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:159:13-106
 	android:theme
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:160:13-43
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:161:13-43
 	android:name
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:157:13-77
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:158:13-77
 activity#com.ilop.sthome.ui.ota.activity.OTAActivity
-ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:161:9-177:20
+ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:162:9-178:20
 	android:screenOrientation
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:164:13-49
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:165:13-49
 	android:exported
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:163:13-37
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:164:13-37
 	android:theme
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:165:13-44
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:166:13-44
 	android:name
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:162:13-71
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:163:13-71
 intent-filter#android.intent.category.DEFAULT+com.aliyun.iot.aep.action.navigation
-ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:166:13-176:29
+ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:167:13-177:29
 action#com.aliyun.iot.aep.action.navigation
-ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:167:17-79
+ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:168:17-79
 	android:name
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:167:25-76
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:168:25-76
 activity#com.ilop.sthome.ui.activity.login.EmailRegisterAliActivity
-ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:179:9-182:54
+ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:180:9-183:54
 	android:screenOrientation
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:181:13-49
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:182:13-49
 	android:theme
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:182:13-51
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:183:13-51
 	android:name
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:180:13-86
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:181:13-86
 activity#com.ilop.sthome.ui.activity.login.PhoneRegisterAliActivity
-ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:183:9-186:52
+ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:184:9-187:52
 	android:screenOrientation
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:185:13-49
-	android:theme
 		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:186:13-49
+	android:theme
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:187:13-49
 	android:name
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:184:13-86
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:185:13-86
 activity#com.ilop.sthome.ui.activity.login.EmailResetAliActivity
-ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:187:9-190:59
+ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:188:9-191:59
 	android:screenOrientation
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:189:13-49
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:190:13-49
 	android:theme
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:190:13-56
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:191:13-56
 	android:name
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:188:13-83
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:189:13-83
 activity#com.ilop.sthome.ui.activity.login.PhoneResetAliActivity
-ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:191:9-194:57
+ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:192:9-195:57
 	android:screenOrientation
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:193:13-49
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:194:13-49
 	android:theme
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:194:13-54
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:195:13-54
 	android:name
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:192:13-83
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:193:13-83
 activity#com.ilop.sthome.ui.activity.mine.InstructionActivity
-ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:195:9-199:67
+ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:196:9-200:67
 	android:screenOrientation
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:198:13-49
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:199:13-49
 	android:label
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:197:13-45
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:198:13-45
 	android:windowSoftInputMode
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:199:13-64
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:200:13-64
 	android:name
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:196:13-80
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:197:13-80
 activity#com.ilop.sthome.ui.activity.device.GatewayMainActivity
-ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:200:9-204:67
+ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:201:9-205:67
 	android:screenOrientation
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:203:13-49
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:204:13-49
 	android:label
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:202:13-45
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:203:13-45
 	android:windowSoftInputMode
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:204:13-64
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:205:13-64
 	android:name
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:201:13-82
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:202:13-82
 activity#com.ilop.sthome.ui.activity.device.DeviceSettingActivity
-ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:205:9-209:67
+ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:206:9-210:67
 	android:screenOrientation
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:208:13-49
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:209:13-49
 	android:label
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:207:13-45
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:208:13-45
 	android:windowSoftInputMode
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:209:13-64
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:210:13-64
 	android:name
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:206:13-84
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:207:13-84
 activity#com.ilop.sthome.ui.activity.config.AddDeviceGuideActivity
-ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:210:9-214:67
+ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:211:9-215:67
 	android:screenOrientation
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:213:13-49
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:214:13-49
 	android:label
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:212:13-45
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:213:13-45
 	android:windowSoftInputMode
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:214:13-64
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:215:13-64
 	android:name
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:211:13-85
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:212:13-85
 activity#com.ilop.sthome.ui.activity.detail.ButtonDetailActivity
-ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:215:9-217:52
+ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:216:9-218:52
 	android:screenOrientation
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:217:13-49
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:218:13-49
 	android:name
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:216:13-83
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:217:13-83
 activity#com.ilop.sthome.ui.activity.detail.CoDetailActivity
-ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:218:9-220:52
+ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:219:9-221:52
 	android:screenOrientation
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:220:13-49
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:221:13-49
 	android:name
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:219:13-79
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:220:13-79
 activity#com.ilop.sthome.ui.activity.detail.CxSmDetailActivity
-ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:221:9-223:52
+ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:222:9-224:52
 	android:screenOrientation
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:223:13-49
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:224:13-49
 	android:name
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:222:13-81
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:223:13-81
 activity#com.ilop.sthome.ui.activity.detail.DoorDetailActivity
-ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:224:9-226:52
+ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:225:9-227:52
 	android:screenOrientation
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:226:13-49
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:227:13-49
 	android:name
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:225:13-81
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:226:13-81
 activity#com.ilop.sthome.ui.activity.detail.GasDetailActivity
-ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:227:9-229:52
+ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:228:9-230:52
 	android:screenOrientation
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:229:13-49
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:230:13-49
 	android:name
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:228:13-80
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:229:13-80
 activity#com.ilop.sthome.ui.activity.detail.LockDetailActivity
-ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:230:9-232:52
+ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:231:9-233:52
 	android:screenOrientation
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:232:13-49
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:233:13-49
 	android:name
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:231:13-81
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:232:13-81
 activity#com.ilop.sthome.ui.activity.detail.ModeButtonDetailActivity
-ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:233:9-235:52
+ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:234:9-236:52
 	android:screenOrientation
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:235:13-49
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:236:13-49
 	android:name
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:234:13-87
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:235:13-87
 activity#com.ilop.sthome.ui.activity.detail.OutDoorDetailActivity
-ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:236:9-238:52
+ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:237:9-239:52
 	android:screenOrientation
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:238:13-49
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:239:13-49
 	android:name
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:237:13-84
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:238:13-84
 activity#com.ilop.sthome.ui.activity.detail.PirDetailActivity
-ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:239:9-241:52
+ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:240:9-242:52
 	android:screenOrientation
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:241:13-49
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:242:13-49
 	android:name
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:240:13-80
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:241:13-80
 activity#com.ilop.sthome.ui.activity.detail.SmDetailActivity
-ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:242:9-244:52
+ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:243:9-245:52
 	android:screenOrientation
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:244:13-49
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:245:13-49
 	android:name
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:243:13-79
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:244:13-79
 activity#com.ilop.sthome.ui.activity.detail.SocketDetailActivity
-ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:245:9-247:52
+ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:246:9-248:52
 	android:screenOrientation
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:247:13-49
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:248:13-49
 	android:name
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:246:13-83
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:247:13-83
 activity#com.ilop.sthome.ui.activity.detail.SosDetailActivity
-ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:248:9-250:52
+ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:249:9-251:52
 	android:screenOrientation
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:250:13-49
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:251:13-49
 	android:name
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:249:13-80
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:250:13-80
 activity#com.ilop.sthome.ui.activity.detail.THCheckDetailActivity
-ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:251:9-253:52
+ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:252:9-254:52
 	android:screenOrientation
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:253:13-49
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:254:13-49
 	android:name
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:252:13-84
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:253:13-84
 activity#com.ilop.sthome.ui.activity.detail.ThermalDetailActivity
-ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:254:9-256:52
+ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:255:9-257:52
 	android:screenOrientation
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:256:13-49
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:257:13-49
 	android:name
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:255:13-84
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:256:13-84
 activity#com.ilop.sthome.ui.activity.detail.WaterDetailActivity
-ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:257:9-259:52
+ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:258:9-260:52
 	android:screenOrientation
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:259:13-49
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:260:13-49
 	android:name
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:258:13-82
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:259:13-82
 activity#com.ilop.sthome.ui.activity.detail.TempControlDetailActivity
-ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:260:9-262:52
+ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:261:9-263:52
 	android:screenOrientation
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:262:13-49
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:263:13-49
 	android:name
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:261:13-88
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:262:13-88
 activity#com.ilop.sthome.ui.activity.device.DeviceHistoryActivity
-ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:263:9-265:52
+ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:264:9-266:52
 	android:screenOrientation
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:265:13-49
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:266:13-49
 	android:name
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:264:13-84
-activity#com.ilop.sthome.ui.activity.mine.ShareListActivity
-ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:266:9-268:52
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:265:13-84
+activity#com.ilop.sthome.ui.activity.device.DeviceShareActivity
+ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:267:9-269:52
 	android:screenOrientation
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:268:13-49
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:269:13-49
 	android:name
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:267:13-78
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:268:13-82
 activity#com.ilop.sthome.ui.activity.config.ConfigDeviceActivity
-ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:269:9-271:52
+ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:270:9-272:52
 	android:screenOrientation
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:271:13-49
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:272:13-49
 	android:name
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:270:13-83
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:271:13-83
 activity#com.ilop.sthome.ui.activity.device.DeviceDetailActivity
-ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:272:9-274:52
+ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:273:9-275:52
 	android:screenOrientation
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:274:13-49
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:275:13-49
 	android:name
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:273:13-83
-activity#com.ilop.sthome.ui.activity.main.ExplainActivity
-ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:275:9-277:52
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:274:13-83
+activity#com.ilop.sthome.ui.activity.mine.AgreementActivity
+ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:276:9-278:52
 	android:screenOrientation
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:277:13-49
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:278:13-49
 	android:name
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:276:13-76
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:277:13-78
 activity#com.ilop.sthome.ui.activity.xmipc.ActivityGuideDeviceCamera
-ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:278:9-281:48
+ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:279:9-282:48
 	android:label
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:281:13-45
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:282:13-45
 	android:configChanges
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:280:13-96
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:281:13-96
 	android:name
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:279:13-87
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:280:13-87
 activity#com.ilop.sthome.ui.activity.xmipc.ActivityGuideDeviceWifiConfig
-ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:282:9-284:66
+ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:283:9-285:66
 	android:windowSoftInputMode
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:284:13-64
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:285:13-64
 	android:name
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:283:13-91
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:284:13-91
 activity#com.ilop.sthome.ui.activity.xmipc.ActivityGuideDeviceWifiConfigNew
-ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:285:9-288:52
+ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:286:9-289:52
 	android:screenOrientation
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:288:13-49
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:289:13-49
 	android:label
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:287:13-45
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:288:13-45
 	android:name
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:286:13-94
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:287:13-94
 activity#com.ilop.sthome.ui.activity.xmipc.ActivityGuideDevicePictureList
-ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:289:9-292:52
+ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:290:9-293:52
 	android:screenOrientation
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:292:13-49
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:293:13-49
 	android:label
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:291:13-45
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:292:13-45
 	android:name
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:290:13-92
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:291:13-92
 activity#com.ilop.sthome.ui.activity.xmipc.ActivityGuideDeviceChangePwd
-ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:293:9-296:52
+ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:294:9-297:52
 	android:screenOrientation
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:296:13-49
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:297:13-49
 	android:label
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:295:13-45
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:296:13-45
 	android:name
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:294:13-90
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:295:13-90
 activity#com.ilop.sthome.ui.activity.xmipc.ActivityGuideDeviceNormalPic
-ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:297:9-301:67
+ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:298:9-302:67
 	android:screenOrientation
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:300:13-49
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:301:13-49
 	android:label
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:299:13-45
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:300:13-45
 	android:windowSoftInputMode
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:301:13-64
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:302:13-64
 	android:name
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:298:13-90
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:299:13-90
 activity#com.ilop.sthome.ui.activity.xmipc.ActivityLocalPicVideo
-ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:302:9-306:67
+ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:303:9-307:67
 	android:screenOrientation
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:305:13-49
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:306:13-49
 	android:label
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:304:13-45
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:305:13-45
 	android:windowSoftInputMode
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:306:13-64
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:307:13-64
 	android:name
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:303:13-83
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:304:13-83
 activity#com.ilop.sthome.ui.activity.xmipc.ActivityGuideSettingMain
-ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:307:9-311:67
+ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:308:9-312:67
 	android:screenOrientation
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:310:13-49
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:311:13-49
 	android:label
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:309:13-45
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:310:13-45
 	android:windowSoftInputMode
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:311:13-64
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:312:13-64
 	android:name
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:308:13-86
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:309:13-86
 activity#com.ilop.sthome.ui.activity.xmipc.ActivityGuideSettingCommon
-ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:312:9-316:67
+ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:313:9-317:67
 	android:screenOrientation
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:315:13-49
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:316:13-49
 	android:label
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:314:13-45
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:315:13-45
 	android:windowSoftInputMode
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:316:13-64
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:317:13-64
 	android:name
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:313:13-88
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:314:13-88
 activity#com.ilop.sthome.ui.activity.xmipc.ActivityGuideSettingExpert
-ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:317:9-321:67
+ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:318:9-322:67
 	android:screenOrientation
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:320:13-49
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:321:13-49
 	android:label
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:319:13-45
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:320:13-45
 	android:windowSoftInputMode
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:321:13-64
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:322:13-64
 	android:name
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:318:13-88
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:319:13-88
 activity#com.ilop.sthome.ui.activity.xmipc.ActivityGuideSetingInfo
-ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:322:9-326:67
+ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:323:9-327:67
 	android:screenOrientation
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:325:13-49
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:326:13-49
 	android:label
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:324:13-45
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:325:13-45
 	android:windowSoftInputMode
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:326:13-64
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:327:13-64
 	android:name
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:323:13-85
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:324:13-85
 activity#com.ilop.sthome.ui.activity.xmipc.ActivityGuideDeviceSetupRecord
-ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:327:9-331:67
+ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:328:9-332:67
 	android:screenOrientation
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:330:13-49
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:331:13-49
 	android:label
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:329:13-45
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:330:13-45
 	android:windowSoftInputMode
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:331:13-64
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:332:13-64
 	android:name
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:328:13-92
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:329:13-92
 activity#com.ilop.sthome.ui.activity.xmipc.ActivityGuideDeviceSetupStorage
-ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:332:9-336:67
+ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:333:9-337:67
 	android:screenOrientation
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:335:13-49
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:336:13-49
 	android:label
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:334:13-45
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:335:13-45
 	android:windowSoftInputMode
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:336:13-64
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:337:13-64
 	android:name
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:333:13-93
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:334:13-93
 activity#com.ilop.sthome.ui.activity.xmipc.DateSelectActivity
-ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:337:9-341:67
+ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:338:9-342:67
 	android:screenOrientation
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:340:13-49
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:341:13-49
 	android:label
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:339:13-45
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:340:13-45
 	android:windowSoftInputMode
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:341:13-64
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:342:13-64
 	android:name
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:338:13-80
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:339:13-80
 activity#com.ilop.sthome.ui.activity.xmipc.ActivityGuideDeviceRecordListNew
-ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:342:9-346:52
+ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:343:9-347:52
 	android:screenOrientation
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:346:13-49
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:347:13-49
 	android:label
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:345:13-45
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:346:13-45
 	android:configChanges
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:344:13-96
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:345:13-96
 	android:name
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:343:13-94
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:344:13-94
 activity#com.ilop.sthome.ui.activity.xmipc.ActivityGuideDeviceAdd
-ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:347:9-351:67
+ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:348:9-352:67
 	android:screenOrientation
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:350:13-49
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:351:13-49
 	android:label
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:349:13-45
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:350:13-45
 	android:windowSoftInputMode
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:351:13-64
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:352:13-64
 	android:name
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:348:13-84
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:349:13-84
 activity#com.ilop.sthome.ui.activity.xmipc.ActivityGuideDeviceListLan
-ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:352:9-355:52
+ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:353:9-356:52
 	android:screenOrientation
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:355:13-49
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:356:13-49
 	android:label
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:354:13-45
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:355:13-45
 	android:name
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:353:13-88
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:354:13-88
 activity#com.ilop.sthome.ui.activity.xmipc.ActivityGuideDeviceBeforeWifiConfig
-ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:356:9-359:52
+ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:357:9-360:52
 	android:screenOrientation
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:359:13-49
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:360:13-49
 	android:label
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:358:13-45
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:359:13-45
 	android:name
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:357:13-97
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:358:13-97
 activity#com.ilop.sthome.ui.activity.config.ConfigGuideActivity
-ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:360:9-363:52
+ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:361:9-364:52
 	android:screenOrientation
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:363:13-49
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:364:13-49
 	android:label
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:362:13-45
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:363:13-45
 	android:name
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:361:13-82
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:362:13-82
 activity#com.ilop.sthome.ui.activity.config.NetWorkActivity
-ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:364:9-368:70
+ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:365:9-369:70
 	android:screenOrientation
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:367:13-49
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:368:13-49
 	android:label
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:366:13-45
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:367:13-45
 	android:windowSoftInputMode
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:368:13-67
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:369:13-67
 	android:name
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:365:13-78
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:366:13-78
 activity#com.ilop.sthome.ui.activity.config.SetApActivity
-ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:369:9-372:52
+ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:370:9-373:52
 	android:screenOrientation
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:372:13-49
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:373:13-49
 	android:label
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:371:13-45
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:372:13-45
 	android:name
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:370:13-76
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:371:13-76
 activity#com.ilop.sthome.ui.activity.config.ConnectNetActivity
-ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:373:9-376:52
+ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:374:9-377:52
 	android:screenOrientation
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:376:13-49
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:377:13-49
 	android:label
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:375:13-45
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:376:13-45
 	android:name
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:374:13-81
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:375:13-81
 activity#com.ilop.sthome.ui.activity.config.RecoveryGuideActivity
-ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:377:9-380:52
+ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:378:9-381:52
 	android:screenOrientation
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:380:13-49
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:381:13-49
 	android:label
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:379:13-45
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:380:13-45
 	android:name
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:378:13-84
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:379:13-84
 activity#com.ilop.sthome.ui.activity.config.QuestionActivity
-ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:381:9-384:52
+ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:382:9-385:52
 	android:screenOrientation
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:384:13-49
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:385:13-49
 	android:label
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:383:13-45
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:384:13-45
 	android:name
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:382:13-79
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:383:13-79
 service#com.ilop.sthome.service.UpdateService
-ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:386:9-389:45
+ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:387:9-390:45
 	android:label
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:389:13-42
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:390:13-42
 	android:exported
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:388:13-36
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:389:13-36
 	android:name
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:387:13-65
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:388:13-65
 service#com.ilop.sthome.service.SiterService
-ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:390:9-394:43
+ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:391:9-395:43
 	android:enabled
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:392:13-35
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:393:13-35
 	android:label
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:394:13-40
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:395:13-40
 	android:exported
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:393:13-36
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:394:13-36
 	android:name
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:391:13-64
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:392:13-64
 receiver#com.aliyun.iot.aep.sdk.receiver.PushReceiver
-ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:396:9-408:20
+ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:397:9-409:20
 	android:exported
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:398:13-37
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:399:13-37
 	android:name
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:397:13-72
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:398:13-72
 intent-filter#com.alibaba.push2.action.NOTIFICATION_OPENED
-ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:399:13-401:29
+ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:400:13-402:29
 action#com.alibaba.push2.action.NOTIFICATION_OPENED
-ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:400:17-87
+ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:401:17-87
 	android:name
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:400:25-84
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:401:25-84
 intent-filter#com.alibaba.push2.action.NOTIFICATION_REMOVED
-ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:402:13-404:29
+ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:403:13-405:29
 action#com.alibaba.push2.action.NOTIFICATION_REMOVED
-ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:403:17-88
+ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:404:17-88
 	android:name
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:403:25-85
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:404:25-85
 intent-filter#com.alibaba.sdk.android.push.RECEIVE
-ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:405:13-407:29
+ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:406:13-408:29
 action#com.alibaba.sdk.android.push.RECEIVE
-ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:406:17-79
+ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:407:17-79
 	android:name
-		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:406:25-76
+		ADDED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml:407:25-76
 uses-sdk
 INJECTED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /Users/siterwell/github/familylink/src/main/AndroidManifest.xml
@@ -1363,8 +1362,6 @@ MERGED from [android.arch.core:runtime:1.1.1] /Users/siterwell/.gradle/caches/tr
 MERGED from [android.arch.core:runtime:1.1.1] /Users/siterwell/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/65fa1fc93d37bff2b7d9730072de3d81/AndroidManifest.xml:20:5-44
 MERGED from [io.reactivex.rxjava2:rxandroid:2.0.1] /Users/siterwell/.gradle/caches/transforms-1/files-1.1/rxandroid-2.0.1.aar/6c5c70e631f6688a20e229420c8165c4/AndroidManifest.xml:19:5-43
 MERGED from [io.reactivex.rxjava2:rxandroid:2.0.1] /Users/siterwell/.gradle/caches/transforms-1/files-1.1/rxandroid-2.0.1.aar/6c5c70e631f6688a20e229420c8165c4/AndroidManifest.xml:19:5-43
-MERGED from [com.facebook.fresco:fresco:1.3.0] /Users/siterwell/.gradle/caches/transforms-1/files-1.1/fresco-1.3.0.aar/dba6e22d5bd74e605d0a8d4f5fd2dc41/AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:fresco:1.3.0] /Users/siterwell/.gradle/caches/transforms-1/files-1.1/fresco-1.3.0.aar/dba6e22d5bd74e605d0a8d4f5fd2dc41/AndroidManifest.xml:5:5-7:41
 MERGED from [com.aliyun.iot.ilop.page:scan:0.0.1] /Users/siterwell/.gradle/caches/transforms-1/files-1.1/scan-0.0.1.aar/2a2c946804c69a2d9ac08dc9f56bb7b6/AndroidManifest.xml:6:5-8:41
 MERGED from [com.aliyun.iot.ilop.page:scan:0.0.1] /Users/siterwell/.gradle/caches/transforms-1/files-1.1/scan-0.0.1.aar/2a2c946804c69a2d9ac08dc9f56bb7b6/AndroidManifest.xml:6:5-8:41
 MERGED from [com.aliyun.alink.linksdk:api-client-biz:1.0.0] /Users/siterwell/.gradle/caches/transforms-1/files-1.1/api-client-biz-1.0.0.aar/8565872c4adfd589324e7883c4d9e228/AndroidManifest.xml:7:5-9:41
@@ -1383,14 +1380,6 @@ MERGED from [com.aliyun.alink.linksdk:ilop-devicecenter:1.3.0] /Users/siterwell/
 MERGED from [com.aliyun.alink.linksdk:ilop-devicecenter:1.3.0] /Users/siterwell/.gradle/caches/transforms-1/files-1.1/ilop-devicecenter-1.3.0.aar/21f678211670c6c04ec5cd1db662001e/AndroidManifest.xml:8:5-11:149
 MERGED from [com.journeyapps:zxing-android-embedded:3.6.0] /Users/siterwell/.gradle/caches/transforms-1/files-1.1/zxing-android-embedded-3.6.0.aar/e192048efeaeb501ff9a8705b5924f22/AndroidManifest.xml:20:5-44
 MERGED from [com.journeyapps:zxing-android-embedded:3.6.0] /Users/siterwell/.gradle/caches/transforms-1/files-1.1/zxing-android-embedded-3.6.0.aar/e192048efeaeb501ff9a8705b5924f22/AndroidManifest.xml:20:5-44
-MERGED from [com.facebook.fresco:drawee:1.3.0] /Users/siterwell/.gradle/caches/transforms-1/files-1.1/drawee-1.3.0.aar/d2fb51df5dff5dd2f286fcfd9fcf1e30/AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:drawee:1.3.0] /Users/siterwell/.gradle/caches/transforms-1/files-1.1/drawee-1.3.0.aar/d2fb51df5dff5dd2f286fcfd9fcf1e30/AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:imagepipeline:1.3.0] /Users/siterwell/.gradle/caches/transforms-1/files-1.1/imagepipeline-1.3.0.aar/60288362a49ee9e9370a41bf0be96ec0/AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:imagepipeline:1.3.0] /Users/siterwell/.gradle/caches/transforms-1/files-1.1/imagepipeline-1.3.0.aar/60288362a49ee9e9370a41bf0be96ec0/AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:imagepipeline-base:1.3.0] /Users/siterwell/.gradle/caches/transforms-1/files-1.1/imagepipeline-base-1.3.0.aar/946d6ab04f3b580591e74574c1f8c786/AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:imagepipeline-base:1.3.0] /Users/siterwell/.gradle/caches/transforms-1/files-1.1/imagepipeline-base-1.3.0.aar/946d6ab04f3b580591e74574c1f8c786/AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:fbcore:1.3.0] /Users/siterwell/.gradle/caches/transforms-1/files-1.1/fbcore-1.3.0.aar/92a7dc5ef019e4c37d1027bc949d8ea6/AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:fbcore:1.3.0] /Users/siterwell/.gradle/caches/transforms-1/files-1.1/fbcore-1.3.0.aar/92a7dc5ef019e4c37d1027bc949d8ea6/AndroidManifest.xml:5:5-7:41
 MERGED from [com.aliyun.iot.aep.sdk:abus:0.0.1] /Users/siterwell/.gradle/caches/transforms-1/files-1.1/abus-0.0.1.aar/720310cdd169db1970c6f53c66977942/AndroidManifest.xml:7:5-9:41
 MERGED from [com.aliyun.iot.aep.sdk:abus:0.0.1] /Users/siterwell/.gradle/caches/transforms-1/files-1.1/abus-0.0.1.aar/720310cdd169db1970c6f53c66977942/AndroidManifest.xml:7:5-9:41
 MERGED from [com.aliyun.iot.aep.sdk.external:securityguard:5.4.94.2018-12-13-exclude-x86] /Users/siterwell/.gradle/caches/transforms-1/files-1.1/securityguard-5.4.94.2018-12-13-exclude-x86.aar/207d8514cef8c0b6008d9e448eea7768/AndroidManifest.xml:7:5-9:41

@@ -11,7 +11,7 @@ public final class R {
         public static final int version = 0x7f100005;
     }
     public static final class string {
-        public static final int app_name = 0x7f1102ee;
+        public static final int app_name = 0x7f1102ef;
     }
     public static final class style {
         public static final int Style_Transparent = 0x7f120104;

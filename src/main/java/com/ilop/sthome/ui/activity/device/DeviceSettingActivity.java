@@ -85,6 +85,7 @@ public class DeviceSettingActivity extends BasePActivity<DeviceSetPresenter, Act
         super.initListener();
         mDBind.replaceDevice.setOnClickListener(view -> mPresent.onReplaceDevice());
         mDBind.name.setOnClickListener(view -> mPresent.setDeviceName());
+        mDBind.share.setOnClickListener(view -> skipAnotherActivity(DeviceShareActivity.class));
         mDBind.ota.setOnClickListener(view -> mPresent.onRouterToOTA());
         mDBind.ins.setOnClickListener(view -> mPresent.onDownloadIns());
         mDBind.deviceUnbind.setOnClickListener(view -> mPresent.onUnBindDevice());
@@ -125,6 +126,7 @@ public class DeviceSettingActivity extends BasePActivity<DeviceSetPresenter, Act
     @Override
     public void isSubDeviceView() {
         mDBind.ota.setVisibility(View.GONE);
+        mDBind.share.setVisibility(View.GONE);
         mDBind.imgDeviceQRCode.setVisibility(View.GONE);
         mDBind.rlGatewaySet.setVisibility(View.GONE);
         mDBind.rvNoticeList.setVisibility(View.GONE);

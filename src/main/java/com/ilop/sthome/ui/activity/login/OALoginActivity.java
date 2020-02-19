@@ -30,8 +30,6 @@ import com.alibaba.sdk.android.openaccount.util.ResourceUtils;
 import com.aliyun.iot.aep.oa.OALanguageHelper;
 import com.example.common.utils.SpUtil;
 import com.ilop.sthome.common.ProtocolFilter;
-import com.ilop.sthome.utils.tools.ErrorTools;
-import com.ilop.sthome.utils.tools.UnitTools;
 import com.siterwell.familywellplus.R;
 
 import java.util.Locale;
@@ -110,10 +108,6 @@ public class OALoginActivity extends LoginActivity{
         this.loginIdEdit.getEditText().addTextChangedListener(new TextWatcher() {
             public void afterTextChanged(Editable var1) {
                 loginIdEdit.updateHistoryView(var1.toString());
-                if(!TextUtils.isEmpty(var1.toString())){
-                    String a = UnitTools.readUserPwd(OALoginActivity.this,var1.toString());
-                    passwordEdit.getInputBoxWithClear().getEditText().setText(a);
-                }
             }
 
             public void beforeTextChanged(CharSequence var1, int var2, int var3, int var4) {
@@ -280,7 +274,7 @@ public class OALoginActivity extends LoginActivity{
     @Override
     protected void onPwdLoginFail(int i, String s) {
         mProgressBar.setVisibility(View.INVISIBLE);
-        Toast.makeText(OALoginActivity.this, ErrorTools.errorCode2Msg(this,i),Toast.LENGTH_LONG).show();
+        Toast.makeText(OALoginActivity.this, s,Toast.LENGTH_LONG).show();
     }
 
     protected final void TRANSPARENT() {

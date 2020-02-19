@@ -103,20 +103,37 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4f242db2-fbe3-41df-87b2-67d5947ff96d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ilop/sthome/ui/activity/device/DeviceRenameActivity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/res/layout/activity_device_rename.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ilop/sthome/data/greenDao/DeviceShareBean.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ilop/sthome/ui/activity/mine/AgreementActivity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ilop/sthome/ui/activity/mine/ContactUsActivity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ilop/sthome/utils/AppMarketUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/res/layout/activity_contact_us.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/res/mipmap-xhdpi/firmware.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/res/mipmap-xhdpi/sharelist_empty.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/res/mipmap-xxhdpi/firmware.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/res/mipmap-xxhdpi/sharelist_empty.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.1/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.1/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.1/javaCompile/javaCompile.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.1/taskHistory/fileSnapshots.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.1/taskHistory/fileSnapshots.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.1/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.1/taskHistory/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.1/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.1/taskHistory/taskHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_aliyun_ams_alicloud_android_ut_5_4_2_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_facebook_fresco_drawee_1_3_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_facebook_fresco_fbcore_1_3_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_facebook_fresco_fresco_1_3_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_facebook_fresco_imagepipeline_1_3_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_facebook_fresco_imagepipeline_base_1_3_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_parse_bolts_bolts_tasks_1_4_0_jar.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/android-profile/profile-2020-02-18-08-38-05-650.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/android-profile/profile-2020-02-18-08-38-05-650.rawproto" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/cache/greendao-candidates.list" beforeDir="false" afterPath="$PROJECT_DIR$/build/cache/greendao-candidates.list" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/generated/source/greendao/com/ilop/sthome/data/greenDao/AutomationBeanDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/generated/source/greendao/com/ilop/sthome/data/greenDao/AutomationBeanDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/generated/source/greendao/com/ilop/sthome/data/greenDao/SceneRelationBeanDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/generated/source/greendao/com/ilop/sthome/data/greenDao/SceneRelationBeanDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/generated/source/buildConfig/debug/com/siterwell/familywellplus/BuildConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/generated/source/buildConfig/debug/com/siterwell/familywellplus/BuildConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/generated/source/r/debug/android/support/asynclayoutinflater/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/generated/source/r/debug/android/support/asynclayoutinflater/R.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/generated/source/r/debug/android/support/compat/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/generated/source/r/debug/android/support/compat/R.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/generated/source/r/debug/android/support/constraint/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/generated/source/r/debug/android/support/constraint/R.java" afterDir="false" />
@@ -135,15 +152,34 @@
       <change beforePath="$PROJECT_DIR$/build/generated/source/r/debug/android/support/transition/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/generated/source/r/debug/android/support/transition/R.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/generated/source/r/debug/android/support/v4/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/generated/source/r/debug/android/support/v4/R.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/generated/source/r/debug/android/support/v7/appcompat/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/generated/source/r/debug/android/support/v7/appcompat/R.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/generated/source/r/debug/android/support/v7/cardview/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/generated/source/r/debug/android/support/v7/cardview/R.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/generated/source/r/debug/android/support/v7/recyclerview/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/generated/source/r/debug/android/support/v7/recyclerview/R.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/generated/source/r/debug/android/support/v7/viewpager/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/generated/source/r/debug/android/support/v7/viewpager/R.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/generated/source/r/debug/butterknife/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/generated/source/r/debug/butterknife/R.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/generated/source/r/debug/butterknife/runtime/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/generated/source/r/debug/butterknife/runtime/R.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/generated/source/r/debug/com/alibaba/sdk/android/openaccount/core/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/generated/source/r/debug/com/alibaba/sdk/android/openaccount/core/R.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/generated/source/r/debug/com/alibaba/sdk/android/openaccount/ui/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/generated/source/r/debug/com/alibaba/sdk/android/openaccount/ui/R.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/generated/source/r/debug/com/alibaba/sdk/android/oss_android_sdk/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/generated/source/r/debug/com/alibaba/sdk/android/oss_android_sdk/R.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/generated/source/r/debug/com/alibaba/sdk/android/push/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/generated/source/r/debug/com/alibaba/sdk/android/push/R.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/generated/source/r/debug/com/alibaba/sdk/thirdpush/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/generated/source/r/debug/com/alibaba/sdk/thirdpush/R.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/generated/source/r/debug/com/alibaba/wireless/security/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/generated/source/r/debug/com/alibaba/wireless/security/R.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/generated/source/r/debug/com/aliyun/alink/business/devicecenter/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/generated/source/r/debug/com/aliyun/alink/business/devicecenter/R.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/generated/source/r/debug/com/aliyun/alink/linksdk/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/generated/source/r/debug/com/aliyun/alink/linksdk/R.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/generated/source/r/debug/com/aliyun/alink/linksdk/alcs/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/generated/source/r/debug/com/aliyun/alink/linksdk/alcs/R.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/generated/source/r/debug/com/aliyun/alink/linksdk/alcs/lpbs/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/generated/source/r/debug/com/aliyun/alink/linksdk/alcs/lpbs/R.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/generated/source/r/debug/com/aliyun/alink/linksdk/channel/core/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/generated/source/r/debug/com/aliyun/alink/linksdk/channel/core/R.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/generated/source/r/debug/com/aliyun/alink/linksdk/channel/gateway/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/generated/source/r/debug/com/aliyun/alink/linksdk/channel/gateway/R.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/generated/source/r/debug/com/aliyun/alink/linksdk/channel/mobile/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/generated/source/r/debug/com/aliyun/alink/linksdk/channel/mobile/R.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/generated/source/r/debug/com/aliyun/alink/linksdk/cmp/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/generated/source/r/debug/com/aliyun/alink/linksdk/cmp/R.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/generated/source/r/debug/com/aliyun/alink/linksdk/tmp/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/generated/source/r/debug/com/aliyun/alink/linksdk/tmp/R.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/generated/source/r/debug/com/aliyun/alink/linksdk/tmp/extbone/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/generated/source/r/debug/com/aliyun/alink/linksdk/tmp/extbone/R.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/generated/source/r/debug/com/aliyun/alink/router/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/generated/source/r/debug/com/aliyun/alink/router/R.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/generated/source/r/debug/com/aliyun/iot/aep/configmanager/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/generated/source/r/debug/com/aliyun/iot/aep/configmanager/R.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/generated/source/r/debug/com/aliyun/iot/aep/routerexternal/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/generated/source/r/debug/com/aliyun/iot/aep/routerexternal/R.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/generated/source/r/debug/com/aliyun/iot/aep/sdk/abus/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/generated/source/r/debug/com/aliyun/iot/aep/sdk/abus/R.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/generated/source/r/debug/com/aliyun/iot/aep/sdk/apiclient/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/generated/source/r/debug/com/aliyun/iot/aep/sdk/apiclient/R.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/generated/source/r/debug/com/aliyun/iot/aep/sdk/connectchannel/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/generated/source/r/debug/com/aliyun/iot/aep/sdk/connectchannel/R.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/generated/source/r/debug/com/aliyun/iot/aep/sdk/credential/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/generated/source/r/debug/com/aliyun/iot/aep/sdk/credential/R.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/generated/source/r/debug/com/aliyun/iot/aep/sdk/framework/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/generated/source/r/debug/com/aliyun/iot/aep/sdk/framework/R.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/generated/source/r/debug/com/aliyun/iot/aep/sdk/log/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/generated/source/r/debug/com/aliyun/iot/aep/sdk/log/R.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/generated/source/r/debug/com/aliyun/iot/aep/sdk/login/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/generated/source/r/debug/com/aliyun/iot/aep/sdk/login/R.java" afterDir="false" />
@@ -152,15 +188,22 @@
       <change beforePath="$PROJECT_DIR$/build/generated/source/r/debug/com/aliyun/iot/aep/sdk/scan/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/generated/source/r/debug/com/aliyun/iot/aep/sdk/scan/R.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/generated/source/r/debug/com/aliyun/iot/aep/sdk/threadpool/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/generated/source/r/debug/com/aliyun/iot/aep/sdk/threadpool/R.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/generated/source/r/debug/com/aliyun/iot/ilop/page/scan/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/generated/source/r/debug/com/aliyun/iot/ilop/page/scan/R.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/generated/source/r/debug/com/aliyun/iot/push/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/generated/source/r/debug/com/aliyun/iot/push/R.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/generated/source/r/debug/com/aliyun/linksdk/coap/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/generated/source/r/debug/com/aliyun/linksdk/coap/R.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/generated/source/r/debug/com/android/databinding/library/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/generated/source/r/debug/com/android/databinding/library/R.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/generated/source/r/debug/com/android/databinding/library/baseAdapters/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/generated/source/r/debug/com/android/databinding/library/baseAdapters/R.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/generated/source/r/debug/com/bumptech/glide/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/generated/source/r/debug/com/bumptech/glide/R.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/generated/source/r/debug/com/example/common/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/generated/source/r/debug/com/example/common/R.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/generated/source/r/debug/com/example/xmpic/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/generated/source/r/debug/com/example/xmpic/R.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/generated/source/r/debug/com/facebook/drawee/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/generated/source/r/debug/com/facebook/drawee/R.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/generated/source/r/debug/com/facebook/drawee/backends/pipeline/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/generated/source/r/debug/com/facebook/drawee/backends/pipeline/R.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/generated/source/r/debug/com/facebook/drawee/R.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/generated/source/r/debug/com/facebook/drawee/backends/pipeline/R.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/generated/source/r/debug/com/facebook/fbcore/R.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/generated/source/r/debug/com/facebook/imagepipeline/R.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/generated/source/r/debug/com/facebook/imagepipelinebase/R.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/generated/source/r/debug/com/google/android/flexbox/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/generated/source/r/debug/com/google/android/flexbox/R.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/generated/source/r/debug/com/google/android/gms/auth/api/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/generated/source/r/debug/com/google/android/gms/auth/api/R.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/generated/source/r/debug/com/google/android/gms/base/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/generated/source/r/debug/com/google/android/gms/base/R.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/generated/source/r/debug/com/google/android/gms/common/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/generated/source/r/debug/com/google/android/gms/common/R.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/generated/source/r/debug/com/google/zxing/client/android/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/generated/source/r/debug/com/google/zxing/client/android/R.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/generated/source/r/debug/com/linchaolong/android/imagepicker/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/generated/source/r/debug/com/linchaolong/android/imagepicker/R.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/generated/source/r/debug/com/siterwell/familywellplus/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/generated/source/r/debug/com/siterwell/familywellplus/R.java" afterDir="false" />
@@ -173,476 +216,180 @@
       <change beforePath="$PROJECT_DIR$/build/intermediates/blame/res/debug/multi-v2/values.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/intermediates/blame/res/debug/multi-v2/values.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/intermediates/blame/res/debug/single/debug.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/intermediates/blame/res/debug/single/debug.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/intermediates/blame/res/debug/single/layout.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/intermediates/blame/res/debug/single/layout.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/intermediates/data-binding-info/debug/activity_about-layout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/intermediates/data-binding-info/debug/activity_about-layout.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/intermediates/data-binding-info/debug/activity_add_ipc-layout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/intermediates/data-binding-info/debug/activity_add_ipc-layout.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/intermediates/data-binding-info/debug/activity_bind-layout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/intermediates/data-binding-info/debug/activity_bind-layout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/intermediates/data-binding-info/debug/activity_device_setting-layout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/intermediates/data-binding-info/debug/activity_device_setting-layout.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/data-binding-info/debug/activity_scene_edit-layout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/intermediates/data-binding-info/debug/activity_scene_edit-layout.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/data-binding-info/debug/activity_set_up-layout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/intermediates/data-binding-info/debug/activity_set_up-layout.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/data-binding-info/debug/fragment_sub_device-layout.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/intermediates/data-binding-info/debug/activity_explain-layout.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/intermediates/data-binding-info/debug/activity_share_list-layout.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/intermediates/data-binding-info/debug/activity_web_view-layout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/intermediates/data-binding-info/debug/activity_web_view-layout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/compile-file-map.properties" beforeDir="false" afterPath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/compile-file-map.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/merged.dir/values-af/values-af.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/merged.dir/values-am/values-am.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/merged.dir/values-ar/values-ar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/merged.dir/values-as/values-as.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/merged.dir/values-az/values-az.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/merged.dir/values-b+sr+Latn/values-b+sr+Latn.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/merged.dir/values-be/values-be.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/merged.dir/values-bg/values-bg.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/merged.dir/values-bn/values-bn.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/merged.dir/values-bs/values-bs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/merged.dir/values-ca/values-ca.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/merged.dir/values-cs/values-cs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/merged.dir/values-da/values-da.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/merged.dir/values-de-rDE/values-de-rDE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/merged.dir/values-el/values-el.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/merged.dir/values-en-rAU/values-en-rAU.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/merged.dir/values-en-rCA/values-en-rCA.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/merged.dir/values-en-rGB/values-en-rGB.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/merged.dir/values-en-rIN/values-en-rIN.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/merged.dir/values-en-rUS/values-en-rUS.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/merged.dir/values-en-rXC/values-en-rXC.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/merged.dir/values-es-rES/values-es-rES.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/merged.dir/values-es-rUS/values-es-rUS.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/merged.dir/values-et/values-et.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/merged.dir/values-eu/values-eu.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/merged.dir/values-fa/values-fa.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/merged.dir/values-fi/values-fi.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/merged.dir/values-fr-rCA/values-fr-rCA.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/merged.dir/values-fr-rFR/values-fr-rFR.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/merged.dir/values-gl/values-gl.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/merged.dir/values-gu/values-gu.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/merged.dir/values-h720dp-v13/values-h720dp-v13.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/merged.dir/values-hdpi-v4/values-hdpi-v4.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/merged.dir/values-he/values-he.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/merged.dir/values-hi-rIN/values-hi-rIN.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/merged.dir/values-hi/values-hi.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/merged.dir/values-hr/values-hr.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/merged.dir/values-hu/values-hu.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/merged.dir/values-hy/values-hy.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/merged.dir/values-id/values-id.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/merged.dir/values-in/values-in.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/merged.dir/values-is/values-is.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/merged.dir/values-it-rIT/values-it-rIT.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/merged.dir/values-it/values-it.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/merged.dir/values-iw/values-iw.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/merged.dir/values-ja-rJP/values-ja-rJP.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/merged.dir/values-ja/values-ja.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/merged.dir/values-ka/values-ka.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/merged.dir/values-kk/values-kk.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/merged.dir/values-km/values-km.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/merged.dir/values-kn/values-kn.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/merged.dir/values-ko-rKR/values-ko-rKR.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/merged.dir/values-ko/values-ko.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/merged.dir/values-ky/values-ky.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/merged.dir/values-land/values-land.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/merged.dir/values-large-v4/values-large-v4.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/merged.dir/values-ldltr-v21/values-ldltr-v21.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/merged.dir/values-lo/values-lo.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/merged.dir/values-lt/values-lt.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/merged.dir/values-lv/values-lv.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/merged.dir/values-mk/values-mk.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/merged.dir/values-ml/values-ml.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/merged.dir/values-mn/values-mn.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/merged.dir/values-mr/values-mr.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/merged.dir/values-ms/values-ms.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/merged.dir/values-my/values-my.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/merged.dir/values-nb/values-nb.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/merged.dir/values-ne/values-ne.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/merged.dir/values-night-v8/values-night-v8.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/merged.dir/values-nl/values-nl.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/merged.dir/values-or/values-or.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/merged.dir/values-pa/values-pa.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/merged.dir/values-pl/values-pl.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/merged.dir/values-port/values-port.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/merged.dir/values-pt-rBR/values-pt-rBR.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/merged.dir/values-pt-rPT/values-pt-rPT.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/merged.dir/values-pt/values-pt.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/merged.dir/values-ro/values-ro.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/merged.dir/values-ru-rRU/values-ru-rRU.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/merged.dir/values-ru/values-ru.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/merged.dir/values-si/values-si.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/merged.dir/values-sk/values-sk.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/merged.dir/values-sl/values-sl.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/merged.dir/values-sq/values-sq.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/merged.dir/values-sr/values-sr.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/merged.dir/values-sv/values-sv.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/merged.dir/values-sw/values-sw.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/merged.dir/values-sw600dp-v13/values-sw600dp-v13.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/merged.dir/values-ta/values-ta.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/merged.dir/values-te/values-te.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/merged.dir/values-th/values-th.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/merged.dir/values-tl/values-tl.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/merged.dir/values-tr/values-tr.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/merged.dir/values-uk/values-uk.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/merged.dir/values-ur/values-ur.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/merged.dir/values-uz/values-uz.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v16/values-v16.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v17/values-v17.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v18/values-v18.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v19/values-v19.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v21/values-v21.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v22/values-v22.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v23/values-v23.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v24/values-v24.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v25/values-v25.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v26/values-v26.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v28/values-v28.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/merged.dir/values-vi/values-vi.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/merged.dir/values-watch-v20/values-watch-v20.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/merged.dir/values-watch-v21/values-watch-v21.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/merged.dir/values-xlarge-v4/values-xlarge-v4.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/merged.dir/values-zh-rCN/values-zh-rCN.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/merged.dir/values-zh-rHK/values-zh-rHK.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/merged.dir/values-zh-rTW/values-zh-rTW.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/merged.dir/values-zu/values-zu.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/merged.dir/values/values.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/merged.dir/values/values.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/merged.dir/values-de/values-de.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/merged.dir/values-en/values-en.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/merged.dir/values-es/values-es.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/merged.dir/values-fr/values-fr.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/merged.dir/values-zh/values-zh.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/merged.dir/values/values.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/merger.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/merger.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout-sw600dp-v13/design_layout_snackbar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout-sw600dp-v13/mtrl_layout_snackbar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout-v21/notification_action.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout-v21/notification_action_tombstone.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout-v21/notification_template_custom_big.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout-v21/notification_template_icon_group.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout-v26/abc_screen_toolbar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout-watch-v20/abc_alert_dialog_button_bar_material.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout-watch-v20/abc_alert_dialog_title_material.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/abc_action_bar_title_item.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/abc_action_bar_up_container.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/abc_action_menu_item_layout.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/abc_action_menu_layout.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/abc_action_mode_bar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/abc_action_mode_close_item_material.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/abc_activity_chooser_view.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/abc_activity_chooser_view_list_item.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/abc_alert_dialog_button_bar_material.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/abc_alert_dialog_material.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/abc_alert_dialog_title_material.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/abc_cascading_menu_item_layout.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/abc_dialog_title_material.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/abc_expanded_menu_layout.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/abc_list_menu_item_checkbox.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/abc_list_menu_item_icon.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/abc_list_menu_item_layout.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/abc_list_menu_item_radio.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/abc_popup_menu_header_item_layout.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/abc_popup_menu_item_layout.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/abc_screen_content_include.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/abc_screen_simple.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/abc_screen_simple_overlay_action_mode.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/abc_screen_toolbar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/abc_search_dropdown_item_icons_2line.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/abc_search_view.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/abc_select_dialog_material.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/abc_tooltip.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_about.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_add_device.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_add_device_guide.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_add_ipc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_add_scene.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_alog.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_alog_web.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_assess.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_automation_detail.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_bind.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_cancellation.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_change_scene.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_choose_action.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_config_device.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_config_gateway.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_config_guide.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_connect_net.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_date.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_detail_alarm.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_detail_humiture.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_detail_outdoor_siren.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_detail_socket.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_detail_temp_control.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_device_camera.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_device_change_password.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_device_detail.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_device_history.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_device_normal_pic.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_device_picture_list.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_device_record_list_horizon.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_device_set_wifi.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_device_set_wifi_new.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_device_setting.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_device_setup_record.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_explain.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_gateway_main.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_histroy_detail.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_input_detail.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_instruction.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_ipc_before_wifi_config.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_localnet_ipc_list.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_localpicvideo.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_mail_register_ali.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_mail_reset_ali.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_main.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_mode_switch.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_net_work.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_personal.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_phone_register_ali.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_phone_reset_ali.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_pic_setting_common.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_pic_setting_expert.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_pic_setting_info.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_pic_setting_main.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_pic_setting_storage.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_product.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_qr_code.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_question.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_record.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_recovery_guide.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_report_bug_successful.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_room_editor.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_room_manage.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_scene_detail.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_scene_edit.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_set_action.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_set_ap.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_set_double_switch.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_set_humiture.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_set_temp_control.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_set_timing.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_set_up.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_share_list.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_start.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_web_view.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/ali_sdk_openaccount_activity_parent_default_content.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/ali_sdk_openaccount_activity_parent_material.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/ali_sdk_openaccount_basewebview.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/ali_sdk_openaccount_change_mobile.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/ali_sdk_openaccount_checkcode_input_box.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/ali_sdk_openaccount_device_item.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/ali_sdk_openaccount_device_manager.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/ali_sdk_openaccount_fragment_checkcode.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/ali_sdk_openaccount_fragment_mobile.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/ali_sdk_openaccount_fragment_mobile_register.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/ali_sdk_openaccount_fragment_pwd.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/ali_sdk_openaccount_fragment_register_confirm.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/ali_sdk_openaccount_fragment_resetpwd.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/ali_sdk_openaccount_horizontal_frame_edge.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/ali_sdk_openaccount_input_box.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/ali_sdk_openaccount_input_box_with_history.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/ali_sdk_openaccount_input_history_item.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/ali_sdk_openaccount_login.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/ali_sdk_openaccount_login_web_view_widget.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/ali_sdk_openaccount_mail_register.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/ali_sdk_openaccount_mail_reset_password.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/ali_sdk_openaccount_mobile_country_item.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/ali_sdk_openaccount_mobile_country_selector.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/ali_sdk_openaccount_mobile_input_box.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/ali_sdk_openaccount_next_step.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/ali_sdk_openaccount_no_password_login.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/ali_sdk_openaccount_oauth.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/ali_sdk_openaccount_password_input_box.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/ali_sdk_openaccount_qr_login.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/ali_sdk_openaccount_register.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/ali_sdk_openaccount_register_fill_password.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/ali_sdk_openaccount_register_one_step.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/ali_sdk_openaccount_reset_oa_tao_password.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/ali_sdk_openaccount_reset_password.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/ali_sdk_openaccount_reset_password_fill_password.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/ali_sdk_openaccount_sms_code_input_box.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/ali_sdk_openaccount_title_bar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/ali_sdk_openaccount_toolbar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/ali_sdk_openaccount_vertical_frame_edge.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/ali_sdk_openaccount_view_title_bar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/ali_sdk_openaccount_web_view_activity.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/aliuser_activity_frame_content.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/crop_image_activity.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/crop_image_view.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/design_bottom_navigation_item.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/design_bottom_sheet_dialog.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/design_layout_snackbar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/design_layout_snackbar_include.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/design_layout_tab_icon.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/design_layout_tab_text.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/design_menu_item_action_area.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/design_navigation_item.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/design_navigation_item_header.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/design_navigation_item_separator.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/design_navigation_item_subheader.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/design_navigation_menu.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/design_navigation_menu_item.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/design_text_input_password_icon.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/deviceadd_local_device_title.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/deviceadd_local_scan_title.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/deviceadd_no_support_device.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/deviceadd_support_device_title.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/dialog_ali_sdk_openaccount.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/dialog_base_list.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/dialog_edit.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/dialog_image.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/dialog_privacy_policy.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/dialog_tip.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fileupload_status_layout.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_device.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_ipc_pic.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_ipc_video.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_message.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_scene.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_scene_child.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_sub_device.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/ilop_ota_activity.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/ilop_ota_dialog.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/ilop_ota_list_item.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/ilop_ota_view_button.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/ilop_ota_view_topbar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/item_add_sub_device.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/item_camera_chose.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/item_change_scene.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/item_choose_room.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/item_chose_color.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/item_default_auto.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/item_detail_list.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/item_detection.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/item_detection_child.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/item_device.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/item_device_camera_pic.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/item_device_child.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/item_device_gateway.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/item_device_history.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/item_device_list.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/item_device_share.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/item_dialog_list.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/item_edit_code.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/item_gateway_list.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/item_history_detail.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/item_ipc_setting.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/item_local_ipc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/item_normal_banner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/item_product_instruction.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/item_product_list.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/item_product_style.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/item_questions.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/item_right_spinner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/item_room.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/item_room_manage.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/item_scene_child.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/item_scene_switch.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/item_set_up_notice.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/item_sub_history.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/item_tab_layout.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/item_timer_week.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/item_trigger.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/layout_banner_effect.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/layout_banner_normal.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/layout_custom_refresh.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/layout_custom_tab.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/layout_empty_ali.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/layout_empty_view.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/layout_error_view.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/layout_footer_view.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/layout_loading_view.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/layout_scan.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/mtrl_layout_snackbar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/mtrl_layout_snackbar_include.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/notification_media_action.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/notification_media_cancel_action.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/notification_template_big_media.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/notification_template_big_media_custom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/notification_template_big_media_narrow.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/notification_template_big_media_narrow_custom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/notification_template_lines_media.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/notification_template_media.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/notification_template_media_custom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/notification_template_part_chronometer.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/notification_template_part_time.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/scan_activity.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/scan_frgment.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/select_dialog_item_material.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/select_dialog_multichoice_material.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/select_dialog_singlechoice_material.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/support_simple_spinner_dropdown_item.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/view_showalbumpic.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/zxing_barcode_scanner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/zxing_capture.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_login_ali.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/intermediates/manifests/full/debug/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/intermediates/manifests/full/debug/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/intermediates/manifests/full/debug/output.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/intermediates/manifests/full/debug/output.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/intermediates/manifests/instant-run/debug/output.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/intermediates/manifests/instant-run/debug/output.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/intermediates/res/debug/output.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/intermediates/res/debug/output.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/intermediates/res/debug/resources-debug.ap_" beforeDir="false" afterPath="$PROJECT_DIR$/build/intermediates/res/debug/resources-debug.ap_" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/intermediates/res/merged/debug/drawable_config_moren.xml.flat" beforeDir="false" afterPath="$PROJECT_DIR$/build/intermediates/res/merged/debug/drawable_config_moren.xml.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/intermediates/res/merged/debug/drawable_ilop_mine_icon_ota_progress.xml.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/intermediates/res/merged/debug/layout_activity_about.xml.flat" beforeDir="false" afterPath="$PROJECT_DIR$/build/intermediates/res/merged/debug/layout_activity_about.xml.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/intermediates/res/merged/debug/layout_activity_add_ipc.xml.flat" beforeDir="false" afterPath="$PROJECT_DIR$/build/intermediates/res/merged/debug/layout_activity_add_ipc.xml.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/intermediates/res/merged/debug/layout_activity_bind.xml.flat" beforeDir="false" afterPath="$PROJECT_DIR$/build/intermediates/res/merged/debug/layout_activity_bind.xml.flat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/intermediates/res/merged/debug/layout_activity_device_setting.xml.flat" beforeDir="false" afterPath="$PROJECT_DIR$/build/intermediates/res/merged/debug/layout_activity_device_setting.xml.flat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/res/merged/debug/layout_activity_scene_edit.xml.flat" beforeDir="false" afterPath="$PROJECT_DIR$/build/intermediates/res/merged/debug/layout_activity_scene_edit.xml.flat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/res/merged/debug/layout_activity_set_up.xml.flat" beforeDir="false" afterPath="$PROJECT_DIR$/build/intermediates/res/merged/debug/layout_activity_set_up.xml.flat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/res/merged/debug/layout_fragment_sub_device.xml.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/intermediates/res/merged/debug/layout_activity_explain.xml.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/intermediates/res/merged/debug/layout_activity_share_list.xml.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/intermediates/res/merged/debug/layout_activity_web_view.xml.flat" beforeDir="false" afterPath="$PROJECT_DIR$/build/intermediates/res/merged/debug/layout_activity_web_view.xml.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/intermediates/res/merged/debug/layout_dialog_tip.xml.flat" beforeDir="false" afterPath="$PROJECT_DIR$/build/intermediates/res/merged/debug/layout_dialog_tip.xml.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/intermediates/res/merged/debug/layout_ilop_ota_activity.xml.flat" beforeDir="false" afterPath="$PROJECT_DIR$/build/intermediates/res/merged/debug/layout_ilop_ota_activity.xml.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/intermediates/res/merged/debug/layout_ilop_ota_list_item.xml.flat" beforeDir="false" afterPath="$PROJECT_DIR$/build/intermediates/res/merged/debug/layout_ilop_ota_list_item.xml.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/intermediates/res/merged/debug/layout_ilop_ota_view_button.xml.flat" beforeDir="false" afterPath="$PROJECT_DIR$/build/intermediates/res/merged/debug/layout_ilop_ota_view_button.xml.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/intermediates/res/merged/debug/layout_ilop_ota_view_topbar.xml.flat" beforeDir="false" afterPath="$PROJECT_DIR$/build/intermediates/res/merged/debug/layout_ilop_ota_view_topbar.xml.flat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/intermediates/res/merged/debug/layout_item_detail_list.xml.flat" beforeDir="false" afterPath="$PROJECT_DIR$/build/intermediates/res/merged/debug/layout_item_detail_list.xml.flat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/res/merged/debug/layout_item_set_up_notice.xml.flat" beforeDir="false" afterPath="$PROJECT_DIR$/build/intermediates/res/merged/debug/layout_item_set_up_notice.xml.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/intermediates/res/merged/debug/layout_item_device_child.xml.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/intermediates/res/merged/debug/mipmap-xhdpi-v4_add_device.png.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/intermediates/res/merged/debug/mipmap-xhdpi-v4_ali_moren.png.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/intermediates/res/merged/debug/mipmap-xhdpi-v4_box_select_f.png.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/intermediates/res/merged/debug/mipmap-xhdpi-v4_box_select_t.png.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/intermediates/res/merged/debug/mipmap-xhdpi-v4_icon_add.png.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/intermediates/res/merged/debug/mipmap-xhdpi-v4_icon_against_theft.png.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/intermediates/res/merged/debug/mipmap-xhdpi-v4_icon_alarm_red.png.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/intermediates/res/merged/debug/mipmap-xhdpi-v4_icon_alarm_yellow.png.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/intermediates/res/merged/debug/mipmap-xhdpi-v4_icon_and.png.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/intermediates/res/merged/debug/mipmap-xhdpi-v4_icon_custom_offline.png.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/intermediates/res/merged/debug/mipmap-xhdpi-v4_icon_custom_online.png.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/intermediates/res/merged/debug/mipmap-xhdpi-v4_icon_empty.png.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/intermediates/res/merged/debug/mipmap-xhdpi-v4_icon_environment.png.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/intermediates/res/merged/debug/mipmap-xhdpi-v4_icon_error.png.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/intermediates/res/merged/debug/mipmap-xhdpi-v4_icon_finger.png.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/intermediates/res/merged/debug/mipmap-xhdpi-v4_icon_fire.png.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/intermediates/res/merged/debug/mipmap-xhdpi-v4_icon_gateway.png.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/intermediates/res/merged/debug/mipmap-xhdpi-v4_icon_home_offline.png.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/intermediates/res/merged/debug/mipmap-xhdpi-v4_icon_home_online.png.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/intermediates/res/merged/debug/mipmap-xhdpi-v4_icon_leave_offline.png.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/intermediates/res/merged/debug/mipmap-xhdpi-v4_icon_leave_online.png.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/intermediates/res/merged/debug/mipmap-xhdpi-v4_icon_more.png.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/intermediates/res/merged/debug/mipmap-xhdpi-v4_icon_scene.png.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/intermediates/res/merged/debug/mipmap-xhdpi-v4_icon_score.png.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/intermediates/res/merged/debug/mipmap-xhdpi-v4_icon_sleep_offline.png.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/intermediates/res/merged/debug/mipmap-xhdpi-v4_icon_sleep_online.png.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/intermediates/res/merged/debug/mipmap-xhdpi-v4_icon_switch_off.png.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/intermediates/res/merged/debug/mipmap-xhdpi-v4_icon_switch_on.png.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/intermediates/res/merged/debug/mipmap-xhdpi-v4_icon_then.png.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/intermediates/res/merged/debug/mipmap-xhdpi-v4_icon_timer.png.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/intermediates/res/merged/debug/mipmap-xhdpi-v4_icon_white_tick.png.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/intermediates/res/merged/debug/mipmap-xhdpi-v4_no_device.png.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/intermediates/res/merged/debug/values-de_values-de.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/build/intermediates/res/merged/debug/values-de_values-de.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/intermediates/res/merged/debug/values-en_values-en.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/build/intermediates/res/merged/debug/values-en_values-en.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/intermediates/res/merged/debug/values-es_values-es.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/build/intermediates/res/merged/debug/values-es_values-es.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/intermediates/res/merged/debug/values-fr_values-fr.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/build/intermediates/res/merged/debug/values-fr_values-fr.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/intermediates/res/merged/debug/values-zh_values-zh.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/build/intermediates/res/merged/debug/values-zh_values-zh.arsc.flat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/intermediates/res/merged/debug/values_values.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/build/intermediates/res/merged/debug/values_values.arsc.flat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/intermediates/res/symbol-table-with-package/debug/package-aware-r.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/intermediates/res/symbol-table-with-package/debug/package-aware-r.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/intermediates/symbols/debug/R.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/intermediates/symbols/debug/R.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/outputs/logs/manifest-merger-debug-report.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/outputs/logs/manifest-merger-debug-report.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/res/drawable/item_dotted_line.xml" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/res/drawable/item_dotted_line.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/res/drawable/menu_default_bg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/res/drawable/menu_default_bg.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/res/drawable/round_bottom_bg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/res/drawable/round_bottom_bg.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/res/drawable/round_gray_bg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/res/drawable/round_gray_bg.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/res/drawable/round_top_bg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/res/drawable/round_top_bg.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/res/mipmap-xhdpi/add_device.png" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/res/mipmap-xhdpi/add_device.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/res/mipmap-xhdpi/box_select_f.png" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/res/mipmap-xhdpi/box_select_f.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/res/mipmap-xhdpi/box_select_t.png" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/res/mipmap-xhdpi/box_select_t.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/res/mipmap-xhdpi/icon_against_theft.png" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/res/mipmap-xhdpi/icon_against_theft.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/res/mipmap-xhdpi/icon_and.png" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/res/mipmap-xhdpi/icon_and.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/res/mipmap-xhdpi/icon_custom_offline.png" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/res/mipmap-xhdpi/icon_custom_offline.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/res/mipmap-xhdpi/icon_custom_online.png" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/res/mipmap-xhdpi/icon_custom_online.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/res/mipmap-xhdpi/icon_empty.png" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/res/mipmap-xhdpi/icon_empty.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/res/mipmap-xhdpi/icon_environment.png" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/res/mipmap-xhdpi/icon_environment.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/res/mipmap-xhdpi/icon_error.png" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/res/mipmap-xhdpi/icon_error.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/res/mipmap-xhdpi/icon_finger.png" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/res/mipmap-xhdpi/icon_finger.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/res/mipmap-xhdpi/icon_fire.png" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/res/mipmap-xhdpi/icon_fire.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/res/mipmap-xhdpi/icon_gateway.png" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/res/mipmap-xhdpi/icon_gateway.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/res/mipmap-xhdpi/icon_home_offline.png" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/res/mipmap-xhdpi/icon_home_offline.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/res/mipmap-xhdpi/icon_home_online.png" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/res/mipmap-xhdpi/icon_home_online.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/res/mipmap-xhdpi/icon_leave_offline.png" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/res/mipmap-xhdpi/icon_leave_offline.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/res/mipmap-xhdpi/icon_leave_online.png" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/res/mipmap-xhdpi/icon_leave_online.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/res/mipmap-xhdpi/icon_more.png" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/res/mipmap-xhdpi/icon_more.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/res/mipmap-xhdpi/icon_scene.png" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/res/mipmap-xhdpi/icon_scene.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/res/mipmap-xhdpi/icon_sleep_offline.png" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/res/mipmap-xhdpi/icon_sleep_offline.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/res/mipmap-xhdpi/icon_sleep_online.png" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/res/mipmap-xhdpi/icon_sleep_online.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/res/mipmap-xhdpi/icon_then.png" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/res/mipmap-xhdpi/icon_then.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/res/mipmap-xhdpi/icon_timer.png" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/res/mipmap-xhdpi/icon_timer.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/res/mipmap-xhdpi/icon_white_tick.png" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/res/mipmap-xhdpi/icon_white_tick.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/common/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/common.iml" beforeDir="false" afterPath="$PROJECT_DIR$/common/common.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/example/common/view/refresh/CustomRefreshView.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/example/common/view/refresh/CustomRefreshView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/res/mipmap-xhdpi/add_device.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/res/mipmap-xhdpi/ali_moren.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/res/mipmap-xhdpi/box_select_f.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/res/mipmap-xhdpi/box_select_t.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/res/mipmap-xhdpi/icon_add.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/res/mipmap-xhdpi/icon_against_theft.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/res/mipmap-xhdpi/icon_alarm_red.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/res/mipmap-xhdpi/icon_alarm_yellow.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/res/mipmap-xhdpi/icon_and.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/res/mipmap-xhdpi/icon_custom_offline.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/res/mipmap-xhdpi/icon_custom_online.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/res/mipmap-xhdpi/icon_empty.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/res/mipmap-xhdpi/icon_environment.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/res/mipmap-xhdpi/icon_error.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/res/mipmap-xhdpi/icon_finger.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/res/mipmap-xhdpi/icon_fire.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/res/mipmap-xhdpi/icon_gateway.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/res/mipmap-xhdpi/icon_home_offline.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/res/mipmap-xhdpi/icon_home_online.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/res/mipmap-xhdpi/icon_leave_offline.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/res/mipmap-xhdpi/icon_leave_online.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/res/mipmap-xhdpi/icon_more.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/res/mipmap-xhdpi/icon_scene.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/res/mipmap-xhdpi/icon_score.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/res/mipmap-xhdpi/icon_sleep_offline.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/res/mipmap-xhdpi/icon_sleep_online.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/res/mipmap-xhdpi/icon_switch_off.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/res/mipmap-xhdpi/icon_switch_on.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/res/mipmap-xhdpi/icon_then.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/res/mipmap-xhdpi/icon_timer.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/res/mipmap-xhdpi/icon_white_tick.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/res/mipmap-xhdpi/no_device.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/res/values-de/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/res/values-de/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/res/values-en/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/res/values-en/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/res/values-es/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/res/values-es/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/res/values-fr/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/res/values-fr/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/res/values-zh/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/res/values-zh/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/familylink.iml" beforeDir="false" afterPath="$PROJECT_DIR$/familylink.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ilop/sthome/data/bean/SceneAliBean.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ilop/sthome/data/db/SceneAliDAO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ilop/sthome/data/db/SysDBAli.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ilop/sthome/data/event/EventRefreshTimer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ilop/sthome/data/event/STEvent.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ilop/sthome/data/greenDao/AutomationBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ilop/sthome/data/greenDao/AutomationBean.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ilop/sthome/data/greenDao/SceneRelationBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ilop/sthome/data/greenDao/SceneRelationBean.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ilop/sthome/mvp/contract/AddDeviceContract.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ilop/sthome/mvp/contract/AddDeviceContract.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ilop/sthome/mvp/contract/DeviceSetContract.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ilop/sthome/mvp/contract/DeviceSetContract.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ilop/sthome/mvp/contract/SetUpContract.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ilop/sthome/mvp/contract/SetUpContract.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ilop/sthome/mvp/model/CommonModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ilop/sthome/mvp/model/CommonModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ilop/sthome/mvp/model/SetUpModel.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ilop/sthome/mvp/model/common/CommonModelImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ilop/sthome/mvp/model/common/CommonModelImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ilop/sthome/mvp/present/AddDevicePresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ilop/sthome/mvp/present/AddDevicePresenter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ilop/sthome/mvp/present/ChooseActionPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ilop/sthome/mvp/present/ChooseActionPresenter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ilop/sthome/mvp/present/DevicePresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ilop/sthome/mvp/present/DevicePresenter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ilop/sthome/mvp/present/DeviceSetPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ilop/sthome/mvp/present/DeviceSetPresenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ilop/sthome/app/MyApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ilop/sthome/app/MyApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ilop/sthome/common/ProtocolFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ilop/sthome/common/ProtocolFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ilop/sthome/data/enums/DevType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ilop/sthome/data/enums/DevType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ilop/sthome/data/enums/SmartProduct.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ilop/sthome/data/enums/SmartProduct.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ilop/sthome/mvp/contract/SubDeviceContract.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/ilop/sthome/mvp/present/MainPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ilop/sthome/mvp/present/MainPresenter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ilop/sthome/mvp/present/SceneDetailPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ilop/sthome/mvp/present/SceneDetailPresenter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ilop/sthome/mvp/present/SceneEditPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ilop/sthome/mvp/present/SceneEditPresenter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ilop/sthome/mvp/present/SetUpPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ilop/sthome/mvp/present/SetUpPresenter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ilop/sthome/network/udp/UDPRecData.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ilop/sthome/service/SiterService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ilop/sthome/service/SiterService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ilop/sthome/ui/activity/config/AddDeviceGuideActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ilop/sthome/ui/activity/config/AddDeviceGuideActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ilop/sthome/mvp/present/SubDevicePresenter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ilop/sthome/service/UpdateService.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/ilop/sthome/ui/activity/device/DeviceSettingActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ilop/sthome/ui/activity/device/DeviceSettingActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ilop/sthome/ui/activity/mine/SetUpActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ilop/sthome/ui/activity/mine/SetUpActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ilop/sthome/ui/activity/scene/AddSceneActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ilop/sthome/ui/activity/scene/AddSceneActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ilop/sthome/ui/adapter/scene/TriggerOutAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ilop/sthome/ui/adapter/scene/TriggerOutAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ilop/sthome/ui/fragment/DeviceFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ilop/sthome/ui/fragment/DeviceFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ilop/sthome/ui/fragment/SubDeviceFragment.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ilop/sthome/utils/greenDao/AutomationDaoUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ilop/sthome/utils/greenDao/AutomationDaoUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ilop/sthome/utils/greenDao/DeviceDaoUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ilop/sthome/utils/greenDao/DeviceDaoUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/res/anim/openfrombottom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/anim/openfrombottom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/res/anim/stay.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/anim/stay.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/res/drawable/checkbox_bg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/drawable/checkbox_bg.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/res/drawable/ipc_title_bg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/drawable/ipc_title_bg.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/res/drawable/yw_1222_114d.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/drawable/yw_1222_114d.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ilop/sthome/ui/activity/login/EmailRegisterAliActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ilop/sthome/ui/activity/login/EmailRegisterAliActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ilop/sthome/ui/activity/login/OALoginActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ilop/sthome/ui/activity/login/OALoginActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ilop/sthome/ui/activity/login/PhoneRegisterAliActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ilop/sthome/ui/activity/login/PhoneRegisterAliActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ilop/sthome/ui/activity/main/ExplainActivity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ilop/sthome/ui/activity/main/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ilop/sthome/ui/activity/main/MainActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ilop/sthome/ui/activity/mine/AboutActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ilop/sthome/ui/activity/mine/AboutActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ilop/sthome/ui/activity/mine/PersonalActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ilop/sthome/ui/activity/mine/PersonalActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ilop/sthome/ui/activity/mine/ShareListActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ilop/sthome/ui/activity/device/DeviceShareActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ilop/sthome/ui/activity/mine/WebViewActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ilop/sthome/ui/activity/mine/WebViewActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ilop/sthome/ui/activity/xmipc/ActivityGuideDeviceAdd.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ilop/sthome/ui/activity/xmipc/ActivityGuideDeviceAdd.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ilop/sthome/ui/adapter/device/SubDeviceAdapter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ilop/sthome/ui/dialog/PrivacyPolicyDialog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ilop/sthome/ui/dialog/PrivacyPolicyDialog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ilop/sthome/ui/ota/activity/OTAActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ilop/sthome/ui/ota/activity/OTAActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ilop/sthome/ui/ota/view/MineOTAButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ilop/sthome/ui/ota/view/MineOTAButton.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ilop/sthome/ui/ota/view/MineOTAListItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ilop/sthome/ui/ota/view/MineOTAListItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ilop/sthome/ui/ota/view/SimpleTopbar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ilop/sthome/ui/ota/view/SimpleTopbar.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ilop/sthome/utils/LogcatHelper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ilop/sthome/utils/NetWorkUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ilop/sthome/utils/NetWorkUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ilop/sthome/utils/SceneModelUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ilop/sthome/utils/tools/ECPreferenceSettings.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ilop/sthome/utils/tools/ECPreferences.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ilop/sthome/utils/tools/EmojiFilter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ilop/sthome/utils/tools/ErrorTools.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ilop/sthome/utils/tools/UnitTools.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ilop/sthome/utils/tools/UnitTools.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ilop/sthome/utils/updateApp/SiterHttpUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ilop/sthome/utils/updateApp/UpdateAppUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/drawable/config_moren.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/drawable/config_moren.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/drawable/ilop_mine_icon_ota_progress.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/drawable/icon_ota_progress.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/activity_about.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/activity_about.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/activity_add_ipc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/activity_add_ipc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/activity_bind.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/activity_bind.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/res/layout/activity_device_setting.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/activity_device_setting.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/res/layout/activity_scene_edit.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/activity_scene_edit.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/res/layout/activity_set_up.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/activity_set_up.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/res/layout/fragment_sub_device.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/activity_explain.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/activity_agreement.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/activity_share_list.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/activity_device_share.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/activity_web_view.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/activity_web_view.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/dialog_tip.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/dialog_tip.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/ilop_ota_activity.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/ilop_ota_activity.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/ilop_ota_list_item.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/ilop_ota_list_item.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/ilop_ota_view_button.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/ilop_ota_view_button.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/ilop_ota_view_topbar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/ilop_ota_view_topbar.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/res/layout/item_detail_list.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/item_detail_list.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/res/layout/item_set_up_notice.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/item_set_up_notice.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/res/xml/file_paths.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/xml/file_paths.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/item_device_child.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/item_device_share.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/item_device_share.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xmpic/xmpic.iml" beforeDir="false" afterPath="$PROJECT_DIR$/xmpic/xmpic.iml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -663,33 +410,73 @@
     </system>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/ilop/sthome/ui/activity/device/DeviceShareActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="399">
+              <caret line="26" column="31" selection-start-line="26" selection-start-column="31" selection-end-line="26" selection-end-column="31" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#696#697#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/ilop/sthome/data/greenDao/DeviceShareBean.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="57">
+              <caret line="3" column="17" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/ilop/sthome/ui/activity/mine/AboutActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="532">
+              <caret line="29" column="28" lean-forward="true" selection-start-line="29" selection-start-column="28" selection-end-line="29" selection-end-column="28" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/res/layout/activity_about.xml">
+          <provider editor-type-id="android-designer2" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="200">
+              <caret line="94" column="55" lean-forward="true" selection-start-line="94" selection-start-column="55" selection-end-line="94" selection-end-column="55" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/res/layout/activity_device_share.xml">
+          <provider editor-type-id="android-designer2" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="722">
+              <caret line="38" column="46" selection-start-line="38" selection-start-column="46" selection-end-line="38" selection-end-column="46" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="resourceFile" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>mSceneAliBean</find>
-      <find>mSceneList</find>
-      <find>auto_item_click</find>
-      <find>maxTemp</find>
-      <find>getParcelableExtra</find>
-      <find>output_condition</find>
-      <find>接收到Topic</find>
-      <find>20</find>
-      <find>EventUdpReceive</find>
-      <find>UDPRecData</find>
-      <find>mFragment</find>
-      <find>mReceiveService</find>
-      <find>mSendService</find>
-      <find>RxTimerUtil</find>
-      <find>data=</find>
       <find>jsonObject1.getString</find>
       <find>name</find>
       <find>CMD_CODE</find>
@@ -705,6 +492,21 @@
       <find>mDeviceId</find>
       <find>DeviceDaoUtil</find>
       <find>DeviceDaoUtil.getInstance().getDeviceDao().update</find>
+      <find>版本</find>
+      <find>handlerUpdate</find>
+      <find>邮箱</find>
+      <find>selected_48</find>
+      <find>checkbox_bg</find>
+      <find>确认</find>
+      <find>mRefreshTextView</find>
+      <find>mButton</find>
+      <find>mCircleImageView</find>
+      <find>arrow_right</find>
+      <find>mTipsTextView</find>
+      <find>分享</find>
+      <find>setDeviceNickName</find>
+      <find>scanBindByShareQrCode</find>
+      <find>/uc/generateShareQrCode</find>
     </findStrings>
     <replaceStrings>
       <replace>Device</replace>
@@ -735,61 +537,61 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/ilop/sthome/utils/CommandUtil.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/ilop/sthome/utils/CoderALiUtils.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/ilop/sthome/mvp/contract/SceneDetailContract.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/ilop/sthome/mvp/contract/AddSceneContract.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/ilop/sthome/mvp/present/AddScenePresenter.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/ilop/sthome/ui/adapter/scene/DefaultAutoAdapter.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/ilop/sthome/ui/adapter/scene/SceneAutoAdapter.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/ilop/sthome/ui/activity/scene/SceneDetailActivity.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/ilop/sthome/ui/activity/mine/ShareListActivity.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/ilop/sthome/data/greenDao/DeviceInfoBean.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/ilop/sthome/ui/activity/scene/SettingTimingActivity.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/ilop/sthome/ui/activity/scene/SettingHumitureActivity.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/ilop/sthome/ui/activity/scene/SettingTempControlActivity.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/ilop/sthome/ui/activity/scene/SettingActionActivity.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/ilop/sthome/ui/activity/scene/SettingDoubleSwitchActivity.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/ilop/sthome/mvp/contract/AutomationContract.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/ilop/sthome/ui/activity/scene/AutomationDetailActivity.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/ilop/sthome/mvp/present/AutomationPresenter.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/ilop/sthome/mvp/present/DevicePresenter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ilop/sthome/data/enums/SmartProduct.java" />
+        <option value="$PROJECT_DIR$/src/main/res/drawable/config_moren.xml" />
+        <option value="$PROJECT_DIR$/src/main/res/layout/activity_share_list.xml" />
+        <option value="$PROJECT_DIR$/common/src/main/java/com/example/common/view/refresh/CustomRefreshView.java" />
+        <option value="$PROJECT_DIR$/common/build.gradle" />
+        <option value="$PROJECT_DIR$/build.gradle" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ilop/sthome/ui/activity/mine/ExplainActivity.java" />
+        <option value="$PROJECT_DIR$/src/main/res/layout/activity_explain.xml" />
+        <option value="$PROJECT_DIR$/src/main/res/layout/activity_agreement.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ilop/sthome/ui/activity/login/EmailRegisterAliActivity.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ilop/sthome/ui/activity/login/PhoneRegisterAliActivity.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ilop/sthome/ui/dialog/PrivacyPolicyDialog.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ilop/sthome/ui/activity/mine/AboutActivity.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ilop/sthome/common/ProtocolFilter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ilop/sthome/ui/activity/login/OALoginActivity.java" />
+        <option value="$PROJECT_DIR$/common/src/main/res/values/strings.xml" />
+        <option value="$PROJECT_DIR$/common/src/main/res/values-en/strings.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ilop/sthome/ui/activity/mine/PersonalActivity.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ilop/sthome/app/MyApplication.java" />
+        <option value="$PROJECT_DIR$/src/main/res/layout/dialog_tip.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ilop/sthome/ui/activity/mine/AgreementActivity.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/ilop/sthome/mvp/present/MainPresenter.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/ilop/sthome/ui/fragment/DeviceFragment.java" />
-        <option value="$PROJECT_DIR$/src/main/AndroidManifest.xml" />
-        <option value="$PROJECT_DIR$/src/main/res/layout/activity_device_rename.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/ilop/sthome/ui/activity/device/DeviceRenameActivity.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/ilop/sthome/mvp/model/common/CommonModelImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/ilop/sthome/mvp/model/CommonModel.java" />
-        <option value="$PROJECT_DIR$/src/main/res/layout/activity_set_up.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/ilop/sthome/mvp/present/DeviceSetPresenter.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/ilop/sthome/mvp/contract/DeviceSetContract.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/ilop/sthome/mvp/present/SetUpPresenter.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/ilop/sthome/ui/activity/mine/SetUpActivity.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/ilop/sthome/mvp/contract/SetUpContract.java" />
-        <option value="$PROJECT_DIR$/src/main/res/layout/item_set_up_notice.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/ilop/sthome/ui/activity/device/DeviceSettingActivity.java" />
-        <option value="$PROJECT_DIR$/src/main/res/layout/item_detail_list.xml" />
+        <option value="$PROJECT_DIR$/src/main/res/layout/activity_bind.xml" />
+        <option value="$PROJECT_DIR$/src/main/res/layout/activity_web_view.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ilop/sthome/ui/activity/mine/WebViewActivity.java" />
+        <option value="$PROJECT_DIR$/src/main/res/layout/activity_add_ipc.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ilop/sthome/utils/NetWorkUtil.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ilop/sthome/ui/activity/xmipc/ActivityGuideDeviceAdd.java" />
+        <option value="$PROJECT_DIR$/src/main/res/layout/ilop_ota_view_topbar.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ilop/sthome/ui/ota/view/SimpleTopbar.java" />
+        <option value="$PROJECT_DIR$/src/main/res/drawable/ilop_mine_icon_ota_progress.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ilop/sthome/ui/ota/view/MineOTAButton.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ilop/sthome/ui/ota/view/MineOTAListItem.java" />
+        <option value="$PROJECT_DIR$/src/main/res/layout/ilop_ota_list_item.xml" />
+        <option value="$PROJECT_DIR$/src/main/res/layout/activity_about.xml" />
+        <option value="$PROJECT_DIR$/src/main/res/layout/ilop_ota_view_button.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ilop/sthome/ui/ota/activity/OTAActivity.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ilop/sthome/ui/activity/mine/ShareListActivity.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ilop/sthome/ui/activity/device/ShareListActivity.java" />
         <option value="$PROJECT_DIR$/src/main/res/layout/activity_device_setting.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/ilop/sthome/ui/activity/scene/AddSceneActivity.java" />
-        <option value="$PROJECT_DIR$/src/main/res/layout/activity_scene_edit.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/ilop/sthome/mvp/present/SceneEditPresenter.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/ilop/sthome/mvp/present/SceneDetailPresenter.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/ilop/sthome/data/greenDao/SceneRelationBean.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/ilop/sthome/data/greenDao/AutomationBean.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/ilop/sthome/utils/greenDao/AutomationDaoUtil.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/ilop/sthome/utils/greenDao/DeviceDaoUtil.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/ilop/sthome/mvp/present/ChooseActionPresenter.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/ilop/sthome/ui/adapter/scene/TriggerOutAdapter.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/ilop/sthome/mvp/contract/AddDeviceContract.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/ilop/sthome/mvp/present/AddDevicePresenter.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/ilop/sthome/ui/activity/config/AddDeviceGuideActivity.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/ilop/sthome/service/SiterService.java" />
-        <option value="$PROJECT_DIR$/common/src/main/res/values/arrays.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ilop/sthome/ui/activity/device/DeviceSettingActivity.java" />
+        <option value="$PROJECT_DIR$/src/main/res/layout/ilop_ota_activity.xml" />
+        <option value="$PROJECT_DIR$/common/src/main/res/values-de/strings.xml" />
+        <option value="$PROJECT_DIR$/common/src/main/res/values-es/strings.xml" />
+        <option value="$PROJECT_DIR$/common/src/main/res/values-fr/strings.xml" />
+        <option value="$PROJECT_DIR$/src/main/res/layout/activity_device_share.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ilop/sthome/ui/activity/device/DeviceShareActivity.java" />
+        <option value="$PROJECT_DIR$/src/main/res/layout/item_device_share.xml" />
+        <option value="$PROJECT_DIR$/src/main/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ilop/sthome/data/greenDao/DeviceShareBean.java" />
+        <option value="$PROJECT_DIR$/common/src/main/res/values-zh/strings.xml" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="y" value="23" />
     <option name="width" value="1920" />
     <option name="height" value="989" />
@@ -803,30 +605,81 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
+      <pane id="ProjectPane" />
       <pane id="AndroidView">
         <subPane>
           <expand>
             <path>
               <item name="familylink" type="1abcf292:AndroidViewProjectNode" />
-              <item name="common" type="feadf853:AndroidModuleNode" />
+              <item name="familylink" type="feadf853:AndroidModuleNode" />
             </path>
             <path>
               <item name="familylink" type="1abcf292:AndroidViewProjectNode" />
-              <item name="common" type="feadf853:AndroidModuleNode" />
+              <item name="familylink" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+            </path>
+            <path>
+              <item name="familylink" type="1abcf292:AndroidViewProjectNode" />
+              <item name="familylink" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="com" type="cbb59c9e:AndroidPsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="familylink" type="1abcf292:AndroidViewProjectNode" />
+              <item name="familylink" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="com" type="cbb59c9e:AndroidPsiDirectoryNode" />
+              <item name="sthome" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="familylink" type="1abcf292:AndroidViewProjectNode" />
+              <item name="familylink" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="com" type="cbb59c9e:AndroidPsiDirectoryNode" />
+              <item name="sthome" type="462c0819:PsiDirectoryNode" />
+              <item name="ui" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="familylink" type="1abcf292:AndroidViewProjectNode" />
+              <item name="familylink" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="com" type="cbb59c9e:AndroidPsiDirectoryNode" />
+              <item name="sthome" type="462c0819:PsiDirectoryNode" />
+              <item name="ui" type="462c0819:PsiDirectoryNode" />
+              <item name="activity" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="familylink" type="1abcf292:AndroidViewProjectNode" />
+              <item name="familylink" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="com" type="cbb59c9e:AndroidPsiDirectoryNode" />
+              <item name="sthome" type="462c0819:PsiDirectoryNode" />
+              <item name="ui" type="462c0819:PsiDirectoryNode" />
+              <item name="activity" type="462c0819:PsiDirectoryNode" />
+              <item name="mine" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="familylink" type="1abcf292:AndroidViewProjectNode" />
+              <item name="familylink" type="feadf853:AndroidModuleNode" />
               <item name="res" type="d4f16f75:AndroidResFolderNode" />
+            </path>
+            <path>
+              <item name="familylink" type="1abcf292:AndroidViewProjectNode" />
+              <item name="familylink" type="feadf853:AndroidModuleNode" />
+              <item name="res" type="d4f16f75:AndroidResFolderNode" />
+              <item name="mipmap" type="ddeffd01:AndroidResFolderTypeNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="ProjectPane" />
       <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="android.sdk.path" value="$USER_HOME$/Library/Android/sdk" />
     <property name="device.picker.selection" value="HYF4C18825010921" />
-    <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/res/mipmap-xxhdpi" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/res/mipmap-xhdpi" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="not.eligible.for.single.variant.sync" value="true" />
     <property name="project.structure.last.edited" value="Dependencies" />
@@ -845,8 +698,8 @@
       <recent name="com.ilop.sthome.data.greenDao" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/res/mipmap-xxhdpi" />
       <recent name="$PROJECT_DIR$/src/main/res/mipmap-xhdpi" />
+      <recent name="$PROJECT_DIR$/src/main/res/mipmap-xxhdpi" />
       <recent name="$PROJECT_DIR$/src/main/java/com/ilop/sthome/ui/activity/device" />
       <recent name="$PROJECT_DIR$/src/main/java/com/ilop/sthome/mvp/model" />
       <recent name="$PROJECT_DIR$/src/main/java/com/ilop/sthome/mvp/model/common" />
@@ -940,10 +793,11 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1920" height="989" extended-state="0" />
+    <frame x="0" y="23" width="1920" height="989" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Captures" order="0" side_tool="true" weight="0.25" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.21092077" />
+      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.21092077" />
       <window_info id="Structure" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info id="Build Variants" order="4" side_tool="true" />
@@ -951,7 +805,6 @@
       <window_info id="Designer" order="6" />
       <window_info id="Resources Explorer" order="7" />
       <window_info id="Capture Tool" order="8" />
-      <window_info anchor="bottom" id="Inspection Results" weight="0.32915717" />
       <window_info anchor="bottom" id="Run" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32915717" />
       <window_info anchor="bottom" id="Debug" order="2" weight="0.53644645" />
@@ -960,371 +813,398 @@
       <window_info anchor="bottom" id="Terminal" order="5" />
       <window_info anchor="bottom" id="Event Log" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Build" order="7" weight="0.32687926" />
-      <window_info anchor="bottom" id="Android Profiler" order="8" />
+      <window_info anchor="bottom" id="Android Profiler" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Logcat" order="9" weight="0.4384966" />
+      <window_info anchor="bottom" id="Inspection Results" order="10" weight="0.32915717" />
       <window_info anchor="right" id="Device File Explorer" order="0" side_tool="true" />
       <window_info anchor="right" id="Capture Analysis" order="1" />
       <window_info anchor="right" id="Gradle" order="2" />
       <window_info anchor="right" id="Theme Preview" order="3" />
       <window_info anchor="right" id="Palette&#9;" order="4" />
-      <window_info anchor="right" id="Preview" order="5" weight="0.22751606" />
+      <window_info active="true" anchor="right" id="Preview" order="5" visible="true" weight="0.22751606" />
     </layout>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ilop/sthome/mvp/present/AutomationPresenter.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ilop/sthome/ui/activity/mine/WebViewActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="423">
-          <caret line="98" column="59" lean-forward="true" selection-start-line="98" selection-start-column="59" selection-end-line="98" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ilop/sthome/data/db/SceneAliDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ilop/sthome/data/bean/SceneAliBean.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ilop/sthome/data/db/SysDBAli.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ilop/sthome/utils/greenDao/AutomationDaoUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="76" column="82" lean-forward="true" selection-start-line="76" selection-start-column="32" selection-end-line="76" selection-end-column="82" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ilop/sthome/utils/greenDao/DeviceDaoUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="169" column="24" lean-forward="true" selection-start-line="169" selection-start-column="24" selection-end-line="169" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ilop/sthome/mvp/present/ChooseActionPresenter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-121">
-          <caret line="31" column="81" selection-start-line="31" selection-start-column="81" selection-end-line="31" selection-end-column="81" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ilop/sthome/ui/activity/scene/ChooseActionActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="59" column="50" lean-forward="true" selection-start-line="59" selection-start-column="50" selection-end-line="59" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/res/layout/item_trigger.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="505">
-          <caret line="51" column="34" selection-start-line="51" selection-start-column="34" selection-end-line="51" selection-end-column="34" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ilop/sthome/data/event/STEvent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="109">
-          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ilop/sthome/mvp/model/CommonModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="274">
-          <caret line="31" column="50" selection-start-line="31" selection-start-column="30" selection-end-line="31" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build/generated/source/greendao/com/ilop/sthome/data/greenDao/DeviceInfoBeanDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="330" column="15" selection-start-line="330" selection-start-column="15" selection-end-line="330" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ilop/sthome/data/greenDao/DeviceInfoBean.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="222">
-          <caret line="267" column="45" lean-forward="true" selection-start-line="267" selection-start-column="45" selection-end-line="267" selection-end-column="45" />
-          <folding>
-            <element signature="e#5349#5350#0" expanded="true" />
-            <element signature="e#5390#5391#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ilop/sthome/ui/adapter/scene/TriggerOutAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="72" column="30" selection-start-line="72" selection-start-column="30" selection-end-line="72" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ilop/sthome/ui/activity/scene/AutomationDetailActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="307">
-          <caret line="194" column="40" selection-start-line="194" selection-start-column="40" selection-end-line="194" selection-end-column="40" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ilop/sthome/data/event/EventRefreshTimer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ilop/sthome/data/event/EventUdpReceive.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" column="21" lean-forward="true" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ilop/sthome/service/UpdateService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="83" column="16" selection-start-line="83" selection-start-column="16" selection-end-line="83" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ilop/sthome/utils/SiterwellUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="17" column="38" lean-forward="true" selection-start-line="17" selection-start-column="38" selection-end-line="17" selection-end-column="38" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ilop/sthome/network/udp/UDPSendData.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="13" column="18" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ilop/sthome/network/udp/UDPRecData.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ilop/sthome/network/udp/GatewayUdpListConstant.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ilop/sthome/data/event/EventProgress.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="6" column="20" lean-forward="true" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ilop/sthome/data/event/EventRefreshSubDeviceLogs.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="10" column="20" lean-forward="true" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ilop/sthome/data/event/EventRefreshDevice.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ilop/sthome/data/event/EventRefreshLogs.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ilop/sthome/data/event/EventRefreshScene.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/res/layout/activity_config_device.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/res/layout/activity_config_guide.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ilop/sthome/ui/activity/config/ConfigGuideActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="33" column="36" selection-start-line="33" selection-start-column="36" selection-end-line="33" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ilop/sthome/ui/activity/config/RecoveryGuideActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+        <state relative-caret-position="117">
+          <caret line="14" column="15" lean-forward="true" selection-start-line="14" selection-start-column="15" selection-end-line="14" selection-end-column="15" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/res/layout/activity_add_device.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ilop/sthome/ui/activity/config/AddGatewayActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="36" column="35" lean-forward="true" selection-start-line="36" selection-start-column="35" selection-end-line="36" selection-end-column="35" />
-        </state>
-      </provider>
+      <provider editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/res/layout/activity_add_device_guide.xml">
       <provider selected="true" editor-type-id="text-editor" />
       <provider editor-type-id="android-designer2" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ilop/sthome/ui/activity/device/DeviceSettingActivity.java">
+    <entry file="file://$PROJECT_DIR$/src/main/res/layout/activity_bind.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="32" column="13" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="13" />
+        <state relative-caret-position="414">
+          <caret line="35" column="47" lean-forward="true" selection-start-line="26" selection-start-column="8" selection-end-line="35" selection-end-column="47" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ilop/sthome/ui/activity/xmipc/ActivityGuideDeviceAdd.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="8" column="31" lean-forward="true" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1655#1682#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ilop/sthome/utils/NetWorkUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="950">
+          <caret line="56" column="22" selection-start-line="56" selection-start-column="22" selection-end-line="56" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/layout/activity_add_ipc.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="798">
+          <caret line="42" column="18" selection-start-line="42" selection-start-column="18" selection-end-line="42" selection-end-column="18" />
+          <folding>
+            <element signature="e#459#477#0" expanded="true" />
+            <element signature="e#579#599#0" expanded="true" />
+            <element signature="e#852#869#0" expanded="true" />
+            <element signature="e#1663#1681#0" expanded="true" />
+            <element signature="e#1872#1898#0" expanded="true" />
+            <element signature="e#2135#2151#0" expanded="true" />
+            <element signature="e#2185#2202#0" expanded="true" />
+            <element signature="e#2245#2263#0" expanded="true" />
+            <element signature="e#2526#2544#0" expanded="true" />
+            <element signature="e#2735#2758#0" expanded="true" />
+            <element signature="e#3022#3040#0" expanded="true" />
+            <element signature="e#3231#3257#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ilop/sthome/ui/ota/view/SimpleTopbar.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="9" column="32" selection-start-line="9" selection-start-column="32" selection-end-line="9" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/src/main/res/mipmap-xhdpi/icon_update.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/values/colors.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="599">
+          <caret line="35" column="34" selection-start-line="35" selection-start-column="17" selection-end-line="35" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/drawable/icon_ota_progress.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="28" selection-start-line="2" selection-start-column="28" selection-end-line="2" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/layout/ilop_ota_view_topbar.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="10" column="37" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="37" />
+          <folding>
+            <element signature="e#180#198#0" expanded="true" />
+            <element signature="e#410#425#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/sdk-framework-0.0.4.4.aar/866a7d17cf486d3baa5c65fdd1f2fdef/jars/classes.jar!/com/aliyun/iot/aep/sdk/framework/AActivity.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="14" column="22" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/values/styles.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="282">
+          <caret line="123" column="17" selection-start-line="123" selection-start-column="17" selection-end-line="123" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/drawable/icon_switch_check_ipc.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/drawable/icon_voice_talk.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/drawable/ilop_mine_dialog_bg.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/drawable/ilop_mine_dialog_left_button_bg.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/drawable/ilop_mine_dialog_right_button_bg.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/mipmap-xhdpi/arrow_right.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/layout/ilop_ota_list_item.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="542">
+          <caret line="42" column="54" lean-forward="true" selection-start-line="41" selection-start-column="13" selection-end-line="42" selection-end-column="54" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ilop/sthome/ui/ota/view/MineOTAListItem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="41">
+          <caret line="37" column="47" selection-start-line="37" selection-start-column="47" selection-end-line="37" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/layout/ilop_ota_dialog.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="8" column="36" lean-forward="true" selection-start-line="8" selection-start-column="36" selection-end-line="8" selection-end-column="36" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ilop/sthome/ui/ota/view/MineOTADialog.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="26" column="62" selection-start-line="26" selection-start-column="62" selection-end-line="26" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/layout/ilop_ota_view_button.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="43" selection-start-line="4" selection-start-column="43" selection-end-line="4" selection-end-column="43" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ilop/sthome/ui/ota/view/MineOTAButton.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ilop/sthome/ui/activity/device/GatewayMainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="22" selection-start-line="22" selection-end-line="28" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/layout/layout_empty_ali.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/values-zh/strings_ali.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="282">
+          <caret line="29" column="17" selection-start-line="29" selection-start-column="17" selection-end-line="29" selection-end-column="17" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/ilop/sthome/mvp/present/DeviceSetPresenter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="248" column="35" selection-start-line="248" selection-start-column="27" selection-end-line="248" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ilop/sthome/ui/activity/config/ConfigDeviceActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="282">
-          <caret line="140" column="48" selection-start-line="140" selection-start-column="48" selection-end-line="140" selection-end-column="48" />
+          <caret line="94" column="16" selection-start-line="94" selection-start-column="16" selection-end-line="94" selection-end-column="16" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ilop/sthome/ui/activity/device/DeviceRenameActivity.java">
+    <entry file="file://$PROJECT_DIR$/src/main/res/layout/activity_device_setting.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="429">
-          <caret line="88" column="57" lean-forward="true" selection-start-line="88" selection-start-column="57" selection-end-line="88" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ilop/sthome/ui/activity/config/AddDeviceGuideActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="83" column="20" lean-forward="true" selection-start-line="83" selection-start-column="20" selection-end-line="83" selection-end-column="20" />
+        <state relative-caret-position="465">
+          <caret line="74" column="43" lean-forward="true" selection-start-line="74" selection-start-column="43" selection-end-line="74" selection-end-column="43" />
           <folding>
-            <element signature="e#3108#3160#0" expanded="true" />
-            <element signature="e#4582#4608#0" expanded="true" />
+            <element signature="e#2629#2656#0" expanded="true" />
+            <element signature="e#3006#3031#0" expanded="true" />
+            <element signature="e#3383#3407#0" expanded="true" />
+            <element signature="e#3756#3780#0" expanded="true" />
           </folding>
         </state>
       </provider>
+      <provider editor-type-id="android-designer2" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ilop/sthome/network/api/SendCommandAli.java">
+    <entry file="file://$PROJECT_DIR$/src/main/res/drawable/tab_add_scene_sel.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ilop/sthome/ui/activity/device/DeviceSettingActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="489">
+          <caret line="87" column="78" selection-start-line="87" selection-start-column="78" selection-end-line="87" selection-end-column="78" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ilop/sthome/utils/greenDao/DeviceDaoUtil.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="282">
-          <caret line="43" column="28" selection-start-line="43" selection-start-column="28" selection-end-line="43" selection-end-column="28" />
+          <caret line="115" column="32" selection-start-line="115" selection-start-column="32" selection-end-line="115" selection-end-column="32" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ilop/sthome/mvp/contract/AddDeviceContract.java">
+    <entry file="file://$PROJECT_DIR$/src/main/res/layout/ilop_ota_activity.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="497">
-          <caret line="34" column="36" selection-start-line="34" selection-start-column="36" selection-end-line="34" selection-end-column="36" />
+        <state relative-caret-position="498">
+          <caret line="37" column="52" selection-start-line="37" selection-start-column="52" selection-end-line="37" selection-end-column="52" />
+          <folding>
+            <element signature="e#1441#1459#0" expanded="true" />
+          </folding>
         </state>
       </provider>
+      <provider editor-type-id="android-designer2" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ilop/sthome/service/SiterService.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ilop/sthome/ui/ota/activity/OTAActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="212">
-          <caret line="263" column="74" lean-forward="true" selection-start-line="263" selection-start-column="74" selection-end-line="263" selection-end-column="74" />
+        <state relative-caret-position="362">
+          <caret line="51" column="43" selection-start-line="51" selection-start-column="43" selection-end-line="51" selection-end-column="43" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ilop/sthome/ui/fragment/SubDeviceFragment.java">
+    <entry file="file://$PROJECT_DIR$/src/main/res/values-zh/strings.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
+        <state relative-caret-position="282">
+          <caret line="124" column="17" selection-start-line="124" selection-start-column="17" selection-end-line="124" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/res/layout/fragment_sub_device.xml">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/common/src/main/res/values-de/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="694">
+          <caret line="111" column="41" selection-start-line="111" selection-start-column="41" selection-end-line="111" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/src/main/res/values-es/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="694">
+          <caret line="111" column="50" selection-start-line="111" selection-start-column="50" selection-end-line="111" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/src/main/res/values-fr/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="694">
+          <caret line="111" column="48" selection-start-line="111" selection-start-column="48" selection-end-line="111" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/layout/item_device_share.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1216">
+          <caret line="64" column="50" selection-start-line="64" selection-start-column="50" selection-end-line="64" selection-end-column="50" />
+          <folding>
+            <element signature="e#425#443#0" expanded="true" />
+            <element signature="e#550#568#0" expanded="true" />
+            <element signature="e#603#621#0" expanded="true" />
+            <element signature="e#715#733#0" expanded="true" />
+            <element signature="e#1052#1069#0" expanded="true" />
+            <element signature="e#1260#1278#0" expanded="true" />
+            <element signature="e#1318#1334#0" expanded="true" />
+            <element signature="e#1555#1572#0" expanded="true" />
+            <element signature="e#1694#1710#0" expanded="true" />
+            <element signature="e#1740#1758#0" expanded="true" />
+            <element signature="e#1886#1904#0" expanded="true" />
+            <element signature="e#1939#1957#0" expanded="true" />
+            <element signature="e#2024#2040#0" expanded="true" />
+            <element signature="e#2021#2037#0" expanded="true" />
+            <element signature="e#2173#2191#0" expanded="true" />
+            <element signature="e#2490#2507#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
       <provider editor-type-id="android-designer2" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ilop/sthome/mvp/present/AddDevicePresenter.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ilop/sthome/ui/adapter/device/DeviceShareAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="606">
-          <caret line="122" column="19" lean-forward="true" selection-start-line="122" selection-start-column="19" selection-end-line="122" selection-end-column="19" />
+        <state relative-caret-position="479">
+          <caret line="53" column="79" lean-forward="true" selection-start-line="53" selection-start-column="79" selection-end-line="53" selection-end-column="79" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/common/src/main/res/drawable/btn_click_bg.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ilop/sthome/mvp/model/CommonModel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="12" column="31" lean-forward="true" selection-start-line="12" selection-start-column="31" selection-end-line="12" selection-end-column="31" />
+        <state relative-caret-position="278">
+          <caret line="110" column="26" selection-start-line="110" selection-start-column="26" selection-end-line="110" selection-end-column="26" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/common/src/main/res/mipmap-xhdpi/arrow.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/src/main/res/mipmap-xxhdpi/button_config8.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/src/main/res/values/arrays.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/AndroidManifest.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="215">
-          <caret line="32" column="29" lean-forward="true" selection-start-line="32" selection-start-column="29" selection-end-line="32" selection-end-column="29" />
+        <state relative-caret-position="252">
+          <caret line="385" column="8" selection-start-line="385" selection-start-column="8" selection-end-line="385" selection-end-column="8" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-manifest" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ilop/sthome/service/UpdateService.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ilop/sthome/ui/activity/device/DeviceShareActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="26" column="31" selection-start-line="26" selection-start-column="31" selection-end-line="26" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#696#697#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ilop/sthome/app/ApplicationHelper.java">
+    <entry file="file://$PROJECT_DIR$/src/main/res/layout/activity_device_share.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="54" selection-start-line="54" selection-end-line="54" />
+        <state relative-caret-position="722">
+          <caret line="38" column="46" selection-start-line="38" selection-start-column="46" selection-end-line="38" selection-end-column="46" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ilop/sthome/data/greenDao/DeviceShareBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="3" column="17" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/aliyun/iot/aep/sdk/base/delegate/APIGatewaySDKDelegate.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ilop/sthome/ui/activity/mine/AboutActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="90" selection-start-line="90" selection-end-line="90" />
+        <state relative-caret-position="532">
+          <caret line="29" column="28" lean-forward="true" selection-start-line="29" selection-start-column="28" selection-end-line="29" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/src/main/res/values-zh/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="599">
+          <caret line="106" column="34" selection-start-line="106" selection-start-column="34" selection-end-line="106" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/layout/activity_about.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="94" column="55" lean-forward="true" selection-start-line="94" selection-start-column="55" selection-end-line="94" selection-end-column="55" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
     </entry>
   </component>
   <component name="masterDetails">

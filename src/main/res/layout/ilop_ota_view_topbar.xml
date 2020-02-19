@@ -1,36 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="44dp"
-    android:background="@color/mine_color_FFFFFF">
+    android:layout_height="@dimen/margin_50">
 
-    <RelativeLayout
-        android:id="@+id/mine_topbar_back_container_rl"
-        android:layout_width="wrap_content"
-        android:layout_height="44dp"
-        android:layout_alignParentLeft="true">
-
-        <ImageView
-            android:layout_width="@dimen/margin_24"
-            android:layout_height="@dimen/margin_24"
-            android:padding="@dimen/margin_3"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="@dimen/margin_15"
-            android:layout_marginRight="16dp"
-            android:src="@mipmap/back"/>
-    </RelativeLayout>
+    <ImageView
+        android:id="@+id/iv_ota_back"
+        style="@style/TabBackImageView"/>
 
     <TextView
-        android:id="@+id/mine_topbar_title_tv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:textColor="@color/top_bar_title"
-        android:textSize="@dimen/text_18" />
-
-    <View
-        android:layout_alignParentBottom="true"
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@color/top_bar_line" />
+        android:id="@+id/tv_ota_title"
+        style="@style/TabTitleTextView"
+        android:text="@string/about"/>
 </RelativeLayout>

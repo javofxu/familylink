@@ -29,8 +29,8 @@ public final class R {
         public static final int rect_round_white_bg = 0x7f0800f0;
     }
     public static final class id {
-        public static final int imageview_resultview_view = 0x7f0a013a;
-        public static final int textview_resultview_des = 0x7f0a0310;
+        public static final int imageview_resultview_view = 0x7f0a0135;
+        public static final int textview_resultview_des = 0x7f0a030b;
     }
     public static final class layout {
         public static final int view_showalbumpic = 0x7f0d00ff;
@@ -39,7 +39,7 @@ public final class R {
         public static final int beep = 0x7f100001;
     }
     public static final class string {
-        public static final int app_name = 0x7f1102ee;
-        public static final int nofoundbarcode = 0x7f110446;
+        public static final int app_name = 0x7f1102ef;
+        public static final int nofoundbarcode = 0x7f11044a;
     }
 }

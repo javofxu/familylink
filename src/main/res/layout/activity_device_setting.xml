@@ -52,9 +52,40 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     app:item_accessoryType = "arrow"
-                    app:item_showDivider="false"
-                    app:item_detailText=""
+                    app:item_showDivider="true"
                     app:item_titleText="@string/ali_gateway_name" />
+
+                <com.ilop.sthome.view.SettingItem
+                    android:id="@+id/replace_device"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:item_accessoryType = "arrow"
+                    app:item_showDivider="true"
+                    app:item_titleText="@string/replace_equipment" />
+
+                <com.ilop.sthome.view.SettingItem
+                    android:id="@+id/ota"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:item_accessoryType = "arrow"
+                    app:item_showDivider="true"
+                    app:item_titleText="@string/ali_gateway_ota" />
+
+                <com.ilop.sthome.view.SettingItem
+                    android:id="@+id/share"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:item_accessoryType = "arrow"
+                    app:item_showDivider="true"
+                    app:item_titleText="@string/ali_share_list" />
+
+                <com.ilop.sthome.view.SettingItem
+                    android:id="@+id/ins"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:item_accessoryType = "arrow"
+                    app:item_showDivider="false"
+                    app:item_titleText="@string/ali_instrution" />
 
                 <View
                     android:layout_width="match_parent"
@@ -98,33 +129,6 @@
                         android:layout_marginBottom="@dimen/margin_15">
                     </android.support.v7.widget.RecyclerView>
                 </RelativeLayout>
-
-                <com.ilop.sthome.view.SettingItem
-                    android:id="@+id/replace_device"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    app:item_accessoryType = "arrow"
-                    app:item_showDivider="true"
-                    app:item_detailText=""
-                    app:item_titleText="@string/replace_equipment" />
-
-                <com.ilop.sthome.view.SettingItem
-                    android:id="@+id/ota"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    app:item_accessoryType = "arrow"
-                    app:item_showDivider="true"
-                    app:item_detailText=""
-                    app:item_titleText="@string/ali_gateway_ota" />
-
-                <com.ilop.sthome.view.SettingItem
-                    android:id="@+id/ins"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    app:item_accessoryType = "arrow"
-                    app:item_showDivider="false"
-                    app:item_detailText=""
-                    app:item_titleText="@string/ali_instrution" />
 
                 <RelativeLayout
                     android:layout_width="match_parent"

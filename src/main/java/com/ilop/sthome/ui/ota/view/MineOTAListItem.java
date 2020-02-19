@@ -37,8 +37,8 @@ public class MineOTAListItem extends FrameLayout {
     private void init() {
         inflate(getContext(), R.layout.ilop_ota_list_item, this);
 
-        mTitle = findViewById(R.id.mine_setting_item_title_textview);
-        mDeviceImg = findViewById(R.id.mine_setting_item_device_imageview);
+        mTitle = findViewById(R.id.mine_setting_item_title);
+        mDeviceImg = findViewById(R.id.mine_setting_item_device);
         mUnderLine = findViewById(R.id.mine_item_underline_view);
     }
 

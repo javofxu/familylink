@@ -7,13 +7,13 @@ import android.util.AttributeSet;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.FrameLayout;
-import android.widget.RelativeLayout;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.siterwell.familywellplus.R;
 
 public class SimpleTopbar extends FrameLayout implements OnClickListener {
-    private RelativeLayout mBackArea;
+    private ImageView mBackArea;
     private TextView mTitle;
 
     private onBackClickListener mBackListener;
@@ -35,8 +35,8 @@ public class SimpleTopbar extends FrameLayout implements OnClickListener {
 
     private void initView() {
         inflate(getContext(), R.layout.ilop_ota_view_topbar, this);
-        mBackArea = findViewById(R.id.mine_topbar_back_container_rl);
-        mTitle = findViewById(R.id.mine_topbar_title_tv);
+        mBackArea = findViewById(R.id.iv_ota_back);
+        mTitle = findViewById(R.id.tv_ota_title);
 
         mBackArea.setOnClickListener(this);
     }
@@ -71,7 +71,7 @@ public class SimpleTopbar extends FrameLayout implements OnClickListener {
 
     @Override
     public void onClick(View v) {
-        if (R.id.mine_topbar_back_container_rl == v.getId()) {
+        if (R.id.iv_ota_back == v.getId()) {
             if (null != mBackListener) {
                 mBackListener.onBackClick();
             }

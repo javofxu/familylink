@@ -33,7 +33,7 @@ public class OTAActivity extends AActivity implements IOTAActivity, OnOTAButtonC
     private OTADeviceSimpleInfo mSimpleInfo;
 
     private MineOTAButton mButton;
-    private ImageView mUpArrowImageView, mCircleImageView;
+    private ImageView mUpArrowImageView;
     private TextView mTipsTextView, mCurrentVersionTextView,new_firewareTextView;
     private SimpleTopbar mTopbar;
     private TextView mRefreshTextView;
@@ -102,14 +102,13 @@ public class OTAActivity extends AActivity implements IOTAActivity, OnOTAButtonC
     /* =====================lifecycle @end =====================*/
 
     protected void initView() {
-        mTopbar = findViewById(R.id.mine_topbar);
+        mTopbar = findViewById(R.id.mine_top_bar);
         mWrapper = findViewById(R.id.mine_setting_ota_detail_wrapper_linearlayout);
-        mUpArrowImageView = findViewById(R.id.mine_setting_ota_detail_up_arrow_imageview);
-        mCircleImageView = findViewById(R.id.mine_setting_ota_detail_success_imageview);
-        mTipsTextView = findViewById(R.id.mine_setting_ota_detail_tips_textview);
-        mCurrentVersionTextView = findViewById(R.id.mine_setting_ota_detail_current_version_textview);
-        mRefreshTextView = findViewById(R.id.mine_setting_ota_detail_refresh_textview);
-        mButton = findViewById(R.id.mine_setting_ota_detail_button_mineotabutton);
+        mUpArrowImageView = findViewById(R.id.mine_setting_ota_detail_up_arrow);
+        mTipsTextView = findViewById(R.id.mine_setting_ota_detail_tips);
+        mCurrentVersionTextView = findViewById(R.id.mine_setting_ota_detail_current_version);
+        mRefreshTextView = findViewById(R.id.mine_setting_ota_detail_refresh);
+        mButton = findViewById(R.id.mine_setting_ota_detail_button);
         new_firewareTextView = findViewById(R.id.text_tv_one);
     }
 
@@ -218,7 +217,6 @@ public class OTAActivity extends AActivity implements IOTAActivity, OnOTAButtonC
         }
 
         if (null != mTipsTextView) {
-            mTipsTextView.setTextColor(getResources().getColor(R.color.text_color_selected));
             mTipsTextView.setText(latestVersion);
         }
         lastver = latestVersion;
@@ -256,7 +254,6 @@ public class OTAActivity extends AActivity implements IOTAActivity, OnOTAButtonC
         }
 
         if (null != mTipsTextView) {
-            mTipsTextView.setTextColor(getResources().getColor(R.color.text_color_selected));
             mTipsTextView.setText(getResources().getString(R.string.ota_current_is_the_lasted_version));
         }
 
@@ -298,19 +295,13 @@ public class OTAActivity extends AActivity implements IOTAActivity, OnOTAButtonC
 
 
         if (OTAConstants.OTA_STATUS_PRE_LOAD == status || OTAConstants.OTA_STATUS_LOADING == status) {
-            mUpArrowImageView.setVisibility(View.VISIBLE);
-            mCircleImageView.setVisibility(View.GONE);
             mRefreshTextView.setVisibility(View.GONE);
             mButton.setVisibility(View.VISIBLE);
             mButton.setStatus(status);
         } else if (OTAConstants.OTA_STATUS_DONE == status) {
 
             if(update){
-                mUpArrowImageView.setVisibility(View.GONE);
-                mCircleImageView.setVisibility(View.VISIBLE);
-
                 if (null != mTipsTextView) {
-                    mTipsTextView.setTextColor(getResources().getColor(R.color.text_color_selected));
                     mTipsTextView.setText(getString(R.string.ota_upgrade_success));
                 }
 
@@ -331,7 +322,6 @@ public class OTAActivity extends AActivity implements IOTAActivity, OnOTAButtonC
                 }
             }else {
                 if (null != mTipsTextView) {
-                    mTipsTextView.setTextColor(getResources().getColor(R.color.text_color_selected));
                     mTipsTextView.setText(getResources().getString(R.string.ota_current_is_the_lasted_version));
                 }
 
@@ -353,8 +343,6 @@ public class OTAActivity extends AActivity implements IOTAActivity, OnOTAButtonC
 
 
         } else if (OTAConstants.OTA_STATUS_FAILURE == status) {
-            mUpArrowImageView.setVisibility(View.VISIBLE);
-            mCircleImageView.setVisibility(View.GONE);
             mRefreshTextView.setVisibility(View.GONE);
             //升级失败变为preload 等待触发重新升级
             mButton.setVisibility(View.VISIBLE);
@@ -432,7 +420,7 @@ public class OTAActivity extends AActivity implements IOTAActivity, OnOTAButtonC
             return;
         }
 
-        if (R.id.mine_setting_ota_detail_refresh_textview == v.getId()) {
+        if (R.id.mine_setting_ota_detail_refresh == v.getId()) {
             if (null != mHandler && null != mSimpleInfo) {
                 mHandler.refreshData(mSimpleInfo);
             }
@@ -452,17 +440,11 @@ public class OTAActivity extends AActivity implements IOTAActivity, OnOTAButtonC
             mWrapper.setVisibility(View.VISIBLE);
         }
 
-        if (null != mCircleImageView) {
-            mCircleImageView.setVisibility(View.VISIBLE);
-            mCircleImageView.setBackgroundResource(R.mipmap.ilop_ota_icon_error);
-        }
-
         if (null != mUpArrowImageView) {
-            mUpArrowImageView.setVisibility(View.GONE);
+            mUpArrowImageView.setImageResource(R.mipmap.fail);
         }
 
         if (null != mTipsTextView) {
-            mTipsTextView.setTextColor(getResources().getColor(R.color.text_color_selected));
             mTipsTextView.setText(getString(R.string.ota_get_info_error));
         }
 
@@ -489,17 +471,11 @@ public class OTAActivity extends AActivity implements IOTAActivity, OnOTAButtonC
             mWrapper.setVisibility(View.VISIBLE);
         }
 
-        if (null != mCircleImageView) {
-            mCircleImageView.setVisibility(View.VISIBLE);
-            mCircleImageView.setBackgroundResource(R.mipmap.ilop_ota_icon_error);
-        }
-
         if (null != mUpArrowImageView) {
-            mUpArrowImageView.setVisibility(View.GONE);
+            mUpArrowImageView.setImageResource(R.mipmap.fail);
         }
 
         if (null != mTipsTextView) {
-            mTipsTextView.setTextColor(getResources().getColor(R.color.text_color_selected));
             mTipsTextView.setText(getString(R.string.ota_did_upgrade_error));
         }
 

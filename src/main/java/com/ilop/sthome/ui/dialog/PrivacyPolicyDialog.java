@@ -15,7 +15,7 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.example.common.base.OnCallBackToRefresh;
-import com.ilop.sthome.ui.activity.main.ExplainActivity;
+import com.ilop.sthome.ui.activity.mine.AgreementActivity;
 import com.ilop.sthome.ui.activity.mine.WebViewActivity;
 import com.ilop.sthome.utils.tools.CacheUtil;
 import com.ilop.sthome.utils.tools.SiterSDK;
@@ -105,8 +105,7 @@ public class PrivacyPolicyDialog extends Dialog {
             public void onClick(View widget) {
                 //点击后的操作
                 Intent intent = new Intent();
-                intent.setClass(mContext, ExplainActivity.class);
-                intent.putExtra("mid", 666);
+                intent.setClass(mContext, AgreementActivity.class);
                 mContext.startActivity(intent);
             }
 

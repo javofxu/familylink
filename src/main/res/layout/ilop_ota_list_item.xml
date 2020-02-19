@@ -2,50 +2,49 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@color/mine_color_FFFFFF"
+    android:background="@color/white"
     android:orientation="vertical"
-    android:paddingLeft="24dp">
+    android:paddingStart="@dimen/margin_24">
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="64dp">
+        android:layout_height="@dimen/margin_64">
 
         <ImageView
-            android:id="@+id/mine_setting_item_device_imageview"
+            android:id="@+id/mine_setting_item_device"
             android:layout_width="36dp"
             android:layout_height="36dp"
-            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
             android:layout_centerVertical="true"
-            android:layout_marginRight="24dp"
-            />
+            android:layout_marginEnd="@dimen/margin_24"/>
 
         <TextView
-            android:id="@+id/mine_setting_item_title_textview"
+            android:id="@+id/mine_setting_item_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
-            android:layout_toRightOf="@+id/mine_setting_item_device_imageview"
+            android:layout_toEndOf="@+id/mine_setting_item_device"
             android:ellipsize="end"
-            android:maxWidth="200dp"
+            android:maxWidth="@dimen/margin_200"
             android:singleLine="true"
-            android:textColor="@color/mine_color_333333"
-            android:textSize="14dp" />
+            android:textColor="@color/text_title"
+            android:textSize="@dimen/text_14" />
 
 
         <ImageView
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
             android:layout_centerVertical="true"
-            android:layout_marginRight="16dp"
-            android:background="@mipmap/arrow_right" />
+            android:layout_marginEnd="@dimen/margin_15"
+            android:src="@mipmap/arrow_right" />
 
         <View
             android:id="@+id/mine_item_underline_view"
             android:layout_width="match_parent"
-            android:layout_height="1dp"
+            android:layout_height="@dimen/margin_1"
             android:layout_alignParentBottom="true"
-            android:background="@color/mine_color_EDEDED" />
+            android:background="@color/top_bar_line" />
     </RelativeLayout>
 
 </RelativeLayout>

@@ -14,7 +14,6 @@ import com.aliyun.iot.aep.sdk.framework.bundle.BundleManager;
 import com.aliyun.iot.aep.sdk.framework.bundle.PageConfigure;
 import com.aliyun.iot.aep.sdk.log.ALog;
 import com.example.xmpic.support.FunSupport;
-import com.facebook.drawee.backends.pipeline.Fresco;
 import com.ilop.sthome.service.SiterService;
 import com.ilop.sthome.utils.greenDao.DaoManager;
 import com.ilop.sthome.utils.tools.SiterSDK;
@@ -52,8 +51,7 @@ public class MyApplication extends AApplication {
 
         // Push SDK 需要在主进程和子进程都初始化
         PushManager.getInstance().init(this);
-        // 初始化拍照裁剪
-        Fresco.initialize(this);
+
         // 其他 SDK, 仅在 主进程上初始化
         String packageName = this.getPackageName();
         if (!packageName.equals(ThreadTools.getProcessName(this, android.os.Process.myPid()))) {

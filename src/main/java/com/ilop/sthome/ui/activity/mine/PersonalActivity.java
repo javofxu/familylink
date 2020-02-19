@@ -11,7 +11,6 @@ import com.bumptech.glide.load.resource.bitmap.CircleCrop;
 import com.bumptech.glide.request.RequestOptions;
 import com.example.common.base.BasePActivity;
 import com.example.common.utils.LiveDataBus;
-import com.facebook.drawee.generic.RoundingParams;
 import com.ilop.sthome.mvp.contract.PersonalContract;
 import com.ilop.sthome.mvp.present.PersonalPresenter;
 import com.ilop.sthome.ui.activity.login.EmailResetAliActivity;

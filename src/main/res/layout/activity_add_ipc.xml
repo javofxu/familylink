@@ -1,141 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android">
-
-<LinearLayout
-    android:orientation="vertical"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/white">
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/margin_50"
-        android:background="@color/color_white">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:text="@string/add_camera"
-            android:textColor="@color/top_bar_title"
-            android:textSize="@dimen/title_size" />
-
-        <ImageView
-            android:id="@+id/iv_add_camera_back"
-            android:layout_width="@dimen/back_image_width"
-            android:layout_height="@dimen/back_image_height"
-            android:padding="@dimen/margin_3"
-            android:layout_centerVertical="true"
-            android:layout_marginStart="@dimen/back_image_marginLeft"
-            android:src="@mipmap/back"/>
-
-    </RelativeLayout>
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@color/top_bar_line" />
-
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
     <LinearLayout
-        android:id="@+id/add_new_ipc"
+        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginStart="@dimen/margin_15"
-        android:layout_marginEnd="@dimen/margin_15"
-        android:layout_marginTop="@dimen/margin_20"
-        android:padding="@dimen/NormalPadding"
-        android:background="@drawable/bg_border_solid"
-        android:gravity="center_vertical">
-       <ImageView
-           android:layout_width="@dimen/margin_32"
-           android:layout_height="@dimen/margin_32"
-           android:src="@mipmap/ali_camera"
-           android:layout_marginEnd="10dp" />
-        <TextView
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="wrap_content"
-            style="@style/CCPFontPreferenceSmall"
-            android:text="@string/add_my_ipc"/>
-        <ImageView
-            android:layout_width="@dimen/margin_24"
-            android:layout_height="@dimen/margin_24"
-            android:padding="@dimen/margin_2"
-            android:src="@mipmap/icon_right" />
-   </LinearLayout>
+        android:layout_height="match_parent"
+        android:background="@color/white">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        style="@style/CCPFontPreferenceSmall"
-        android:textColor="@color/text_color_hint"
-        android:text="@string/ipc_tip"
-        android:singleLine="false"
-        android:layout_margin="@dimen/margin_15"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_50">
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/margin_20"
-        android:background="@color/line_bg" />
+            <TextView
+                style="@style/TabTitleTextView"
+                android:text="@string/add_camera"/>
 
-    <LinearLayout
-        android:id="@+id/add_share_ipc"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:padding="@dimen/NormalPadding"
-        android:layout_margin="@dimen/margin_15"
-        android:background="@drawable/bg_border_solid"
-        android:gravity="center_vertical">
-        <ImageView
-            android:layout_width="@dimen/margin_32"
-            android:layout_height="@dimen/margin_32"
-            android:src="@mipmap/icon_shared"
-            android:layout_marginRight="10dp"/>
-        <TextView
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="wrap_content"
-            style="@style/CCPFontPreferenceSmall"
-            android:text="@string/add_share_ipc"/>
-        <ImageView
-            android:layout_width="@dimen/margin_24"
-            android:layout_height="@dimen/margin_24"
-            android:padding="@dimen/margin_2"
-            android:src="@mipmap/icon_right" />
+            <ImageView
+                android:id="@+id/iv_add_camera_back"
+                style="@style/TabBackImageView"/>
+
+        </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_1"
+            android:background="@color/top_bar_line" />
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            android:scrollbars="none"
+            android:background="@color/main_ground">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+                <com.ilop.sthome.view.SettingItem
+                    android:id="@+id/add_new_ipc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_15"
+                    app:item_accessoryType = "arrow"
+                    app:item_showDivider="false"
+                    app:item_background = "true"
+                    app:item_titleText="@string/official_website" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_line"
+                    android:textSize="@dimen/text_12"
+                    android:text="@string/ipc_tip"
+                    android:layout_margin="@dimen/margin_15"/>
+                <com.ilop.sthome.view.SettingItem
+                    android:id="@+id/add_share_ipc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_15"
+                    app:item_accessoryType = "arrow"
+                    app:item_showDivider="false"
+                    app:item_background = "true"
+                    app:item_titleText="@string/add_share_ipc" />
+                <com.ilop.sthome.view.SettingItem
+                    android:id="@+id/add_local_ipc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_15"
+                    app:item_accessoryType = "arrow"
+                    app:item_showDivider="false"
+                    app:item_background = "true"
+                    app:item_titleText="@string/add_localnet_ipc" />
+            </LinearLayout>
+        </ScrollView>
     </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:padding="@dimen/NormalPadding"
-        android:layout_margin="@dimen/margin_15"
-        android:background="@drawable/bg_border_solid"
-        android:gravity="center_vertical"
-        android:layout_marginBottom="35dp"
-        android:id="@+id/add_local_ipc">
-        <ImageView
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@mipmap/icon_router"
-            android:layout_marginEnd="10dp" />
-        <TextView
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="wrap_content"
-            style="@style/CCPFontPreferenceSmall"
-            android:singleLine="true"
-            android:marqueeRepeatLimit="-1"
-            android:ellipsize="marquee"
-            android:focusableInTouchMode="true"
-            android:focusable="true"
-            android:text="@string/add_localnet_ipc"/>
-        <ImageView
-            android:layout_width="@dimen/margin_24"
-            android:layout_height="@dimen/margin_24"
-            android:padding="@dimen/margin_2"
-            android:src="@mipmap/icon_right" />
-    </LinearLayout>
-</LinearLayout>
 </layout>

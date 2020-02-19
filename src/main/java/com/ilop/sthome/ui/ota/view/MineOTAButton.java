@@ -71,9 +71,9 @@ public class MineOTAButton extends FrameLayout implements AnimatorUpdateListener
 
     private void init() {
         inflate(getContext(), R.layout.ilop_ota_view_button, this);
-        mContainer = findViewById(R.id.mine_button_ota_container_relativelayout);
-        mProgress = findViewById(R.id.mine_button_ota_progress_imageview);
-        mMessage = findViewById(R.id.mine_button_ota_msg_textview);
+        mContainer = findViewById(R.id.mine_button_ota_container);
+        mProgress = findViewById(R.id.mine_button_ota_progress);
+        mMessage = findViewById(R.id.mine_button_ota_msg);
 
         mContainer.setOnClickListener(this);
 

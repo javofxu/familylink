@@ -210,7 +210,6 @@ public class MainPresenter extends BasePresenterImpl<MainContract.IView> impleme
                     public void onLogoutSuccess() {
                         UserInfoDaoUtil.getInstance().getUserInfoDao().deleteAll();
                         DeviceDaoUtil.getInstance().deleteAllGateway();
-                        SceneDaoUtil.getInstance().getSceneDao().deleteAll();
                         Intent intent = new Intent(mContext, StartActivity.class);
                         mView.startActivityByIntent(intent);
                     }

@@ -304,7 +304,7 @@ public enum SmartProduct {
     EE_SIMULATE_PHONE("PHONE", R.string.phone,   R.mipmap.mobile_phone_64, R.drawable.config_moren,""),
 
     //未知设备
-    EE_DEV_UN_KNOW("un_know", R.string.unamed, R.mipmap.ali_moren,R.drawable.config_moren,"");
+    EE_DEV_UN_KNOW("un_know", R.string.unamed, R.mipmap.default_pic_152,R.drawable.config_moren,"");
 
     private String devType;
     private int devResId;

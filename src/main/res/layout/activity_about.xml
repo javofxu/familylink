@@ -9,27 +9,22 @@
         android:background="@color/white">
 
         <RelativeLayout
-            android:layout_width="fill_parent"
-            android:layout_height="@dimen/toolbar_height">
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_50">
+
+            <TextView
+                style="@style/TabTitleTextView"
+                android:text="@string/about"/>
 
             <ImageView
                 android:id="@+id/iv_about_back"
-                android:src="@drawable/iv_return_back"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:layout_marginStart="@dimen/back_image_marginLeft"/>
-
-            <TextView
-                android:textAllCaps="false"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="@dimen/title_size"
-                android:text="@string/about"
-                android:textColor="@color/black"
-                android:layout_centerInParent="true" />
+                style="@style/TabBackImageView"/>
 
         </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_1"
+            android:background="@color/top_bar_line" />
 
         <ScrollView
             android:layout_width="match_parent"
@@ -38,57 +33,66 @@
             android:scrollbars="none"
             android:fillViewport="true">
             <LinearLayout
-                android:orientation="vertical"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center_horizontal">
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
 
                 <ImageView
-                    android:id="@+id/imageView1"
-                    android:layout_width="@dimen/margin_160"
-                    android:layout_height="@dimen/margin_120"
-                    android:layout_marginBottom="10dp"
-                    android:src="@mipmap/company_logo"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_marginTop="@dimen/margin_40"/>
-
-                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/margin_30"
-                    android:orientation="vertical">
-                    <TextView
-                        android:id="@+id/guanwang"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textSize="@dimen/text_18"
-                        android:text="@string/user_agreement"
-                        android:textColor="@color/black"
-                        android:gravity="center"/>
-                    <View
-                        android:layout_width="match_parent"
-                        android:layout_height="@dimen/margin_1"
-                        android:background="@color/black"/>
-                </LinearLayout>
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/margin_100"
+                    android:src="@mipmap/company_logo"/>
+
+                <TextView
+                    android:id="@+id/app_version"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_28"
+                    android:layout_marginBottom="@dimen/margin_100"
+                    android:textSize="@dimen/text_14"
+                    android:textColor="@color/text_normal"
+                    android:text="v3.0.1"
+                    android:gravity="center"/>
 
                 <LinearLayout
-                    android:id="@+id/about_center"
                     android:orientation="vertical"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/margin_50"
                     android:background="@color/white">
 
-
                     <com.ilop.sthome.view.SettingItem
-                        android:id="@+id/app_version"
+                        android:id="@+id/official_website"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        app:item_accessoryType = "none"
+                        app:item_accessoryType = "arrow"
+                        app:item_showDivider="false"
                         app:item_background = "false"
-                        app:item_showDivider="true"
-                        app:item_titleText="@string/app_version_hint" />
+                        app:item_titleText="@string/official_website" />
 
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/margin_15"
+                        android:background="@color/main_ground"/>
+
+                    <com.ilop.sthome.view.SettingItem
+                        android:id="@+id/version_update"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:item_accessoryType = "arrow"
+                        app:item_showDivider ="true"
+                        app:item_background  = "false"
+                        app:item_titleText="@string/version_update" />
+
+                    <com.ilop.sthome.view.SettingItem
+                        android:id="@+id/contact_us"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:item_accessoryType = "arrow"
+                        app:item_showDivider ="true"
+                        app:item_background  = "false"
+                        app:item_titleText="@string/contact_us" />
 
                     <com.ilop.sthome.view.SettingItem
                         android:id="@+id/user_agree"
@@ -107,15 +111,6 @@
                         app:item_showDivider="true"
                         app:item_background = "false"
                         app:item_titleText="@string/privacy_agree" />
-
-                    <com.ilop.sthome.view.SettingItem
-                        android:id="@+id/sale"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        app:item_accessoryType = "arrow"
-                        app:item_showDivider="true"
-                        app:item_background = "false"
-                        app:item_titleText="@string/sale_number" />
 
                 </LinearLayout>
 

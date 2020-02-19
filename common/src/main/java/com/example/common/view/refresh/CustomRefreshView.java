@@ -260,8 +260,6 @@ public class CustomRefreshView extends FrameLayout implements SwipeRefreshLayout
         blankView.addView(mEmptyView);
         if (img>0){
             mEmptyImg.setImageResource(img);
-        }else {
-            mEmptyImg.setImageResource(R.mipmap.no_device);
         }
         if (s !=null) mEmptyText.setText(s);
         if (mDataObserver != null) {

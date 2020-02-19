@@ -8,7 +8,7 @@ package com.aliyun.iot.aep.routerexternal;
 
 public final class R {
     public static final class string {
-        public static final int app_name = 0x7f1102ee;
+        public static final int app_name = 0x7f1102ef;
     }
     public static final class style {
         public static final int AppTheme = 0x7f120008;

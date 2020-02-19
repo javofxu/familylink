@@ -36,24 +36,24 @@
         "source": "/Users/siterwell/github/familylink/src/main/res/layout/activity_device_setup_record.xml"
     },
     {
-        "merged": "/Users/siterwell/github/familylink/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_bind.xml",
-        "source": "/Users/siterwell/github/familylink/src/main/res/layout/activity_bind.xml"
-    },
-    {
         "merged": "/Users/siterwell/github/familylink/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_device_rename.xml",
         "source": "/Users/siterwell/github/familylink/src/main/res/layout/activity_device_rename.xml"
+    },
+    {
+        "merged": "/Users/siterwell/github/familylink/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_bind.xml",
+        "source": "/Users/siterwell/github/familylink/src/main/res/layout/activity_bind.xml"
     },
     {
         "merged": "/Users/siterwell/github/familylink/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_explain.xml",
         "source": "/Users/siterwell/github/familylink/src/main/res/layout/activity_explain.xml"
     },
     {
-        "merged": "/Users/siterwell/github/familylink/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_detail_outdoor_siren.xml",
-        "source": "/Users/siterwell/github/familylink/src/main/res/layout/activity_detail_outdoor_siren.xml"
-    },
-    {
         "merged": "/Users/siterwell/github/familylink/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_cancellation.xml",
         "source": "/Users/siterwell/github/familylink/src/main/res/layout/activity_cancellation.xml"
+    },
+    {
+        "merged": "/Users/siterwell/github/familylink/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_detail_outdoor_siren.xml",
+        "source": "/Users/siterwell/github/familylink/src/main/res/layout/activity_detail_outdoor_siren.xml"
     },
     {
         "merged": "/Users/siterwell/github/familylink/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_scene_child.xml",
@@ -84,10 +84,6 @@
         "source": "/Users/siterwell/github/familylink/src/main/res/layout/activity_histroy_detail.xml"
     },
     {
-        "merged": "/Users/siterwell/github/familylink/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_sub_device.xml",
-        "source": "/Users/siterwell/github/familylink/src/main/res/layout/fragment_sub_device.xml"
-    },
-    {
         "merged": "/Users/siterwell/github/familylink/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_config_device.xml",
         "source": "/Users/siterwell/github/familylink/src/main/res/layout/activity_config_device.xml"
     },
@@ -116,6 +112,10 @@
         "source": "/Users/siterwell/github/familylink/src/main/res/layout/activity_recovery_guide.xml"
     },
     {
+        "merged": "/Users/siterwell/github/familylink/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_device_share.xml",
+        "source": "/Users/siterwell/github/familylink/src/main/res/layout/activity_device_share.xml"
+    },
+    {
         "merged": "/Users/siterwell/github/familylink/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_ipc_video.xml",
         "source": "/Users/siterwell/github/familylink/src/main/res/layout/fragment_ipc_video.xml"
     },
@@ -130,6 +130,10 @@
     {
         "merged": "/Users/siterwell/github/familylink/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_detail_temp_control.xml",
         "source": "/Users/siterwell/github/familylink/src/main/res/layout/activity_detail_temp_control.xml"
+    },
+    {
+        "merged": "/Users/siterwell/github/familylink/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_agreement.xml",
+        "source": "/Users/siterwell/github/familylink/src/main/res/layout/activity_agreement.xml"
     },
     {
         "merged": "/Users/siterwell/github/familylink/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_net_work.xml",
@@ -262,6 +266,10 @@
     {
         "merged": "/Users/siterwell/github/familylink/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_pic_setting_expert.xml",
         "source": "/Users/siterwell/github/familylink/src/main/res/layout/activity_pic_setting_expert.xml"
+    },
+    {
+        "merged": "/Users/siterwell/github/familylink/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_contact_us.xml",
+        "source": "/Users/siterwell/github/familylink/src/main/res/layout/activity_contact_us.xml"
     },
     {
         "merged": "/Users/siterwell/github/familylink/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_set_up.xml",

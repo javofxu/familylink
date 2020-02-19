@@ -42,6 +42,6 @@ public class WebViewActivity extends BaseActivity<ActivityWebViewBinding> {
     @Override
     protected void initListener() {
         super.initListener();
-        mDBind.ivWebViewBack.setOnClickListener(view -> finish());
+        mDBind.ivWebBack.setOnClickListener(view -> finish());
     }
 }

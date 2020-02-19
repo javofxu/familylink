@@ -14,7 +14,7 @@ import android.widget.TextView;
 
 import com.alibaba.sdk.android.openaccount.ui.ui.EmailRegisterActivity;
 import com.example.common.utils.RxTimerUtil;
-import com.ilop.sthome.ui.activity.main.ExplainActivity;
+import com.ilop.sthome.ui.activity.mine.AgreementActivity;
 import com.ilop.sthome.ui.activity.mine.WebViewActivity;
 import com.ilop.sthome.utils.tools.CacheUtil;
 import com.ilop.sthome.utils.tools.SiterSDK;
@@ -101,8 +101,7 @@ public class EmailRegisterAliActivity extends EmailRegisterActivity {
             public void onClick(View widget) {
                 //点击后的操作
                 Intent intent = new Intent();
-                intent.setClass(EmailRegisterAliActivity.this, ExplainActivity.class);
-                intent.putExtra("mid", 666);
+                intent.setClass(EmailRegisterAliActivity.this, AgreementActivity.class);
                 startActivity(intent);
             }
 

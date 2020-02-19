@@ -38,7 +38,7 @@
     <string name="user_agreement">Protocolo De Usuario</string>
     <string name="privacy_agree">Política De Privacidad</string>
     <string name="login_protocol">Por favor, lea cuidadosamente y comprenda plenamente las disposiciones de los "protocolos de usuario" y de la "política de privacidad", entre otras cosas: para poder ofrecer servicios de comunicación instantánea, transmisión de datos de equipo inteligente, etc., necesitamos reunir información sobre su equipo, los registros operativos, etc.Por favor, lean detenidamente los 《protocolos de usuario》 y 《política de privacidad》 para obtener más información.Si está de acuerdo, haga clic en "sí" para comenzar a usar nuestros servicios.</string>
-    <string name="server_intro">1, la confirmación y aceptación de los términos de servicio \nEl contenido de este sitio web y la aplicación son propiedad de Cosa Connects BV. Los usuarios deben leer detenidamente los términos y condiciones antes de aceptar este servicio.</string>
+    <string name="server_intro">\t\t\t\t1. la confirmación y aceptación de los términos de servicio \nEl contenido de este sitio web y la aplicación son propiedad de Cosa Connects BV. Los usuarios deben leer detenidamente los términos y condiciones antes de aceptar este servicio.</string>
     <string name="login_protocol_1">《protocolos de usuario》</string>
     <string name="login_protocol_3">《política de privacidad》</string>
     <string name="login_protocol_2">Crear una cuenta significa que está de acuerdo《protocolos de usuario》y《política de privacidad》</string>
@@ -103,4 +103,11 @@
     <string name="cant_add_conditions">No se pueden añadir otras condiciones</string>
     <string name="perform_action">Pulse el botón para ejecutar</string>
     <string name="push_message">Cuando se cumplan las condiciones de activación\nel teléfono recibirá un mensaje de empuje.</string>
+    <string name="official_website">Red</string>
+    <string name="contact_us">Contact Us</string>
+    <string name="version_update">Actualización Versiones</string>
+    <string name="contact_information">Contact:</string>
+    <string name="agreed_agreement">Ha sido revisado y acordado.</string>
+    <string name="exit_agreement">Si se cancela el Acuerdo de consentimiento,\nno podrá continuar usando la App.</string>
+    <string name="add_sharer">Añadir un comentario</string>
 </resources>

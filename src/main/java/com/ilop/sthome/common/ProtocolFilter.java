@@ -1,12 +1,11 @@
 package com.ilop.sthome.common;
 
 import android.content.Context;
-import android.content.SharedPreferences;
 
 import com.example.common.base.OnCallBackToRefresh;
 import com.example.common.utils.LiveDataBus;
+import com.example.common.utils.SpUtil;
 import com.ilop.sthome.ui.dialog.PrivacyPolicyDialog;
-import com.ilop.sthome.utils.tools.ECPreferences;
 
 /**
  * @author skygge
@@ -26,22 +25,18 @@ public class ProtocolFilter {
 
     public void setContext(Context context) {
         this.context = context;
-        SharedPreferences sharedPreferences = ECPreferences.getSharedPreferences();
-        SharedPreferences.Editor editor = sharedPreferences.edit();
         if(!isReadProtocol()){
             PrivacyPolicyDialog mDialog = new PrivacyPolicyDialog(context, new OnCallBackToRefresh() {
                 @Override
                 public void onConfirm() {
-                    editor.putBoolean("isAgree", true);
-                    editor.apply();
+                    SpUtil.putBoolean(context,"isAgree", true);
                     if (action!=null) getAction().doAction();
                     LiveDataBus.get().with("close_dialog").postValue(0);
                 }
 
                 @Override
                 public void onCancel() {
-                    editor.putBoolean("isAgree", false);
-                    editor.apply();
+                    SpUtil.putBoolean(context,"isAgree", false);
                     LiveDataBus.get().with("close_dialog").postValue(0);
                 }
             });
@@ -52,9 +47,7 @@ public class ProtocolFilter {
     }
 
     private boolean isReadProtocol(){
-        SharedPreferences sharedPreferences = ECPreferences.getSharedPreferences();
-        boolean isAgree = sharedPreferences.getBoolean("isAgree", false);
-        return isAgree;
+        return SpUtil.getBoolean(context, "isAgree", false);
     }
 
     public Action getAction() {

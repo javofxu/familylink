@@ -55,46 +55,6 @@ public class NetWorkUtil {
      * @return int 网络状态 {@link #NETWORKTYPE_2G},{@link #NETWORKTYPE_3G},          *{@link #NETWORKTYPE_INVALID},{@link #NETWORKTYPE_WAP}* <p>{@link #NETWORKTYPE_WIFI}
      */
     public static int getNetWorkType(Context context) {
-         boolean flag = false;
-
-        TelephonyManager telephonyManager = (TelephonyManager)context.getSystemService(Context.TELEPHONY_SERVICE);
-        switch (telephonyManager.getNetworkType()) {
-            case TelephonyManager.NETWORK_TYPE_1xRTT:
-                flag = false; // ~ 50-100 kbps
-            case TelephonyManager.NETWORK_TYPE_CDMA:
-                flag = false; // ~ 14-64 kbps
-            case TelephonyManager.NETWORK_TYPE_EDGE:
-                flag = false; // ~ 50-100 kbps
-            case TelephonyManager.NETWORK_TYPE_EVDO_0:
-                flag = true; // ~ 400-1000 kbps
-            case TelephonyManager.NETWORK_TYPE_EVDO_A:
-                flag = true; // ~ 600-1400 kbps
-            case TelephonyManager.NETWORK_TYPE_GPRS:
-                flag = false; // ~ 100 kbps
-            case TelephonyManager.NETWORK_TYPE_HSDPA:
-                flag = true; // ~ 2-14 Mbps
-            case TelephonyManager.NETWORK_TYPE_HSPA:
-                flag = true; // ~ 700-1700 kbps
-            case TelephonyManager.NETWORK_TYPE_HSUPA:
-                flag = true; // ~ 1-23 Mbps
-            case TelephonyManager.NETWORK_TYPE_UMTS:
-                flag = true; // ~ 400-7000 kbps
-            case TelephonyManager.NETWORK_TYPE_EHRPD:
-                flag = true; // ~ 1-2 Mbps
-            case TelephonyManager.NETWORK_TYPE_EVDO_B:
-                flag = true; // ~ 5 Mbps
-            case TelephonyManager.NETWORK_TYPE_HSPAP:
-                flag = true; // ~ 10-20 Mbps
-            case TelephonyManager.NETWORK_TYPE_IDEN:
-                flag = false; // ~25 kbps
-            case TelephonyManager.NETWORK_TYPE_LTE:
-                flag = true; // ~ 10+ Mbps
-            case TelephonyManager.NETWORK_TYPE_UNKNOWN:
-                flag = false;
-            default:
-                flag = false;
-        }
-
 
         int mNetWorkType =0;
         ConnectivityManager manager = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
@@ -104,10 +64,7 @@ public class NetWorkUtil {
             if (type.equalsIgnoreCase("WIFI")) {
                 mNetWorkType = NETWORKTYPE_WIFI;
             } else if (type.equalsIgnoreCase("MOBILE")) {
-                String proxyHost = android.net.Proxy.getDefaultHost();
-                mNetWorkType = TextUtils.isEmpty(proxyHost)
-                        ? (flag ? NETWORKTYPE_3G : NETWORKTYPE_2G)
-                        : NETWORKTYPE_WAP;
+                mNetWorkType = NETWORKTYPE_3G;
             }
         } else {
             mNetWorkType = NETWORKTYPE_INVALID;
@@ -115,50 +72,4 @@ public class NetWorkUtil {
         return mNetWorkType;
     }
 
-
-
-    /**
-     * 将ip的整数形式转换成ip形式
-     *
-     * @param ipInt
-     * @return
-     */
-    public static String int2ip(int ipInt) {
-        StringBuilder sb = new StringBuilder();
-        sb.append(ipInt & 0xFF).append(".");
-        sb.append((ipInt >> 8) & 0xFF).append(".");
-        sb.append((ipInt >> 16) & 0xFF).append(".");
-        sb.append((ipInt >> 24) & 0xFF);
-        return sb.toString();
-    }
-
-    /**
-     * 获取当前ip地址
-     *
-     * @param context
-     * @return
-     */
-    public static String getLocalIpAddress(Context context) {
-        try {
-            // for (Enumeration<NetworkInterface> en = NetworkInterface
-            // .getNetworkInterfaces(); en.hasMoreElements();) {
-            // NetworkInterface intf = en.nextElement();
-            // for (Enumeration<InetAddress> enumIpAddr = intf
-            // .getInetAddresses(); enumIpAddr.hasMoreElements();) {
-            // InetAddress inetAddress = enumIpAddr.nextElement();
-            // if (!inetAddress.isLoopbackAddress()) {
-            // return inetAddress.getHostAddress().toString();
-            // }
-            // }
-            // }
-            WifiManager wifiManager = (WifiManager) context
-                    .getSystemService(Context.WIFI_SERVICE);
-            WifiInfo wifiInfo = wifiManager.getConnectionInfo();
-            int i = wifiInfo.getIpAddress();
-            return int2ip(i);
-        } catch (Exception ex) {
-            return " 获取IP出错鸟!!!!请保证是WIFI,或者请重新打开网络!\n" + ex.getMessage();
-        }
-        // return null;
-    }
 }

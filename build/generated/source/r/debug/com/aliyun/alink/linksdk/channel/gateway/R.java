@@ -8,13 +8,13 @@ package com.aliyun.alink.linksdk.channel.gateway;
 
 public final class R {
     public static final class mipmap {
-        public static final int ic_launcher = 0x7f0f008f;
-        public static final int ic_launcher_round = 0x7f0f0090;
+        public static final int ic_launcher = 0x7f0f008b;
+        public static final int ic_launcher_round = 0x7f0f008c;
     }
     public static final class raw {
         public static final int version = 0x7f100005;
     }
     public static final class string {
-        public static final int app_name = 0x7f1102ee;
+        public static final int app_name = 0x7f1102ef;
     }
 }

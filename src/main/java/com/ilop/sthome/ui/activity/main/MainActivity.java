@@ -17,7 +17,6 @@ import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.bumptech.glide.load.resource.bitmap.CircleCrop;
 import com.bumptech.glide.request.RequestOptions;
 import com.example.common.base.BasePActivity;
-import com.facebook.drawee.generic.RoundingParams;
 import com.ilop.sthome.mvp.contract.MainContract;
 import com.ilop.sthome.mvp.present.MainPresenter;
 import com.ilop.sthome.service.SiterService;
@@ -28,7 +27,6 @@ import com.ilop.sthome.ui.activity.mine.AssessActivity;
 import com.ilop.sthome.ui.activity.mine.InstructionActivity;
 import com.ilop.sthome.ui.activity.mine.PersonalActivity;
 import com.ilop.sthome.ui.activity.mine.SetUpActivity;
-import com.ilop.sthome.utils.updateApp.UpdateAppUtil;
 import com.siterwell.familywellplus.R;
 import com.siterwell.familywellplus.databinding.ActivityMainBinding;
 
@@ -52,8 +50,6 @@ public class MainActivity extends BasePActivity<MainPresenter, ActivityMainBindi
         super.initView();
         mDBind.mainToolbar.setTitle(getString(R.string.device));
         setSupportActionBar(mDBind.mainToolbar);
-        UpdateAppUtil mUpdateAppUtil = new UpdateAppUtil(this);
-        mUpdateAppUtil.getUpdateInfo();
         radioButtons = new RadioButton[3];
         radioButtons[0] = mDBind.mainDevice;
         radioButtons[1] = mDBind.mainScene;

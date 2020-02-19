@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.siterwell.familywellplus"
-    android:versionCode="18310"
-    android:versionName="3.0.0" >
+    android:versionCode="18311"
+    android:versionName="3.0.1" >
 
     <uses-sdk
         android:minSdkVersion="21"
@@ -110,6 +110,7 @@
         <activity android:name="com.ilop.sthome.ui.activity.detail.AddModeSwitchActivity" />
         <activity android:name="com.ilop.sthome.ui.activity.mine.AssessActivity" />
         <activity android:name="com.ilop.sthome.ui.activity.mine.SetUpActivity" />
+        <activity android:name="com.ilop.sthome.ui.activity.mine.ContactUsActivity" />
         <activity android:name="com.ilop.sthome.ui.activity.scene.SceneDetailActivity" />
         <activity android:name="com.ilop.sthome.ui.activity.scene.SceneEditActivity" />
         <activity android:name="com.ilop.sthome.ui.activity.device.ChangeSceneActivity" />
@@ -308,7 +309,7 @@
             android:name="com.ilop.sthome.ui.activity.device.DeviceHistoryActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.ilop.sthome.ui.activity.mine.ShareListActivity"
+            android:name="com.ilop.sthome.ui.activity.device.DeviceShareActivity"
             android:screenOrientation="portrait" />
         <activity
             android:name="com.ilop.sthome.ui.activity.config.ConfigDeviceActivity"
@@ -317,7 +318,7 @@
             android:name="com.ilop.sthome.ui.activity.device.DeviceDetailActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.ilop.sthome.ui.activity.main.ExplainActivity"
+            android:name="com.ilop.sthome.ui.activity.mine.AgreementActivity"
             android:screenOrientation="portrait" />
         <activity
             android:name="com.ilop.sthome.ui.activity.xmipc.ActivityGuideDeviceCamera"

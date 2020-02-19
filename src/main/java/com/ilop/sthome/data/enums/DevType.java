@@ -22,7 +22,7 @@ public enum DevType {
     //未知设备
     EE_DEV_UN_KNOW("un_know",
                R.string.unamed,
-               R.mipmap.ali_moren);
+               R.mipmap.default_pic_152);
 
     private String productKey;
     private int devResId;
